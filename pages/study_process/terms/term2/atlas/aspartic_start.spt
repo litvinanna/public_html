@@ -1,0 +1,4 @@
+load pages/study_process/terms/term2/atlas/asp.pdb
+set echo top left; font echo 20; color echo white
+echo Aspartic
+rotate best

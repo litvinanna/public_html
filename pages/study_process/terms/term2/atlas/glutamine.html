@@ -1,0 +1,169 @@
+<script type="text/javascript-lazy">
+var Info = {
+    serverURL: "libs/js/jsmol/php/jsmol.php",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: 400,
+    height: 400,
+    color: "black",
+    deferApplet: true,
+    coverImage: "pages/study_process/terms/term2/atlas/load.png",
+    coverclickgo: "pages/study_process/terms/term2/atlas/load.png",
+    script: "pages/study_process/terms/term2/atlas/glutamine_start.spt"
+};
+
+
+$(document).ready(function() {
+    $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+    $("#jmolhbstart").html(Jmol.jmolButton(JSMol, 'pages/study_process/terms/term2/atlas/gln_hb.spt', 'Starthb'));
+    $("#jmolhbresume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+    $("#jmolsbstart").html(Jmol.jmolButton(JSMol, 'pages/study_process/terms/term2/atlas/gln_sb.spt', 'Startsb'));
+    $("#jmolsbresume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+    $("#jmoldnastart").html(Jmol.jmolButton(JSMol, 'pages/study_process/terms/term2/atlas/gln_dna.spt', 'Startdna'));
+    $("#jmoldnaresume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+    $("#snapshot").html(Jmol.jmolButton(JSMol, 'write gln.png', 'Take picture'));
+    $("#snapshot1").html(Jmol.jmolButton(JSMol, 'write gln-contacts.png', 'Take picture'));
+
+
+
+});
+<!-- маленькое окошко-->
+var Info0 = {
+    serverURL: "libs/js/jsmol/php/jsmol.php",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: 400,
+    height: 400,
+    color: "black",
+    script: "script pages/study_process/terms/term2/atlas/glutamine_start.spt; spin"
+};
+
+<!--окошко для разного pH-->
+
+var Info1 = {
+    serverURL: "libs/js/jsmol/php/jsmol.php",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: 400,
+    height: 400,
+    color: "black",
+    deferApplet: true,
+    coverImage: "pages/study_process/terms/term2/atlas/load.png",
+    coverclickgo: "pages/study_process/terms/term2/atlas/load.png",
+    script: "script pages/study_process/terms/term2/atlas/ph1.spt"
+};
+$(document).ready(function() {
+    $("#jmolinfo").html(Jmol.getAppletHtml("JSMol0", Info0));
+    $("#jmolph").html(Jmol.getAppletHtml("JSMol1", Info1));
+    $("#jmolph_button").html(Jmol.jmolButton(JSMol1, 'resume', 'Change pH'));
+    $("#jmollabelson_button").html(Jmol.jmolButton(JSMol0, 'pages/study_process/terms/term2/atlas/glutamine_labels.spt', 'Show labels'));
+    $("#jmollabelsoff_button").html(Jmol.jmolButton(JSMol0, 'pages/study_process/terms/term2/atlas/labelsoff.spt', 'UnShow labels'));
+
+});
+</script>
+<div class="col-md-12">
+    <h1>Атлас аминокислот - глутамин.</h1>
+    <hr>
+</div>
+<div class="col-md-6">
+    <!-- первый простой апплет-->
+    <div id='jmolinfo'></div>
+    <div id='jmollabelson_button' class='key'></div>
+    <div id='jmollabelsoff_button' class='key'></div>
+</div>
+<div class="col-md-6">
+    <table class="table table-bordered">
+        <caption>Свойства</caption>
+        <tbody>
+            <tr style='background-color:PapayaWhip;'>
+                <td colspan='2'>Общие</td>
+            </tr>
+            <tr>
+                <td>Название по IUPAC</td>
+                <td>2-аминопентанамид-5-овая кислота</td>
+            </tr>
+            <tr>
+                <td>Краткое название</td>
+                <td>Глн, Gln, Q</td>
+            </tr>
+            <tr>
+                <td>Хим.формула</td>
+                <td>O=C(NH2)-CH2-CH2-CH(NH2)-COOH</td>
+            </tr>
+            <tr>
+                <td>Брутто-формула</td>
+                <td>С<sub>5</sub>H<sub>10</sub>N<sub>2</sub>O<sub>3</sub></td>
+            </tr>
+            <tr>
+                <td colspan='2' style='background-color:PapayaWhip'> Физические свойства</td>
+            </tr>
+            <tr>
+                <td>Молярная масса</td>
+                <td>146.1445 г/моль</td>
+            </tr>
+            <tr>
+                <td>Температура плавления</td>
+                <td>185 °C</td>
+            </tr>
+            <tr>
+                <td>Растворимость в воде, 25°C</td>
+                <td>413 г/л</td>
+            </tr>
+            <tr>
+                <td colspan='2' style='background-color:PapayaWhip'>Классификации</td>
+            </tr>
+            <tr>
+                <td>PubChem</td>
+                <td><a href='https://pubchem.ncbi.nlm.nih.gov/compound/738'>738</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-md-12">
+    <div class="col-md-4 col-md-offset-4">
+        <figure>
+            <figcaption>Диаграмма 1. Длины белков </figcaption>
+            <img src="pages/study_process/terms/term2/atlas/glutamine.png" width="100%" height="100%">
+        </figure>
+    </div>
+    <div class="col-md-12">
+        <hr>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <p>Глутамин — одна из 20 протеиногенных, заменимая альфа-аминокислота. В крови человека имеет самую высокую концентрацию среди свободных аминокислот - 500-900мкмоль/л.</p>
+            <p>Протонированные/депротонированные формы глутамина при разной кислотности среды.</p>
+        </div>
+        <div class="col-md-6">
+            <p>Глутамин гидрофильная незаряженная аминокислота. Образует водородные связи, взаимодействует с другими гидрофильными аминокислотами. </p>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="col-md-6">
+            <div id='jmolph'></div>
+            <div id='jmolph_button'></div>
+            <div id='snapshot'></div>
+        </div>
+        <div class="col-md-6">
+            <!-- большой апплет с контактами-->
+            <div id='jmol'></div>
+            <div id='snapshot1' class='key'></div>
+            <hr class='hr'>
+            <div id='jmolhbstart' class='key'></div> <a href="pages/study_process/terms/term2/atlas/gln_hb.spt">[текст скрипта]</a>
+            <div id='jmolhbresume' class='key'></div> белок-белковые водородные связи
+            <hr class='hr'>
+            <div id='jmoldnastart' class='key'></div> <a href="pages/study_process/terms/term2/atlas/gln_dna.spt">[текст скрипта]</a>
+            <div id='jmoldnaresume' class='key'></div> ДНК-белковые взаимодествия
+        </div>
+    </div>
+</div>
+<div class="col-md-12">
+    <hr>
+</div>
+<div name="links" id="links" class="col-md-12">
+    <h2>Примечания:</h2>
+    <ul>
+        <li><a href='https://pubchem.ncbi.nlm.nih.gov/compound/5961#section=Top'>Pubchem</a></li>
+        <li><a href='https://en.wikipedia.org/wiki/Glutamine'>Википедия</a></li>
+    </ul>
+</div>

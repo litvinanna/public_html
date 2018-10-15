@@ -1,0 +1,193 @@
+<div class='col-md-6'>
+	<p>Мне был выдан контиг с идентификатором <a href='https://www.ncbi.nlm.nih.gov/nuccore/959672007/'>NW_014652958</a></p>
+	<p>Данный контиг принадлежит организму <a href='https://en.wikipedia.org/wiki/California_two-spot_octopus'>Octopus bimaculoides</a> &mdash; Калифорнийскому двупятнистому осьминогу.
+	</p>
+
+	<table class='table table-bordered'><caption>Таб.1. Особенности контига</caption>
+	<tr><td>Длина</td><td>1567542 bp </td></tr>
+	<tr><td>CDS</td><td>40</td></tr>
+	<tr><td>Аннотированные гены</td><td>20</td></tr>
+	
+	</table>
+	</div>
+<div class='col-md-6'>		
+	<figure>
+		<figcaption>Рис.1 Octopus bimaculoides <a href='http://www.allposters.com/-sp/Two-Spot-Octopus-Octopus-Bimaculoides-Southern-California-USA-Posters_i6014915_.htm'>[источник]</a></figcaption>
+		<img src='pages/study_process/terms/term3/pr12/octopus.jpg' width=100%>
+		</figure>
+	</div>
+	
+<div class='col-md-12 small_empty_block'></div>
+
+	
+<div class='col-md-12'>
+	<h2>Результаты предсказания</h2>
+	<p>Программы AUGUSTUS запускается с некоторым набором параметров</p>
+	<figure class='figure'>
+		<figcaption>Параметры запуска с пояснениями</figcaption>
+		<pre class='small'>
+Prediction job ID: predMG4KKPj8  #идентификатор запуска
+AUGUSTUS parameter project identifier: fly  #модельный организм, по подобию которого ищутся участки
+Genome file: octopus.fasta  #скачанный файл со скэффолдом
+User set UTR prediction: true  #дополнительно предсказываются мРНК
+Report genes on: both strands  #поиск ведется на обеих цепях
+Alternative transcripts: many  #предсказывается большое число альтернативных транскриптов (не более 20)
+Allowed gene structure: predict any number of (possibly partial) genes #подразумевается, что генов несколько
+Ignore conflictes with other strand: false
+			</pre>
+
+		</figure>
+	<table class='table table-bordered' width=400px>
+		<caption>Выход программы (последовательности намеренно укорочены)</caption>
+		<tbody class='small'><tr>
+			<td>Файл</td>
+			<td>Содержание</td>
+			<td>Формат</td>
+				</tr>
+		<tr>
+			<td>.aa</td>
+			<td>последовательности белковых транскриптов в fasta-формате</td>
+			<td><pre class='small'>>g1.t1
+MLTTNNNSTAILLPPLTTISAIT
+</pre></td>
+				</tr>
+		<tr>
+			<td>.cdsexons</td>
+			<td>кодирующие нуклеотидные последовательности транскриптов (экзоны)</td>
+			<td><pre class='small'>>g1.t1.cds1
+atgctcaccaccaacaacaacagcacagcaatattgctaccacca
+</pre></td>
+				</tr>
+		<tr>
+			<td>.codingseq</td>
+			<td>нуклеотидные последовательности транскриптов</td>
+			<td><pre class='small'>>NW_014652958.1.g1.t1
+atgctcaccaccaacaacaacagcacagcaatattgctaccaccactaacgacaat
+</pre></td>
+				</tr>
+		<tr>
+			<td>.gbrowse</td>
+			<td>таблица с разными участками</td>
+			<td ><pre class='small'>NW_014652958.1  AUGUSTUS        gene    20      247     0.33    -       .       Gene g1
+NW_014652958.1  AUGUSTUS        mRNA    20      247     0.33    -       .       mRNA g1.t1 ; Gene g1
+NW_014652958.1  AUGUSTUS        stop_codon      20      22      .       -       0       mRNA g1.t1
+NW_014652958.1  AUGUSTUS        single  20      247     0.33    -       0       mRNA g1.t1
+NW_014652958.1  AUGUSTUS        CDS     20      247     0.33    -       0       mRNA g1.t1
+</pre></td>
+				</tr>
+		<tr>
+			<td>.gff</td>
+			<td>полная информация о предсказании; 
+				после хеша - версия программы, параметры, кодирующие последовательности;
+				таблица с tab-ами по колонкам : 
+				<ul class='list-unstyled'>
+					<li>3-тип участка</li>
+					<li>4-начало участка</li>
+					<li>5- конец участка</li>
+					<li>6 - score       </li>
+					<li>7 - цепь        </li>
+					<li>8 - рамка чтения</li>
+					<li>9 - доп. информация (идентификатор транскрипта)</li>
+				</ul></td>
+			<td><pre class='small'>
+# This output was generated with AUGUSTUS (version 3.1.0).
+# [information about program]
+#
+# ----- prediction on sequence number 1 (length = 1567542, name = NW_014652958.1) -----
+#
+# Constraints/Hints:
+# (none)
+# Predicted genes for sequence number 1 on both strands
+# start gene g1
+NW_014652958.1  AUGUSTUS        gene    20      247     0.33    -       .       g1
+NW_014652958.1  AUGUSTUS        transcript      20      247     0.33    -       .       g1.t1
+NW_014652958.1  AUGUSTUS        stop_codon      20      22      .       -       0       transcript_id "$
+NW_014652958.1  AUGUSTUS        single  20      247     0.33    -       0       transcript_id "g1.t1"; $
+NW_014652958.1  AUGUSTUS        CDS     20      247     0.33    -       0       transcript_id "g1.t1"; $
+NW_014652958.1  AUGUSTUS        start_codon     245     247     .       -       0       transcript_id "$
+# coding sequence = [atgctcaccaccaacaacaacagcac]
+# protein sequence = [MLTTNNNSTAILLPPLTTI]
+# end gene g1
+###
+</pre></td>
+				</tr>
+		<tr>
+			<td>.gtf</td>
+			<td>краткая таблица со всеми предсказанными участками</td>
+			<td><pre class='small'>NW_014652958.1  AUGUSTUS        gene    20      247     0.33    -       .       g1
+NW_014652958.1  AUGUSTUS        transcript      20      247     0.33    -       .       g1.t1
+NW_014652958.1  AUGUSTUS        stop_codon      20      22      .       -       0       transcript_id "$
+NW_014652958.1  AUGUSTUS        single  20      247     0.33    -       0       transcript_id "g1.t1"; $
+NW_014652958.1  AUGUSTUS        CDS     20      247     0.33    -       0       transcript_id "g1.t1"; $
+NW_014652958.1  AUGUSTUS        start_codon     245     247     .       -       0       transcript_id "$
+NW_014652958.1  AUGUSTUS        gene    538     768     0.83    +       .       g2
+</pre></td>
+				</tr>
+			<tr>
+				<td>.mrna</td>
+				<td>последовательности различных mRNA</td>
+				<td><pre class='small'>>g1.t1
+aagttctcatttctccacccaccttcactg</pre></td>
+				</tr>	
+				</tbody>
+		
+		
+		</table>
+
+<table class='table table-bordered'>
+	<caption></caption>
+	<tr>
+		<td></td>
+		<td>Аннотация</td>
+		<td>AUGUSTUS</td></tr>
+	<tr>
+		<td>Число генов</td>
+		<td>20</td>
+		<td>55</td></tr>
+	<tr>
+		<td>Число разных мРНК=белковых транскриптов</td>
+		<td>40</td>
+		<td>143</td></tr>
+	<tr>
+		<td>Число кодирующих участков (CDS)</td>
+		<td>-</td>
+		<td>1053</td></tr>
+	</table>
+
+</div>
+<div class='col-md-8'>
+	<p>Был выбран <a href='https://www.ncbi.nlm.nih.gov/gene/106873937'>ген</a>, который подвергается альтернативному сплайсингу (2 вариантa). 
+	Кодирует ankyrin repeat and SOCS box protein 8. 
+	Координаты гена 756768..765116.
+	Структура <a href='http://www.rcsb.org/pdb/explore/explore.do?structureId=3ZNG'>PDB 3ZNG</a> похожего белка показаны на рис.3.</p>
+	<p>Ген ankyrin repeat and SOCS box protein 8 предсказан не был.
+</p>
+	</div>
+<div class='col-md-4'>
+	<figure>
+		<figcaption>Рис.3</figcaption>
+		<img src='pages/study_process/terms/term3/pr12/3zng.jpg' width=100%>
+		</figure>
+
+	</div>
+<div class='col-md-12'>
+	<figure><figcaption>Рис.2</figcaption><img src='pages/study_process/terms/term3/pr12/gene.png' width=100%></figure>
+	</div>
+	
+<div class='col-md-12 small_empty_block'></div>
+<div class='col-md-12'>
+	<p>Был выбран <a href='https://www.ncbi.nlm.nih.gov/gene/106874222'>другой ген</a>, который подвергается альтернативному сплайсингу. 
+	Он кодирует alpha/beta hydrolase domain-containing protein 14B-like. Похожий 
+	<a href='http://www.uniprot.org/uniprot/Q96IU4'>человеческий белок</a> 
+	имеет гидролазную активность к пара-нитрофенилбутирату (in vitro), может активировать транскрипцию.
+
+	</p>
+	</div>
+
+	</div>
+<div class='col-md-12'>
+	<figure><figcaption>Рис.2</figcaption><img src='pages/study_process/terms/term3/pr12/gene-2.png' width=100%></figure>
+	<div class='small_empty_block'></div>
+	<p>Для данного гена была получена gff таблица <a href='pages/study_process/terms/term3/pr12/gene-ann.gff'>из genbank</a> и <a href='pages/study_process/terms/term3/pr12/gene-pred.gff'>предсказанная</a>.
+	Почти полностью точно была предсказана третья изоформа. Ещё один предсказанный транскрипт не похож ни на одну изоформу, хотя три CDS совпадают.</p>
+	

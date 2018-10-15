@@ -1,0 +1,49 @@
+zap
+load nmrpdb hel_regions.pdb
+# load gatc-b.pdb
+# restrict not (protein or water)
+
+
+#------Helix #1, color: red------
+select 1:A, 40:B
+color red
+select 2:A, 39:B
+color red
+select 3:A, 38:B
+color red
+select 4:A, 37:B
+color red
+select 5:A, 36:B
+color red
+select 6:A, 35:B
+color red
+select 7:A, 34:B
+color red
+select 8:A, 33:B
+color red
+select 9:A, 32:B
+color red
+select 10:A, 31:B
+color red
+select 11:A, 30:B
+color red
+select 12:A, 29:B
+color red
+select 13:A, 28:B
+color red
+select 14:A, 27:B
+color red
+select 15:A, 26:B
+color red
+select 16:A, 25:B
+color red
+select 17:A, 24:B
+color red
+select 18:A, 23:B
+color red
+select 19:A, 22:B
+color red
+select 20:A, 21:B
+color red
+
+select all

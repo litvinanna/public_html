@@ -1,0 +1,186 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Aspartic</title>
+<link href="atlasstyle.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript"
+src="http://vsb.fbb.msu.ru/share/jmol/jsmol/JSmol.min.js">
+</script>
+
+
+<script type="text/javascript">
+var Info = {
+    serverURL: "http://vsb.fbb.msu.ru/share/jmol/jsmol/php/jsmol.php",
+    j2sPath: "http://vsb.fbb.msu.ru/share/jmol/jsmol/j2s/",
+    use: "HTML5",
+    width: 600,
+    height: 600, 
+    color: "black",
+    script: ""
+    };                                                                                
+$(document).ready(function(){ 
+  $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+  $("#jmolStart").html(Jmol.jmolButton(JSMol, 'contacts_asp.spt', 'Start script'));  
+  $("#jmolResume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+  });
+<--простое окошко -->
+var Info0 = {
+    serverURL: "http://vsb.fbb.msu.ru/share/jmol/jsmol/php/jsmol.php",
+    j2sPath: "http://vsb.fbb.msu.ru/share/jmol/jsmol/j2s/",
+    use: "HTML5",
+    width: 350,
+    height: 350, 
+    color: "black",
+    script: 'load $NC(CC(=O)O)C(=O)O'
+    };
+  
+  
+<!-- окошко для разного pH-->
+var Info1 = {
+    serverURL: "http://vsb.fbb.msu.ru/share/jmol/jsmol/php/jsmol.php",
+    j2sPath: "http://vsb.fbb.msu.ru/share/jmol/jsmol/j2s/",
+    use: "HTML5",
+    width: 450,
+    height: 450, 
+    color: "black",
+    script: 'load $NC(CC(=O)O)C(=O)O'
+    };
+
+
+$(document).ready(function(){ 
+  $("#jmolinfo").html(Jmol.getAppletHtml("JSMol0", Info0));  <--простое окошко -->
+  $("#jmolph").html(Jmol.getAppletHtml("JSMol1", Info1));
+  $("#jmolStart1").html(Jmol.jmolButton(JSMol1, 'script ph2.spt', 'Start script'));    
+  $("#jmolph_button").html(Jmol.jmolButton(JSMol1, 'resume', 'Change pH'));
+  $("#jmollabelson_button").html(Jmol.jmolButton(JSMol1, 'glutamine_labels.spt', 'Show labels'));
+  $("#jmollabelsoff_button").html(Jmol.jmolButton(JSMol1, 'resume', 'UnShow labels'));
+
+  });
+
+
+
+</script>
+
+</head>
+
+<body>
+<div id="container">
+
+<div id = 'header'>
+<a href='../term2.php'>Назад</a> <a href='aspartic.html'>Атлас аминокислот - аспарагиновая кислота</a>
+</div>
+                          
+<div id="content">
+
+<div style = 'float:left'>
+
+<div id='jmolinfo' style='float:none; margin: 5px;'> </div>
+<table class = 'imagetable'> <caption><b>Химическая формула</b></caption>
+<tr><td><img src='aspartic.png' width = 350px ></td></td>
+</table>
+
+
+
+<table class = 'table'>
+<caption><b>Свойства</b></caption>
+<tr style = 'background-color:PapayaWhip'>  <td colspan = '2'> Общие</td></tr>
+       
+<tr>  <td>Название по IUPAC</td><td>2-аминобутандиовая кислота</td></tr>
+<tr>  <td>Краткое название</td><td>Асп, Asp, D</td></tr>
+<tr>  <td>Хим.формула</td><td>HOOCCH<sub>2</sub>CH(NH<sub>2</sub>)COOH</td></tr>
+<tr>  <td>Брутто-формула</td><td>С<sub>4</sub>H<sub>7</sub>NO<sub>4</sub></td></tr> 
+
+<tr style = 'background-color:PapayaWhip'> <td colspan = '2'> Физические свойства</td> </tr>    
+<tr>  <td>Молярная масса</td><td>133.10 г/моль</td></tr>
+<tr>  <td>Температура плавления</td><td>270 °C</td></tr>
+<tr>  <td>Растворимость в воде, 25°C</td><td> 4.5 г/л</td></tr>
+
+<tr style = 'background-color:PapayaWhip'> <td colspan = '2'>Классификация</td> </tr>
+<tr>  <td>PubChem</td><td><a href = 'http://pubchem.ncbi.nlm.nih.gov/compound/59605960'>5960</a></td></tr>
+</table>
+</div>
+
+
+
+<h1>Общие сведения</h1>
+<p>Аспарагиновая кислота — алифатическая аминокислота, одна из 20 протеиногенных аминокислот организма. 
+Встречается во всех организмах в свободном виде и в составе белков. Кроме того, выполняет роль нейромедиатора
+ в центральной нервной системе. 
+ <a href='#links'>[1]</a>.</p>
+<h1>Формы аминокислот в зависимости от pH</h1>
+<p>Аспарагиновая кислота относится к отрицательно заряженным аминокислотам. pKa = 3.65.</p>
+<p>В апплете, представленном ниже отображаются структуры соответствующих (де)протонированных форм в зависимости от pH. 
+Для запуска необходимо нажать кнопку "Start script", отобразить названия тяжелых атомов — "Show labels". </p>
+<div style='float:left'>
+
+<div id='jmolph' style = "margin: 10px;" ></div>
+<div id='jmolStart1'></div>
+<div id='jmolph_button'></div> 
+<div id='jmollabelson_button'></div> 
+<div id='jmollabelsoff_button'></div> 
+
+</div>
+
+
+<p><br>
+<br>
+<br>
+<br>
+<br>
+<br></p>
+<h1>Белок-белковые и ДНК-белковые контакты</h1>
+        
+<p>Немного хорошего, продуманного текста.</p>
+<div id='jmol' style = "float: left; margin: 20px;" >  </div>
+
+<div class='clear'></div>
+<div id='jmolStart' class = 'key'></div>   <a href = "conacts_asp.spt">[текст скрипта]</a>
+<div id='jmolResume' class = 'key'></div>
+
+
+
+<div class = "clear"> </div>
+
+<table class = 'imagetable'> <caption>Название рисунка</caption>
+<tr><td><img src='image.png' width = 600px></td></td>
+</table>
+
+
+<table class = 'table'>
+<caption>Заголовок заготовки таблицы</caption>
+<tr style = 'background-color:PapayaWhip'>  <td>первый столбец </td>
+  <td>торой столбец </td>
+       
+<tr>  <td>[ILE]</td><td>151.0</td></tr>
+<tr>  <td>[ARG]</td><td>153.0</td></tr>
+<tr>  <td>[GLN]</td><td>158.1</td></tr>
+<tr>  <td>[LEU]</td><td>163.0</td></tr>
+     
+<tr>  <td>[ALA]</td><td>138.7</td></tr>
+<tr>  <td>[VAL]</td><td>150.6</td></tr>
+<tr>  <td>[LYS]</td><td>164.0</td></tr>
+<tr>  <td>[TRP]</td><td>173.0</td></tr>
+
+</table>
+
+<a name='links'> </a>
+<h2>Примечания:</h2>
+<ul class='links'>
+
+<li><a href = 'https://en.wikipedia.org/wiki/Aspartic_acid'>en.wikipedia.org</a></li>
+
+</ul>
+</div>
+
+ 
+<div id="clear"></div>
+<div id="footer"> 
+  <p>&copy Литвин Аня и Васильева Лена, 2015-2016</p>
+</div>
+
+</div>
+</div>
+</body>
+</html>

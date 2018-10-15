@@ -1,0 +1,35 @@
+hmmbuild - build a hidden Markov model from an alignment
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Alignment file:                    drosofila-domens.fasta
+File format:                       a2m
+Search algorithm configuration:    Multiple domain (hmmls)
+Model construction strategy:       MAP (gapmax hint: 0.50)
+Null model used:                   (default)
+Prior used:                        (default)
+Sequence weighting method:         G/S/C tree weights
+New HMM file:                      hmm-1 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Alignment:           #1
+Number of sequences: 27
+Number of columns:   650
+
+Determining effective sequence number    ... done. [2]
+Weighting sequences heuristically        ... done.
+Constructing model architecture          ... done.
+Converting counts to probabilities       ... done.
+Setting model name, etc.                 ... done. [drosofila-domens]
+
+Constructed a profile HMM (length 133)
+Average score:      211.85 bits
+Minimum score:      171.71 bits
+Maximum score:      283.17 bits
+Std. deviation:      49.92 bits
+
+Finalizing model configuration           ... done.
+Saving model to file                     ... done.
+//
+

@@ -1,0 +1,351 @@
+<script type="text/javascript-lazy">
+var Info = {
+    serverURL: "libs/js/jsmol/php/jsmol.php",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: "100%",
+    height: 400,
+    color: "#202020",
+    deferApplet: true,
+    coverImage: "images/wide_load.png",
+    coverclickgo: "images/wide_load.png",
+    script: ""
+};
+
+
+$(document).ready(function() {
+    $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+        $("#jmol1").html(Jmol.getAppletHtml("JSMol1", Info));
+        $("#jmolStart1").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term3/pr2/pr2_script1.spt', 'A-DNA'));
+        $("#jmolStart2").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term3/pr2/pr2_script2.spt', 'B-DNA'));
+        $("#jmolStart3").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term3/pr2/pr2_script3.spt', 'Z-DNA'));
+        $("#jmolStack1").html(Jmol.jmolButton(JSMol1, 'script pages/study_process/terms/term3/pr2/pr2_script4.spt', 'max stacking'));
+        $("#jmolStack2").html(Jmol.jmolButton(JSMol1, 'script pages/study_process/terms/term3/pr2/pr2_script5.spt', 'min stacking'));
+
+        Jmol.setButtonCss("btn btn-navy btn-block sharp");
+
+});
+</script>
+<div class="col-md-12">
+    <h1>Формы ДНК</h1>
+    <hr>
+</div>
+<div class="col-md-12">
+    <p>С помощью программы fiber из пакета 3DNA были три структуры - три двуцепочечных участка днк в A, B, Z форме, состоящих из пяти повторов GATC (GC в случае Z формы). Характеристики форм Днк представлены в таблице 1.</p>
+</div>
+<div class="col-md-12">
+    <hr>
+    <div id='jmol'> </div>
+    <hr>
+</div>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <div id='jmolStart1'></div>
+        <br>
+        <a class="btn btn-default btn-block sharp" href='pages/study_process/terms/term3/pr2/gatc-a.pdb'> Cкачать A-DNA.pdb </a>
+        </br>
+    </div>
+    <div class="col-md-4">
+        <div id='jmolStart2'></div>
+        <br>
+        <a class="btn btn-default btn-block sharp" href='pages/study_process/terms/term3/pr2/gatc-b.pdb'> Cкачать B-DNA.pdb </a>
+        </br>
+    </div>
+    <div class="col-md-4">
+        <div id='jmolStart3'></div>
+        <br>
+        <a class="btn btn-default btn-block sharp" href='pages/study_process/terms/term3/pr2/gatc-z.pdb'> Cкачать Z-DNA.pdb </a>
+        </br>
+    </div>
+</div>
+<div class="col-md-12">
+    <hr>
+    <table class="table table-bordered">
+        <caption>Таб.1.Характеристика форм ДНК</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th>А-форма</th>
+                <th>B-форма</th>
+                <th>Z-форма</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Тип спирали</td>
+                <td>правая</td>
+                <td>правая</td>
+                <td>левая</td>
+            </tr>
+            <tr>
+                <td>Шаг спирали,Å</td>
+                <td>28.03</td>
+                <td>33.75</td>
+                <td>43.5</td>
+            </tr>
+            <tr>
+                <td>Число оснований на виток</td>
+                <td>11</td>
+                <td>10</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Ширина большой бороздки Å</td>
+                <td>7.98 [3:A-32:B]</td>
+                <td>17.21 [6:A-32:B]</td>
+                <td>16.08 [14:A-26:B]</td>
+            </tr>
+            <tr>
+                <td>Ширина малой бороздки Å</td>
+                <td>16.97 [12:A-32:B]</td>
+                <td>11.69 [13:A-32:B]</td>
+                <td>9.87 [10:A-35:B]</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-md-12">
+    <p> Я работала с азотистым основанием тимин. В В-форме в сторону большой бороздки смотрят атомы c4, c5, c6, c5M, o4, в сторону малой - c2, n2, o2. Остальные атомы основания - n1. 
+    В А-форме в сторону большой торчат- c7, o4, в сторону малой - o2. В образовании Z-формы тимин не учавствует.</p>
+    <table class="table table-bordered">
+        <caption>Торсионные углы тимина</caption>
+        <tbody>
+            <tr>
+                <td>Форма</td>
+                <td>α</td>
+                <td>β</td>
+                <td>γ</td>
+                <td>δ</td>
+                <td>ε</td>
+                <td>ζ</td>
+                <td>χ</td>
+            </tr>
+            <tr>
+                <td>А-ДНК</td>
+                <td>-51.7</td>
+                <td>174.8</td>
+                <td>41.7</td>
+                <td>79.1</td>
+                <td>-147.8</td>
+                <td>-75.1</td>
+                <td>-157.2</td>
+            </tr>
+            <tr>
+                <td>В-ДНК</td>
+                <td>-29.9</td>
+                <td>136.4</td>
+                <td>31.1</td>
+                <td>143.4</td>
+                <td>-140.8</td>
+                <td>-160.5</td>
+                <td>-98.0</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6">
+        <h3>Торсионные углы нуклеотидов (base) в разных конформациях DNA</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Торсионные углы нуклеотидов (base) в РНК</h3>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6">
+        <figure>
+            <pre class='pre' style='height: 200px; overflow: scroll'>
+Торсионные углы нуклеотидов (base) в A-DNA  
+  base    alpha    beta   gamma   delta  epsilon   zeta    chi
+   1 G     ---    174.8    41.7    79.0  -147.8   -75.1  -157.2
+   2 A    -51.7   174.8    41.7    79.1  -147.8   -75.1  -157.2
+   3 T    -51.7   174.8    41.7    79.1  -147.8   -75.1  -157.2
+   4 C    -51.7   174.8    41.7    79.1  -147.8   -75.1  -157.2
+   5 G    -51.7   174.8    41.7    79.1  -147.8   -75.1  -157.2
+   6 A    -51.7   174.8    41.7    79.0  -147.8   -75.1  -157.2
+   7 T    -51.7   174.8    41.7    79.1  -147.8   -75.1  -157.2
+   8 C    -51.7   174.8    41.7    79.0  -147.8   -75.0  -157.2
+   
+ 
+ 
+ 
+Торсионные углы нуклеотидов (base) в B-DNA 
+   base    alpha    beta   gamma   delta  epsilon   zeta    chi
+   1 G     ---    136.4    31.1   143.4  -140.8  -160.5   -98.0
+   2 A    -29.9   136.3    31.2   143.3  -140.8  -160.5   -98.0
+   3 T    -29.9   136.3    31.1   143.3  -140.8  -160.5   -97.9
+   4 C    -29.9   136.4    31.1   143.4  -140.8  -160.5   -98.0
+   5 G    -29.9   136.3    31.2   143.3  -140.8  -160.5   -98.0
+   6 A    -29.9   136.4    31.1   143.4  -140.8  -160.5   -98.0
+   7 T    -29.9   136.3    31.2   143.3  -140.8  -160.5   -98.0
+   8 C    -29.9   136.3    31.1   143.3  -140.8  -160.5   -97.9
+ 
+
+
+Торсионные углы нуклеотидов (base) в Z-DNA 
+   base    alpha    beta   gamma   delta  epsilon   zeta    chi
+   1 G     ---    179.0  -173.8    94.9  -103.6   -64.8    58.7
+   2 C   -139.5  -136.7    50.9   137.6   -96.5    81.9  -154.3
+   3 G     52.0   179.0  -173.8    94.9  -103.6   -64.8    58.7
+   4 C   -139.5  -136.8    50.8   137.6   -96.5    82.0  -154.3
+   5 G     51.9   179.0  -173.8    94.9  -103.6   -64.8    58.7
+   6 C   -139.5  -136.8    50.9   137.6   -96.5    82.0  -154.3
+   7 G     51.9   179.0  -173.8    94.9  -103.6   -64.8    58.7
+   8 C   -139.5  -136.7    50.9   137.6   -96.5    81.9  -154.3
+   
+
+</pre>
+        </figure>
+    </div>
+    <div class="col-md-6">
+        <figure>
+            <pre class='pre' style='height: 200px; overflow: scroll'>
+  base    alpha    beta   gamma   delta  epsilon   zeta    chi
+   1 G     ---     ---   -176.7    86.5  -135.0   -75.5   176.3
+   2 G    -80.2   177.0    60.7    82.4  -159.9   -71.4  -167.4
+   3 G    -47.6   172.5    47.1    82.9  -157.8   -61.2  -162.7
+   4 G    163.0   177.5   174.7    83.7  -143.5   -72.1  -171.5
+   5 U    -59.2   179.0    48.6    82.3  -175.7   -62.0  -158.1
+   6 A   -172.2  -178.4   172.6   145.4   -88.3   -46.4  -143.3
+   7 C     47.8   171.9    49.0    86.8  -147.8   -70.9  -169.6
+   8 G    -60.2  -179.7    46.1    81.7  -158.2   -68.3  -156.6
+   9 A    -63.9  -178.5    46.4    83.4  -169.2   -77.6  -150.6
+  10 G    158.1  -165.5   167.8    82.7  -135.7   -69.0  -176.0
+  11 G    -53.8   174.4    50.0    81.6  -157.8   -66.7  -170.0
+  12 U    -61.8  -175.8    51.6    84.5  -144.5   -66.7  -159.3
+  13 U    -72.5   178.4    51.4    85.5  -146.1   -52.1  -148.9
+  14 A    -93.0  -164.8    48.3    83.3  -148.3   -57.1  -173.6
+  15 U    -62.6  -179.0    52.5    83.7  -140.3   -65.6  -174.8
+  16 U    -60.7   168.5    52.5    86.6  -153.0   -57.4  -155.8
+  17 C    -62.1   171.2    55.1    86.8  -110.9  -147.9  -175.0
+  18 C    116.1  -118.6   167.3    83.8  -137.2   -72.2  -174.8
+  19 G    -62.4   172.1    44.6    79.5  -148.6   -76.9  -175.6
+  20 G    -54.8   179.5    51.9    82.4  -157.3   -62.5  -156.4
+  21 C    -64.7  -178.5    48.7    83.5  -128.2  -121.6  -143.8
+  22 G    179.2   177.5    55.3    89.4  -149.1   -70.1   179.9
+  23 C    -68.8  -172.2    48.7    84.5  -160.2   -68.1  -158.6
+  24 C    149.6  -173.8   179.0    84.8  -136.7   -59.2  -171.1
+  25 A    -52.3   172.5    49.6    82.9   179.8   -79.0  -155.8
+  26 A    172.2  -178.1   171.9    88.4  -125.5   -52.4  -174.9
+  27 G    -45.7   169.2    46.0   146.2  -137.7   -51.8  -114.2
+  28 G    -54.4   159.6    58.3   145.9  -138.3   138.4   -94.0
+</pre>
+        </figure>
+    </div>
+</div>
+<div class="col-md-12">
+    <hr>
+    <table class="table table-bordered">
+        <caption>Средние значения торсионных углов для</caption>
+        <tr>
+            <td>Форма</td>
+            <td>α</td>
+            <td>β</td>
+            <td>γ</td>
+            <td>δ</td>
+            <td>ε</td>
+            <td>ζ</td>
+            <td>χ</td>
+        </tr>
+        <tr>
+            <td>A-DNA</td>
+            <td>-51.70</td>
+            <td>174.80</td>
+            <td>41.70</td>
+            <td>79.08</td>
+            <td>-147.79</td>
+            <td>-75.09</td>
+            <td>-157.20</td>
+        </tr>
+        <tr>
+            <td>B-DNA</td>
+            <td>-29.90</td>
+            <td>136.34</td>
+            <td>31.14</td>
+            <td>143.34</td>
+            <td>-140.80</td>
+            <td>-160.50</td>
+            <td>-97.99</td>
+        </tr>
+        <tr>
+            <td>Z-DNA</td>
+            <td>-42.82</td>
+            <td>21.12</td>
+            <td>-61.47</td>
+            <td>116.25</td>
+            <td>-100.24</td>
+            <td>4.72</td>
+            <td>-47.80</td>
+        </tr>
+        <tr>
+            <td>RNA 1qtq</td>
+            <td>-13.59</td>
+            <td>20.66</td>
+            <td>68.54</td>
+            <td>90.75</td>
+            <td>-132.54</td>
+            <td>-62.98</td>
+            <td>-134.86</td>
+        </tr>
+        <tr>
+            <td>Форма</td>
+            <td>α</td>
+            <td>β</td>
+            <td>γ</td>
+            <td>δ</td>
+            <td>ε</td>
+            <td>ζ</td>
+            <td>χ</td>
+        </tr>
+    </table>
+</div>
+<div class="col-md-4">
+    <hr>
+    <p>Укладка РНК больше всего похожа на А-форму ДНК.</p>
+    <p>В моём комплексе РНК-белок водородные связи образует 28 пар. Структура содержиn 9 неканонических пар. Я
+        <a href='pages/study_process/terms/term3/pr3/prikidka.jpg'> прикинула (рис.) </a> как она должна выглядеть (дополнительные взаимодействия между цветными).
+    </p>
+    </div><div class='col-md-8'>
+    <figure>
+        <figcaption>РНК 1qtq структура</figcaption>
+        <pre class="pre">
+                            ..  ..
+                            2---71
+                            3---70
+                            4---69 Акцепторный
+                            5---68 стебель
+                            6---67
+ D-петля        D-стебель   7---66  Т-стебель       Т-петля
+    16 15 14 13 12 11 10 9 8      65 64 63 62 61 60 59 58
+  17            |  |  |           |  |  |  |  |      *   57
+  18            |  |  |           |  |  |  |  |      *   56  
+    19 20 21 22 23 24 25          49 50 51 52 53    54 55 
+                         26 *** 44   48
+                         27 --- 43 45  47 V-петля (дополнительная)
+                         28 --- 42   46
+                         29 --- 41
+                         30 --- 40 Антикодоновый стебель
+                         31 --- 39
+                         32 *** 38
+                         33 *** 37 
+                          34  36
+                            35
+   
+</pre></figure>
+</div>
+<div class="col-md-12">
+    <p>Неканонические пары : 13(A--A)45, 14(A--U)8, 15(G--C)48, 26(A--C)44, 30(G--C)40, 32(U--U)38, 33(U--A)37, 18(G--U)55, 58(A--U)54.</p>
+    Водородные связи, стабилизирующие третичную структуру: 18-55, 19-56 (соединяют D- и T- петли), 13-45, 15-48 (соединяют D- и V- петли), 14-8.
+    <p>Данные по стейкингу были получены find_pair. При выборе пар с максимальным и минимальным перекрыванием я не учитывала пары с нулевым перекрытием, так как они с большой вероятностью находятся в разных частях молекулы.</p>
+</div>
+<div class="col-md-9">
+    <div id='jmol1'> </div>
+</div>
+<div class="col-md-3">
+    <div id='jmolStack1'></div>
+    <p>шаг 20 GC/AC 12.28 Å<sup>2</sup></p>
+
+    <div id='jmolStack2'></div>
+    <p>шаг 20 UA/UA 1.77 Å<sup>2</sup></p>
+	</div>
+

@@ -1,0 +1,183 @@
+<script type="text/javascript-lazy">
+var Info = {
+    serverURL: "libs/js/jsmol/php/jsmol.php",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: "100%",
+    height: 400,
+    color: "#202020",
+    deferApplet: true,
+    coverImage: "images/wide_load.png",
+    coverclickgo: "images/wide_load.png",
+    script: ""
+};
+
+
+$(document).ready(function() {
+    $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+    $("#jmol1").html(Jmol.getAppletHtml("JSMol1", Info));
+    $("#jmolStart1").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term3/pr3/pr3_script1.spt', 'Start'));
+    $("#jmolResume").html(Jmol.jmolButton(JSMol, "resume", "Resume"));
+    $("#jmolRes1").html(Jmol.jmolButton(JSMol1, 'script pages/study_process/terms/term3/pr3/pr3_script3.spt', 'arg118'));
+    $("#jmolRes2").html(Jmol.jmolButton(JSMol1, 'script pages/study_process/terms/term3/pr3/pr3_script4.spt', 'asn'));
+
+    Jmol.setButtonCss("btn btn-navy btn-block sharp");
+});
+</script>
+<div class="col-md-12">
+    <h1>Структура РНК</h1>
+    <hr>
+</div>
+<div class="col-md-6">
+    <p>С помощью программы find_pair и analyse в структуре РНК-белкового комплекса (PDB ID: 1qtq) были найдены нуклеотиды, образующие водородные свзи. Результаты представлены в таблице 1. </p>
+    <p>Предсказание структуры РНК по алгоритму Зукера было реализовано с поvощью программы
+        <a href="http://rna.tbi.univie.ac.at/cgi-bin/RNAfold.cgi">RNAfold</a> из пакета Viena Rna Package. Лучшее предсказание из двух представлено на рис.1 (цветом обозначена вероятность существования пары соответственно синий-красный 0-1). Это структура с минимальной свободной энергией MFE (minimum free energy).
+    </p>
+</div>
+<div class="col-md-6">
+    <figure width=100%>
+        <figcaption>Рис.1.РНК, алгоритм Зукера</figcaption>
+        <img src='pages/study_process/terms/term3/pr3/rna2.png' width="100%">
+    </figure>
+</div>
+<div class="col-md-12">
+    <table class="table table-bordered">
+        <caption>Таб.1.</caption>
+        <thead>
+            <tr>
+                <th>Участок структуры</th>
+                <th>Позиции в структуре (по результатам find_pair) 902-976</th>
+                <th>Результаты предсказания с помощью einverted</th>
+                <th>Результаты предсказания по алгоритму Зукера </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Акцепторный стебель </td>
+                <td>5'---2-7---3'
+                    <br/> 3'--71-66--5'
+                    <br/> всего 6 пар </td>
+                <td>5'---1-7---3'
+                    <br/> 3'--71-65--5'
+                    <br/> всего 7 пар </td>
+                <td>5'---1-7---3'
+                    <br/> 3'--71-65--5'
+                    <br/> всего 7 пар, одна лишняя </td>
+            </tr>
+            <tr>
+                <td>D-стебель </td>
+                <td>5'--10-12--3'
+                    <br/> 3'--25-23--5'
+                    <br/> всего 3 пары</td>
+                <td></td>
+                <td>5'--10-12--3'
+                    <br/> 3'--24-22--5'
+                    <br/> всего 3 пары, верно</td>
+            </tr>
+            <tr>
+                <td>T-стебель </td>
+                <td>5'--49-53--3'
+                    <br/> 3'--65-61--5'
+                    <br/> всего 5 пар</td>
+                <td></td>
+                <td>5'--49-53--3'
+                    <br/> 3'--65-61--5'
+                    <br/> всего 5 пар, верно</td>
+            </tr>
+            <tr>
+                <td>Антикодоновый стебель </td>
+                <td>5'--26-33--3'
+                    <br/> 3'--44-37--5'
+                    <br/> всего 8 пар</td>
+                <td></td>
+                <td>5'--26-30--3'
+                    <br/> 3'--42-38--5'
+                    <br/> всего 5 пар из 8 верно</td>
+            </tr>
+            <tr>
+                <td>Общее число канонических пар нуклеотидов </td>
+                <td>19, 9 неканонических, и те, и другие формируют вторичную и третичную структуру</td>
+                <td>7</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-md-12">
+    <hr>
+    <h1>ДНК-белковый комплекс</h1>
+    <p>ДНК-белковый комплекс PDB ID: 1lrr. Последовательно показаны ДНК, кислороды сахара, кислороды фосфата, азоты в основаниях.</p>
+</div>
+<div class="col-md-12">
+    <div id='jmol'> </div>
+    <hr>
+</div>
+<div class="col-md-12">
+    <div class="col-md-3" id='jmolStart1'></div>
+    <div class="col-md-3" id='jmolResume'></div>
+</div>
+<div class="col-md-12">
+    <hr>
+    <p>Полярным контактом было обозначено нахождение полярных атомов (N, O) на расстоянии 3.5Å. Неполярным контактом было обозначено нахождение неполярных атомов (C, P, S) на расстоянии 4.5Å.</p>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Контакты атомов белка с</th>
+                <th>Полярные</th>
+                <th>Неполярные</th>
+                <th>Всего</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>остатками 2'-дезоксирибозы </td>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>остатками фосфорной кислоты</td>
+                <td>7</td>
+                <td>5</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>остатками азотистых оснований со стороны большой бороздки</td>
+                <td>0</td>
+                <td>4</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>остатками азотистых оснований со стороны малой бороздки </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-md-6">
+    <p>С помощью программы nucplot были найдены днк-белковые контакты. Результаты изображены на рис.2. Выдача программы содержала ещё один лист, но конактов он не содержит.</p>
+     <p>Больше всего свзей с ДНК образует аргинин118. Для распознавания ДНК важны аминокислоты, которые взаимодействуют непосредственно с азотистыми основаниями. Например, два аспарагина (150 и 152) взаимодействуют с тимином. </p>
+    </div><div class='col-md-6'>
+    <figure width=100%>
+        <figcaption>Рис.2.ДНК-белковые контакты</figcaption>
+        <img src='pages/study_process/terms/term3/pr3/nucplot.png' width="100%">
+    </figure>
+   
+</div>
+<div class="col-md-12 ">
+    <div id='jmol1'></div>
+</div>
+<div class="col-md-12 ">
+    <div class="col-md-6 ">Аргинин118 взаимодействует с фосфатами двух остатков.</div>
+    <div class="col-md-6 ">Два аспарагина (150 и 152) взаимодействуют с тиминами.</div>
+</div>
+<div class="col-md-12 ">
+    <div class="col-md-6 ">
+        <div id='jmolRes1'></div>
+    </div>
+    <div class="col-md-6 ">
+        <div id='jmolRes2'></div>
+    </div>
+</div>

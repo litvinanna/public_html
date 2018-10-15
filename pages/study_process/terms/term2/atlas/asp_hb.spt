@@ -1,0 +1,24 @@
+set echo top center
+font echo 15
+color echo white
+
+zap
+load=4UAV
+wireframe off
+ backbone 5
+color white
+cpk off
+select (asp101:a or glu105:a or ile97:a)
+center selected
+zoom 500
+wireframe 60
+cpk 130
+color cpk
+hbonds calculate
+measure range (glu105:a.n)(asp101:a.o)
+measure range (asp101:a.n)(ile97:a.o)
+set echo top center
+font echo 15
+color echo white
+echo Protein backbone with hydrogen bonds between asp101, glu105, ile97  (PDB ID: 4UAV)
+pause

@@ -1,0 +1,70 @@
+<script type="text/javascript-lazy">
+var Info = {
+    serverURL: "libs/js/jsmol/php/",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: 700,
+    height: 700,
+    color: "black",
+    deferApplet: true,
+    coverImage: "images/applet.png",
+    coverclickgo: "images/applet.png",
+    script: "script pages/study_process/terms/term2/pr2/pr2_script0.spt"
+};
+
+
+$(document).ready(function() {
+    $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+    $("#jmolStart1").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term2/pr2/pr2_script1.spt', 'Start script 1'));
+    $("#jmolStart2").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term2/pr2/pr2_script2.spt', 'Start script 2'));
+    $("#jmolStart3").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term2/pr2/pr2_script3.spt', 'Start script 3'));
+    $("#jmolStart4").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term2/pr2/pr2_script4.spt', 'Start script 4'));
+    $("#jmolStart5").html(Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term2/pr2/pr2_script5.spt', 'Start script 5'));
+    $("#jmolResume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+});
+</script>
+</head>
+<h1>Внутренности белков и макромолекулярных комплексов.</h1>
+<p>На этой странице представлены особенности структуры белка<sup>[1]</sup> и днк-белкового комплекса<sup>[2]</sup>.</p>
+<div id='jmol' style="float: left; margin: 20px;"> </div>
+<p>Для запуска программы нажмите на кнопку Start script. Для продолжения программы нажмите Resume.</p>
+<span style='font-size:90% ;'>
+<div class = 'key'><div id='jmolStart1' style='float:left;'></div>  <a href = 'pages/study_process/terms/term2/pr2/pr2_script1.spt'> [текст] </a>структура гидрофобного ядра</div></br>
+<div class = 'key'><div id='jmolStart2' style='float:left;'></div>  <a href = 'pages/study_process/terms/term2/pr2/pr2_script2.spt'> [текст] </a>плотность упаковки в гидрофобном ядре</div> </br>
+<div class = 'key'><div id='jmolStart3' style='float:left;'></div>  <a href = 'pages/study_process/terms/term2/pr2/pr2_script3.spt'> [текст] </a>взаимодействие ДНК и белка</div> </br>
+<div class = 'key'><div id='jmolStart4' style='float:left;'></div>  <a href = 'pages/study_process/terms/term2/pr2/pr2_script4.spt'> [текст] </a>белок и ДНК, большая и малая бороздка</div></br>
+<div class = 'key'><div id='jmolStart5' style='float:left;'></div>  <a href = 'pages/study_process/terms/term2/pr2/pr2_script5.spt'> [текст] </a>структура ДНК, акцепторы и доноры протонов</div></br>
+<div class = 'key'><div id='jmolResume' style='float:left;'></div></div>
+</span>
+<p></p>
+<div class="col-md-12">
+    <h2>Гидрофобное ядро</h2>
+    <p>
+        </br> С помощью сервиса CluD<sup>[3]</sup> была исследована структура гидрофобного ядра универсального белка стресса E<sup>[1]</sup> из бактерии
+        <i>Proteus mirabilis</i>. В <a href='pages/study_process/terms/term2/4wy2_clud.rsc'>результате</a> оказалось, что значимыми являются три ядра (599 атомов(красное), 20 (розовое), 19(оранжевое)). Ядро составляет около 26% всех атомов белка. Поверхность белка не содержит больших гидрофобных участков, скорее всего находится в цитоплазме. А гидрофобная поверхность нужна, чтобы прочнее взаимодействовать с другими гидрофобными структурами в гидрофильной среде (воде), например, чтобы заякориваться в бифосфолипидном слое мембраны, взаимодействовать с другими белками с такими же участками.</p>
+    <p>
+        </br> Выбран триптофан TRP143, входящий в состав гидрофобного ядра. Плотное покрытие образуют соседние атомы, которые расположены не далее 5Å. В пределах этой же группы атомов было исследовано среднее расстояние между несвязанными ковалентно атомами. В <a href='pages/study_process/terms/term2/pr2/pr2_info.xlsx'>результате</a> среднее растояние равно 4.40 Å. В большинстве случаев это расстояние между двумя углеродами (ван-дер-ваальсов радиус углерода 1.85Å, кислорода 1.4Å [4]). Молекула воды помещается, если расстояние между центрами больше 1.85*2 + 1.4*2 = 6.5Å. Поэтому в среднем в гидрофобном ядре молекулы H<sub>2</sub>O не умещаются.</p>
+    <h2>Взаимодействие с ДНК</h2>
+    <p>
+        </br> Человеческая ДНК-полимераза вставляет дезоксицитидин трифосфат напротив гуанидина[2]. Эта полимераза относится к типу η (eta), семейство Y. Она отличанется низкой производительностью, но может работать с поврежденной ДНК.
+    </p>
+    <p>Взаимодейтвие ДНК, РНК и белка является основой функционирования живой клетки. ДНК обычно хранит генетическую информацию, она реализуется через РНК в белки, при этом все процесссы регулируются различными способами, исходя из последовательности ДНК, при помощи белков, разных видов РНК, другими молекулами. По сути,во всём, что происходит с ДНК, завязаны белки. ДНК-зависимая-ДНК-полимеразы отвечают за синтез новой цепочки ДНК на матрице из ДНК. Есть другие полимеразы, с отличными матрицами и выходными молекулами. Наша полимераза относится к типу η (eta), семейство Y. Она отличанется низкой производительностью, но может работать с поврежденной ДНК.
+    </p>
+    <p>В нашем случае, значительная часть белка занята около активного центра, около сахаро-фосфатного остова.</p>
+    <h2>Структура ДНК</h2>
+    <p>
+        </br> Показана структура молекулы ДНК из комплекса [2]. Двойная спираль ДНК представляет собой две полинуклеотидные цепочки, соединенные водородными связями. При этом она не симметричная — на поверхности две бороздки разной ширины/глубины, малая и большая. Они раскрашены разными цветами.</p>
+    <p>В нашем случае, белок взаимодействует с сахаро-фосфатным остовом ДНК, а в активном центре — почти со всеми атомами (и с азотистыми основаниями). Это необходимо для распознования ДНК и селективного присоединения нуклеотида к цепочке.</p>
+    <p>
+        </br> В той же ДНК показаны доноры и акцепторы протонов в бороздках. Я думаю, по ним можно определить последовательность ДНК.
+    </p>
+</div>
+<div name="links" id="links" class="col-md-12">
+    <h2>Источники:</h2>
+    <ul>
+        <li><a href='http://www.rcsb.org/pdb/explore/explore.do?structureId=4wy2'>Go to the protein page</a></li>
+        <li><a href='http://www.rcsb.org/pdb/explore/explore.do?structureId=4yr3'>Go to the dna-complex page</a></li>
+        <li><a href='http://mouse.belozersky.msu.ru/npidb/cgi-bin/hftri.pl'>CluD</a></li>
+        <li><a href='http://www.chem.msu.su/rus/cryst/cryshist/vanderw.htm'>Ван-дер-ваальсовы радиусы атомов</a></li>
+    </ul>
+</div>

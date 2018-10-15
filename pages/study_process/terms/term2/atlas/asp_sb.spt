@@ -1,0 +1,45 @@
+set echo top center
+font echo 15
+color echo white
+
+
+
+zap
+load=3TX3
+wireframe off
+ backbone 5
+color white
+cpk off
+select (arg136:b or asp180:b)
+center selected
+zoom 500
+wireframe 60
+cpk 130
+color cpk
+measure range (arg136:b.nh2)(asp180:b.od1)
+set echo top center
+font echo 15
+color echo white
+echo Protein backbone with salt bridge  between arg136:b and asp180:b (PDB ID: 3TX3)
+pause
+
+zap
+load=2bkx
+wireframe off
+ backbone 5
+color white
+cpk off
+select (asp127:a or lys27:a)
+center selected
+zoom 500
+wireframe 60
+cpk 130
+color cpk
+measure range (lys27:a.nz)(asp127:a.od2)
+set echo top center
+font echo 15
+color echo white
+echo Protein backbone with salt bridge  between asp127:a and lys27:a (PDB ID: 2BKX)
+pause
+
+

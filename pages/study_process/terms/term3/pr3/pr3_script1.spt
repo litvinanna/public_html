@@ -1,0 +1,34 @@
+load "pages/study_process/terms/term3/pr3/1lrr.pdb"
+script "pages/study_process/terms/term3/pr3/pr3_define1.spt"
+cpk off; color structure
+set echo top left; font echo 18; color echo [xCCCCCC];
+echo DNA and protein
+pause 
+
+resume
+restrict dna
+center dna
+cartoon off; wireframe 50
+color cpk
+echo DNA
+pause
+
+resume
+select dna; color grey; cpk off
+select set1; color cpk; cpk 100
+echo O in sugar
+pause
+
+resume
+select dna; color grey; cpk off
+select set2; color cpk; cpk 100
+echo O in phosphate
+pause
+
+resume
+select dna; color grey; cpk off
+select set3; color blue; cpk 100
+echo N in base
+pause
+
+

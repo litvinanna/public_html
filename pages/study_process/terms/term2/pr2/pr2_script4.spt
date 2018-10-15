@@ -1,0 +1,24 @@
+zap
+load "pages/study_process/terms/term2/4yr3.rsc"
+set echo top left; font echo 20 sansserif plain; color echo [xFFEFD5];
+
+echo Dna, minor groove is pink, major is yellow
+restrict none
+select dna
+script pages/study_process/terms/term2/pr2_dna.rsc
+spacefill on
+zoom 150; center selected; color cpk
+select mjg; color yellow
+select mig; color pink
+pause
+
+resume
+echo Dna and protein
+select protein
+wireframe 0.2 on
+pause
+
+resume
+echo DNA contacting with protein is shown
+select within(5.0, protein) and dna
+color green

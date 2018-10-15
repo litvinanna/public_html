@@ -1,0 +1,128 @@
+Blast4-request ::= {
+  body queue-search {
+    program "blastp",
+    service "plain",
+    queries bioseq-set {
+      seq-set {
+        seq {
+          id {
+            local str "Query_340391"
+          },
+          descr {
+            user {
+              type str "CFastaReader",
+              data {
+                {
+                  label str "DefLine",
+                  data str ">tr|B4ETT2|B4ETT2_PROMH Universal stress protein E
+ OS=Proteus mirabilis (strain HI4320) GN=uspE PE=1 SV=1"
+                }
+              }
+            },
+            title "tr|B4ETT2|B4ETT2_PROMH Universal stress protein E
+ OS=Proteus mirabilis (strain HI4320) GN=uspE PE=1 SV=1"
+          },
+          inst {
+            repr raw,
+            mol aa,
+            length 316,
+            seq-data ncbieaa "MEKYQNLLVVIDPNQDDQPALRRAVYIVQRNGGRIKAFLPVYDLSYDM
+TTLLSPDERNAMRKGVINQKTAWIKQQARYYLEAGIQIDIKVIWHNRPYEAIIEEVITDKHDLLIKMAHQHDKLGSLI
+FTPLDWQLLRKCPAPVWMVKDKEWPEYGTIVVAANLSNEESYHDALNLKLIELTNDLSHRIQKDPDVHLLSAYPVAPI
+NIAIELPDFDPNLYNNALRGQHLIAMKELRQKFSIPEEKTHVKEGLPEQVIPQVCEELNAGIVVLGILGRTGLSAAFL
+GNTAEQLIDHIKCDLLAIKPDGFTCPITVDSDNE"
+          }
+        }
+      }
+    },
+    subject database "refseq_protein",
+    algorithm-options {
+      {
+        name "WordSize",
+        value integer 6
+      },
+      {
+        name "WordThreshold",
+        value integer 21
+      },
+      {
+        name "EvalueThreshold",
+        value cutoff e-value { 1, 10, 1 }
+      },
+      {
+        name "UngappedMode",
+        value boolean FALSE
+      },
+      {
+        name "PercentIdentity",
+        value real { 0, 10, 0 }
+      },
+      {
+        name "HitlistSize",
+        value integer 5000
+      },
+      {
+        name "EffectiveSearchSpace",
+        value big-integer 0
+      },
+      {
+        name "DbLength",
+        value big-integer 0
+      },
+      {
+        name "WindowSize",
+        value integer 40
+      },
+      {
+        name "SegFiltering",
+        value boolean FALSE
+      },
+      {
+        name "MaskAtHash",
+        value boolean FALSE
+      },
+      {
+        name "MatrixName",
+        value string "BLOSUM62"
+      },
+      {
+        name "GapOpeningCost",
+        value integer 11
+      },
+      {
+        name "GapExtensionCost",
+        value integer 1
+      },
+      {
+        name "CompositionBasedStats",
+        value integer 2
+      },
+      {
+        name "SmithWatermanMode",
+        value boolean FALSE
+      }
+    },
+    program-options {
+      {
+        name "EntrezQuery",
+        value string "txid2 [ORGN]"
+      }
+    },
+    format-options {
+      {
+        name "Web_JobTitle",
+        value string "tr|B4ETT2|B4ETT2_PROMH Universal stress"
+      },
+      {
+        name "Web_OrganismName",
+        value string "Bacteria (taxid:2)"
+      },
+      {
+        name "Web_ShortQueryAdjust",
+        value boolean TRUE
+      }
+    }
+  }
+}
+
+

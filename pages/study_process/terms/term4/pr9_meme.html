@@ -1,0 +1,362 @@
+<div class='col-md-12'>
+	<p><em>Работа выполнена с <a href='http://kodomo.fbb.msu.ru/~emadevich/'>Эмиром Радкевичем</a></em></p>
+	
+	<h2>Определение биологической роли определенного транскрипционного фактора в бактерии</h2>
+	
+	<p><a href='https://en.wikipedia.org/wiki/Repressor_lexA'>LexA</a> &ndash; транскрипционный репрессор, который 
+	подавляет гены SOS-ответа. Они отвечают за репарацию повреждений ДНК, которые произошли во время клеточного
+	 цикла и не были устранены. Также гены SOS-ответа учавствуют в репарации повреждений при высоком уровне мутагенеза.
+	</p>
+	
+	<h3>MEME</h3>
+	</div>
+	<div class='col-md-12'>
+<p>Для последовательностей сайтов связывания фактора LexA бактерии <em>Bifidobacterium longum NCC2705</em> 
+с помощью программы <a href='http://meme-suite.org/tools/meme'>MEME</a> был найден мотив связывания.
+Профиль отражен логотипом на рис.1, результаты работы MEME &ndash; в таб.1.
+</p>
+<p>
+Информационное содержание показывает качество мотива. Его значение растет с увеличением числа
+консервативных позиций, при этом пропорционально длине мотива.
+</p>
+<p>
+<a href='pages/study_process/terms/term4/pr9/meme-pwm.txt'>Таблица PWM</a> для каждоого  варианта буквы (A, T, G, C) в позиции показывает 
+логарифм некоторой величины. Эта величина равна сумме отношения наблюдаемой вероятности буквы в данной позиции на ожидаемую плюс так называемый псевдокаунт. 
+Псевдокаунт &ndash; малое число, которое прибавляется ко всем отношениям, так как логарифм нуля не определен.
+</p>
+<p>Паттерн данного мотива: <em>T&nbsp;S&nbsp;G&nbsp;H&nbsp;A&nbsp;C&nbsp;A&nbsp;D&nbsp;V&nbsp;Y&nbsp;G&nbsp;T&nbsp;W&nbsp;Y&nbsp;K&nbsp;W</em></p>
+
+</div>
+<div class='col-md-6'>
+<figure style=''>
+            <figcaption>Рис.1 Лого, полученное в MEME</figcaption>
+            <img src='pages/study_process/terms/term4/pr9/meme-logo.png' style='' width = 100%>
+        </figure>
+        </div>
+<div class='col-md-6'>
+         <table class='table'>
+  <caption>Таб.1 Параметры мотива в MEME</caption>
+  <tbody class='small'>
+  <tr>
+	  <td>E-value</td>
+	  <td>3.0e-43</td>
+	  </tr>
+   <tr>
+	  <td>Длина</td>
+	  <td>16</td>
+	  </tr>
+   <tr>
+	  <td>Информационное содержание</td>
+	  <td>24.9</td>
+	  </tr>
+  </tbody></table>
+    
+        </div>
+      
+  <div class='col-md-12 small_empty_block'></div>
+  <div class='col-md-12'>
+ <p> Также для поиска мотива была использована программа <a href='http://autosome.ru/chipmunk/'>ChipMunk</a>.
+ В поле Speed mode была выбрана опция presice. Профили, полученный в разных программах, не отличаются (рис.2). 
+ </p>
+ 
+ <switch class ='col-md-8'>
+    <a class="btn btn-success" ng-click="setCurrent('1')" ng-if="isCurrent('default')">Результаты ChipMunk</a>
+	<a class="btn btn-default" ng-click="setCurrent('default')" ng-if="isCurrent('1')">Cкрыть</a>
+<figure ng-if="isCurrent('1')">
+	<caption>Рис.2 Результаты работы ChipMunk</caption>
+            <img src='pages/study_process/terms/term4/pr9/chipmonk.png' width = 100%>
+        </figure>    
+</switch>
+  </div>     
+<div class='col-md-12'>
+<h3>TOMTOM</h3>
+С помощью сервиса 
+<a href='http://meme-suite.org/tools/tomtom'>TOMTOM</a> были найдены похожие мотивы связывания в других бактериях в базе данных геномов 
+бактерий RegTransBase.
+Находок с E-value меньше единицы оказалось две.
+</div>
+<div class='col-md-6'>
+	  <table class='table'>
+  <caption>Таб.2.1 Первая находка</caption>
+  <tbody class='small'>
+	  <tr>
+		  <td align=right>Название ТФ</td>
+		  <td> PsrA_Proteobacteria</td>
+		  </tr>
+	  <tr>
+		  <td align=right>E-value</td>
+		  <td>5.43e-03</td>
+		  </tr>
+	  <tr>
+		  <td align=right>P-value</td>
+		  <td>3.85e-05</td>
+		  </tr>
+	  <tr>
+		  <td align=right>Наложение</td>
+		  <td>16</td>
+		  </tr>
+	  <tr>
+		  <td align=right>Сдвиг</td>
+		  <td>2</td>
+		  </tr>
+	  <tr>
+		  <td align=right>Цепочка</td>
+		  <td>прямая</td>
+		  </tr>
+
+	</tbody>
+  </table>
+  
+  <p>
+  </p>
+	</div>
+<div class='col-md-6'>
+	<figure style=''>
+            <figcaption>Рис.2.1 Логотип первой находки</figcaption>
+            <img src='pages/study_process/terms/term4/pr9/logo_bact1.png' style='' width = 100%>
+        </figure>
+        
+  <table>
+  <caption></caption>
+  <tbody>
+	</tbody>
+  </table>
+        </div>
+        
+ <div class='col-md-12 small_empty_block'></div>
+<div class='col-md-6'>
+	  <table class='table'>
+  <caption>Таб.2.2 Вторая находка</caption>
+  <tbody class='small'>
+	  <tr>
+		  <td align=right>Название ТФ</td>
+		  <td>RSc0472_Burkholderiales</td>
+		  </tr>
+	  <tr>
+		  <td align=right>E-value</td>
+		  <td> 	1.81e-02</td>
+		  </tr>
+	  <tr>
+		  <td align=right>P-value</td>
+		  <td>1.28e-04</td>
+		  </tr>
+	  <tr>
+		  <td align=right>Наложение</td>
+		  <td>16</td>
+		  </tr>
+	  <tr>
+		  <td align=right>Сдвиг</td>
+		  <td>0</td>
+		  </tr>
+	  <tr>
+		  <td align=right>Цепочка</td>
+		  <td>обратная комплементарная</td>
+		  </tr>
+
+	</tbody>
+  </table></div>
+<div class='col-md-6'>
+<figure style=''>
+            <figcaption>Рис.2.2 Логотип второй находки</figcaption>
+            <img src='pages/study_process/terms/term4/pr9/logo_bact2.png' style='' width = 100%>
+        </figure>
+        </div>
+         <div class='col-md-12'>
+         
+         <p>Результаты TOMTOM &ndash; таблицы <a href='pages/study_process/terms/term4/pr9/tomtom-1.txt'>PWM</a> для находок.</p>
+         </div>
+         
+        <div class='col-md-12 small_empty_block'></div>
+       <div class='col-md-6'>
+		   <p>
+       Первая находка имеет бОльшую длину, чем наш мотив. В целом находки отличаются достаточно сильно, что видно из профилей (рис.2.1-2) и подтверждает высокий E-value.
+       </p><p>В середине всех мотивов наблюдается 2-4 менее консервативные позиции, а по краям &ndash; более консервативные. 
+       При этом было замечено, что мотив связывания LexA является палиндромом. 
+       </p><p>Мы предположили, что транскрипционный фактор состоит из двух
+       симметричных субъединиц, которые связываются с ДНК рядом. 
+       </p>
+       <p>
+       На рис.3 показана структура LexA из бактерии <em>Escherichia coli</em> (PDB ID: 3jsp). 
+       Видно, что ТФ является гомодимером.
+       </p>
+       </div>
+       <div class='col-md-6'>
+<figure style=''>
+            <figcaption>Рис.3. Структура LexA</figcaption>
+            <img src='pages/study_process/terms/term4/pr9/3jsp.png' style='' width = 100%>
+        </figure>
+        </div>
+<div class='col-md-12'>
+<h3>FIMO</h3>
+<p>Был проведен поиск мотива при помощи программы <a href='http://meme-suite.org/doc/fimo.html?man_type=web'>FIMO</a>. Была выбрана база данных Upstream Sequences: Prokaryotic и запись Bifidobacterium longum NCC2705. Также для 
+разумного ограничения числа находок порог p-value был установлен 10<sup>-8</sup>. 
+</p><p>Результаты приведены в таб.3. В первой колонке приведены идентификаторы генов, экспрессия которых предположительно регулируется LexA.</p>
+<p>Для бактерий в данной программе существует две базы данных &ndash; Upstream Database и Genbank. 
+</p>
+<p>В Upstream db лежат только последовательности 
+около промотора. Для мотива с относительно небольшим информационным содержанием (как у нас) по всему геному найдется очень много совпадений. При этом известно, 
+что чаще всего транскрипционные факторы связываются с ДНК в районе промотора. Поэтому поиск по полному геному нецелесообразен, так как он будет долгим и мы получим много лишнего мусора.
+ Если же искать по базе Upstream sequences, то мусора будет меньше и более вероятно будут найдены действительно участки связывания транскрипционного фактора.
+ </p>
+
+<table class='table col-s-12'>
+  <caption>Таб.3 Результаты FIMO</caption>
+  <tbody class='small'>
+<tr><th>sequence_name</th><th>start</th><th>stop</th><th>strand</th><th>score</th><th>p-value</th><th>q-value</th><th>matched_sequence</th></tr>
+<tr><td>NP_696286.1|ahcY</td><td>43</td><td>58</td><td>-</td><td>29.6481</td><td>1.15e-10</td><td>7.24e-05</td><td>TCGAACAAATGTTCGA</td></tr>
+<tr><td>NP_696285.1|BL1114</td><td>101</td><td>116</td><td>+</td><td>29.6481</td><td>1.15e-10</td><td>7.24e-05</td><td>TCGAACAAATGTTCGA</td></tr>
+<tr><td>NP_696174.1|BL1002</td><td>31</td><td>46</td><td>+</td><td>28.2593</td><td>2.67e-10</td><td>0.000112</td><td>TCGAACAGATGTTCGA</td></tr>
+<tr><td>NP_696578.1|recA</td><td>410</td><td>425</td><td>+</td><td>27.6574</td><td>6.21e-10</td><td>0.000194</td><td>TCGAACAAATGTTCGT</td></tr>
+<tr><td>NP_695909.1|ruvA</td><td>8</td><td>23</td><td>-</td><td>27.463</td><td>7.73e-10</td><td>0.000194</td><td>TCGAACAACTGTTCGA</td></tr>
+<tr><td>NP_696474.1|lexA</td><td>15</td><td>30</td><td>+</td><td>26.6667</td><td>1.21e-09</td><td>0.000217</td><td>TCGAACAGATGTTCTA</td></tr>
+<tr><td>NP_696475.1|BL1311</td><td>121</td><td>136</td><td>-</td><td>26.6667</td><td>1.21e-09</td><td>0.000217</td><td>TCGAACAGATGTTCTA</td></tr>
+<tr><td>NP_695260.1|BL0029</td><td>44</td><td>59</td><td>-</td><td>26.6481</td><td>1.41e-09</td><td>0.000221</td><td>TCGAACAGACGTTCGA</td></tr>
+<tr><td>NP_696475.1|BL1311</td><td>52</td><td>67</td><td>-</td><td>25.5185</td><td>3.08e-09</td><td>0.000387</td><td>TCGAACAGATGTTTGA</td></tr>
+<tr><td>NP_696474.1|lexA</td><td>84</td><td>99</td><td>+</td><td>25.5185</td><td>3.08e-09</td><td>0.000387</td><td>TCGAACAGATGTTTGA</td></tr>
+<tr><td>NP_696174.1|BL1002</td><td>31</td><td>46</td><td>-</td><td>24.9074</td><td>5.37e-09</td><td>0.000614</td><td>TCGAACATCTGTTCGA</td></tr>
+<tr><td>NP_695885.1|uvrA</td><td>163</td><td>178</td><td>+</td><td>24.8704</td><td>6.04e-09</td><td>0.000633</td><td>TCGAACAAGCGTTCGA</td></tr>
+
+	</tbody>
+  </table>
+  
+  
+  <h3>STRING</h3>
+  <p>Мы предположили, что часть генов, которые регулируются одним ТФ, входит в консервативное геномное окружение.
+
+ Для этого мы использовали базу данных <a href='http://string-db.org/'>STRING</a>.
+  Результат приведен на рис.4.
+  </p>
+  
+  
+  <switch class ='col-md-12'>
+    <a class="btn btn-success" ng-click="setCurrent('2')" >Показать геномное окружение</a>
+	<a class="btn btn-default" ng-click="setCurrent('default')" >Cкрыть</a>
+  <div>
+<figure ng-if="isCurrent('2')">
+            <figcaption>Рис.4 </figcaption>
+            <img src='pages/study_process/terms/term4/pr9/string_hires_image.png' style='' width = 50%>
+     
+            <img src='pages/study_process/terms/term4/pr9/legend.png' style='' width = 50%>
+        </figure>
+        </div>
+     </switch>  
+      
+        <p> Консервативность геномного окружения можно определить по совместной встречаемости в геноме в 
+        различных таксонах, а также по паттерну расположения. 
+        Гены, которые встречаются рядом в множестве таксонов и образуют консервативное 
+        геномное окружение, выделены в таб.4 зелёным цветом. Также в таб.4 показаны функции найденных генов.
+        </p>
+        
+        
+        
+        
+        
+         <switch class ='col-md-12'>
+    <a class="btn btn-success" ng-click="setCurrent('3')" >Показать совместную встречаемость</a>
+    <a class="btn btn-success" ng-click="setCurrent('4')" >Показать совместное расположение</a>
+	<a class="btn btn-default" ng-click="setCurrent('default')" >Cкрыть</a>
+ 
+<figure ng-if="isCurrent('3')">
+            <figcaption>Рис.5 Совместная встречаемость </figcaption>
+            <img src='pages/study_process/terms/term4/pr9/cooccur.png' width=60% >
+     </figure >
+     <figure ng-if="isCurrent('4')">
+		 <figcaption>Рис.6 Совместное расположение</figcaption>
+            <img src='pages/study_process/terms/term4/pr9/neighbor.png' width=80% >
+        </figure>
+      
+     </switch> 
+        
+ 
+        
+<table class='table col-s-12'>
+  <caption>Таб.4  Функции найденных генов</caption>
+  <tbody class='small'>
+
+<tr><th>Ген</th><th>Функции</th></tr>
+<tr><td>achY</td><td>катализирует образование L-гомоцистиена из S-аденозил-L-гомоцистеина</td></tr>
+<tr class='success'><td>BL1114                  </td><td>COG family: нуклеотидилтрасферазы/ДНК полимеразы, 
+                     вовлеченные в репарацию ДНК</td></tr>
+<tr class='success'><td>BL1002                  </td><td>COG family: транскрипционные репрессоры SOS-ответа 
+                     (RecA-mediated аутопептидазы)</td></tr>
+<tr><td>recA                </td><td>COG family: транскрипционные репрессоры SOS-ответа 
+                     (RecA-mediated аутопептидазы)</td></tr>
+<tr><td>ruvA                 </td><td>енолазы; катализирует образование   
+                     фосфоенолпирувата из 2-фосфо-D-глицерата во процессе
+                     гликолиза</td></tr>
+<tr><td>lexA                  </td><td>Уменьшает число генов, вовлеченных в SOS-ответ</td></tr>
+
+<tr><td>BL0029                  </td><td>COG family: неохарактеризованная АТФe-аза связанная с 
+                     хеликазной субъединицей резольвазы структуры Холедея
+                     PFAM_ID: AAA</td></tr>
+<tr><td>uvrA</td><td>UvrABC восстановительная система катализирует узнавание
+                     и процессинг сшивания ДНК.UvrA это АТФ-аза и ДНК-связывающий белок.
+                     Узнающий повреждения комплекс состоит из
+                     двух uvrA и двух uvrB субъединиц.
+                     </td></tr>
+	</tbody>
+  </table>
+
+<p>
+К сожалению, ни одного метаболического пути в KEGG, в который бы входили несколько найденных белков, не нашлось.
+</p>
+</div>
+<div class='col-md-12'>
+<h2>Метилирование</h2>
+<p>
+С помощью программы fuzznuc в геноме <em>Bifidobacterium longum NCC2705</em> были найдены все сайты связывания ТФ. 
+Совпадающие с ранее предсказанными FIMO сайты выделены в таб.5.
+</p>
+<table class='table col-s-12'>
+  <caption>Таб.5 Результаты fuzznuc</caption>
+  <tbody class='small'>
+<tr><td>Start</td><td>End </td><td>Strand    </td><td>Pattern            </td><td>Sequence </td><td>Gene ID     </td><td>Protein ID </td></tr>
+<tr><td>  94478 </td><td>  94493  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TGGTACAGCTGTACTT </td><td>                   </td><td>              </td></tr>
+<tr><td> 199107 </td><td> 199122  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAGCCGTTCTT </td><td>                   </td><td>              </td></tr>
+<tr class='success'><td> 325839 </td><td> 325854  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAAATGTTCGT </td><td>     NP_696578.1   </td><td>    recA      </td></tr>
+<tr><td> 347468 </td><td> 347483  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGTACATATGTACGA </td><td>                   </td><td>              </td></tr>
+<tr class='success'><td> 476649 </td><td> 476664  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAAGCGTTCGA </td><td>     NP_695885.1   </td><td>    uvrA      </td></tr>
+<tr><td> 560160 </td><td> 560175  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAAACGTTCGA </td><td>                   </td><td>              </td></tr>
+<tr><td> 652433 </td><td> 652448  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TGGTACATCTGTTCGA </td><td>                   </td><td>              </td></tr>
+<tr class='success'><td> 822397 </td><td> 822412  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAGATGTTCGA </td><td>     NP_696174.1   </td><td>    BL1002    </td></tr>
+<tr><td> 872535 </td><td> 872550  </td><td>     + </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGTACAGGTGTTCGA </td><td>                   </td><td>              </td></tr>
+<tr class='success'><td>  36017 </td><td>  36032  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAGACGTTCGA </td><td>     NP_695260.1   </td><td>    BL0029    </td></tr>
+<tr><td> 187452 </td><td> 187467  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAGATGTTTGA </td><td>                   </td><td>              </td></tr>
+<tr><td> 187485 </td><td> 187500  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TGGCACAAACGTTCGA </td><td>                   </td><td>              </td></tr>
+<tr><td> 187505 </td><td> 187520  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAACTGTTCTT </td><td>                   </td><td>              </td></tr>
+<tr class='success'><td> 187521 </td><td> 187536  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAGATGTTCTA </td><td>     NP_696475.1   </td><td>    BL1311    </td></tr>
+<tr><td> 347468 </td><td> 347483  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGTACATATGTACGA </td><td>                   </td><td>              </td></tr>
+<tr class='success'><td> 508458 </td><td> 508473  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAACTGTTCGA </td><td>     NP_695909.1   </td><td>    ruvA      </td></tr>
+<tr><td> 606207 </td><td> 606222  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TGGTACAGCTGTACGA </td><td>                   </td><td>              </td></tr>
+<tr><td> 681741 </td><td> 681756  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAGGCGTACGT </td><td>                   </td><td>              </td></tr>
+<tr><td> 822397 </td><td> 822412  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACATCTGTTCGA </td><td>                   </td><td>              </td></tr>
+<tr class='success'><td> 955184 </td><td> 955199  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGAACAAATGTTCGA </td><td>     NP_696286.1   </td><td>    ahcY      </td></tr>
+<tr><td>1924546 </td><td>1924561  </td><td>     - </td><td>pattern:TSGHACADVYGTWYKW   </td><td>TCGCACAGGCGTACGA </td><td>                   </td><td>              </td></tr>   
+
+
+  
+  </tbody></table>
+  <p>
+  В целом fuzznuc сработал очень неплохо. Из всех сайтов связывания, предсказанных FIMO, всего один, находящийся в гене, кодирующем
+белок с идентификатором BL1114, не был предсказан. Все же остальные предсказания полностью совпали с выдачей fuzznuc. 
+В таблице 5 есть множество ячеек, которые не выделены зеленым. Это легко объясняется тем фактом, что выдача FIMO была отфильтрована 
+по пороговому значению P-value < e-8. Другими словами те ячейки, которые не выделены зеленым, имеют пару с выдачей FIMO, но мы этого
+не видим из-за установления порогового значения по P-value в выдаче FIMO.
+И правда, если мы поставим пороговое значение P-value повыше, то в выдаче FIMO появтяс нове предсказания, которые будут совпадать
+с еще не выделенными зеленым цветом ячейками таблицы 5.
+
+  </p>
+ </div> 
+ <div class='col-md-12 small_empty_block'></div>
+ <div class='col-md-6'>
+<figure style=''>
+            <figcaption>Рис.7 Результаты Rebase</figcaption>
+            <img src='pages/study_process/terms/term4/pr9/rebase.png' style='' width = 100%>
+        </figure>
+    
+  
+</div>
+<div class='col-md-6'>
+<p>На рисунке 7 представлена выдача программы REBASE для нашей бактерии. Всего было найдено три ДНК метилтрансферазы. Две из них,
+564P и 1473P, относятся ко II типу, а 1782P - к I типу. При этом для 564P известен сайт рестрикции - GATC.</p>
+</div>

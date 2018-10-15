@@ -1,0 +1,9 @@
+load "pages/study_process/terms/term3/pr3/1lrr.pdb"
+select all
+cartoon off; cpk off; color structure
+wireframe 10; backbone 30
+select asn150 or asn152
+center selected
+color cpk; wireframe 100
+select within (2.5,[T]7:B.C2 or [T]7:B.C5 or [T]7:C.C2 or[T]7:C.C5)
+color cpk; wireframe 100

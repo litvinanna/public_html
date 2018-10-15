@@ -1,0 +1,45 @@
+set echo top center
+font echo 15
+color echo white
+for (var i = 1; i <= 100; i++ ) {
+
+load $[NH3+]C(CC(=O)O)C(=O)O
+script pages/study_process/terms/term2/atlas/aspartic_labels.spt
+set echo top center
+font echo 15
+color echo white
+echo pH<1,88
+pause
+
+resume
+zap
+load $[NH3+]C(CC(=O)O)C(=O)[O-]
+script pages/study_process/terms/term2/atlas/aspartic_labels.spt
+set echo top center
+font echo 15
+color echo white
+echo 1,88<=pH<3,65
+pause
+
+resume
+zap
+load $[NH3+]C(CC(=O)[O-])C(=O)[O-]
+script pages/study_process/terms/term2/atlas/aspartic_labels.spt
+set echo top center
+font echo 15
+color echo white
+echo 3,65<=pH<9,6
+pause
+
+resume
+zap
+load $NC(CC(=O)[O-])C(=O)[O-]
+script pages/study_process/terms/term2/atlas/aspartic_labels.spt
+set echo top center
+font echo 15
+color echo white
+echo ph>=9,6
+pause
+resume
+}
+

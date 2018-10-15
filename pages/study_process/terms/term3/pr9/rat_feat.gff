@@ -1,0 +1,68 @@
+##gff-version 3
+##sequence-region  1 455729
+#!Date 2016-11-08
+#!Type DNA
+#!Source-version EMBOSS 6.6.0.0
+	EMBL	databank_entry	1	455729	.	+	.	ID=.1;organism=Rattus norvegicus;mol_type=genomic DNA;strain=mixed;db_xref=taxon:10116;chromosome=1;sex=pooled males and females;note=pooled female animals of strain BN/SsNHsdMCW plus one male of strain SHR (also known as SHR-Akr)
+	EMBL	sequence_feature	1187	1236	.	+	.	ID=.2;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	1890	1943	.	+	.	ID=.3;estimated_length=54;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	8283	11374	.	+	.	ID=.4;estimated_length=3092;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	17453	17504	.	+	.	ID=.5;estimated_length=52;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	18564	18588	.	+	.	ID=.6;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	26139	27938	.	+	.	ID=.7;estimated_length=1800;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	33190	33239	.	+	.	ID=.8;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	34138	34169	.	+	.	ID=.9;estimated_length=32;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	42358	44939	.	+	.	ID=.10;estimated_length=2582;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	49798	49822	.	+	.	ID=.11;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	50790	50846	.	+	.	ID=.12;estimated_length=57;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	51355	51404	.	+	.	ID=.13;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	51932	57284	.	+	.	ID=.14;estimated_length=5353;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	57803	57852	.	+	.	ID=.15;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	66941	68026	.	+	.	ID=.16;estimated_length=1086;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	68769	68818	.	+	.	ID=.17;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	71213	75050	.	+	.	ID=.18;estimated_length=3838;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	75559	75583	.	+	.	ID=.19;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	STS	81718	81889	.	+	.	ID=.20;standard_name=d1rat245;db_xref=UniSTS:121480
+	EMBL	sequence_feature	83015	83041	.	+	.	ID=.21;estimated_length=27;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	STS	83569	83783	.	+	.	ID=.22;standard_name=d1rat245;db_xref=UniSTS:121480
+	EMBL	sequence_feature	83962	83986	.	+	.	ID=.23;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	87871	87901	.	+	.	ID=.24;estimated_length=31;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	108629	108678	.	+	.	ID=.25;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	113180	113229	.	+	.	ID=.26;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	144278	144327	.	+	.	ID=.27;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	152321	152370	.	+	.	ID=.28;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	179908	179932	.	+	.	ID=.29;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	223393	223442	.	+	.	ID=.30;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	234117	234166	.	+	.	ID=.31;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	253552	253601	.	+	.	ID=.32;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	255082	255131	.	+	.	ID=.33;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	273597	273646	.	+	.	ID=.34;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	296476	299519	.	+	.	ID=.35;estimated_length=3044;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	300218	301227	.	+	.	ID=.36;estimated_length=1010;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	303451	303500	.	+	.	ID=.37;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	309343	309392	.	+	.	ID=.38;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	324767	324791	.	+	.	ID=.39;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	340280	340329	.	+	.	ID=.40;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	347812	348119	.	+	.	ID=.41;estimated_length=308;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	348683	348732	.	+	.	ID=.42;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	350591	351670	.	+	.	ID=.43;estimated_length=1080;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	352384	358793	.	+	.	ID=.44;estimated_length=6410;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	359457	359509	.	+	.	ID=.45;estimated_length=53;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	379796	379845	.	+	.	ID=.46;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	380864	380913	.	+	.	ID=.47;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	397854	397903	.	+	.	ID=.48;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	398528	411214	.	+	.	ID=.49;estimated_length=12687;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	414644	414693	.	+	.	ID=.50;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	415943	415996	.	+	.	ID=.51;estimated_length=54;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	416508	416567	.	+	.	ID=.52;estimated_length=60;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	417789	417844	.	+	.	ID=.53;estimated_length=56;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	425525	425549	.	+	.	ID=.54;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	428338	428387	.	+	.	ID=.55;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	428935	428984	.	+	.	ID=.56;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	429797	429827	.	+	.	ID=.57;estimated_length=31;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	430633	440643	.	+	.	ID=.58;estimated_length=10011;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	449793	449842	.	+	.	ID=.59;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	450734	450783	.	+	.	ID=.60;estimated_length=50;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	451379	451411	.	+	.	ID=.61;estimated_length=33;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	451664	451688	.	+	.	ID=.62;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends
+	EMBL	sequence_feature	454664	454688	.	+	.	ID=.63;estimated_length=25;note=*gap_type: within scaffold;note=*linkage_evidence: paired-ends

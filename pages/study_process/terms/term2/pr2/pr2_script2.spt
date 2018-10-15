@@ -1,0 +1,31 @@
+zap
+load "pages/study_process/terms/term2/4wy2.rsc"
+
+set echo top left; font echo 20 sansserif plain; color echo [xFFEFD5];
+echo Tryptophan in hydrophobic core
+restrict none
+define myresidue 143
+center myresidue
+select myresidue
+spacefill on
+color green
+zoom 300; rotate best
+pause
+
+resume
+echo Tryptophan and residues within 7 Å
+select within(7.0, myresidue) and not myresidue and protein
+select within(groups, selected)
+cpk 20 on
+wireframe 0.1 on
+pause
+
+resume
+for (var i = 1; i<=7; i++) {
+select within(@{i}, myresidue) and not myresidue
+spacefill on
+echo @{'Tryptophan and nearby atoms within ' + i + ' Å'}
+pause
+resume 
+}
+select 134

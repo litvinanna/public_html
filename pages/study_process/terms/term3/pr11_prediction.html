@@ -1,0 +1,129 @@
+
+	<div class='col-md-12'>	<h2>Предсказание генов прокариот</h2></div>
+	<div class='col-md-8'>
+	<p>Исследовалась плазмида <a href='https://www.ncbi.nlm.nih.gov/nuccore/1033685137/'>CP012607</a> <i>Ralstonia insidiosa</i> strain FC1138 plasmid. 
+	<a href='https://en.wikipedia.org/wiki/Ralstonia_insidiosa'><i>Ralstonia insidiosa</i></a> — грам-отрицательная бактерия окружающей среды</p>
+	
+	</div>
+	<div class='col-md-4'>	
+	
+	<table class = 'table table-bordered'>
+		<caption>Таб.1. Характеристики плазмиды</caption>
+		<tr><td>Размер</td><td>50765 bp</td></tr>
+		<tr><td>Количество генов</td><td>61</td></tr>
+		<tr><td>Количество белков</td><td>61</td></tr>
+		</table>
+		</div>
+
+		
+<div class='col-md-12'>
+	<p>Последовательность плазмиды и таблица оссобеностей были получены с помощью команды:
+	<pre>seqret embl:CP012607 -feature true -offormat2 gff -ofname2 cp012607.gff -auto</pre>
+	<ol>
+		<li>-feature true 'включает' скачаивание таблицы особенностей</li>
+		<li>-offormat2 задает формат выходной таблицы особенностей</li>
+		<li>-ofname2 задает имя выходной таблицы особенностей</li>
+		<li>-auto позволяет задать остальные параметры по умолчанию (имя самой входной последовательности)</li>
+	</ol></p>
+	<p>Prodigal запускался с помощью команды:
+	<pre>prodigal -i cp012607.fasta -f sco -o pred.sco</pre>
+	<ol>
+		<li>-i задает входную последовательность</li>
+		<li>-f задает формат выходных данных о предсказаниии</li>
+		<li>-o задает имя выходного файла</li></ol></p>
+	<p>Данные о кодирующих последовательностях обрабатывалсь с помощью python-скрипта <a href='pages/study_process/terms/term3/pr11/script_pr11.py'>[py]</a>.
+	Он сравнивал файл с таблицей особенностей <a href='pages/study_process/terms/term3/pr11/cp012607.gff'>[gff]</a> из embl и 
+	файл, полученный Prodigal <a href='pages/study_process/terms/term3/pr11/pred.sco'>[sco]</a>. </p>
+	<pre>python script_pr11.py  cp012607.gff pred.sco </pre>
+	</div>
+<div class='col-md-6'>
+<table class='table table-bordered'>
+	<caption>Таб.2.Результаты предсказания</caption>
+<tr><td>Гены</td><td>Число</td><td>Процент от аннотированных</td></tr>
+<tr><td>одинаковые      </td><td>39</td><td> 	63.9%</td></tr>
+<tr><td>совпадает N     </td><td>0</td><td>	0.0% </td></tr>
+<tr><td>совпадает C     </td><td>18</td><td> 	29.5%</td></tr>
+<tr><td>не предсказаны	</td><td>4 </td><td>	6.6% </td></tr>
+<tr><td>неверно предсказаны</td><td>12</td><td> 	17.4% (от всех предсказанных)</td></tr>
+
+	</table>
+	</div>
+	<div class='col-md-6'>
+	<figure><figcaption>Рис.1.Результаты предсказания</figcaption><img src='pages/study_process/terms/term3/pr11/pie_chart1.png' width=100%></figure></div>
+	
+	<div class='col-md-12'>
+	<p>Результаты предсказания и реальная аннотация плазмиды сравнены в таб.1. и рис.1. Большинство генов предсказаны правильно - 64%, не найдены 7%.
+	Треть предсказанных белков имеет неверно определенный N-конец, то есть начало трансляции, а вот белков с неверно определенным С-концом нет. Это может быть связано с тем, что Prodigal учитывает не все возможные старт-кодоны. 
+	Также не все старт (или стоп) кодоны "работают". Трансляция и транскрипция зависят от многих других факторов, поэтому данный кодон может вообще не попасть в РНК, либо оказаться внутри неё, но не влиять на трансляцию.</p>
+	<p>С помощью <a href='pages/study_process/terms/term3/pr11/script_pr11_mod.py'>модифицированого скрипта</a> были найдены гены, у которых был неверно предсказан С-конец. Были рассмотрены два случая. Флажками start и end были обначены начало и конец предсказанного гена.</p>
+	
+	</div>
+		<div class='col-md-12 small_empty_block'></div>
+		<div class='col-md-12'><p>В первом случае (рис.1) реальный ген оказался короче. Он предположительно кодирует <a href='https://www.ncbi.nlm.nih.gov/protein/ANH77064'>белок</a> элонгации транскрипции длиной 217 аминокислот. Для записи можно быстро прогнать blast.
+	Находок много, и они очень хорошие, что говорит о правильности аннотированного гена.</p></div>
+		<div class='col-md-6'>
+		<figure><figcaption>Рис.1-1</figcaption><img src='pages/study_process/terms/term3/pr11/gene1.png' width=100%></figure></div>
+		</div>
+		<div class='col-md-3'>
+		<figure><figcaption>Рис.1-2. Начальный кодон ATG</figcaption><img src='pages/study_process/terms/term3/pr11/gene1-1.png' width=100%></figure></div>
+		</div>
+		<div class='col-md-3'>
+		<figure><figcaption>Рис.1-3. Завышенное начало</figcaption><img src='pages/study_process/terms/term3/pr11/gene1-2.png' width=100%></figure></div>
+		</div>
+		<div class='col-md-12'><figure><figcaption>Рис.1-4. Blast</figcaption><div style='height: 200px; overflow-y:scroll'><img src='pages/study_process/terms/term3/pr11/list-1.png' width=100%></div></figure></div>
+		<div class='col-md-12 small_empty_block'></div>
+		<div class='col-md-12'><p>В втором случае (рис.2) реальный ген оказался длинее. Он кодирует <a href='https://www.ncbi.nlm.nih.gov/protein/ANH77028.1'>bacterial conjugation TrbI-like family protein</a>.</p></div>
+		<div class='col-md-6'>
+		<figure><figcaption>Рис.2-1</figcaption><img src='pages/study_process/terms/term3/pr11/gene2.png' width=100%></figure></div>
+		</div>
+		<div class='col-md-3'>
+		<figure><figcaption>Рис.2-2. Начальный кодон ATG</figcaption><img src='pages/study_process/terms/term3/pr11/gene2-1.png' width=100%></figure></div>
+		</div>
+		<div class='col-md-3'>
+		<figure><figcaption>Рис.2-3. Заниженное начало</figcaption><img src='pages/study_process/terms/term3/pr11/gene2-2.png' width=100%></figure></div>
+		</div>
+		<div class='col-md-12'><figure><figcaption>Рис.2-4. Blast</figcaption><div style='height: 200px; overflow-y:scroll'><img src='pages/study_process/terms/term3/pr11/list-2.png' width=100%></div></figure></div>
+
+		
+	<div class='col-md-12'>
+	<h3>Предсказание для генома организма</h3>
+	<p>Тоже самое было выполнено с хромосомой <a href='https://www.ncbi.nlm.nih.gov/nuccore/AM942759.1'>AM942759.1</a> бактерии <a href='https://www.ncbi.nlm.nih.gov/genome/?term=proteus%20mirabilis'><i>Proteus</i> <i>mirabilis</i> HI4320</a>
+	и хромосомой <a href='https://www.ncbi.nlm.nih.gov/nuccore/BA000007.2'>BA000007.2</a> <a href='https://www.ncbi.nlm.nih.gov/genome/?term=NC_000913'><i>E.coli</i></a>.</p>
+	<pre>seqret embl:AM942759 -feature true -offormat2 gff -ofname2 am942759.gff -auto
+prodigal -i am942759.fasta -f sco -o pred_proteus.sco
+python script_pr11.py am942759.gff pred_proteus.sco </pre></div>
+	
+	<div class='col-md-6'>
+		<table class='table table-bordered'><caption>Таб.3. Результаты предсказаня для <i>Proteus</i></caption>
+	<tr><td>Гены</td><td>Число</td><td>Процент от аннотированных</td></tr>
+<tr><td>same</td><td>3239 </td><td>86.6%</td></tr>
+<tr><td>N</td><td>25 </td><td>0.7%</td></tr>
+<tr><td>C</td><td>324 </td><td>8.7%</td></tr>
+<tr><td>not predicted</td><td>151 </td><td>4.0%</td></tr>
+<tr><td>wrong predicted</td><td>50 </td><td>1.4% (от предсказанных)</td></tr>
+
+	</table></div>
+<div class='col-md-6'>
+	<figure class='figure'><figcaption>Рис.3.Результаты предсказания для <i>Proteus</i></figcaption><img src='pages/study_process/terms/term3/pr11/pie_chart2.png' width=100%></figure></div>
+	<div class='col-md-12'>
+	<pre> seqret embl:BA000007 -feature true -offormat2 gff -ofname2 ba000007.gff -auto
+prodigal -i ba000007.fasta -f sco -o pred_coli.sco
+python script_pr11.py ba000007.gff pred_coli.sco 
+</pre></div>
+	
+	<div class='col-md-6'>
+		<table class='table table-bordered'><caption>Таб.4. Результаты предсказаня для <i>E.coli</i></caption>
+	<tr><td>Гены</td><td>Число</td><td>Процент от аннотированных</td></tr>
+<tr><td>same</td><td>4179 </td><td>77.9%</td></tr>
+<tr><td>N</td><td>4 </td><td>0.1%</td></tr>
+<tr><td>C</td><td>919 </td><td>17.1%</td></tr>
+<tr><td>not predicted</td><td>260 </td><td>4.8%</td></tr>
+<tr><td>wrong predicted</td><td>206 </td><td>3.9%</td></tr>
+
+	</table></div>
+<div class='col-md-6'>
+	<figure class='figure'><figcaption>Рис.4.Результаты предсказания для <i>E.coli</i></figcaption><img src='pages/study_process/terms/term3/pr11/pie_chart3.png' width=100%></figure></div>
+<div class='col-md-12'><p>Предказания Prodigal и аннотация больше совпали у <i>Proteus</i> <i>mirabilis</i> - менее исследованного организма. В <i>E.coli</i> найдено и точно описано больше генов, так как это
+очень популярный модельный организм, в том числе и генов с 'неочевидным' стартом или стопом. Гены <i>Proteus</i>  изучены не так хорошо, многие из них аннотированы как
+гипотетические, то есть точно не известные и не подтвержденные, а найдены они с помощью похожих алгоритмов, поэтому совпадений больше.</p></div>
+	

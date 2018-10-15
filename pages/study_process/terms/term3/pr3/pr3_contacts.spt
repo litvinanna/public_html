@@ -1,0 +1,38 @@
+define propol protein and (*.O? or *.N?)
+define pronon protein and (*.C? or *.S? or *.P?)
+define dnanonbig dna and (*.C6 or *.C5 or (g and *.C8) or (c and *.C4) or (t and (*.C4 or *.C5M)))
+define dnapolbig dna and (*.N6  or *.N7 or *.O4 or *.O6)
+define dnanonlit dna and (*.C2 or ((a or g) and *.C4) or (t and *.C6))
+define dnapollit dna and (*.N1 or *.N2 or *.N3 or *.N9 or *.O2)
+define set1 dna and (*.O3' or *.O4' or *.O5')
+define set2 dna and (*.O1P or *.O2P)
+define set3 dna and *.N
+
+select all; color white; cpk off; cartoon off; wireframe 10
+select (within(3.5, set1) and propol) or (within(3.5, propol) and set1)
+cpk 220; color cpk; pause; resume
+
+select all; color white; cpk off
+select (within(3.5, set2) and propol) or (within(3.5, propol) and set2)
+cpk 220; color cpk; pause; resume
+
+select all; color white; cpk off
+select (within(4.5, dna and *.P?) and pronon) or (within(4.5, pronon) and (dna and *.P?))
+cpk 220; color cpk; pause; resume
+
+select all; color white; cpk off
+select (within(3.5, dnapolbig) and propol) or (within(3.5, propol) and dnapolbig)
+cpk 220; color cpk; pause; resume
+
+select all; color white; cpk off
+select (within(3.5, dnapollit) and propol) or (within(3.5, propol) and dnapollit)
+cpk 220; color cpk; pause; resume
+
+select all; color white; cpk off
+select dna; color yellow
+select (within(4.5, dnanonbig) and pronon) or (within(4.5, pronon) and dnanonbig)
+cpk 220; color cpk; pause; resume
+
+select all; color white; cpk off
+select (within(4.5, dnanonlit) and pronon) or (within(4.5, pronon) and dnanonlit)
+cpk 220; color cpk; pause; resume

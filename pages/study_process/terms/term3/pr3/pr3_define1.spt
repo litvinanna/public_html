@@ -1,0 +1,3 @@
+define set1 (*.O3' or *.O4' or *.O5') and dna
+define set2 (*.O1P or *.O2P) and dna
+define set3 *.N? and dna

@@ -1,0 +1,7 @@
+set terminal png enhanced large size 500, 500
+set output 'results.png'
+set key right bottom
+set xlabel "False positive rate"
+set ylabel "True positive rate"
+plot "roc-data-random" using 2:1 with points title "random data",\
+       "roc-data" using 2:1 with points title "real data"

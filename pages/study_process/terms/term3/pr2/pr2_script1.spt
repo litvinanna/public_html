@@ -1,0 +1,11 @@
+load "pages/study_process/terms/term3/pr2/gatc-a.pdb"
+cpk off
+cartoon on
+set echo top left; font echo 18; color echo [xFFEFD5];
+echo A-DNA
+select a; color red
+select g; color green
+select t; color blue
+select c; color orange
+
+rotate x 50

@@ -1,0 +1,325 @@
+<div class="col-md-12">
+    <h1>Blast</h1>
+    <hr>
+</div>
+<div class="col-md-12">
+    <h2>Определение таксономии</h2>
+    <p>Была использована <a href='pages/study_process/terms/term3/pr8/mine.fasta'>консенсусная последоватеьность [fasta]</a>, длиной 759 аминокислот, прочтенная в шестом практикуме. Был проведен поиск с помощью blastn (конкретно megablast) со стандартными параметрами (рис.1).
+    </p>
+    <figure>
+        <figcaption>Рис.1.Список находок</figcaption>
+        <div style="height: 300px; overflow-y: scroll"><img width=100% src='pages/study_process/terms/term3/pr8/list1.png'></div>
+    </figure>
+    <hr>
+    <p>Blast также может отображать результаты как taxonomy report (рис.2). Так мы можем увидеть, выравнивания с генами каких видов были найдены и каков их вес. Нам интересны выравнивания с самыми большими весами.
+    </p>
+    <figure>
+        <figcaption>Рис.2.Lineage report</figcaption>
+        <div style="height: 300px; overflow-y: scroll"><img width=100% src='pages/study_process/terms/term3/pr8/lineage.png'></div>
+    </figure>
+    <hr>
+    <p>Также blast составляет предполагаемое филогенетическое дерево для найденных последовательностей (рис.3).
+    </p>
+    <figure>
+        <figcaption>Рис.3.Фрагмент дерева, жёлтым выделена нтересующая последовательность</figcaption>
+        <div style="height: 300px; overflow-y: scroll"><img width=100% src='pages/study_process/terms/term3/pr8/tree2.png'></div>
+    </figure>
+    <hr>
+    <p>Для определения таксономии нужно понять с какими последовательностями каких видов наша последовательность сходна, и на сколько отличается от близких видов.
+     Как видно из приведенных результатов, наша последовательность очень сходна с последовательностями генов 18S рРНК плоских червей рода
+        <a href='https://en.wikipedia.org/wiki/Diphyllobothrium'>Diphyllobothrium</a> (лентецы).
+        </p><p>
+         Несколько видов имеют гены примерно одинаково отличающиеся от нашей последовательности.
+         Были скачаны последовательности из первых находок, нj с разными bitscore и из разных видов (рис.4), и создано выравнивание программой muscle(default).
+         Оказалось, что скачанные последовательности все гораздо длиннее нашей, поэтому их концы были обрезаны.
+         Центральная перекрывающаяся часть очень консервативна. Но, например в сайте 270-320 (рис.5) есть замены во всех последовательностях. В целом, наш последовательность
+         отличается от всех сильнее, чем скачанные друг от друга, поэтому нельзя утверждать к каком у виду относится наша послевательность.
+         </p><p>
+			 Таксономия нащей последовательности: cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Platyhelminthes; Cestoda; Eucestoda; Diphyllobothriidea; Diphyllobothriidae; Diphyllobothrium
+			</p><p>
+			 <a href='pages/study_process/terms/term3/pr8/ali3.jvp'>выравнивание [jvp]</a>
+    </p>
+    <figure><figcaption>Рис.4.Выбранные находки</figcaption><img src='pages/study_process/terms/term3/pr8/choice.png' width="100%"></figure>
+    <figure><figcaption>Рис.5.Выранивание в пределах рода</figcaption><div style="overflow-x: scroll"><img src='pages/study_process/terms/term3/pr8/ali3.png'></div></figure>
+</div>
+<div class="col-md-12">
+    <h2>Сравнение алгоритмов</h2>
+    <p>Была использована <a href='pages/study_process/terms/term3/pr8/mine.fasta'>та же консенсусная последоватеьность [fasta]</a>.
+    Существует несколько нуклеотидных алгоритмов для поиска. Они оптимизированы для разных поисков. </br>[в скобках указаны рекомендованные Scoring Parameters, которые влияют на подсчет веса выравнивания]</p>
+    <ul>
+		<li><p>Megablast - идентификация последовательности, близкородственный поиск; оптимизирован для высоко-схожих последовательностей. Сначала идет поиск 
+    по точному совпадению 28-буквенных слов, затем из них строится выравнивание. </br>[match/mismatch scores: 1, -2; gap costs: linear]</p>
+    </li><li>
+    <p><a href='https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp#discMegaBlast'>Discontiguous megablast</a> - межвидовой поиск для более различающихся последовательностей, у которых сходство меньше 80%. Сначала находится совпадение не сплошных слов, а некоторого набора непоследовательных позиций 
+    внутри более длинных участков. Для сравнения используются шаблоны длиной 16, 28, 21 позиция, в которых проверяется совпадение 11, 12 позиций, то есть ищутся  размазанные слова длиной 11, 12 нуклеотидов. У данного алгоритма
+    есть свои опции для определения шаблона дл поиска, то есть набора сравниваемых букв (template length и template type). </br>[match/mismatch scores: 2, -3; gap costs: existance 5, extension 2]
+    </p>
+    <li>
+    <p>Blastn - для поиска и близких, и далеких последовательнотей; размер слова 7, 11, 15 нуклеотидов. </br>[match/mismatch scores: 2, -3; gap costs: existance 5, extension 2]</p>
+    </li>
+    </ul>
+    <p>Был проведен поиск с помощью трёх разных алгоритмов. При этом род Diphyllobothrium был исключен.</p>
+   <!-- <table class="table table-bordered">
+        <caption>Таб.Сравнение алгоритмов</caption>
+        <tr>
+            <td>Алгоритм</td>
+            <td>megablast</td>
+            <td>discontiguous megablast</td>
+            <td>blastn</td>
+        </tr>
+      
+        <tr>
+            <td>Количество находок</td>
+            <td>115</td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </table>-->
+    <p>Все три выдачи получились очень похожими. Первые находки и вовсе одинаковые. Выдача megablast (рис.6) отличалась от двух других score-ами, так как в этом алгоритме используются другие параметры его подсчета. 
+    Количество найденных последовательнотей везде очень большое, больше 1000 c хорошими e-vulues. Я думаю, такая ситуация возникает, так как данный ген очень консервативен (часть рибосомы), и у него очень много гомологов
+    в разных организмах.</p>
+    <figure><figcaption>Рис.6.Выдача megablast</figcaption><div style="height: 300px; overflow-y: scroll"><img src='pages/study_process/terms/term3/pr8/list3.png' width="100%"></div></figure>
+    <p>Далее был проведен поиск с исключением таксона flatworms. Выдача discontiguous megablast и blastn в обозримой длине оказалась одинаковой. Выдачи megablast (рис.7) и discontiguous megablast (рис.8) при таких условиях.</p>
+     <figure><figcaption>Рис.7.Выдача megablast</figcaption><div style="height: 300px; overflow-y: scroll"><img src='pages/study_process/terms/term3/pr8/list4.png' width="100%"></div></figure>
+      <figure><figcaption>Рис.8.Выдача discontiguous megablast</figcaption><div style="height: 300px; overflow-y: scroll"><img src='pages/study_process/terms/term3/pr8/list5.png' width="100%"></div></figure>
+      <p>Найдены были гены 18s RNA, но находки разные. Так как поиск проводился в отдаленных таксонах, я думаю, что выдача discontiguous megablast более достоверна.</p>
+</div>
+<div class="col-md-12">
+    <h2>Наличие гомологов</h2>
+    <p>Организм X5 (Amoboaphelidium protococarum), сборка генома X5.
+    Из сборки была создана база данных (makeblastdb -in X5.fasta -dbtype nucl) на серевере kodomo, затем с помощью tblastn
+    для каждого белка был проведен поиск гомологов.
+    Было проверено наличие в данном геноме гомологов белков:
+    <ul>
+		<li>HSP7C_HUMAN - консервативный шаперон HSP70, белок теплового шока</li>
+		<li>CISY_HUMAN - митохондриальная цитратсинтаза </li>
+		<li>PABP2_HUMAN - белок, cвязывающий поли(А) хвост матричной РНК </li>
+		</ul>
+    </p>
+    <h3>Белок HSP7C_HUMAN</h3>
+    <div class='col-md-8'>
+    <p><a href='http://www.uniprot.org/uniprot/P11142'>Данный белок теплового шока</a> (рис.9) у человека закодирован в 11 хромосоме. Действует как ингибитор транкрипционной активности и шаперон. Учавствует в формированиии спайсосомы, необходим для запуска сплайсинга.
+      Связывает бактериальные липосахариды(LPS) и контролирует LPS-индуцированный воспалительный ответ. В клетке может находится в цитоплазматических гранулах, содержащий нетранслированные mRNA, но
+      довольно быстро транслоцируется в ядро, а при тепловом шоке особенно в ядрышки.</p>
+    </div>  <div class='col-md-4'><figure><figcaption>Рис.9.Heat shock protein</figcaption><img src='pages/study_process/terms/term3/pr8/protein1.png' width="100%"></figure></div>
+    <p><a href='pages/study_process/terms/term3/pr8/HSP7C_HUMAN.out'>[результаты поиска для HSP7C_HUMAN]</a></p>
+    <div style="height: 300px; overflow-y: scroll">
+		<pre>Sequences producing significant alignments:                          (Bits)  Value
+
+  scaffold-199                                                         917    0.0
+  scaffold-423                                                         725    0.0
+  scaffold-96                                                          725    0.0
+  unplaced-999                                                         549    5e-174
+  unplaced-980                                                         446    9e-137
+  unplaced-804                                                         265    5e-75
+  scaffold-157                                                         264    3e-74
+  scaffold-499                                                         263    3e-74
+  scaffold-693                                                         261    2e-73
+  unplaced-959                                                         221    3e-60
+  scaffold-469                                                         171    4e-50
+  scaffold-418                                                         171    4e-50
+  unplaced-113                                                         123    4e-33
+  scaffold-138                                                        82.8    9e-19
+  scaffold-61                                                         82.8    9e-19
+  unplaced-721                                                        42.7    5e-05
+</pre></div>
+<p>Самая лучшая находка:</p>
+<pre>> scaffold-199
+
+ Score =  917 bits (2369),  Expect = 0.0, Method: Compositional matrix adjust.
+ Identities = 474/607 (78%), Positives = 538/607 (89%), Gaps = 0/607 (0%)
+ Frame = -2
+</pre>
+<p>Количество совпадающих или аналогичных аминокислот очень велико, очень низкий e-value, процент identities ~80%. Последовательности наверняка гомологичны.</p>
+<h3>Белок CISY_HUMAN</h3>
+<div class='col-md-12'><div class='col-md-8'><p>
+	<a href='https://en.wikipedia.org/wiki/Citrate_synthase'>Цитрат-синтаза</a> первый белок в цикле Кребса (рис.10). В эукариотических клетках находится в митохндриальном матриксе, но закодирована в ядерном геноме.
+	Синтезируется в цитоплазме, затем транспортируется в митохондрии. Часто используется как маркёр митохондрий.</p>
+	<p>Цитратсинтаза катализирует реакцию конденсации С2-ацетатил-СоА и С4-оксалоацетата в С6-цитрат. </p></br>
+		acetyl-CoA + oxaloacetate + H2O → citrate + CoA-SH
+
+</p>
+	</div>
+	<div class='col-md-4'><figure><figcaption>Рис.10.Цитрат-синтаза</figcaption><img src='pages/study_process/terms/term3/pr8/protein2.png' width="100%"></figure></div>
+	</div>
+    <p><a href='pages/study_process/terms/term3/pr8/CISY_HUMAN.out'>[результаты поиска для CISY_HUMAN]</a></p>
+		<pre>                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  scaffold-693                                                         565    2e-180
+  scaffold-157                                                         564    5e-180
+  scaffold-287                                                         100    3e-22
+  scaffold-212                                                        92.4    1e-19
+</pre>
+<p>Первые две находки идентичны, лучшее выравнивание:</p>
+<pre style="height: 300px; overflow-y: scroll">
+ Score =  565 bits (1457),  Expect = 2e-180, Method: Compositional matrix adjust.
+ Identities = 262/377 (69%), Positives = 315/377 (84%), Gaps = 3/377 (1%)
+ Frame = +1
+
+Query  90       GIRFRGFSIPECQKLLPKAKGGEEPLPEGLFWLLVTGHIPTEEQVSWLSKEWAKRAA-LP  148
+                GIRFRG +IPEC + LPKA GG EPLPEGLF+LL+TG +PT+EQV  +S++WA RA+ LP
+Sbjct  1243882  GIRFRGMTIPEC*EKLPKANGG*EPLPEGLFYLLLTGEVPTKEQVDEVSRDWANRASSLP  1244061
+
+Query  149      SHVVTMLDNFPTNLHPMSQLSAAVTALNSESNFARAYAQGISRTKYWELIYEDSMDLIAK  208
+                 HV  ++D  P  LHPMSQ S AVTA+  +S FA+AY QG+ ++KYWE  YEDSMDLIAK
+Sbjct  1244062  KHVEDIID*CPVTLHPMSQFSIAVTAMQHDSKFAQAYQQGVHKSKYWEYAYEDSMDLIAK  1244241
+
+Query  209      LPCVAAKIYRNLYREGSGIGAIDSNLDWSHNFTNMLGY-TDHQFTELTRLYLTIHSDHEG  267
+                LP VA++IYRN++++G  + AID   DWS+NF NMLG+  D QF EL RLYLTIHSDHEG
+Sbjct  1244242  LPVVASRIYRNVFKDGK-VAAIDKTKDWSYNFANMLGFGKDAQFVELMRLYLTIHSDHEG  1244418
+
+Query  268      GNVSAHTSHLVGSALSDPYLSFAAAMNGLAGPLHGLANQEVLVWLTQLQKEVGKDVSDEK  327
+                GNVSAHT+HLVGSALSDPYLSFAA +NGLAGPLHGLANQEVL W+ Q+++E+G +VSDE+
+Sbjct  1244419  GNVSAHTTHLVGSALSDPYLSFAAGLNGLAGPLHGLANQEVLRWILQMKEEIGTNVSDEQ  1244598
+
+Query  328      LRDYIWNTLNSGRVVPGYGHAVLRKTDPRYTCQREFALKHLPNDPMFKLVAQLYKIVPNV  387
+                +RDY W TL SG+V+PGYGHAVLRKTDPRYTCQREFALKHLP DP+FK+V+QLY IVPNV
+Sbjct  1244599  VRDYCWKTLKSGQVIPGYGHAVLRKTDPRYTCQREFALKHLPTDPLFKMVSQLYNIVPNV  1244778
+
+Query  388      LLEQGKAKNPWPNVDAHSGVLLQYYGMTEMNYYTVLFGVSRALGVLAQLIWSRALGFPLE  447
+                L EQGK KNP+PNVDAHSGVLLQ+Y + E  +YTVLFGVSRALG L+QL+W RALG P+E
+Sbjct  1244779  LTEQGKTKNPFPNVDAHSGVLLQHYNLKEQEFYTVLFGVSRALGCLSQLVWDRALGLPIE  1244958
+
+Query  448      RPKSMSTEGLMKFVDSK  464
+                RPKS++T+ + K  D K
+Sbjct  1244959  RPKSLTTDTIKKMFDGK  1245009
+
+
+
+</pre>
+<p>Количество совпадений гораздо меньше. Но есть много кластеров по 15-20 амк, которые совпадают, и численные характеристики выранивания хорошие - 
+достаточно identities (~70%), низкое значение e-value. Значительная часть найденной последовательности гомологична. Скорее всего, в геноме есть белок, гомологичный цитрат-синтазе.</p>
+<h3>Белок PABP2_HUMAN</h3>
+<div class='col-md-12'><div class='col-md-8'>
+	<p>Полиаденилат-связывающий белок (рис.11) локализован в ядре, где связывает поли-А хвосты pre-mRNA. 
+	Он необходим для успешного роста поли-А хвоста (помогает полиА-полимеразе узнавать субстрат, способствует элонгации) на 3'-конце и устанавливает размер хвоста в примерно 200-250 н.
+	<a href='https://en.wikipedia.org/wiki/PABPN1'>wiki</a> <a href='http://www.uniprot.org/uniprot/Q86U42'>uniprot</a> </p></div>
+	<div class='col-md-4'><figure><figcaption>Рис.11.Полиаденилат-связывающий белок</figcaption><img src='pages/study_process/terms/term3/pr8/protein3.png' width="100%"></figure></div></div>
+    <p><a href='pages/study_process/terms/term3/pr8/PABP2_HUMAN.out'>[результаты поиска для PABP2_HUMAN]</a></p>
+    <div style="height: 300px; overflow-y: scroll">
+		<pre>                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+  scaffold-100                                                         117    2e-28
+  scaffold-199                                                         114    2e-27
+  scaffold-243                                                        45.8    2e-05
+  scaffold-361                                                        42.7    2e-04
+  scaffold-212                                                        41.6    4e-04
+  scaffold-115                                                        41.6    5e-04
+  scaffold-568                                                        37.7    0.007
+  scaffold-158                                                        37.0    0.011
+  scaffold-693                                                        36.6    0.014
+  scaffold-17                                                         36.2    0.020
+  scaffold-444                                                        35.8    0.028
+  scaffold-162                                                        32.0    0.38
+  scaffold-110                                                        31.2    0.84
+  scaffold-57                                                         30.0    1.7
+  scaffold-22                                                         28.1    6.0
+  scaffold-423                                                        28.1    7.3
+
+</pre></div>
+
+<p>Ценность имеют только первые две находки, в обеих присутствует некоторый домен:</p>
+<pre>
+ Score =  117 bits (292),  Expect = 2e-28, Method: Compositional matrix adjust.
+ Identities = 54/86 (63%), Positives = 64/86 (74%), Gaps = 0/86 (0%)
+ Frame = +1
+
+Query  168     EADARSIYVGNVDYGATAEELEAHFHGCGSVNRVTILCDKFSGHPKGFAYIEFSDKESVR  227
+               E D RSIYVGNVDY   AEEL AHF  CG++NRVTIL DKF+G PKG AY+EF+D +SV
+Sbjct  420784  EIDKRSIYVGNVDYETAAEEL*AHFQDCGAINRVTILADKFTGRPKGHAYVEFADAKSVE  420963
+
+Query  228     TSLALDESLFRGRQIKVIPKRTNRPG  253
+                +L L  +LFR R ++V  KRTN PG
+Sbjct  420964  NALILSGTLFRNRMLQVTAKRTNIPG  421041
+</pre>
+<p>Этот регион ответственен за гомоолигомеризацию. Гомологичность домена предположить можно, но достоверного гомолога белка нет.</p>
+</div>
+
+<div class="col-md-12">
+ <h2>Поиск гена в геноме</h2>
+ <p>Для поиска из генома организма X5 (Amoboaphelidium protococarum) был выбран скэффолд 444 <a href='pages/study_process/terms/term3/pr8/scaffold-444.fasta'>scaffold-444 [fasta]</a>, длина 851481 нуклеотидов.</p>
+<p>С помощью blastn был проведен поиск в нуклеотидных базах данных (рис.12).</p>
+<figure class='col-md-12 padding'>
+        <figcaption>Рис.12.Список находок</figcaption>
+        <div style="height: 300px; overflow-y: scroll"><img width=100% src='pages/study_process/terms/term3/pr8/poisk.png'></div>
+    </figure>
+<p>Я рассмотрела находку Danio rerio beta actin mRNA, complete cds (Length: 1143; Score: 1138 bits(616); Identities: 961/1131(85%); Gaps: 10/1131(0%)). 
+Это ген организма <a href='https://ru.wikipedia.org/wiki/%D0%94%D0%B0%D0%BD%D0%B8%D0%BE-%D1%80%D0%B5%D1%80%D0%B8%D0%BE'>Danio Rerio</a> - 
+пресноводной лучеперой рыбы, модельного организма, известного как zebrafish. Этот <a href='https://www.ncbi.nlm.nih.gov/nucleotide/2822455?report=genbank&log$=nuclalign&blast_rank=3&RID=1YXTJDTD014'>ген</a>
+кодирует <a href='https://www.ncbi.nlm.nih.gov/protein/2822456'>белок бета-актин</a>. </p>
+<p>Скэффолд был выровнен в пределах позиций 164798 - 165923. 
+Я прибавила по 10 нуклеотидов с каждой стороны и выровняла с данным геном zebrafish. Однако выравнивание получилось ужасным и показало что никакой гомологичности не может быть.
+Оказадось, что blast нашел последовательность наоборот, то есть потребовалось применить reverse+complement для нашей последовательности (по сути взяли комплементарную цепочку)
+<a href='pages/study_process/terms/term3/pr8/zebra-mine.jvp'>выравнивание [jvp]</a>.
+Выравнивание неплохое, учитывая, что разные кодоны могут кодировать одну аминокислоту, поэтому вполне допустимы одиночные замены.
+</p>
+<p>Следующим шагом <a href='pages/study_process/terms/term3/pr8/part-44-revcom.fasta'>частичную последовательность скэффолда</a> поискала в blastx (рис.13).</p>
+ <figure>
+        <figcaption>Рис.13.Поиск в blastx</figcaption>
+        <div style="height: 300px; overflow-y: scroll"><img width=100% src='pages/study_process/terms/term3/pr8/list2.png'></div>
+    </figure>
+    </div>
+    
+<div class="col-md-12">	
+    <div class='col-md-6'>
+    <p>Одна из первых находок - бета-актин Acanthopagrus schlegelii (дальневосточный морской карась) (рис.14.). 
+    Видно, что белок очень консервативен. Несмотря на довольно далекое таксономическое положение
+    (хордовое и плоский червь) белок почти точно совпадает. Неудивительно, что актин - важный клеточный белок - очень консервативен.</p>
+    
+    </div>
+    <div class='col-md-6'>
+    <figure>
+        <figcaption>Рис.14.Бета-актин карася и найденный ген.</figcaption>
+        <img width=100% src='pages/study_process/terms/term3/pr8/4-1.png'>
+    </figure></div>
+    </div>
+    <div class="col-md-12">
+		<!--  class="small_empty_block" -->
+		<hr>
+	</div>
+    <div class="col-md-12">	
+    <div class='col-md-6'><p>Бета-актин - одна из шести изоформ актина (рис.15).</p></div>
+   <div class='col-md-6'>
+    <figure>
+        <figcaption>Рис.15.Бета-актин</figcaption>
+        <img width=100% src='pages/study_process/terms/term3/pr8/actin.png'>
+    </figure>
+   </div>
+   </div>
+<div class='col-md-12'><hr></div>
+<div class='col-md-12'>
+	<h2>Классификация вирусов</h2>
+	<p>Были рассмотрены геномы следущих вирусов семейства Tombusviridae (род <a href='https://en.wikipedia.org/wiki/Umbravirus'>Umbravirus</a>):
+		<ul>
+			<li><a href='https://www.ncbi.nlm.nih.gov/nuccore/NC_011515.1'>Carrot mottle virus</a></li>
+			<li><a href='https://www.ncbi.nlm.nih.gov/nuccore/NC_001726.1'>Carrot mottle mimic umbravirus (CMoMV) dsRNA1</a></li>
+			<li><a href='https://www.ncbi.nlm.nih.gov/nuccore/NC_003603.1'>Groundnut rosette virus complete genome, strain MC1</a></li>
+			<li><a href='https://www.ncbi.nlm.nih.gov/nuccore/NC_003853.1'>Pea enation mosaic virus-2</a></li>
+			<li><a href='https://www.ncbi.nlm.nih.gov/nuccore/NC_004366.1'>Tobacco bushy top virus</a></li>
+			<li><a href='https://www.ncbi.nlm.nih.gov/nuccore/NC_029900.1'>Potato necrosis virus isolate QV323</a> (из другого рода)</li>
+			</ul>
+		</p>
+		<p>Все геномы были скачаны в один файл <a href='pages/study_process/terms/term3/pr8/viruses.fasta'>viruses.fasta</a>. 
+		Был использован локальный пакет ncbi-blast+. Была создана нуклеотидная база из последовательностей геномов.
+		</p>
+		<pre>makeblastdb -in viruses.fasta -dbtype nucl</pre>
+		<p> С помощью tblastx был проведен поиск
+		данных геномов в базе. 
+		</p>
+		<pre>tblastx -query viruses.fasta -db viruses.fasta -out att1 -outfmt 7</pre>
+		<p>
+		С помощью <a href='pages/study_process/terms/term3/pr8/.py'>скрипта</a> из таблицы результатов локального множественного выравнивания были исключены строки, содержащие
+		выравнивания типа А против А, и типа В проти А, если А против В уже присутствует. Также были исключены выравнивания с e-value больше 0.001.
+		<a href='pages/study_process/terms/term3/pr8-1/'> </a></p>
+	</div>
+
+
+<!--<div name="links" id="links" class="col-md-12">
+    <h2>Примечания:</h2>
+    <ul>
+        <li><a>todo</a></li>
+    </ul>
+</div>-->

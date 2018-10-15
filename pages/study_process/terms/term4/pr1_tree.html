@@ -1,0 +1,91 @@
+<div class='col-md-12'>
+<h2>Построение филогенетического дерева</h2></div>
+<div class='col-md-12'>
+<p>Из общего списка были выбраны бактерии (табл.1) и построено отдельное филогенетическое дерево (рис.1).</p></div>
+<div class='col-md-12'>
+	<table class='table table-bordered small'>
+		<caption>Таб.1.Выбранные бактерии</caption>
+		<tbody>
+		<tr>
+			<td>Название бактерии</td>
+			<td>Сокращение</td>
+			<td>Таксономия</td>
+			</tr>
+		<tr>
+			<td>типичный представитель таблицы</td>
+			<td></td>
+			<td>... = root; cellular organisms; Bacteria; Terrabacteria group; Firmicutes;</td>
+			</tr>
+		<tr>
+			<td>Bacillus subtilis</td>
+			<td>BACSU</td>
+			<td>...  Bacilli; Bacillales; Bacillaceae; Bacillus; Bacillus subtilis group</td>
+			</tr>
+		<tr>
+			<td>Clostridium botulinum</td>
+			<td>CLOBA</td>
+			<td>...  Clostridia; Clostridiales; Clostridiaceae; Clostridium</td>
+			</tr>
+		<tr>
+			<td>Enterococcus faecalis</td>
+			<td>ENTFA</td>
+			<td> ...  Bacilli; Lactobacillales; Enterococcaceae; Enterococcus</td>
+			</tr>
+		<tr>
+			<td>Finegoldia magna</td>
+			<td>FINM2</td>
+			<td> ...  Tissierellia; Tissierellales; Peptoniphilaceae; Finegoldia</td>
+			</tr>
+		<tr>
+			<td>Geobacillus kaustophilus</td>
+			<td>GEOKA</td>
+			<td> ...  Bacilli; Bacillales; Bacillaceae; Geobacillus; Geobacillus thermoleovorans group</td>
+			</tr>
+		<tr>
+			<td>Lactobacillus acidophilus</td>
+			<td>LACAC</td>
+			<td>...  Bacilli; Lactobacillales; Lactobacillaceae; Lactobacillus</td>
+			</tr>
+		<tr>
+			<td>Staphylococcus aureus</td>
+			<td>STAAR</td>
+			<td>...  Bacilli; Bacillales; Staphylococcaceae; Staphylococcus</td>
+			</tr>
+		<tr>
+			<td>Staphylococcus epidermidis</td>
+			<td>STAES</td>
+			<td>...  Bacilli; Bacillales; Staphylococcaceae; Staphylococcus</td>
+			</tr>
+		<tr>
+			<td>Streptococcus pyogenes serotype M1</td>
+			<td>STRP1</td>
+			<td>...  Bacilli; Lactobacillales; Streptococcaceae; Streptococcus; Streptococcus pyogenes</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+<div class='col-md-12'>
+<p>Филогенетическое дерево было построено на сайте <a href='http://etetoolkit.org/treeview/'>http://etetoolkit.org/treeview/</a> на основе записи в формате newick:
+<pre>((FINM2, CLOBA), ((LACAC, (STRP1, ENTFA)), ((BACSU, GEOKA), (STAAR, STAES))));</pre>
+</p>
+</div>
+<div class="col-md-12">
+        <figure>
+            <figcaption>Рис.1. Полученное дерево</figcaption>
+            <img src='pages/study_process/terms/term4/pr1/tree.png' width="100%">
+        </figure>
+    </div>
+<div class='col-md-12'>
+<p>Данное дерево содержит следующие нетривиальные ветви, некоторые ветви выделяют <strong>домены</strong>:
+<ul>
+<li>(FINM2, CLOBA) против (LACAC, STRP1, ENTFA, BACSU, GEOKA, STAAR, STAES) - <strong>Bacilli</strong></li>
+<li>(LACAC, STRP1, ENTFA) - <strong>Lactobacillales</strong> против (FINM2, CLOBA, BACSU, GEOKA, STAAR, STAES)</li>
+<li>(STRP1, ENTFA) против (FINM2, CLOBA, LACAC, BACSU, GEOKA, STAAR, STAES)</li>
+<li>(STAAR, STAES) - <strong>Staphylococcaceae; Staphylococcus</strong> против (FINM2, CLOBA, LACAC, STRP1, ENTFA, BACSU, GEOKA)</li>
+<li>(BACSU, GEOKA) - <strong>Bacillaceae</strong> против (FINM2, CLOBA, LACAC, STRP1, ENTFA, STAAR, STAES)</li>
+<li>(BACSU, GEOKA, STAAR, STAES) - <strong>Bacillales</strong> против (FINM2, CLOBA, LACAC, STRP1, ENTFA)</li>
+
+</ul></p>
+<p>Для реконструкции филогении был выбран рибосомный белок S4 - мнемоника RS4.</p>
+<p></p>
+</div>

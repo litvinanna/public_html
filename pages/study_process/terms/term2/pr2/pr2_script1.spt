@@ -1,0 +1,27 @@
+zap
+load "pages/study_process/terms/term2/pr2/4wy2.pdb"
+set echo top left; font echo 20 sansserif plain; color echo [xFFEFD5];
+
+echo Hydrophobic core is colored and protein backbone is grey
+restrict none
+script "pr2/4wy2_clud.rsc"
+select protein; backbone 0.4 on; color grey 
+define core core1 or core2 or core4;
+select core; spacefill on;
+select core1; color red;
+select core2; color pink;
+select core4; color orange;
+zoom 100
+pause
+
+resume
+echo Protein is grey, hydrophobic sctructure is colored
+select protein and not core; spacefill on
+pause
+
+resume
+echo Previous picture with cyan water
+select water
+spacefill on
+color cyan
+pause

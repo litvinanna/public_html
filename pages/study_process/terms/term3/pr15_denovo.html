@@ -1,0 +1,236 @@
+<div class='col-md-12'>
+	<h1>Сборка генома <em>de novo</em></h1></div>
+	<div class='col-md-8'>
+	<p>Я получила <a href='http://www.ebi.ac.uk/ena/data/view/SRR4240378'>проект</a> по секвенированию хромосомы бактерии Buchnera aphidicola. Это короткие (длиной около 36)
+	чтения Illumina. Они были скачаны в формате fastq.
+		</p>
+		<p><a href='https://microbewiki.kenyon.edu/index.php/Buchnera_aphidicola'>Buchnera aphidicola</a> &mdash; грамотрицательная гаммапротеобактерия. 
+		Buchnera aphidicola основной эндосимбионт тлей, которые питаются растениями.
+		Размер бактерии около 3 нм. Она отличается от других грамотрицательных бактерий тем, что не умеет синтезировать липополисахариды 
+		(<a href='https://en.wikipedia.org/wiki/Lipopolysaccharide'>LPS</a>).</p><p> Имеет довольно маленький геном (0.62 Mb), состоящий из хромосомы и нескольких плазмид (чаще двух).</p>
+		</div>
+		<div class='col-md-4'>
+			    <figure>
+			<figcaption>Рис.1.Buchnera aphidicola</figcaption>
+			<img src='pages/study_process/terms/term3/pr15/bacteria.png'
+			width=100%>
+				</figure>
+		</div>
+		
+		<div class='col-md-12'>
+	<h2>Очистка</h2>
+	<p>Чтения содержат адаптерные последовательности, а так же могут иметь плохое качество местами.
+	Последовательности были очищены с помощью программы Trimmomatic.</p>
+	<p>Файлы с адаптерами для Illumina были скопированы из папки <samp>/P/y15/term3/block4/adapters</samp>. Всё содержимое этих файло было записано в один файл. </p>
+	<pre>touch adapters.fa
+cat adapters/* >> adapters.fa</pre>
+	<p>Была запущена программа Trimmomatic: TRAILING:20 - от концов чтений были отрезаны нуклеотиды качеством ниже 20, 
+	MINLEN:30 - удалены последовательности короче 30 нуклеотидов, 
+	ILLUMINACLIP:adapters.fa:2:7:7 - адаптеры, скопированные ранее, удалены из чтений.
+	<pre>java -jar /usr/share/java/trimmomatic.jar SE -phred33 SRR4240378.fastq reads.fastq TRAILING:20 MINLEN:30 ILLUMINACLIP:adapters.fa:2:7:7</pre>
+	После работы программы получаем:
+	<pre>Input Reads: 4420587 Surviving: 4167944 (94,28%) Dropped: 252643 (5,72%)</pre>
+	Удалено 5,72% чтений.</p>
+	<h2>Сборка [1]</h2>
+	<p>Программы пакета <a href='https://en.wikipedia.org/wiki/Velvet_assembler'>velvet</a> были запущены последовательно. 
+	Они реализуют некоторый алгоритм сборки <em>de novo</em>,
+	 основанный на <a href='https://en.wikipedia.org/wiki/De_Bruijn_graph'>графах де Брёйна</a>. </p>
+	<pre>velveth ./velveth 29 -fastq reads.fastq -short
+velvetg ./velveth 
+Final graph has 495 nodes and n50 of 14866, max 55699, total 664225, using 0/4167944 reads
+</pre></div>
+<div class='col-md-6'>
+	<p>После работы, в папке <samp>./velveth</samp> находится файл с контигами <samp>contigs.fa</samp>. Из него можно извлечь все строки с описаниями последовательностей-контигов.
+	<pre>grep '>' contigs.fa > contigs.txt</pre>
+	И составить таблицу <a href='pages/study_process/terms/term3/pr15/contigs.xlsx'>[excel]</a>. Все данные приведены в k-мерах.
+	
+	</p>
+	<p>
+</p>
+	
+	</div>
+	
+	<div class='col-md-6'>
+		<table class='table table-bordered'>
+			<caption>Таб.1.Контиги сборки k=29</caption>
+			<tbody class='small'>
+<tr><td>Контиг</td><td>Длина</td><td>Покрытие</td></tr>
+<tr><td colspan='3'>Самые длинные</td></tr>
+<tr><td>8	</td><td>5569</td><td>	27,43 </td></tr>
+<tr><td>6	</td><td>3273</td><td>	29,54 </td></tr>
+<tr><td>26	</td><td>2659</td><td>	27,35 </td></tr>
+<tr><td colspan='3'>Самые покрывающие</td></tr>
+<tr><td>56	</td><td>926</td> <td>  140,50</td></tr>
+<tr><td>74	</td><td>30	 </td><td>  137,60</td></tr>
+<tr><td>16	</td><td>2085</td><td>	137,43</td></tr>
+				
+				
+				</tbody>
+			</table>
+	</div>
+	
+	<div class='col-md-12'>
+	<h2>Анализ сборки</h2></div>
+	<div class='col-md-4'><p>Полученные контиги были выровнены на геном (<a href='https://www.ncbi.nlm.nih.gov/nuccore/926444578/'>CP009253</a>) с помощью blast.</p></div>
+	<div class='col-md-8'>
+	    <figure>
+        <figcaption>Рис.2. Выравнивание контигов k=29 на геном</figcaption>
+        <img src='pages/study_process/terms/term3/pr15/blast.png'
+        width=100%>
+    </figure>
+
+	</div>
+	<div class='col-md-12'>
+	<p>Как видно из рис., хромосома покрыт один раз почти полностью. Собранные контиги очень хорошо легли на геном.
+		</p>
+		<p>Все контиги, узазанные в таб.1. были записаны в отдельные файлы и выровнены на тот же геном.</p>
+		</div>
+<div class='col-md-12'>
+	<table class='table table-bordered'>
+		<caption>Таб.2. Самые длинные контиги сборки k=29</caption>
+		<tbody class='small'>
+			<tr>
+				<td>Контиг</td>
+				<td>Max score</td>
+				<td>Total score</td>
+				<td>Query cover</td>
+				<td>E-value</td>
+				<td>Identity</td>
+				<td>Gaps</td>
+				<td>Картинка</td>
+				</tr>
+			<tr>
+				<td>NODE_8_length_55699_cov_27.433258</td>
+				<td>3949</td>
+				<td>21802</td>
+				<td>6%</td>
+				<td>0.0	</td>
+				<td>76%</td>
+				<td>345/8614<br>(4%)</td>
+				<td><img src='pages/study_process/terms/term3/pr15/8.png' width = 100%></td>
+				</tr>
+			<tr>
+				<td>NODE_6_length_32730_cov_29.538864</td>
+				<td>5760</td>
+				<td>15609 </td>
+				<td>4%</td>
+				<td>0.0</td>
+				<td>78%</td>
+				<td>244/9217<br>(2%)</td>
+				<td><img src='pages/study_process/terms/term3/pr15/6.png' width = 100%></td>
+				</tr>
+			<tr>
+				<td> NODE_26_length_26591_cov_27.350946</td>
+				<td>5421</td>
+				<td>6544</td>
+				<td>2%</td>
+				<td>0.0</td>
+				<td>75%</td>
+				<td>552/13012<br>(4%)</td>
+				<td><img src='pages/study_process/terms/term3/pr15/26.png' width = 100%></td>
+
+			</tbody>
+		</table>
+		<p>Контиги с высоким покрытием из файла <samp>contigs.txt</samp> очень плохо выровнялись на геном (e-value > 0.001), и имеют маленькую длину, поэтому они, скорее всего, собраны неверно.</p>
+	</div>
+<div class='col-md-12'>
+<h2>Сборка[2]</h2>
+<p>Риды были собраны заново, но с длиной k-меров 25.</p>
+<pre>velveth ./velveth25 25 -fastq reads.fastq -short
+velvetg ./velveth25
+Final graph has 2577 nodes and n50 of 4641, max 26632, total 693191, using 0/4167944 reads
+grep '>' contigs.fa > contigs25.txt
+</pre></div>
+<div class='col-md-4'><p>Полученные контиги были выровнены на геном (<a href='https://www.ncbi.nlm.nih.gov/nuccore/926444578/'>CP009253</a>) с помощью blast.</p></div>
+	<div class='col-md-8'>
+	    <figure>
+        <figcaption>Рис.3. Выравнивание контигов k=25 на геном</figcaption>
+        <img src='pages/study_process/terms/term3/pr15/blast25.png'
+        width=100%>
+    </figure>
+
+	</div>
+<div class='col-md-12'>
+<table class='table table-bordered'>
+	<caption>Таб.2. Длинные контиги сборки k=25</caption>
+	<tbody class='small'>
+		<tr>
+			<td>Контиг</td>
+			<td>Max score</td>
+			<td>Total score</td>
+			<td>Coverage</td>
+			<td>E-value</td>
+			<td>Identity</td>
+			<td>Length</td>
+			</tr>
+		<tr>
+			<td> NODE_6_length_26632_cov_46.586399</td>
+			<td>7348</td>
+			<td>14334</td>
+			<td>3%</td>
+			<td>0.0</td>
+			<td>81%</td>
+			<td>26632</td>
+			</tr>
+		<tr>
+			<td>NODE_7_length_18655_cov_43.680195</td>
+			<td>3949 </td>
+			<td>9162</td>
+			<td>2%</td>
+			<td>0.0</td>
+			<td>76%</td>
+			<td>18655</td>
+			</tr>
+		<tr>			 		
+			<td>NODE_58_length_14850_cov_41.244850</td>
+			<td>2202 </td>
+			<td>5593 </td>
+			<td>1%</td>
+			<td>0.0</td>
+			<td>78%</td>
+			<td>14850</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+<div class='col-md-6'>
+<p>Таблица <a href='pages/study_process/terms/term3/pr15/contigs25.xlsx'>[excel]</a> с данными о контигах из файла <samp>contigs.fa</samp></p>
+<p>N50 больше в сборке с k-мерами длины 29. N50 &ndash; длина самого короткого контига из наименьшего набора, который покрывает половину генома.
+Это значит, что контиги в сборке с более длинными k-мерами в среднем длиннее.</p>
+</div><div class='col-md-6'>
+	<table class='table table-bordered'>
+		<caption>Таб.3. Значения N50 сборок 1 и 2</caption>
+		<tbody>
+			<tr>
+				<td></td>
+				<td>k-mer 29</td>
+				<td>k-mer 25</td>
+				</tr>
+			<tr>
+				<td>n50</td>
+				<td>14866</td>
+				<td>4641</td>
+				</tr>
+			</tbody>
+		</table>
+</div>
+<div class='col-md-12'>
+	<h2>Сборка[3]</h2>
+	<p>В очищенном файле содержится примерно 4 миллиона ридов и 16 671 776 строк. Запишем первые 8 335 888 в новый файл.</p>
+	<pre>head -n 8335888 reads.fastq > reads_half.fastq</pre>
+	<p>Сборка половины ридов с k-мерами длины 29.</p>
+	<pre>velveth ./velveth_half 29 -fastq reads_half.fastq -short
+velvetg ./velveth_half
+Final graph has 497 nodes and n50 of 3850, max 13789, total 651839, using 0/2083972 reads
+</pre>
+	</div>
+	<div class='col-md-4'><p>Полученные из половины ридов контиги были выровнены на геном (<a href='https://www.ncbi.nlm.nih.gov/nuccore/926444578/'>CP009253</a>) с помощью blast.</p></div>
+	<div class='col-md-8'>
+	    <figure>
+        <figcaption>Рис.4. Выравнивание контигов из половины ридов на геном</figcaption>
+        <img src='pages/study_process/terms/term3/pr15/blast_half.png'
+        width=100%>
+    </figure>
+
+	</div>

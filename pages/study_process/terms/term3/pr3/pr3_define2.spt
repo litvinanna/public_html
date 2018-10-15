@@ -1,0 +1,7 @@
+define propol protein and (*.O? or *.N?)
+define pronon protein and (*.C? or *.S? or *.P?)
+define dnanonbig dna and (*.C6 or *.C5 or (g and *.C8) or (c and *.C4) or (t and (*.C4 or *.C5M)))
+define dnapolbig dna and (*.N6  or *.N7 or *.O4 or *.O6)
+define dnanonlit dna and (*.C2 or ((a or g) and *.C4) or (t and *.C6))
+define dnapollit dna and (*.N1 or *.N2 or *.N3 or *.N9 or *.O2)
+

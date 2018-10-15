@@ -1,0 +1,255 @@
+<div class="col-md-12">
+    <h1>Emboss и выравнивание геномов</h1>
+    <hr>
+</div>
+<div class="col-md-12">
+<h2>Emboss</h2>
+<table class="table table-bordered">
+	<caption></caption>
+	<tr>
+		<td rowspan=2>0.</td>
+		<td>Функция</td>
+		<td>Исходные файлы</td>
+		<td>Результат</td>
+		
+		</tr>
+		<tr><td colspan=4>>Команда</td></tr>
+	<tr>
+		<td rowspan=2>1.</td>
+		<td>Несколько файлов в формате fasta собрать в единый файл</td>
+		<td>список последовательностей <a href='pages/study_process/terms/term3/pr9/mylist'>mylist</a></td>
+		<td>файл с последовательностями <a href='pages/study_process/terms/term3/pr9/seqs.fasta'>seqs.fasta</a></td>
+		</tr>
+		<tr>		<td colspan=4>>seqret @mylist seqs.fasta</td></tr>
+	<tr>
+		<td rowspan=2>2.</td>
+		<td>Один файл в формате fasta с несколькими последовательностями разделить на отдельные fasta файлы </td>
+		<td>файл с последовательностями <a href='pages/study_process/terms/term3/pr9/seqs.fasta'>seqs.fasta</a></td>
+		<td>файлы с последовательностями, названия составлены из названий последовательностей маленькими буквами
+			<a href='pages/study_process/terms/term3/pr9/acly_human.fasta'>acly_human.fasta</a>;
+			<a href='pages/study_process/terms/term3/pr9/acly_rat.fasta'>acly_rat.fasta</a>;
+			<a href='pages/study_process/terms/term3/pr9/prpc_abds2.fasta'>prpc_abds2.fasta</a></td>;
+		
+		</tr>
+		<tr>		<td colspan=4>>seqretsplit seqs.fasta</td></tr>
+	<tr>
+		<td rowspan=2>3.</td>
+		<td>Из файла с хромосомой в формате .gb вырезать три кодирующих последовательности по указанным координатам "от", "до", "ориентация" и сохранить в одном fasta файле </td>
+		<td>хромосома E.coli, список кодирующих участков <a href='pages/study_process/terms/term3/pr9/colilist'>colilist</a></td>
+		<td>список последовательностей кодирующих участков <a href='pages/study_process/terms/term3/pr9/coliseqs.fasta'>coliseqs.fasta</a></td>
+		
+		</tr>
+		<tr>		<td colspan=4>>seqret @colilist fasta:coliseqs.fasta</td></tr>
+	<tr>
+		<td rowspan=2>4.</td>
+		<td>Транслировать кодирующие последовательности, лежащие в одном fasta файле, в аминокислотные, используя указанную таблицу генетического кода. Результат - в одном fasta файле</td>
+		<td>файл с нуклеотидными последовательностями, были взяты кодирующие регионы <a href='pages/study_process/terms/term3/pr9/sequence_nucl.fasta'>sequence_nucl.fasta</a></td>
+		<td>файл с последовательностями белков <a href='pages/study_process/terms/term3/pr9/tran_proteins.fasta'>tran_proteins.fasta</a></td>
+		
+		</tr>
+		<tr>		<td colspan=4>>transeq sequence_nucl.fasta -table 0 -outseq tran_proteins.fasta</td></tr>
+	<tr>
+		<td rowspan=2>5.</td>
+		<td>Транслировать данную нуклеотидную последовательность в шести рамках</td>
+		<td>файл с нукл. кодирующей последовательностью белка <a href='pages/study_process/terms/term3/pr9/actin_cds.fasta'>actin_cds.fasta</a></td>
+		<td>файл с амк. последовательностями белка <a href='pages/study_process/terms/term3/pr9/actin_6_frames.fasta'>actin_6_frames.fasta</a></td>
+		
+		</tr>
+		<tr>		<td colspan=4>>transeq actin_cds.fasta -frame 6 -outseq actin_6_frames.fasta</td></tr>
+	<tr>
+		<td rowspan=2>6.</td>
+		<td>Перевести выравнивание из fasta формата в формат .msf</td>
+		<td>файлы с нукл. последовательностями разных актинов<a href='pages/study_process/terms/term3/pr9/actin1.fasta'>actin1.fasta</a> <a href='pages/study_process/terms/term3/pr9/actin2.fasta'>actin2.fasta</a></td>
+		<td>выранивания <a href='pages/study_process/terms/term3/pr9/align_actin.fasta'>align_actin.fasta</a> <a href='pages/study_process/terms/term3/pr9/align_actin.msf'>align_actin.msf</a></td>
+		
+		</tr>
+		<tr><td colspan=4>>water -asequence actin1.fasta -bsequence actin2.fasta -aformat3 fasta -outfile align_actin.fasta</br> >seqret align_actin.fasta align_actin.msf -osformat2 msf</td></tr>
+	<tr>
+		<td rowspan=2>7.</td>
+		<td>Выдать в выходной поток число совпадающих букв между второй последовательностью выравнивания и всеми остальными (на выходе только имя последовательности и число) </td>
+		<td>файлы с нукл. последовательностями разных актинов <a href='pages/study_process/terms/term3/pr9/actin1.fasta'>actin1.fasta</a>; <a href='pages/study_process/terms/term3/pr9/actin2.fasta'>actin2.fasta</a>; 
+			<a href='pages/study_process/terms/term3/pr9/actin3.fasta'>actin3.fasta</a>; выравнивание с помощью muscle <a href='pages/study_process/terms/term3/pr9/align_actin_three.fasta'>align_actin_three.fasta</a></td>
+		<td>
+			<pre>
+NM_078901.3_1-1047	659
+XM_015907036.1_1-896	896
+XM_002277287.3_1-1635	562
+</pre>
+			</td>
+		
+		</tr>
+		<tr><td colspan=4>>infoalign align_actin_three.fasta stdout -refseq 2  -only -name -idcount</td></tr>
+	<tr>
+		<td rowspan=2>8.</td>
+		<td>Перевести аннотации особенностей в записи формата .gb в табличный формат .gff </td>
+		<td>один из скэффолдов первой хромосомы Rattus norvegicus <a href='pages/study_process/terms/term3/pr9/rat_chr.gb'>rat_chr.gb</a></td>
+		<td>feature table file <a href='pages/study_process/terms/term3/pr9/rat_feat.gff'>rat_feat.gff</a></td>
+		
+		</tr>
+		<tr><td colspan=4>>featcopy rat_chr.gb rat_feat.gff -offormat2 gff</td></tr>
+	<tr>
+		<td rowspan=2>9.</td>
+		<td>Из данного файла с хромосомой в формате .gb получить fasta файл с кодирующими последовательностями; (*) добавить в описание каждой последовательности функцию белка (из поля product) </td>
+		<td>Исходные файлы</td>
+		<td>Результат</td>
+		
+		</tr>
+		<tr><td colspan=4>>Команда</td></tr>
+	<tr>
+		<td rowspan=2>10.</td>
+		<td>Перемешать буквы в данной нуклеотидной последовательности; (*) проверить с помощью blastn сколько "достоверных" находок (с E-value < 0.1) найдется в нуклеотидном банке данных (запустите с порогом E = 10 - по умолчанию)</td>
+		<td>файл с нукл. последовательностью белка <a href='pages/study_process/terms/term3/pr9/actin1.fasta'>actin1.fasta</a></td>
+		<td>файл перемешанной последовательностью <a href='pages/study_process/terms/term3/pr9/actin1_shuffled.fasta'>actin1_shuffled.fasta</a></br> blastn не нашел достоверных находок (рис.1)</td>
+		
+		</tr>
+		<tr><td colspan=4>>shuffle actin1.fasta > actin1_shuffled.fasta</td></tr>
+	<tr>
+		<td rowspan=2>11.</td>
+		<td>Найдите частоты кодонов в данных кодирующих последовательностях </td>
+		<td>файл с нукл. кодирующей последовательностью белка <a href='pages/study_process/terms/term3/pr9/actin_cds.fasta'>actin_cds.fasta</a></td>
+		<td>файл с таблицей встречаемости кодонов<a href='pages/study_process/terms/term3/pr9/actin_codons.cusp'>actin_codons.cusp</a></td>
+		
+		</tr>
+		<tr><td colspan=4>>cusp actin_cds.fasta actin_codons.cusp</td></tr>
+	<tr>
+		<td rowspan=2>12.</td>
+		<td>Найдите частоты динуклеотидов в данной нуклеотидной последовательности и сравните их с ожидаемыми </td>
+		<td>файл с нукл. кодирующей последовательностью белка <a href='pages/study_process/terms/term3/pr9/actin_cds.fasta'>actin_cds.fasta</a></td>
+		<td>файл с таблицей встречаемости динуклеотидов <a href='pages/study_process/terms/term3/pr9/actin_cds.compseq'>actin_cds.compseq</a>;</br>
+			значение в столбце Obs/Exp Frequency для равномерного распределения пар было бы равным единице, но это не так. Чаще всего встречается пара СС, реже всего TA</td>
+		
+		</tr>
+		<tr><td colspan=4>>compseq actin_cds.fasta actin_cds.compseq -word 2</td></tr>
+	<tr>
+		<td rowspan=2>13.</td>
+		<td>Выровняйте кодирующие последовательности соответственно выравниванию белков - их продуктов</td>
+		<td></td>
+		<td>Результат</td>
+		
+		</tr>
+		<tr><td colspan=4>>Команда</td></tr>
+	
+	</table>
+</div>
+<div class='col-md-12'>
+    <figure>
+        <figcaption>Рис.1.Находки для перемешанного гена</figcaption>
+        <img width=100% src='pages/study_process/terms/term3/pr9/list1.png'>
+    </figure></div>
+<div class='col-md-12'>
+  <h2>Пангеном</h2>
+	<p>Были взяты геномы двух бактерий: <a href='https://www.ncbi.nlm.nih.gov/nuccore/CP006573.1?report=GenBank'>круговая хромосома</a> <a href='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1311759/'>Mannheimia haemolytica D171</a>,
+	<a href='https://www.ncbi.nlm.nih.gov/nuccore/CP006574.1?report=GenBank'>круговая хромосома</a> <a href='https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1311760'>Mannheimia haemolytica D174</a>
+	
+		
+</p>
+  </div>
+<div class='col-md-12'>
+    <figure>
+        <figcaption>Рис.2.Карта локального сходства D171 vs. D174 (y-axis vs. x-axis)</figcaption>
+        <img width=100% src='pages/study_process/terms/term3/pr9/0.png'>
+        <img width=100% src='pages/study_process/terms/term3/pr9/hit_matrix.png'>
+    </figure></div>
+<div class='col-md-12 small_empty_block'></div>
+    
+<div class='col-md-6'>
+<p>На рис.3 показан участок, на котором произошла инверсия</p>
+	<figure>
+        <figcaption>Рис.3.Инверсия</figcaption>
+        <img width=100% src='pages/study_process/terms/term3/pr9/1.png'>
+    </figure></div>
+<div class='col-md-6'>
+<p>На рис.4-5 показаны участки, которые были транслоцированы</p>
+	<figure>
+        <figcaption>Рис.4.Транслокация 1</figcaption>
+        <img width=100% src='pages/study_process/terms/term3/pr9/2.png'>
+    </figure>
+    <figure>
+        <figcaption>Рис.5.Транслокация 2</figcaption>
+        <img width=100% src='pages/study_process/terms/term3/pr9/3.png'>
+    </figure></div>   
+    
+    <div class='col-md-12'>
+    <h2>Составление пангенома</h2>
+    <p>Были исследованы геномы бактерий рода Acetobacter.
+    Был создан файл genomes.tsv, в котором давались исходные данные для работы, со следующим содержанием:</p>
+    <pre>all:embl:HF677570.1       386B    chr1    c       Acetobacter pasteurianus 386B
+all:embl:AP011121       IFO3283-01   chr1    c       Acetobacter pasteurianus IFO 3283-01
+all:embl:CP012111       Ab3    chr1    c       Acetobacter pasteurianus strain Ab3
+</pre>
+	<p>NPG-explorer  установила на компьютер. Был создан файл с параметрами работы:</p>
+<pre>npge -g npge.conf</pre>
+	<p>Геномные ДНК были скачаны и переименованы:</p>
+	<pre>npge Prepare</pre>
+	<p>Геномы были оценены. Параметр MIN_IDENTUTY был изменен на 0.846 по рекомендации программы.</p>
+	<pre>npge Examine</pre>
+	<p>Далее был создн и проанализирован пангеном.</p> 
+	<pre>npge MakePangenome
+npge PostProcessing</pre>
+<h3>Синтеничные участки</h3>
+    <p>В файле pannome/pangenome.info содерится информация о разных типах блоков. В моем пангеноме 27 g-блоков. 
+    Пример выравнивания g-блоков представлен на рис.6.
+    </p>
+<figure class='figure'><figcaption>Рис.6. Выравнивание g-блоков</figcaption><div style='overflow-x:scroll' width = 100%><img src='pages/study_process/terms/term3/pr9/npge-1.png' width=1200px></div></figure> <div class='small_empty_block'></div>
+<figure class='figure'><figcaption>Рис.7. Выравнивание внутри g-блока</figcaption><div style='overflow-x:scroll' width = 100%><img src='pages/study_process/terms/term3/pr9/npge-2.png' width=1200px></div></figure>
+   <p>Блок g3x352440 присутствует во вех геномах. Можно отдельно посмотреть регионы, которые включены в этот блок.
+    Он состоит их многих частей (рис.7). Например, он начинается с довольно длинной коровой части s3x6298.
+    Далее в второй вид имеет отличную од двух других часть. Такое чередование далее характерно. Второй вид сильно выделяется из тройки.
+    Для любой комбинации s, r, h, m блоков можно получить выранивание последовательнотей, выделив их.</p>
+    
+   </div>
+   <div class='col-md-12'>
+   <h3>Описание s-блоков</h3>
+   <p>В пангеноме 401 s-блок. Они составляют 79.68% пангенома - размер ядра, то есть часть входных последовательностей, вошедших в блоки.
+   Сходство геномов - процент консервативных позицийв объединённом выранивании s-блоков - 93.4436%.</p>
+   
+   </div>
+   <div class='col-md-12'>
+   <h3>R-блок</h3>
+   <p>Для рассмотрения был взят блок r22x334. Последовательность 
+   из выбранного региона выделена красным. Он встречается 22 раза в геноме второго организма. 
+   Последовательность очень консервативная (всё выравнивание такое, как показанный кусочек). Но этот блок встерачается 
+   только в одном геноме,</p>
+   <figure class='figure'><figcaption>Рис.8. R-блок</figcaption><div style='overflow-x:scroll' width = 100%><img src='pages/study_process/terms/term3/pr9/npge-3.png' width=1200px></div>
+   </figure> <div class='small_empty_block'></div>
+
+   </div>
+   <div class='col-md-12'>
+	 <h3>Дерево</h3>
+   <p>Филогенетическое дерево геномов, построенное по объединенному выравниванию s-блоков (рис.9.),  показывает, что второй организм действительно сильно отличается от остальных.</p>
+   <figure class='figure'><figcaption>Рис.9. Филогенетическое дерево</figcaption><div><img width = 100% src='pages/study_process/terms/term3/pr9/tree.png'></div></figure>
+   </div>
+   <div class='col-md-12'>
+   <h3>Ошибка?</h3>
+   <p>Между двумя коровыми блоками s3x4966 и s3x15814 были найденны необычные блоки. Этот регион в одном геноме 
+   отмечен как уникальный (рис.10). Но этот регион у всех организмов кодирует Fusaric acid resistance protein.
+   </p>
+   <figure class='figure'><figcaption>Рис.10</figcaption><div style='overflow-x:scroll' width = 100%><img src='pages/study_process/terms/term3/pr9/npge-4.png' width=1200px></div></figure>
+   <figure class='figure'><figcaption>Рис.11</figcaption><div style='overflow-x:scroll' width = 100%><img src='pages/study_process/terms/term3/pr9/npge-5.png' width=1200px></div></figure>
+<div class='small_empty_block'></div>
+<p>Данные последовательности были скачаны в <a href='pages/study_process/terms/term3/pr9/mist'>файл (1-3-2)</a>
+ и <a href='pages/study_process/terms/term3/pr9/ali-1.jvp'>выровнены</a> (рис.11). Выранивание достаточно хорошее,
+ учитывая то, что это гены, а не сами белки.</p>
+      <figure class='figure'><figcaption>Рис.11</figcaption><div style='overflow-x:scroll' width = 100%><img src='pages/study_process/terms/term3/pr9/npge-6.png'></div></figure>
+<p>Этот участок кажется гомологичным, но сильно эволюционировавшим, изменившимся в геноме Ab3.</p>
+   </div>
+    <h3>Интересный пример</h3>
+   <p>Между двумя коровыми блоками найден регион, котором последовательность Ab3 выделена отдельно.
+   Регионы имеют одинаковую длину, но в Ab3 это dihydropyrimidine dehydrogenase, 
+   а в IFO и 386B pyridine nucleotide-disulphide oxidoreductase.</p><p>
+   Эти ферменты работают с одним субстратом, но тем не менее относятся к разным классам.
+   Это может служить примером эволюционной удаленности штамма Ab3. Такое 'несовпадение' ряд ли является результатом транслокации, 
+   так как регион расположен между консервативными участками, и данный ген не мог ровно встать на место другого, который был удален (невероятная ситуация).
+   Эти гены несомненно гомологичны, но из-за большого эволюционного разрыва последовательности и функции закодированных 
+   белков стали заметно отличаться.</p>
+   <figure class='figure'><figcaption>Рис.12</figcaption><div style='overflow-x:scroll' width = 100%><img src='pages/study_process/terms/term3/pr9/npge-7.png' width=1200px></div></figure>
+   <figure class='figure'><figcaption>Рис.13</figcaption><div style='overflow-x:scroll' width = 100%><img src='pages/study_process/terms/term3/pr9/npge-8.png' width=1200px></div></figure>
+
+   </div>
+    
+<!--<div name="links" id="links" class="col-md-12">
+    <h2>Примечания:</h2>
+    <ul>
+        <li><a>todo</a></li>
+    </ul>
+</div> -->

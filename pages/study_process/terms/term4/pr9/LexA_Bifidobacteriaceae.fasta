@@ -1,0 +1,194 @@
+>BAD_0676(uvrB) Score=5.8 Pos=-87 [Bifidobacterium adolescentis ATCC 15703]
+TAGAACACATGTTCGA
+>BAD_1115(lexA) Score=5.7 Pos=-8 [Bifidobacterium adolescentis ATCC 15703]
+TCGAACAGATGTTTGA
+>BAD_1024(recA) Score=5.7 Pos=-190 [Bifidobacterium adolescentis ATCC 15703]
+TCGAACAGATGTTCGG
+>BAD_0804(ruvA) Score=5.9 Pos=-41 [Bifidobacterium adolescentis ATCC 15703]
+TCGAACAGATGTTCTA
+>BAD_0840(uvrA) Score=5.6 Pos=-78 [Bifidobacterium adolescentis ATCC 15703]
+TAGAACACCTGTTCGA
+>BAD_1008(lhr) Score=5.5 Pos=25 [Bifidobacterium adolescentis ATCC 15703]
+TCGAACGTATGTACGA
+>BAD_1115(lexA) Score=5.8 Pos=-76 [Bifidobacterium adolescentis ATCC 15703]
+TCGAACAGCTGTTCTA
+>BAD_1115(lexA) Score=5 Pos=-60 [Bifidobacterium adolescentis ATCC 15703]
+TCGAACGCTTGTTCCA
+>BAD_1115(lexA) Score=5.2 Pos=-40 [Bifidobacterium adolescentis ATCC 15703]
+TGGCACATATGTTCGA
+>BAD_0522(dinP1) Score=5.7 Pos=-110 [Bifidobacterium adolescentis ATCC 15703]
+TCGAACAGCCGTTCGA
+>BAD_0585(rarA) Score=5.8 Pos=-48 [Bifidobacterium adolescentis ATCC 15703]
+TCGAACGTGTGTTCGA
+>BIFANG_00697(dinP2) Score=5.9 Pos=-47 [Bifidobacterium angulatum DSM 20098]
+TCGAACAAGTGTTCGA
+>BIFANG_01139(uvrB) Score=5.6 Pos=-80 [Bifidobacterium angulatum DSM 20098]
+TGGAACAAATGTTCGA
+>BIFANG_01578(recA) Score=5.7 Pos=-229 [Bifidobacterium angulatum DSM 20098]
+TCGAACAAATGTTCGC
+>BIFANG_00990(lexA) Score=5.9 Pos=-113 [Bifidobacterium angulatum DSM 20098]
+TCGAACATCTGTTCTA
+>BIFANG_00990(lexA) Score=5.6 Pos=-97 [Bifidobacterium angulatum DSM 20098]
+TCGAACGTTTGTTCTA
+>BIFANG_01367(ruvA) Score=6 Pos=-29 [Bifidobacterium angulatum DSM 20098]
+TCGAACAGTTGTTCGA
+>BIFANG_01450(uvrA) Score=5.8 Pos=-82 [Bifidobacterium angulatum DSM 20098]
+GCGAACATCTGTTCGA
+>BIFANG_00973(dinP1) Score=6 Pos=-41 [Bifidobacterium angulatum DSM 20098]
+TCGAACGTATGTTCGA
+>BIFANG_01557(lhr) Score=5.8 Pos=-8 [Bifidobacterium angulatum DSM 20098]
+TCGAACATATGTACGA
+>BIFANG_00990(lexA) Score=5.7 Pos=-43 [Bifidobacterium angulatum DSM 20098]
+TCGAACAAATGTTTGA
+>BIFANG_00990(lexA) Score=5 Pos=-77 [Bifidobacterium angulatum DSM 20098]
+TTGCACAGATGTTCGA
+>BLA_0934(recA) Score=5.7 Pos=-206 [Bifidobacterium animalis subsp. lactis AD011]
+TCGAACAAATGTTCGC
+>BLA_0790(lexA) Score=5.7 Pos=-64 [Bifidobacterium animalis subsp. lactis AD011]
+TCGAACATCTGTTTGA
+>BLA_1342(ruvA) Score=5.8 Pos=-33 [Bifidobacterium animalis subsp. lactis AD011]
+CCGAACATATGTTCGA
+>BLA_0790(lexA) Score=5.8 Pos=-127 [Bifidobacterium animalis subsp. lactis AD011]
+TCGAACAAATGTTCTA
+>BLA_0790(lexA) Score=5.6 Pos=-94 [Bifidobacterium animalis subsp. lactis AD011]
+TCGCACATCTGTTCGA
+>BLA_1496(uvrB) Score=5.6 Pos=-67 [Bifidobacterium animalis subsp. lactis AD011]
+TAGAACAGACGTTCGA
+>BLA_0349(dinP2) Score=5.1 Pos=-29 [Bifidobacterium animalis subsp. lactis AD011]
+TCGAACATCTGTTCAG
+>BLA_0950(lhr) Score=5.7 Pos=-8 [Bifidobacterium animalis subsp. lactis AD011]
+TCGAACATATGTGCGA
+>BLA_1129(dinP1) Score=5.8 Pos=-27 [Bifidobacterium animalis subsp. lactis AD011]
+TCGAACGTTTGTTCGA
+>BLA_1204(rarA) Score=6.1 Pos=-56 [Bifidobacterium animalis subsp. lactis AD011]
+TCGAACATTTGTTCGA
+>BLA_1372(uvrA) Score=5.9 Pos=-88 [Bifidobacterium animalis subsp. lactis AD011]
+TCGAACAAGTGTTCGA
+>BbifN4_010100002264(lexA) Score=4.9 Pos=-51 [Bifidobacterium bifidum NCIMB 41171]
+TCGAACGAATGTTTGT
+>BbifN4_010100006154(recA) Score=5.5 Pos=-246 [Bifidobacterium bifidum NCIMB 41171]
+TCGAACAGGTGTTCGC
+>BbifN4_010100004709(ruvA) Score=5.4 Pos=-169 [Bifidobacterium bifidum NCIMB 41171]
+TCGAACAGATGTTCTG
+>BbifN4_010100004854(uvrA) Score=5.6 Pos=-90 [Bifidobacterium bifidum NCIMB 41171]
+TCGAACTGATGTTCGA
+>BbifN4_010100002264(lexA) Score=4.5 Pos=-105 [Bifidobacterium bifidum NCIMB 41171]
+TAGAACAACTGTACTC
+>BbifN4_010100006079(lhr) Score=5.1 Pos=-8 [Bifidobacterium bifidum NCIMB 41171]
+TCGAATATATGTACGA
+>BbifN4_010100006359(dinP1) Score=4.6 Pos=-61 [Bifidobacterium bifidum NCIMB 41171]
+TCGAACATATGTCTCA
+>BbifN4_010100002924(rarA) Score=5.6 Pos=-38 [Bifidobacterium bifidum NCIMB 41171]
+TCGAACCTATGTTCGA
+>BIFBRE_01637(recA) Score=5.7 Pos=-157 [Bifidobacterium breve DSM 20213]
+TCGAACAAATGTTCGC
+>BIFBRE_01347(ruvA) Score=6 Pos=-36 [Bifidobacterium breve DSM 20213]
+TCGAACAGTTGTTCGA
+>BIFBRE_01804(lexA) Score=5.7 Pos=-67 [Bifidobacterium breve DSM 20213]
+TCGAACAGATGTTTGA
+>BIFBRE_01621(lhr) Score=5.7 Pos=22 [Bifidobacterium breve DSM 20213]
+TCGAACATATGTGCGA
+>BIFBRE_01804(lexA) Score=5.4 Pos=-120 [Bifidobacterium breve DSM 20213]
+TCGAACATCTGTTCTT
+>BIFBRE_01804(lexA) Score=5 Pos=-100 [Bifidobacterium breve DSM 20213]
+TGGCACAAATGTTCGA
+>BIFBRE_01317(uvrA) Score=6 Pos=-106 [Bifidobacterium breve DSM 20213]
+TCGAACATGTGTTCGA
+>BIFBRE_00833(dinP1) Score=6.1 Pos=-8 [Bifidobacterium breve DSM 20213]
+TCGAACAAATGTTCGA
+>BIFBRE_00563(rarA) Score=5.9 Pos=-39 [Bifidobacterium breve DSM 20213]
+TCGAACGTCTGTTCGA
+>BIFBRE_01804(lexA) Score=5.6 Pos=-136 [Bifidobacterium breve DSM 20213]
+TCGAACAAGTGTTCTA
+>BDP_0902(uvrB) Score=5.7 Pos=-58 [Bifidobacterium dentium Bd1]
+TAGAACGTATGTTCGA
+>BDP_1421(recA) Score=5.6 Pos=-235 [Bifidobacterium dentium Bd1]
+TCGAACAGATGTTCGT
+>BDP_1131(uvrA) Score=5.6 Pos=-82 [Bifidobacterium dentium Bd1]
+TCGAACAGGTGTTCTA
+>BDP_1176(ruvA) Score=5.9 Pos=-151 [Bifidobacterium dentium Bd1]
+TCGAACAGATGTTCTA
+>BDP_0412(dinP2) Score=5.2 Pos=4 [Bifidobacterium dentium Bd1]
+TCGAACATCTGTTTCA
+>BDP_1405(lhr) Score=5.5 Pos=-8 [Bifidobacterium dentium Bd1]
+TCGAACGTATGTACGA
+>BDP_1556(lexA) Score=5.7 Pos=-286 [Bifidobacterium dentium Bd1]
+TCGAACAGATGTTTGA
+>BDP_0721(dinP1) Score=5.9 Pos=-75 [Bifidobacterium dentium Bd1]
+TCGAACGGATGTTCGA
+>BDP_0795(rarA) Score=5.8 Pos=-21 [Bifidobacterium dentium Bd1]
+TCGAACGTGTGTTCGA
+>BIFGAL_00191(recA) Score=5.7 Pos=-152 [Bifidobacterium gallicum DSM 20093]
+TCGAACATTTGTTCGC
+>BIFGAL_00302(lexA) Score=5.7 Pos=-25 [Bifidobacterium gallicum DSM 20093]
+TCGAACATTTGTTCGC
+>BIFGAL_00302(lexA) Score=5.6 Pos=11 [Bifidobacterium gallicum DSM 20093]
+TCGCACATTTGTTCGA
+>BIFGAL_01661(ruvA) Score=5.8 Pos=-125 [Bifidobacterium gallicum DSM 20093]
+GCGAACATCTGTTCGA
+>BIFGAL_01317(lhr) Score=5 Pos=-8 [Bifidobacterium gallicum DSM 20093]
+TCGAACATATGAGCGA
+>BIFGAL_01091(dinP1) Score=6.3 Pos=-8 [Bifidobacterium gallicum DSM 20093]
+TCGAACATATGTTCGA
+>BIFGAL_01848(rarA) Score=6.3 Pos=-68 [Bifidobacterium gallicum DSM 20093]
+TCGAACATATGTTCGA
+>BIFGAL_01593(uvrA) Score=6 Pos=-102 [Bifidobacterium gallicum DSM 20093]
+TCGAACATGTGTTCGA
+>BL1415(recA) Score=5.6 Pos=-236 [Bifidobacterium longum NCC2705]
+TCGAACAAATGTTCGT
+>BL0728(ruvA) Score=6 Pos=-50 [Bifidobacterium longum NCC2705]
+TCGAACAGTTGTTCGA
+>BL1310(lexA) Score=5.2 Pos=-120 [Bifidobacterium longum NCC2705]
+TCGAACAACTGTTCTT
+>BL1310(lexA) Score=4.7 Pos=-100 [Bifidobacterium longum NCC2705]
+TGGCACAAACGTTCGA
+>BL1310(lexA) Score=5.7 Pos=-67 [Bifidobacterium longum NCC2705]
+TCGAACAGATGTTTGA
+>BL1310(lexA) Score=5.9 Pos=-136 [Bifidobacterium longum NCC2705]
+TCGAACAGATGTTCTA
+>BL1432(lhr) Score=5.2 Pos=-8 [Bifidobacterium longum NCC2705]
+TCGTACATATGTACGA
+>BL1114(dinP1) Score=6.1 Pos=-58 [Bifidobacterium longum NCC2705]
+TCGAACAAATGTTCGA
+>BL0029(rarA) Score=5.9 Pos=-39 [Bifidobacterium longum NCC2705]
+TCGAACGTCTGTTCGA
+>BL0702(uvrA) Score=5.6 Pos=-102 [Bifidobacterium longum NCC2705]
+TCGAACAAGCGTTCGA
+>Blon_0949(recA) Score=5.6 Pos=-173 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGAACAGATGTTCGT
+>Blon_1157(ruvA) Score=6.2 Pos=-50 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGAACAGATGTTCGA
+>Blon_0842(lexA) Score=5.9 Pos=-136 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGAACAGATGTTCTA
+>Blon_0842(lexA) Score=5.2 Pos=-120 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGAACAACTGTTCTT
+>Blon_0842(lexA) Score=5 Pos=-100 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TGGCACAAATGTTCGA
+>Blon_0842(lexA) Score=5.7 Pos=-67 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGAACAGATGTTTGA
+>Blon_0964(lhr) Score=5.2 Pos=-8 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGTACATATGTACGA
+>Blon_1082(uvrA) Score=5.6 Pos=-204 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGAACAAGCGTTCGA
+>Blon_1951(dinP1) Score=6.1 Pos=-64 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGAACAAATGTTCGA
+>Blon_0716(rarA) Score=5.9 Pos=-39 [Bifidobacterium longum subsp. infantis ATCC 15697]
+TCGAACGTCTGTTCGA
+>HMPREF0424_0243(dinP2) Score=5.6 Pos=-107 [Gardnerella vaginalis 409-05]
+TCGAACGTTTGTTCTA
+>HMPREF0424_1021(recA) Score=5.7 Pos=-179 [Gardnerella vaginalis 409-05]
+TCGAACAAATGTTCGC
+>HMPREF0424_0837(ruvA) Score=5.6 Pos=-79 [Gardnerella vaginalis 409-05]
+TAGAACAGATGTTCTA
+>HMPREF0424_0816(uvrA) Score=5.6 Pos=-92 [Gardnerella vaginalis 409-05]
+TCGAACACTTGTTCTA
+>HMPREF0424_0572(lexA) Score=4.9 Pos=-114 [Gardnerella vaginalis 409-05]
+TCGAACAGATGTATTA
+>HMPREF0424_0572(lexA) Score=4.6 Pos=-94 [Gardnerella vaginalis 409-05]
+TGACACATTTGTTCGA
+>HMPREF0424_0572(lexA) Score=5.7 Pos=-62 [Gardnerella vaginalis 409-05]
+TCGAACAGATGTTTGA
+>HMPREF0424_0826(rarA) Score=5.6 Pos=-38 [Gardnerella vaginalis 409-05]
+TCGAACGTTTGTTCTA
+>HMPREF0424_0572(lexA) Score=4.8 Pos=-130 [Gardnerella vaginalis 409-05]
+CTGAACATTTGTTCTA

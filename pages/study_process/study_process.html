@@ -1,0 +1,33 @@
+<div class="panel panel-navy separated sharp">
+    <div class="panel-heading">
+        <h4 class="text-navy">Учебный процесс</h4>
+    </div>
+    <div class="panel-body">
+        <div ng-repeat="term in terms" class="col-md-2">
+            <button class="btn btn-default btn-block sharp" ng-click="setTerm(term)" ng-class="{'btn-navy':isTermActive(term)}" compile="term.title"></button>
+        </div>
+        <div class="col-md-12" ng-if="isTermChoosen()">
+            <hr>
+            <h2>{{ currentTerm().description }}</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="panel-body" ng-if="isTermChoosen()">
+        <div ng-repeat="task in currentTerm().tasks" class="col-md-6">
+            <button class="btn btn-default btn-block sharp" ng-click="setTask(task)" ng-class="{'btn-navy':isTaskActive(task)}" compile="task.title"></button>
+        </div>
+        <div class="col-md-12">
+            <div class="small_empty_block"></div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-navy separated sharp" ng-if="isTaskChoosen()">
+    <div class="panel-body">
+        <div class="col-md-12">
+            <ng-include src="currentTask().url"></ng-include>
+        </div>
+        <div class="col-md-12">
+            <div class="bottom_empty"></div>
+        </div>
+    </div>
+</div>

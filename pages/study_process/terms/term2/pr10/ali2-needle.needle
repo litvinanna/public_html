@@ -1,0 +1,62 @@
+########################################
+# Program: needle
+# Rundate: Sun 22 May 2016 21:56:32
+# Commandline: needle
+#    [-asequence] fasta-for-gl-loc.fasta
+#    [-bsequence] uspe.fasta
+#    -gapopen 10
+#    -gapextend 0.5
+#    -outfile ali2-needle.needle
+# Align_format: srspair
+# Report_file: ali2-needle.needle
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: WP_021461508.1
+# 2: B4ETT2_PROMH
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 320
+# Identity:     146/320 (45.6%)
+# Similarity:   208/320 (65.0%)
+# Gaps:          11/320 ( 3.4%)
+# Score: 733.0
+# 
+#
+#=======================================
+
+WP_021461508.      1 -MYFNNILVVIDPENEKQAALERALHLIKQQNSSQLVNLTAFLAIYNLSY     49
+                      ..:.|:||||||..:.|.||.||:::: |:|..:   :.|||.:|:|||
+B4ETT2_PROMH       1 MEKYQNLLVVIDPNQDDQPALRRAVYIV-QRNGGR---IKAFLPVYDLSY     46
+
+WP_021461508.     50 AVSVTHSSSEREEMIAAVIAEKKAWLQDILAQYDLSNTQFKIEVVWESNE     99
+                     .::...|..||..|...||.:|.||::.....|..:..|..|:|:|.:..
+B4ETT2_PROMH      47 DMTTLLSPDERNAMRKGVINQKTAWIKQQARYYLEAGIQIDIKVIWHNRP     96
+
+WP_021461508.    100 ADAIEKEIVKHHHDLVVKFTHQEDDLSSLIFTPTDWQLLRKSSCPILMVK    149
+                     .:||.:|::...|||::|..||.|.|.||||||.|||||||...|:.|||
+B4ETT2_PROMH      97 YEAIIEEVITDKHDLLIKMAHQHDKLGSLIFTPLDWQLLRKCPAPVWMVK    146
+
+WP_021461508.    150 DGDWKHQRRILVAVNVSDDEPYHDDFNKQLVGLSMSLAQSLDRG-NIHLV    198
+                     |.:|.....|:||.|:|::|.|||..|.:|:.|:..|:..:.:. ::||:
+B4ETT2_PROMH     147 DKEWPEYGTIVVAANLSNEESYHDALNLKLIELTNDLSHRIQKDPDVHLL    196
+
+WP_021461508.    199 SAYPSAPVGITLDLPEFSVPDYGNSIRGQHLINMKALRQHFGIAEDHTHV    248
+                     ||||.||:.|.::||:|....|.|::||||||.||.|||.|.|.|:.|||
+B4ETT2_PROMH     197 SAYPVAPINIAIELPDFDPNLYNNALRGQHLIAMKELRQKFSIPEEKTHV    246
+
+WP_021461508.    249 YEGLPEEVIPKVAQDIGAELVVLGTIGRTGLSAVLLGNTAEHVISQLNCN    298
+                     .|||||:|||:|.:::.|.:||||.:|||||||..||||||.:|..:.|:
+B4ETT2_PROMH     247 KEGLPEQVIPQVCEELNAGIVVLGILGRTGLSAAFLGNTAEQLIDHIKCD    296
+
+WP_021461508.    299 LLAIKPSK-----DLITDDE    313
+                     ||||||..     .:.:|:|
+B4ETT2_PROMH     297 LLAIKPDGFTCPITVDSDNE    316
+
+
+#---------------------------------------
+#---------------------------------------

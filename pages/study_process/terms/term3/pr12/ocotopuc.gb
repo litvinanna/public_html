@@ -1,0 +1,1193 @@
+LOCUS       NW_014652958         1567542 bp    DNA     linear   CON 10-DEC-2015
+DEFINITION  Octopus bimaculoides isolate UCB-OBI-ISO-001 unplaced genomic
+            scaffold, Octopus_bimaculoides_v2_0 Scaffold322, whole genome
+            shotgun sequence.
+ACCESSION   NW_014652958 GPS_011462892
+VERSION     NW_014652958.1
+DBLINK      BioProject: PRJNA305125
+            BioSample: SAMN03271701
+            Assembly: GCF_001194135.1
+KEYWORDS    WGS; RefSeq.
+SOURCE      Octopus bimaculoides
+  ORGANISM  Octopus bimaculoides
+            Eukaryota; Metazoa; Lophotrochozoa; Mollusca; Cephalopoda;
+            Coleoidea; Neocoleoidea; Octopodiformes; Octopoda; Incirrata;
+            Octopodidae; Octopus.
+REFERENCE   1  (bases 1 to 1567542)
+  AUTHORS   Albertin,C.B., Simakov,O., Mitros,T., Wang,Z.Y., Pungor,J.R.,
+            Edsinger-Gonzales,E., Brenner,S., Ragsdale,C.W. and Rokhsar,D.S.
+  TITLE     The octopus genome and the evolution of cephalopod neural and
+            morphological novelties
+  JOURNAL   Nature 524 (7564), 220-224 (2015)
+   PUBMED   26268193
+COMMENT     REFSEQ INFORMATION: The reference sequence is identical to
+            KQ415687.1.
+            Assembly name: Octopus_bimaculoides_v2_0
+            The genomic sequence for this RefSeq record is from the
+            whole-genome assembly released by the UC Berkeley on 2015/08/18.
+            The original whole-genome shotgun project has the accession
+            LGKD00000000.1.
+            
+            ##Genome-Assembly-Data-START##
+            Assembly Provider     :: Vincent J. Coates Genomic Sequencing
+                                     Laboratory at UC Berkeley
+            Assembly Method       :: Meraculous v. May-2013
+            Assembly Name         :: Octopus_bimaculoides_v2_0
+            Genome Coverage       :: 92x
+            Sequencing Technology :: Illumina HiSeq 2000
+            ##Genome-Assembly-Data-END##
+            
+            ##Genome-Annotation-Data-START##
+            Annotation Provider         :: NCBI
+            Annotation Status           :: Full annotation
+            Annotation Version          :: Octopus bimaculoides Annotation
+                                           Release 100
+            Annotation Pipeline         :: NCBI eukaryotic genome annotation
+                                           pipeline
+            Annotation Software Version :: 6.5
+            Annotation Method           :: Best-placed RefSeq; Gnomon
+            Features Annotated          :: Gene; mRNA; CDS; ncRNA
+            ##Genome-Annotation-Data-END##
+FEATURES             Location/Qualifiers
+     source          1..1567542
+                     /organism="Octopus bimaculoides"
+                     /mol_type="genomic DNA"
+                     /isolate="UCB-OBI-ISO-001"
+                     /isolation_source="wild caught off the coast of
+                     California"
+                     /db_xref="taxon:37653"
+                     /chromosome="Unknown"
+                     /sex="male"
+                     /tissue_type="gonad"
+                     /country="Pacific Ocean"
+                     /collected_by="Crissy Huffard, Roy Caldwell"
+     gene            315381..329906
+                     /gene="LOC106873320"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873320"
+     mRNA            join(315381..315418,318711..318868,320217..320262,
+                     321188..321274,321769..321899,323718..323847,
+                     325004..325073,327222..327338,328100..328279,
+                     329431..329906)
+                     /gene="LOC106873320"
+                     /product="Golgi reassembly-stacking protein 2-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 4 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014920682.1"
+                     /db_xref="GeneID:106873320"
+     CDS             join(318771..318868,320217..320262,321188..321274,
+                     321769..321899,323718..323847,325004..325073,
+                     327222..327338,328100..328279,329431..329786)
+                     /gene="LOC106873320"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="Golgi reassembly-stacking protein 2-like"
+                     /protein_id="XP_014776168.1"
+                     /db_xref="GeneID:106873320"
+     gene            complement(339350..445928)
+                     /gene="LOC106873409"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873409"
+     mRNA            complement(join(339350..339684,340465..340516,
+                     342520..342599,343512..343586,414385..414492,
+                     445872..445928))
+                     /gene="LOC106873409"
+                     /product="U3 small nucleolar ribonucleoprotein protein
+                     IMP3-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 11 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 3 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014920795.1"
+                     /db_xref="GeneID:106873409"
+     CDS             complement(join(339531..339684,340465..340516,
+                     342520..342599,343512..343586,414385..414492,
+                     445872..445909))
+                     /gene="LOC106873409"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="U3 small nucleolar ribonucleoprotein protein
+                     IMP3-like"
+                     /protein_id="XP_014776281.1"
+                     /db_xref="GeneID:106873409"
+     gene            464946..618226
+                     /gene="LOC106873852"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873852"
+     mRNA            join(464946..465947,498523..498607,510159..510298,
+                     511806..511940,512654..512852,518203..518336,
+                     576102..576224,579201..579434,581189..581344,
+                     582514..582702,594300..594413,595020..595130,
+                     595723..595956,596907..597020,597407..597602,
+                     598511..598656,599439..599666,600864..601014,
+                     606162..606523,606914..607465,607855..607970,
+                     608977..609213,609894..610468,610941..611080,
+                     611168..611390,611926..612067,612991..613165,
+                     613656..613820,614261..614412,615281..615428,
+                     615771..615868,616532..618226)
+                     /gene="LOC106873852"
+                     /product="neurogenic locus notch homolog protein 1-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 69 Proteins, and 99% coverage of
+                     the annotated genomic feature by RNAseq alignments"
+                     /transcript_id="XM_014921403.1"
+                     /db_xref="GeneID:106873852"
+     CDS             join(465872..465947,498523..498607,510159..510298,
+                     511806..511940,512654..512852,518203..518336,
+                     576102..576224,579201..579434,581189..581344,
+                     582514..582702,594300..594413,595020..595130,
+                     595723..595956,596907..597020,597407..597602,
+                     598511..598656,599439..599666,600864..601014,
+                     606162..606523,606914..607465,607855..607970,
+                     608977..609213,609894..610468,610941..611080,
+                     611168..611390,611926..612067,612991..613165,
+                     613656..613820,614261..614412,615281..615428,
+                     615771..615868,616532..617791)
+                     /gene="LOC106873852"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="neurogenic locus notch homolog protein 1-like"
+                     /protein_id="XP_014776889.1"
+                     /db_xref="GeneID:106873852"
+     gene            complement(645156..738045)
+                     /gene="LOC106873489"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873489"
+     mRNA            complement(join(645156..647487,677385..677688,
+                     738012..738045))
+                     /gene="LOC106873489"
+                     /product="fibroblast growth factor receptor 3-like,
+                     transcript variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 1 sample with support for all annotated introns"
+                     /transcript_id="XM_014920995.1"
+                     /db_xref="GeneID:106873489"
+     mRNA            complement(join(645156..647487,677385..677688,
+                     707498..707509,708743..708935))
+                     /gene="LOC106873489"
+                     /product="fibroblast growth factor receptor 3-like,
+                     transcript variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 1 sample with support for all annotated introns"
+                     /transcript_id="XM_014920910.1"
+                     /db_xref="GeneID:106873489"
+     CDS             complement(645220..646422)
+                     /gene="LOC106873489"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="fibroblast growth factor receptor 3-like"
+                     /protein_id="XP_014776396.1"
+                     /db_xref="GeneID:106873489"
+     CDS             complement(645220..646422)
+                     /gene="LOC106873489"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="fibroblast growth factor receptor 3-like"
+                     /protein_id="XP_014776481.1"
+                     /db_xref="GeneID:106873489"
+     gene            756768..765116
+                     /gene="LOC106873937"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873937"
+     mRNA            join(756768..756843,759948..760182,763384..765116)
+                     /gene="LOC106873937"
+                     /product="ankyrin repeat and SOCS box protein 8-like,
+                     transcript variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 16 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 11 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014921572.1"
+                     /db_xref="GeneID:106873937"
+     mRNA            join(756780..757144,759948..760182,763384..765116)
+                     /gene="LOC106873937"
+                     /product="ankyrin repeat and SOCS box protein 8-like,
+                     transcript variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 16 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014921510.1"
+                     /db_xref="GeneID:106873937"
+     CDS             join(759952..760182,763384..764016)
+                     /gene="LOC106873937"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="ankyrin repeat and SOCS box protein 8-like"
+                     /protein_id="XP_014776996.1"
+                     /db_xref="GeneID:106873937"
+     CDS             join(759952..760182,763384..764016)
+                     /gene="LOC106873937"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="ankyrin repeat and SOCS box protein 8-like"
+                     /protein_id="XP_014777058.1"
+                     /db_xref="GeneID:106873937"
+     gene            complement(794226..805858)
+                     /gene="LOC106874065"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106874065"
+     mRNA            complement(join(794226..794351,794988..795074,
+                     801912..803311,804818..804892,805798..805858))
+                     /gene="LOC106874065"
+                     /product="uncharacterized LOC106874065"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 100% coverage of the annotated
+                     genomic feature by RNAseq alignments, including 5 samples
+                     with support for all annotated introns"
+                     /transcript_id="XM_014921687.1"
+                     /db_xref="GeneID:106874065"
+     CDS             complement(join(794323..794351,794988..795074,
+                     801912..803311,804818..804892,805798..805829))
+                     /gene="LOC106874065"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="uncharacterized protein LOC106874065"
+                     /protein_id="XP_014777173.1"
+                     /db_xref="GeneID:106874065"
+     gene            complement(809318..897350)
+                     /gene="LOC106873084"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873084"
+     mRNA            complement(join(809318..809410,809923..810081,
+                     810789..810973,811680..811880,812818..812917,
+                     814125..814236,814519..814668,815579..815700,
+                     826061..826069,833359..833450,834155..834284,
+                     834598..834689,835830..835983,836349..836493,
+                     837170..837377,838095..838221,839501..839603,
+                     840826..840921,841296..841347,841796..841946,
+                     843061..843144,843728..843832,844386..844502,
+                     845269..845424,846088..846178,846612..846677,
+                     866938..867083,869937..870013,874941..875040,
+                     886926..887030,887364..887536,888195..888398,
+                     897148..897350))
+                     /gene="LOC106873084"
+                     /product="myosin-IIIa-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 11 Proteins, and 97% coverage of
+                     the annotated genomic feature by RNAseq alignments"
+                     /transcript_id="XM_014920340.1"
+                     /db_xref="GeneID:106873084"
+     CDS             complement(join(809318..809410,809923..810081,
+                     810789..810973,811680..811880,812818..812917,
+                     814125..814236,814519..814668,815579..815700,
+                     826061..826069,833359..833450,834155..834284,
+                     834598..834689,835830..835983,836349..836493,
+                     837170..837377,838095..838221,839501..839603,
+                     840826..840921,841296..841347,841796..841946,
+                     843061..843144,843728..843832,844386..844502,
+                     845269..845424,846088..846178,846612..846677,
+                     866938..867083,869937..870013,874941..875040,
+                     886926..887030,887364..887536,888195..888398,
+                     897148..897211))
+                     /gene="LOC106873084"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="myosin-IIIa-like"
+                     /protein_id="XP_014775826.1"
+                     /db_xref="GeneID:106873084"
+     gene            complement(1005309..1031034)
+                     /gene="LOC106874144"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106874144"
+     mRNA            complement(join(1005309..1007613,1008697..1008856,
+                     1019535..1019717,1020738..1020959,1022078..1022152,
+                     1022605..1022676,1024037..1024255,1024922..1025062,
+                     1025480..1025581,1026294..1026377,1027292..1027382,
+                     1027832..1027990,1028802..1029056,1030684..1031034))
+                     /gene="LOC106874144"
+                     /product="KAT8 regulatory NSL complex subunit 3-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 3 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 11 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014921801.1"
+                     /db_xref="GeneID:106874144"
+     CDS             complement(join(1005989..1007613,1008697..1008856,
+                     1019535..1019717,1020738..1020959,1022078..1022152,
+                     1022605..1022676,1024037..1024255,1024922..1025062,
+                     1025480..1025581,1026294..1026377,1027292..1027382,
+                     1027832..1027990,1028802..1029056,1030684..1030700))
+                     /gene="LOC106874144"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="KAT8 regulatory NSL complex subunit 3-like"
+                     /protein_id="XP_014777287.1"
+                     /db_xref="GeneID:106874144"
+     gene            1032174..1052334
+                     /gene="LOC106874222"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106874222"
+     mRNA            join(1032174..1032384,1048144..1048427,1050504..1050666,
+                     1051448..1051683,1051843..1052334)
+                     /gene="LOC106874222"
+                     /product="alpha/beta hydrolase domain-containing protein
+                     14B-like, transcript variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 11 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014921912.1"
+                     /db_xref="GeneID:106874222"
+     CDS             join(1032372..1032384,1048144..1048427,1050504..1050666,
+                     1051448..1051683,1051843..1052037)
+                     /gene="LOC106874222"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="alpha/beta hydrolase domain-containing protein
+                     14B-like isoform X1"
+                     /protein_id="XP_014777398.1"
+                     /db_xref="GeneID:106874222"
+     mRNA            join(1036560..1036696,1048144..1048427,1050504..1050666,
+                     1051448..1051683,1051843..1052334)
+                     /gene="LOC106874222"
+                     /product="alpha/beta hydrolase domain-containing protein
+                     14B-like, transcript variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 11 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014921985.1"
+                     /db_xref="GeneID:106874222"
+     CDS             join(1036690..1036696,1048144..1048427,1050504..1050666,
+                     1051448..1051683,1051843..1052037)
+                     /gene="LOC106874222"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="alpha/beta hydrolase domain-containing protein
+                     14B-like isoform X2"
+                     /protein_id="XP_014777471.1"
+                     /db_xref="GeneID:106874222"
+     mRNA            join(1042965..1043191,1048144..1048427,1050504..1050666,
+                     1051448..1051683,1051843..1052334)
+                     /gene="LOC106874222"
+                     /product="alpha/beta hydrolase domain-containing protein
+                     14B-like, transcript variant X3"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 11 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 10 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922058.1"
+                     /db_xref="GeneID:106874222"
+     CDS             join(1048179..1048427,1050504..1050666,1051448..1051683,
+                     1051843..1052037)
+                     /gene="LOC106874222"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="alpha/beta hydrolase domain-containing protein
+                     14B-like isoform X3"
+                     /protein_id="XP_014777544.1"
+                     /db_xref="GeneID:106874222"
+     gene            complement(1061910..1076047)
+                     /gene="LOC106873624"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873624"
+     mRNA            complement(join(1061910..1062944,1075810..1076047))
+                     /gene="LOC106873624"
+                     /product="transmembrane protein 203-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 5 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014921105.1"
+                     /db_xref="GeneID:106873624"
+     CDS             complement(1062087..1062494)
+                     /gene="LOC106873624"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="transmembrane protein 203-like"
+                     /protein_id="XP_014776591.1"
+                     /db_xref="GeneID:106873624"
+     gene            1076613..1092083
+                     /gene="LOC106873710"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873710"
+     mRNA            join(1076613..1076652,1079374..1079520,1080023..1080100,
+                     1080440..1080537,1081299..1081397,1082318..1082419,
+                     1083230..1083409,1083716..1083837,1084871..1085043,
+                     1085885..1085932,1086687..1086794,1088210..1088402,
+                     1089705..1089764,1090361..1090479,1091160..1091254,
+                     1091888..1092083)
+                     /gene="LOC106873710"
+                     /product="NADPH-dependent diflavin oxidoreductase 1-like,
+                     transcript variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 8 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 9 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014921223.1"
+                     /db_xref="GeneID:106873710"
+     mRNA            join(1077884..1077903,1079374..1079520,1080023..1080100,
+                     1080440..1080537,1081299..1081397,1082318..1082419,
+                     1083230..1083409,1083716..1083837,1084871..1085043,
+                     1085885..1085932,1086687..1086794,1088210..1088402,
+                     1089705..1089764,1090361..1090479,1091160..1091254,
+                     1091888..1092083)
+                     /gene="LOC106873710"
+                     /product="NADPH-dependent diflavin oxidoreductase 1-like,
+                     transcript variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 8 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 2 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014921296.1"
+                     /db_xref="GeneID:106873710"
+     CDS             join(1079380..1079520,1080023..1080100,1080440..1080537,
+                     1081299..1081397,1082318..1082419,1083230..1083409,
+                     1083716..1083837,1084871..1085043,1085885..1085932,
+                     1086687..1086794,1088210..1088402,1089705..1089764,
+                     1090361..1090479,1091160..1091254,1091888..1092032)
+                     /gene="LOC106873710"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="NADPH-dependent diflavin oxidoreductase 1-like"
+                     /protein_id="XP_014776709.1"
+                     /db_xref="GeneID:106873710"
+     CDS             join(1079380..1079520,1080023..1080100,1080440..1080537,
+                     1081299..1081397,1082318..1082419,1083230..1083409,
+                     1083716..1083837,1084871..1085043,1085885..1085932,
+                     1086687..1086794,1088210..1088402,1089705..1089764,
+                     1090361..1090479,1091160..1091254,1091888..1092032)
+                     /gene="LOC106873710"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="NADPH-dependent diflavin oxidoreductase 1-like"
+                     /protein_id="XP_014776782.1"
+                     /db_xref="GeneID:106873710"
+     gene            complement(1094950..1141758)
+                     /gene="LOC106873177"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873177"
+     mRNA            complement(join(1094950..1098397,1099081..1099191,
+                     1099596..1099718,1100794..1100922,1101197..1101298,
+                     1102354..1102542,1103239..1103312,1104375..1104532,
+                     1104938..1105155,1106858..1107133,1107852..1108016,
+                     1111159..1111164,1111690..1111816,1112589..1112653,
+                     1113434..1113640,1114376..1114580,1115062..1115222,
+                     1115667..1115738,1117612..1117674,1118507..1118613,
+                     1119138..1120475,1121254..1121347,1121807..1121949,
+                     1122891..1123004,1123704..1123851,1124151..1124261,
+                     1127722..1127883,1128614..1128724,1135806..1135892,
+                     1137021..1137149,1138556..1138690,1138812..1138946,
+                     1139547..1139723,1141552..1141758))
+                     /gene="LOC106873177"
+                     /product="uncharacterized LOC106873177"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 99% coverage of the annotated
+                     genomic feature by RNAseq alignments"
+                     /transcript_id="XM_014920443.1"
+                     /db_xref="GeneID:106873177"
+     CDS             complement(join(1098371..1098397,1099081..1099191,
+                     1099596..1099718,1100794..1100922,1101197..1101298,
+                     1102354..1102542,1103239..1103312,1104375..1104532,
+                     1104938..1105155,1106858..1107133,1107852..1108016,
+                     1111159..1111164,1111690..1111816,1112589..1112653,
+                     1113434..1113640,1114376..1114580,1115062..1115222,
+                     1115667..1115738,1117612..1117674,1118507..1118613,
+                     1119138..1120475,1121254..1121347,1121807..1121949,
+                     1122891..1123004,1123704..1123851,1124151..1124261,
+                     1127722..1127883,1128614..1128724,1135806..1135892,
+                     1137021..1137149,1138556..1138690,1138812..1138946,
+                     1139547..1139723,1141552..1141728))
+                     /gene="LOC106873177"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="uncharacterized protein LOC106873177"
+                     /protein_id="XP_014775929.1"
+                     /db_xref="GeneID:106873177"
+     gene            1134205..1410863
+                     /gene="LOC106874794"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106874794"
+     mRNA            join(1134205..1134317,1403325..1403530,1404154..1404318,
+                     1405738..1405956,1406810..1406896,1407211..1407316,
+                     1408295..1408398,1409803..1409928,1410752..1410863)
+                     /gene="LOC106874794"
+                     /product="deoxyhypusine synthase-like, transcript variant
+                     X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 9 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 3 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922766.1"
+                     /db_xref="GeneID:106874794"
+     gene            complement(1143575..1163506)
+                     /gene="LOC106873246"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106873246"
+     mRNA            complement(join(1143575..1143679,1145890..1146027,
+                     1146190..1146356,1146554..1146815,1147201..1147332,
+                     1148222..1148415,1149041..1149227,1149686..1149958,
+                     1150632..1150756,1150884..1151120,1163345..1163506))
+                     /gene="LOC106873246"
+                     /product="centriolin-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 87% coverage of the
+                     annotated genomic feature by RNAseq alignments"
+                     /transcript_id="XM_014920566.1"
+                     /db_xref="GeneID:106873246"
+     CDS             complement(join(1143575..1143679,1145890..1146027,
+                     1146190..1146356,1146554..1146815,1147201..1147332,
+                     1148222..1148415,1149041..1149227,1149686..1149958,
+                     1150632..1150756,1150884..1151088))
+                     /gene="LOC106873246"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="centriolin-like"
+                     /protein_id="XP_014776052.1"
+                     /db_xref="GeneID:106873246"
+     gene            complement(1184275..1395045)
+                     /gene="LOC106874603"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106874603"
+     mRNA            complement(join(1184275..1184953,1185810..1185910,
+                     1187235..1187408,1187758..1187830,1189906..1189987,
+                     1191417..1191513,1192171..1192351,1194681..1194803,
+                     1195877..1196029,1200669..1200767,1202110..1202206,
+                     1240363..1240461,1268516..1268602,1298926..1299021,
+                     1394669..1395045))
+                     /gene="LOC106874603"
+                     /product="protein SCAI-like, transcript variant X3"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 6 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 5 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922578.1"
+                     /db_xref="GeneID:106874603"
+     mRNA            complement(join(1184275..1184953,1185810..1185910,
+                     1187235..1187408,1187758..1187830,1189906..1189987,
+                     1191417..1191513,1192171..1192351,1194681..1194803,
+                     1195877..1196029,1200669..1200767,1202110..1202206,
+                     1209247..1209261,1240363..1240461,1268516..1268602,
+                     1298926..1299021,1394669..1395045))
+                     /gene="LOC106874603"
+                     /product="protein SCAI-like, transcript variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 2 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 8 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922502.1"
+                     /db_xref="GeneID:106874603"
+     mRNA            complement(join(1184275..1184953,1185810..1185910,
+                     1187235..1187408,1187758..1187830,1189906..1189987,
+                     1191417..1191513,1192171..1192351,1194681..1194803,
+                     1195877..1196029,1200669..1200767,1202110..1202206,
+                     1209247..1209261,1223095..1223130,1240363..1240461,
+                     1268516..1268602,1298926..1299021,1394669..1395045))
+                     /gene="LOC106874603"
+                     /product="protein SCAI-like, transcript variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 2 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 7 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922428.1"
+                     /db_xref="GeneID:106874603"
+     CDS             complement(join(1184801..1184953,1185810..1185910,
+                     1187235..1187408,1187758..1187830,1189906..1189987,
+                     1191417..1191513,1192171..1192351,1194681..1194803,
+                     1195877..1196029,1200669..1200767,1202110..1202206,
+                     1240363..1240461,1268516..1268602,1298926..1299021,
+                     1394669..1394766))
+                     /gene="LOC106874603"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="protein SCAI-like isoform X3"
+                     /protein_id="XP_014778064.1"
+                     /db_xref="GeneID:106874603"
+     CDS             complement(join(1184801..1184953,1185810..1185910,
+                     1187235..1187408,1187758..1187830,1189906..1189987,
+                     1191417..1191513,1192171..1192351,1194681..1194803,
+                     1195877..1196029,1200669..1200767,1202110..1202206,
+                     1209247..1209261,1240363..1240461,1268516..1268602,
+                     1298926..1299021,1394669..1394766))
+                     /gene="LOC106874603"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="protein SCAI-like isoform X2"
+                     /protein_id="XP_014777988.1"
+                     /db_xref="GeneID:106874603"
+     CDS             complement(join(1184801..1184953,1185810..1185910,
+                     1187235..1187408,1187758..1187830,1189906..1189987,
+                     1191417..1191513,1192171..1192351,1194681..1194803,
+                     1195877..1196029,1200669..1200767,1202110..1202206,
+                     1209247..1209261,1223095..1223130,1240363..1240461,
+                     1268516..1268602,1298926..1299021,1394669..1394766))
+                     /gene="LOC106874603"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="protein SCAI-like isoform X1"
+                     /protein_id="XP_014777914.1"
+                     /db_xref="GeneID:106874603"
+     mRNA            join(1400824..1400938,1403325..1403530,1404154..1404318,
+                     1405738..1405956,1406810..1406896,1407211..1407316,
+                     1408295..1408398,1409803..1409928,1410752..1410863)
+                     /gene="LOC106874794"
+                     /product="deoxyhypusine synthase-like, transcript variant
+                     X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 9 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922687.1"
+                     /db_xref="GeneID:106874794"
+     CDS             join(1403333..1403530,1404154..1404318,1405738..1405956,
+                     1406810..1406896,1407211..1407316,1408295..1408398,
+                     1409803..1409928,1410752..1410841)
+                     /gene="LOC106874794"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="deoxyhypusine synthase-like"
+                     /protein_id="XP_014778173.1"
+                     /db_xref="GeneID:106874794"
+     CDS             join(1403333..1403530,1404154..1404318,1405738..1405956,
+                     1406810..1406896,1407211..1407316,1408295..1408398,
+                     1409803..1409928,1410752..1410841)
+                     /gene="LOC106874794"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="deoxyhypusine synthase-like"
+                     /protein_id="XP_014778252.1"
+                     /db_xref="GeneID:106874794"
+     gene            complement(1411506..1443859)
+                     /gene="LOC106874408"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106874408"
+     mRNA            complement(join(1411506..1412783,1413499..1413606,
+                     1414477..1414683,1416256..1416522,1417020..1417147,
+                     1417646..1417748,1418723..1418946,1420035..1420383,
+                     1420814..1421055,1421317..1421413,1421766..1422262,
+                     1423136..1423316,1424359..1424637,1425673..1425876,
+                     1426700..1426826,1428294..1428439,1428969..1429103,
+                     1429297..1429368,1430419..1430609,1431044..1431119,
+                     1432245..1432286,1432517..1432616,1443759..1443859))
+                     /gene="LOC106874408"
+                     /product="large proline-rich protein BAG6-like, transcript
+                     variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 2 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922236.1"
+                     /db_xref="GeneID:106874408"
+     mRNA            complement(join(1411506..1412783,1413499..1413606,
+                     1416256..1416522,1417020..1417147,1417646..1417748,
+                     1418723..1418946,1420035..1420383,1420814..1421055,
+                     1421311..1421413,1421766..1422262,1423136..1423316,
+                     1424359..1424637,1425673..1425876,1426700..1426826,
+                     1428294..1428439,1428969..1429103,1429297..1429368,
+                     1430419..1430609,1431044..1431119,1432245..1432286,
+                     1432517..1432616,1443759..1443859))
+                     /gene="LOC106874408"
+                     /product="large proline-rich protein BAG6-like, transcript
+                     variant X3"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 2 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922316.1"
+                     /db_xref="GeneID:106874408"
+     mRNA            complement(join(1411506..1412783,1413499..1413606,
+                     1414477..1414683,1416256..1416522,1417020..1417147,
+                     1417646..1417748,1418723..1418946,1420035..1420383,
+                     1420814..1421055,1421311..1421413,1421766..1422262,
+                     1423136..1423316,1424359..1424637,1425673..1425876,
+                     1426700..1426826,1428294..1428439,1428969..1429103,
+                     1429297..1429368,1430419..1430609,1431044..1431119,
+                     1432245..1432286,1432517..1432616,1443759..1443859))
+                     /gene="LOC106874408"
+                     /product="large proline-rich protein BAG6-like, transcript
+                     variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 2 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922172.1"
+                     /db_xref="GeneID:106874408"
+     CDS             complement(join(1412514..1412783,1413499..1413606,
+                     1414477..1414683,1416256..1416522,1417020..1417147,
+                     1417646..1417748,1418723..1418946,1420035..1420383,
+                     1420814..1421055,1421317..1421413,1421766..1422262,
+                     1423136..1423316,1424359..1424637,1425673..1425876,
+                     1426700..1426826,1428294..1428439,1428969..1429103,
+                     1429297..1429368,1430419..1430609,1431044..1431119,
+                     1432245..1432286,1432517..1432579))
+                     /gene="LOC106874408"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="large proline-rich protein BAG6-like isoform X2"
+                     /protein_id="XP_014777722.1"
+                     /db_xref="GeneID:106874408"
+     CDS             complement(join(1412514..1412783,1413499..1413606,
+                     1416256..1416522,1417020..1417147,1417646..1417748,
+                     1418723..1418946,1420035..1420383,1420814..1421055,
+                     1421311..1421413,1421766..1422262,1423136..1423316,
+                     1424359..1424637,1425673..1425876,1426700..1426826,
+                     1428294..1428439,1428969..1429103,1429297..1429368,
+                     1430419..1430609,1431044..1431119,1432245..1432286,
+                     1432517..1432579))
+                     /gene="LOC106874408"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="large proline-rich protein BAG6-like isoform X3"
+                     /protein_id="XP_014777802.1"
+                     /db_xref="GeneID:106874408"
+     CDS             complement(join(1412514..1412783,1413499..1413606,
+                     1414477..1414683,1416256..1416522,1417020..1417147,
+                     1417646..1417748,1418723..1418946,1420035..1420383,
+                     1420814..1421055,1421311..1421413,1421766..1422262,
+                     1423136..1423316,1424359..1424637,1425673..1425876,
+                     1426700..1426826,1428294..1428439,1428969..1429103,
+                     1429297..1429368,1430419..1430609,1431044..1431119,
+                     1432245..1432286,1432517..1432579))
+                     /gene="LOC106874408"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="large proline-rich protein BAG6-like isoform X1"
+                     /protein_id="XP_014777658.1"
+                     /db_xref="GeneID:106874408"
+     gene            1449285..1456094
+                     /gene="LOC106875264"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106875264"
+     mRNA            join(1449285..1449606,1452226..1452277,1454053..1454213,
+                     1454775..1454868,1455621..1456094)
+                     /gene="LOC106875264"
+                     /product="endothelial differentiation-related factor
+                     1-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 22 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014923380.1"
+                     /db_xref="GeneID:106875264"
+     CDS             join(1449532..1449606,1452226..1452277,1454053..1454213,
+                     1454775..1454868,1455621..1455670)
+                     /gene="LOC106875264"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="endothelial differentiation-related factor
+                     1-like"
+                     /protein_id="XP_014778866.1"
+                     /db_xref="GeneID:106875264"
+     gene            1457526..1460908
+                     /gene="LOC106874925"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106874925"
+     mRNA            join(1457526..1457985,1459005..1460908)
+                     /gene="LOC106874925"
+                     /product="Bardet-Biedl syndrome 10 protein-like,
+                     transcript variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 7 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922873.1"
+                     /db_xref="GeneID:106874925"
+     mRNA            join(1458057..1458265,1459005..1460908)
+                     /gene="LOC106874925"
+                     /product="Bardet-Biedl syndrome 10 protein-like,
+                     transcript variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 3 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014922951.1"
+                     /db_xref="GeneID:106874925"
+     mRNA            join(1458057..1458211,1459005..1460908)
+                     /gene="LOC106874925"
+                     /product="Bardet-Biedl syndrome 10 protein-like,
+                     transcript variant X3"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 1 sample with support for all annotated introns"
+                     /transcript_id="XM_014923027.1"
+                     /db_xref="GeneID:106874925"
+     mRNA            join(1458239..1458260,1459005..1460908)
+                     /gene="LOC106874925"
+                     /product="Bardet-Biedl syndrome 10 protein-like,
+                     transcript variant X4"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 1 sample with support for all annotated introns"
+                     /transcript_id="XM_014923105.1"
+                     /db_xref="GeneID:106874925"
+     mRNA            join(1458298..1458377,1459005..1460908)
+                     /gene="LOC106874925"
+                     /product="Bardet-Biedl syndrome 10 protein-like,
+                     transcript variant X6"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 1 sample with support for all annotated introns"
+                     /transcript_id="XM_014923265.1"
+                     /db_xref="GeneID:106874925"
+     mRNA            join(1458666..1458921,1459005..1460908)
+                     /gene="LOC106874925"
+                     /product="Bardet-Biedl syndrome 10 protein-like,
+                     transcript variant X5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 1 Protein, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 1 sample with support for all annotated introns"
+                     /transcript_id="XM_014923190.1"
+                     /db_xref="GeneID:106874925"
+     CDS             1459066..1460775
+                     /gene="LOC106874925"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="Bardet-Biedl syndrome 10 protein-like"
+                     /protein_id="XP_014778359.1"
+                     /db_xref="GeneID:106874925"
+     CDS             1459066..1460775
+                     /gene="LOC106874925"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="Bardet-Biedl syndrome 10 protein-like"
+                     /protein_id="XP_014778437.1"
+                     /db_xref="GeneID:106874925"
+     CDS             1459066..1460775
+                     /gene="LOC106874925"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="Bardet-Biedl syndrome 10 protein-like"
+                     /protein_id="XP_014778513.1"
+                     /db_xref="GeneID:106874925"
+     CDS             1459066..1460775
+                     /gene="LOC106874925"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="Bardet-Biedl syndrome 10 protein-like"
+                     /protein_id="XP_014778591.1"
+                     /db_xref="GeneID:106874925"
+     CDS             1459066..1460775
+                     /gene="LOC106874925"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="Bardet-Biedl syndrome 10 protein-like"
+                     /protein_id="XP_014778676.1"
+                     /db_xref="GeneID:106874925"
+     CDS             1459066..1460775
+                     /gene="LOC106874925"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="Bardet-Biedl syndrome 10 protein-like"
+                     /protein_id="XP_014778751.1"
+                     /db_xref="GeneID:106874925"
+     gene            complement(1461528..1477224)
+                     /gene="LOC106875357"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106875357"
+     mRNA            complement(join(1461528..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468766,1477136..1477224))
+                     /gene="LOC106875357"
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like, transcript variant X3"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 8 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 6 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014923653.1"
+                     /db_xref="GeneID:106875357"
+     mRNA            complement(join(1461528..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468766,1476190..1476299))
+                     /gene="LOC106875357"
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like, transcript variant X2"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 8 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 12 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014923577.1"
+                     /db_xref="GeneID:106875357"
+     mRNA            complement(join(1461528..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468766,1472790..1472868))
+                     /gene="LOC106875357"
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like, transcript variant X4"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 8 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 6 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014923731.1"
+                     /db_xref="GeneID:106875357"
+     mRNA            complement(join(1461528..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468766,1471405..1471764))
+                     /gene="LOC106875357"
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like, transcript variant X1"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 8 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 13 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014923490.1"
+                     /db_xref="GeneID:106875357"
+     mRNA            complement(join(1461528..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468766,1469007..1469085))
+                     /gene="LOC106875357"
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like, transcript variant X5"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 8 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 6 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014923808.1"
+                     /db_xref="GeneID:106875357"
+     mRNA            complement(join(1461528..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468766,1468862..1468886))
+                     /gene="LOC106875357"
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like, transcript variant X6"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 8 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 6 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014923871.1"
+                     /db_xref="GeneID:106875357"
+     CDS             complement(join(1461688..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468750))
+                     /gene="LOC106875357"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like"
+                     /protein_id="XP_014778976.1"
+                     /db_xref="GeneID:106875357"
+     CDS             complement(join(1461688..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468750))
+                     /gene="LOC106875357"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like"
+                     /protein_id="XP_014779063.1"
+                     /db_xref="GeneID:106875357"
+     CDS             complement(join(1461688..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468750))
+                     /gene="LOC106875357"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like"
+                     /protein_id="XP_014779139.1"
+                     /db_xref="GeneID:106875357"
+     CDS             complement(join(1461688..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468750))
+                     /gene="LOC106875357"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like"
+                     /protein_id="XP_014779217.1"
+                     /db_xref="GeneID:106875357"
+     CDS             complement(join(1461688..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468750))
+                     /gene="LOC106875357"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like"
+                     /protein_id="XP_014779294.1"
+                     /db_xref="GeneID:106875357"
+     CDS             complement(join(1461688..1461924,1462372..1462479,
+                     1462659..1462773,1463296..1463397,1466579..1466695,
+                     1467236..1467378,1468562..1468750))
+                     /gene="LOC106875357"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="dehydrodolichyl diphosphate syntase complex
+                     subunit DHDDS-like"
+                     /protein_id="XP_014779357.1"
+                     /db_xref="GeneID:106875357"
+     gene            1476587..1525555
+                     /gene="LOC106875700"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /db_xref="GeneID:106875700"
+     mRNA            join(1476587..1476801,1477157..1477215,1477470..1477499,
+                     1477825..1477884,1482179..1482329,1482824..1482919,
+                     1484706..1484866,1485715..1485936,1499254..1499354,
+                     1499908..1500079,1501146..1501285,1502531..1502687,
+                     1503987..1504121,1504714..1504842,1505655..1505880,
+                     1506447..1506629,1507261..1507411,1508953..1509040,
+                     1509671..1509805,1510296..1510342,1510719..1510941,
+                     1511494..1511751,1512442..1512566,1513813..1513895,
+                     1514213..1514324,1514982..1515043,1515929..1516199,
+                     1516729..1516854,1517396..1517519,1518906..1519061,
+                     1519691..1519843,1521632..1521747,1522279..1522784,
+                     1523481..1523786,1524863..1525555)
+                     /gene="LOC106875700"
+                     /product="PH-interacting protein-like"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon. Supporting evidence
+                     includes similarity to: 3 Proteins, and 100% coverage of
+                     the annotated genomic feature by RNAseq alignments,
+                     including 11 samples with support for all annotated
+                     introns"
+                     /transcript_id="XM_014923977.1"
+                     /db_xref="GeneID:106875700"
+     CDS             join(1476753..1476801,1477157..1477215,1477470..1477499,
+                     1477825..1477884,1482179..1482329,1482824..1482919,
+                     1484706..1484866,1485715..1485936,1499254..1499354,
+                     1499908..1500079,1501146..1501285,1502531..1502687,
+                     1503987..1504121,1504714..1504842,1505655..1505880,
+                     1506447..1506629,1507261..1507411,1508953..1509040,
+                     1509671..1509805,1510296..1510342,1510719..1510941,
+                     1511494..1511751,1512442..1512566,1513813..1513895,
+                     1514213..1514324,1514982..1515043,1515929..1516199,
+                     1516729..1516854,1517396..1517519,1518906..1519061,
+                     1519691..1519843,1521632..1521747,1522279..1522784,
+                     1523481..1523786,1524863..1525536)
+                     /gene="LOC106875700"
+                     /note="Derived by automated computational analysis using
+                     gene prediction method: Gnomon."
+                     /codon_start=1
+                     /product="PH-interacting protein-like"
+                     /protein_id="XP_014779463.1"
+                     /db_xref="GeneID:106875700"
+ORIGIN      
+//
+

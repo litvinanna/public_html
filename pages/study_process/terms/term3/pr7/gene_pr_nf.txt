@@ -1,0 +1,47 @@
+tax_id	Org_name	GeneID	CurrentID	Status	Symbol	Aliases	description	other_designations	map_location	chromosome	genomic_nucleotide_accession.version	start_position_on_the_genomic_accession	end_position_on_the_genomic_accession	orientation	exon_count	OMIM	
+5763	Naegleria fowleri	15332108	0	live	ND1	L067_p01	NADH dehydrogenase subunit 1			MT	NC_021104.1	2810	3787	plus	0		
+5763	Naegleria fowleri	15332060	0	live	rps7	L067_p02	ribosomal protein S7			MT	NC_021104.1	3788	4942	plus	0		
+5763	Naegleria fowleri	15332109	0	live	ATP1	L067_p03	ATP synthase F1 subunit alpha			MT	NC_021104.1	5250	6902	plus	0		
+5763	Naegleria fowleri	15332062	0	live	orf312	L067_p04	Orf312			MT	NC_021104.1	6963	7697	plus	0		
+5763	Naegleria fowleri	15332110	0	live	ND4L	L067_p05	NADH dehydrogenase subunit 4L			MT	NC_021104.1	7811	8071	plus	0		
+5763	Naegleria fowleri	15332112	0	live	orf164	L067_p06	Orf164			MT	NC_021104.1	8414	8899	plus	0		
+5763	Naegleria fowleri	15332065	0	live	rps12	L067_p07	ribosomal protein S12			MT	NC_021104.1	8902	9288	plus	0		
+5763	Naegleria fowleri	15332113	0	live	COX1	L067_p08	cytochrome c oxidase subunit I			MT	NC_021104.1	9612	11513	plus	0		
+5763	Naegleria fowleri	15332067	0	live	COX11	L067_p09	heme biosynthesis protein			MT	NC_021104.1	11612	12286	plus	0		
+5763	Naegleria fowleri	15332068	0	live	sdh2	L067_p10	succinate:cytochrome c oxidoreductase subunit 2			MT	NC_021104.1	12290	13120	plus	0		
+5763	Naegleria fowleri	15332069	0	live	ND11	L067_p11	NADH dehydrogenase subunit 11			MT	NC_021104.1	13223	15295	plus	0		
+5763	Naegleria fowleri	15332070	0	live	COX3	L067_p12	cytochrome c oxidase subunit III			MT	NC_021104.1	15390	16283	plus	0		
+5763	Naegleria fowleri	15332115	0	live	ND8	L067_p13	NADH dehydrogenase subunit 8			MT	NC_021104.1	16513	16992	plus	0		
+5763	Naegleria fowleri	15332071	0	live	ND5	L067_p14	NADH dehydrogenase subunit 5			MT	NC_021104.1	17004	19007	plus	0		
+5763	Naegleria fowleri	15332072	0	live	CYTB	L067_p15	cytochrome b			MT	NC_021104.1	19074	20525	plus	0		
+5763	Naegleria fowleri	15332073	0	live	ATP3	L067_p16	ATP synthase F1 subunit gamma			MT	NC_021104.1	21018	21881	plus	0		
+5763	Naegleria fowleri	15332074	0	live	orf145	L067_p17	Orf145			MT	NC_021104.1	21947	22405	plus	0		
+5763	Naegleria fowleri	15332075	0	live	ND6	L067_p18	NADH dehydrogenase subunit 6			MT	NC_021104.1	22454	23059	plus	0		
+5763	Naegleria fowleri	15332076	0	live	rps2	L067_p19	ribosomal protein S2			MT	NC_021104.1	23059	23847	plus	0		
+5763	Naegleria fowleri	15332077	0	live	ATP8	L067_p20	ATP synthase F0 subunit 8			MT	NC_021104.1	23923	24255	plus	0		
+5763	Naegleria fowleri	15332078	0	live	rps10	L067_p21	ribosomal protein S10			MT	NC_021104.1	24670	24912	plus	0		
+5763	Naegleria fowleri	15332080	0	live	rpl11	L067_p22	ribosomal protein L11			MT	NC_021104.1	24909	25346	plus	0		
+5763	Naegleria fowleri	15332079	0	live	rpl2	L067_p23	ribosomal protein L2			MT	NC_021104.1	25386	26186	plus	0		
+5763	Naegleria fowleri	15332081	0	live	rps19	L067_p24	ribosomal protein S19			MT	NC_021104.1	26188	26451	plus	0		
+5763	Naegleria fowleri	15332082	0	live	rps3	L067_p25	ribosomal protein S3			MT	NC_021104.1	26457	28004	plus	0		
+5763	Naegleria fowleri	15332083	0	live	rpl16	L067_p26	ribosomal protein L16			MT	NC_021104.1	28006	28431	plus	0		
+5763	Naegleria fowleri	15332084	0	live	rpl14	L067_p27	ribosomal protein L14			MT	NC_021104.1	28440	28811	plus	0		
+5763	Naegleria fowleri	15332085	0	live	rpl5	L067_p28	ribosomal protein L5			MT	NC_021104.1	28822	29397	plus	0		
+5763	Naegleria fowleri	15332086	0	live	rps14	L067_p29	ribosomal protein S14			MT	NC_021104.1	29397	29693	plus	0		
+5763	Naegleria fowleri	15332087	0	live	rps8	L067_p30	ribosomal protein S8			MT	NC_021104.1	29698	30108	plus	0		
+5763	Naegleria fowleri	15332088	0	live	rpl6	L067_p31	ribosomal protein L6			MT	NC_021104.1	30118	30603	plus	0		
+5763	Naegleria fowleri	15332089	0	live	rps11	L067_p32	ribosomal protein S11			MT	NC_021104.1	30604	32274	plus	0		
+5763	Naegleria fowleri	15332090	0	live	rps13	L067_p33	ribosomal protein S13			MT	NC_021104.1	32264	32728	plus	0		
+5763	Naegleria fowleri	15332091	0	live	ND4	L067_p34	NADH dehydrogenase subunit 4			MT	NC_021104.1	32748	34136	plus	0		
+5763	Naegleria fowleri	15332092	0	live	yejU	L067_p35	ABC transporter subunit			MT	NC_021104.1	34137	34784	plus	0		
+5763	Naegleria fowleri	15332093	0	live	ND2	L067_p36	NADH dehydrogenase subunit 2			MT	NC_021104.1	34785	36263	plus	0		
+5763	Naegleria fowleri	15332116	0	live	ATP6	L067_p37	ATP synthase F0 subunit 6			MT	NC_021104.1	36420	37163	plus	0		
+5763	Naegleria fowleri	15332095	0	live	ND3	L067_p38	NADH dehydrogenase subunit 3			MT	NC_021104.1	37187	37549	plus	0		
+5763	Naegleria fowleri	15332096	0	live	COX2	L067_p39	cytochrome c oxidase subunit II			MT	NC_021104.1	37689	38546	plus	0		
+5763	Naegleria fowleri	15332097	0	live	orf504	L067_p40	Orf504			MT	NC_021104.1	38636	40219	plus	0		
+5763	Naegleria fowleri	15332117	0	live	ND7	L067_p41	NADH dehydrogenase subunit 7			MT	NC_021104.1	40370	41557	plus	0		
+5763	Naegleria fowleri	15332118	0	live	yejR	L067_p42	heme lyase			MT	NC_021104.1	41636	43024	minus	0		
+5763	Naegleria fowleri	15332119	0	live	ymf16	L067_p43	tatC-like protein			MT	NC_021104.1	43404	44192	minus	0		
+5763	Naegleria fowleri	15332123	0	live	rps4	L067_p44	ribosomal protein S4			MT	NC_021104.1	44566	45897	plus	0		
+5763	Naegleria fowleri	15332124	0	live	ATP9	L067_p45	ATP synthase F0 subunit 9			MT	NC_021104.1	46047	46265	plus	0		
+5763	Naegleria fowleri	15332127	0	live	ND9	L067_p46	NADH dehydrogenase subunit 9			MT	NC_021104.1	47070	47627	plus	0		

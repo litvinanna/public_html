@@ -1,0 +1,184 @@
+
+1. cytochrome c oxidase subunit III, partial (mitochondrion) [Naegleria fowleri]
+297 aa protein
+YP_007890030.1 GI:484759757
+
+2. NADH dehydrogenase subunit 9 (mitochondrion) [Naegleria fowleri]
+185 aa protein
+YP_007890064.1 GI:484759756
+
+3. ATP synthase F0 subunit 9 (mitochondrion) [Naegleria fowleri]
+72 aa protein
+YP_007890063.1 GI:484759755
+
+4. ribosomal protein S4 (mitochondrion) [Naegleria fowleri]
+443 aa protein
+YP_007890062.1 GI:484759754
+
+5. tatC-like protein (mitochondrion) [Naegleria fowleri]
+262 aa protein
+YP_007890061.1 GI:484759753
+
+6. heme lyase (mitochondrion) [Naegleria fowleri]
+462 aa protein
+YP_007890060.1 GI:484759752
+
+7. NADH dehydrogenase subunit 7 (mitochondrion) [Naegleria fowleri]
+395 aa protein
+YP_007890059.1 GI:484759751
+
+8. Orf504 (mitochondrion) [Naegleria fowleri]
+527 aa protein
+YP_007890058.1 GI:484759750
+
+9. cytochrome c oxidase subunit II (mitochondrion) [Naegleria fowleri]
+285 aa protein
+YP_007890057.1 GI:484759749
+
+10. NADH dehydrogenase subunit 3 (mitochondrion) [Naegleria fowleri]
+120 aa protein
+YP_007890056.1 GI:484759748
+
+11. ATP synthase F0 subunit 6 (mitochondrion) [Naegleria fowleri]
+247 aa protein
+YP_007890055.1 GI:484759747
+
+12. NADH dehydrogenase subunit 2 (mitochondrion) [Naegleria fowleri]
+492 aa protein
+YP_007890054.1 GI:484759746
+
+13. ABC transporter subunit (mitochondrion) [Naegleria fowleri]
+215 aa protein
+YP_007890053.1 GI:484759745
+
+14. NADH dehydrogenase subunit 4 (mitochondrion) [Naegleria fowleri]
+462 aa protein
+YP_007890052.1 GI:484759744
+
+15. ribosomal protein S13 (mitochondrion) [Naegleria fowleri]
+154 aa protein
+YP_007890051.1 GI:484759743
+
+16. ribosomal protein S11 (mitochondrion) [Naegleria fowleri]
+556 aa protein
+YP_007890050.1 GI:484759742
+
+17. ribosomal protein L6 (mitochondrion) [Naegleria fowleri]
+161 aa protein
+YP_007890049.1 GI:484759741
+
+18. ribosomal protein S8 (mitochondrion) [Naegleria fowleri]
+136 aa protein
+YP_007890048.1 GI:484759740
+
+19. ribosomal protein S14 (mitochondrion) [Naegleria fowleri]
+98 aa protein
+YP_007890047.1 GI:484759739
+
+20. ribosomal protein L5 (mitochondrion) [Naegleria fowleri]
+191 aa protein
+YP_007890046.1 GI:484759738
+
+21. ribosomal protein L14 (mitochondrion) [Naegleria fowleri]
+123 aa protein
+YP_007890045.1 GI:484759737
+
+22. ribosomal protein L16 (mitochondrion) [Naegleria fowleri]
+141 aa protein
+YP_007890044.1 GI:484759736
+
+23. ribosomal protein S3 (mitochondrion) [Naegleria fowleri]
+515 aa protein
+YP_007890043.1 GI:484759735
+
+24. ribosomal protein S19 (mitochondrion) [Naegleria fowleri]
+87 aa protein
+YP_007890042.1 GI:484759734
+
+25. ribosomal protein L2 (mitochondrion) [Naegleria fowleri]
+266 aa protein
+YP_007890041.1 GI:484759733
+
+26. ribosomal protein S10 (mitochondrion) [Naegleria fowleri]
+80 aa protein
+YP_007890039.1 GI:484759732
+
+27. ribosomal protein L11 (mitochondrion) [Naegleria fowleri]
+145 aa protein
+YP_007890040.1 GI:484759731
+
+28. ATP synthase F0 subunit 8 (mitochondrion) [Naegleria fowleri]
+110 aa protein
+YP_007890038.1 GI:484759730
+
+29. ribosomal protein S2 (mitochondrion) [Naegleria fowleri]
+262 aa protein
+YP_007890037.1 GI:484759729
+
+30. NADH dehydrogenase subunit 6 (mitochondrion) [Naegleria fowleri]
+201 aa protein
+YP_007890036.1 GI:484759728
+
+31. Orf145 (mitochondrion) [Naegleria fowleri]
+152 aa protein
+YP_007890035.1 GI:484759727
+
+32. ATP synthase F1 subunit gamma (mitochondrion) [Naegleria fowleri]
+287 aa protein
+YP_007890034.1 GI:484759726
+
+33. cytochrome b (mitochondrion) [Naegleria fowleri]
+483 aa protein
+YP_007890033.1 GI:484759725
+
+34. NADH dehydrogenase subunit 5 (mitochondrion) [Naegleria fowleri]
+667 aa protein
+YP_007890032.1 GI:484759724
+
+35. NADH dehydrogenase subunit 8 (mitochondrion) [Naegleria fowleri]
+159 aa protein
+YP_007890031.1 GI:484759723
+
+36. NADH dehydrogenase subunit 11 (mitochondrion) [Naegleria fowleri]
+690 aa protein
+YP_007890029.1 GI:484759722
+
+37. succinate:cytochrome c oxidoreductase subunit 2 (mitochondrion) [Naegleria fowleri]
+276 aa protein
+YP_007890028.1 GI:484759721
+
+38. heme biosynthesis protein (mitochondrion) [Naegleria fowleri]
+224 aa protein
+YP_007890027.1 GI:484759720
+
+39. cytochrome c oxidase subunit I (mitochondrion) [Naegleria fowleri]
+633 aa protein
+YP_007890026.1 GI:484759719
+
+40. ribosomal protein S12 (mitochondrion) [Naegleria fowleri]
+128 aa protein
+YP_007890025.1 GI:484759718
+
+41. Orf164 (mitochondrion) [Naegleria fowleri]
+161 aa protein
+YP_007890024.1 GI:484759717
+
+42. NADH dehydrogenase subunit 4L (mitochondrion) [Naegleria fowleri]
+86 aa protein
+YP_007890023.1 GI:484759716
+
+43. Orf312 (mitochondrion) [Naegleria fowleri]
+244 aa protein
+YP_007890022.1 GI:484759715
+
+44. ATP synthase F1 subunit alpha (mitochondrion) [Naegleria fowleri]
+550 aa protein
+YP_007890021.1 GI:484759714
+
+45. ribosomal protein S7 (mitochondrion) [Naegleria fowleri]
+384 aa protein
+YP_007890020.1 GI:484759713
+
+46. NADH dehydrogenase subunit 1 (mitochondrion) [Naegleria fowleri]
+325 aa protein
+YP_007890019.1 GI:484759712

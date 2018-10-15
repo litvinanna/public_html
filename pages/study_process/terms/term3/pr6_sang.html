@@ -1,0 +1,104 @@
+<div class="col-md-12">
+    <h1>Чтение последовательностей по Сенгеру</h1>
+    <hr>
+</div>
+<div class="col-md-12">
+    <p>Даны две последовательности (<a href='pages/study_process/terms/term3/pr6/dir.ab1'>прямая [ab1]</a> и <a href='pages/study_process/terms/term3/pr6/rev.ab1'>обратная [ab1]</a> цепь), полученные из капиллярного секвенаторы по Сенгеру.
+    </p>
+    <p>Данные были проанализированы с помощью программы Chromas Lite. Для обратной цепи была построены перевернутая и комплементарная (Reverse+Complement), которая, в случае "идеального секвенирования" должна совпадать с прямой.
+    </p>
+    <p>Характеристика прямой цепочки:
+        <ul>
+            <li>Нечитаемые регионы - 1-25, 512-833 - они были удалены.</li>
+            <li>На оставленном участке уровень сигнала выше уровня шума в 10 раз, пики хорошо различимы.</li>
+            <li>Сигнальные пики максимально отличаются в 3 раза.</li>
+        </ul>
+    </p>
+    <p>Характеристика обратной цепочки:
+        <ul>
+            <li>Нечитаемые регионы - 1-272, 821-868 - они были удалены.</li>
+            <li>На оставленном участке уровень сигнала выше уровня шума в среднем в 5 раз, пика также хорошо отличимы.</li>
+            <li>Сигнальные пики максимально отличаются в 3-4 раза.</li>
+        </ul>
+    </p>
+    <p>
+        Сравнивая две цепочки, я пыталась устранить проблемные места. Исправленные проблемные нуклеотиды обозначены маленькими буквами. Для полиморфизмов использовались
+        <a href='http://droog.gs.washington.edu/parc/images/iupac.html' </a>коды</a>.
+    </p>
+</div>
+<div class="col-md-12">
+    <hr>
+</div>
+<div class="col-md-11 col-md-offset-1">
+    <div class="col-md-2">
+        <figure>
+            <figcaption>Рис.1.</figcaption>
+            <img src='pages/study_process/terms/term3/pr6/prob1.png' width="100%">
+        </figure>
+    </div>
+    <div class="col-md-2">
+        <figure>
+            <figcaption>Рис.2.</figcaption>
+            <img src='pages/study_process/terms/term3/pr6/prob2.png' width="100%">
+        </figure>
+    </div>
+    <div class="col-md-2">
+        <figure>
+            <figcaption>Рис.3.</figcaption>
+            <img src='pages/study_process/terms/term3/pr6/prob3.png' width="100%">
+        </figure>
+    </div>
+    <div class="col-md-2">
+        <figure>
+            <figcaption>Рис.4.</figcaption>
+            <img src='pages/study_process/terms/term3/pr6/prob4.png' width="100%">
+        </figure>
+    </div>
+    <div class="col-md-2">
+        <figure>
+            <figcaption>Рис.5.</figcaption>
+            <img src='pages/study_process/terms/term3/pr6/prob5.png' width="100%">
+        </figure>
+    </div>
+</div>
+<div class="col-md-11 col-md-offset-1">
+    <div class="col-md-2">
+        <p>На рис.1. в прямой последовательности уровень сигнала превышает уровень шума всего в 2 раза, что не достоверно. В обратной последовательности в этом месте гораздо более чистый пик С, поэтому правим на цитозин.</p>
+    </div>
+    <div class="col-md-2">
+        <p>На рис.2. в прямой последовательности сигнала нет, точнее он слился с шумом. На обратной есть пик, поэтому правим на гуанин.</p>
+    </div>
+    <div class="col-md-2">
+        <p>На рис.3. в обратной цепи в нуклеотиде есть только шумы, но по прямой последовательности с четким пиком видно, что это цитозин.</p>
+    </div>
+    <div class="col-md-2">
+        <p>На рис.4. в обратной цепи есть "как будто полиморфизм, одинаковые сигналы t и g, но в прямой цепи есть четкий пик, поэтому правим на g.</p>
+    </div>
+    <div class="col-md-2">
+        <p>На рис.5. в обратной последовательности есть два равносильных сигнала (сигнал и шум) (причем по силе как обычный сигнал), но прямая цепь нечитаема на этом участке. Поэтому принято решение обозначить данный нуклеотид как полиморфизм.</p>
+    </div>
+</div>
+<div class="col-md-12">
+    <hr>
+</div>
+<div class="col-md-12">
+    <p>С помощью программы Jalview было построено выравнивание исправленных последовательностей (рис.6, прямая цепь сверху)
+        <a href='pages/study_process/terms/term3/pr6/ali.jvp'> проект [jvp] </a>. ИСпользованные последовательности
+        <a href='pages/study_process/terms/term3/pr6/dir[2].fa'>прямая [fasta]</a> и
+        <a href='pages/study_process/terms/term3/pr6/rev[2].fa'>обратная [fasta]</a>.
+    </p>
+    <figure style='overflow-x: scroll;'>
+        <figcaption>Рис.6.Выравнивание</figcaption>
+        <img src='pages/study_process/terms/term3/pr6/ali.png' style='overflow-x: scroll;'>
+    </figure>
+</div>
+<div class="col-md-12">
+    <hr>
+    <h2>Плохая последовательность</h2>
+    <p>Взят кусок из прямой последовательности. Пики нечеткие, не отдельные, сильно перекрываются, много шума - такую хроматограмму невозможно интерпретировать правильно в изоляции.
+    </p>
+    <figure>
+        <figcaption>Рис.7.Плохая последовательность</figcaption>
+        <img src='pages/study_process/terms/term3/pr6/bad.png'>
+    </figure>
+</div>

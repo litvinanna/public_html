@@ -1,0 +1,168 @@
+<script type="text/javascript-lazy">
+var Info = {
+    serverURL: "libs/js/jsmol/php/jsmol.php",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: 500,
+    height: 500,
+    color: "black",
+    deferApplet: true,
+    coverImage: "pages/study_process/terms/term2/atlas/load.png",
+    coverclickgo: "pages/study_process/terms/term2/atlas/load.png",
+    script: "pages/study_process/terms/term2/atlas/aspartic_start.spt"
+};
+
+
+$(document).ready(function() {
+    $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+    $("#jmolhbstart").html(Jmol.jmolButton(JSMol, 'pages/study_process/terms/term2/atlas/asp_hb.spt', 'Starthb'));
+    $("#jmolhbresume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+    $("#jmolsbstart").html(Jmol.jmolButton(JSMol, 'pages/study_process/terms/term2/atlas/asp_sb.spt', 'Startsb'));
+    $("#jmolsbresume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+    $("#jmoldnastart").html(Jmol.jmolButton(JSMol, 'pages/study_process/terms/term2/atlas/asp_dna.spt', 'Startdna'));
+    $("#jmoldnaresume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+    $("#snapshot").html(Jmol.jmolButton(JSMol, 'write aps.png', 'Take picture'));
+    $("#snapshot1").html(Jmol.jmolButton(JSMol, 'write aps-contacts.png', 'Take picture'));
+});
+
+<!-- маленькое окошко-->
+var Info0 = {
+    serverURL: "libs/js/jsmol/php/jsmol.php",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: 500,
+    height: 500,
+    color: "black",
+    script: "script pages/study_process/terms/term2/atlas/aspartic_start.spt; spin"
+};
+
+<!--окошко для разного pH-->
+
+var Info1 = {
+    serverURL: "libs/js/jsmol/php/jsmol.php",
+    j2sPath: "libs/js/jsmol/j2s/",
+    use: "HTML5",
+    width: 500,
+    height: 500,
+    color: "black",
+    deferApplet: true,
+    coverImage: "pages/study_process/terms/term2/atlas/load.png",
+    coverclickgo: "pages/study_process/terms/term2/atlas/load.png",
+    script: "script pages/study_process/terms/term2/atlas/ph2.spt"
+};
+$(document).ready(function() {
+    $("#jmolinfo").html(Jmol.getAppletHtml("JSMol0", Info0));
+    $("#jmolph").html(Jmol.getAppletHtml("JSMol1", Info1));
+    $("#jmolph_button").html(Jmol.jmolButton(JSMol1, 'resume', 'Change pH'));
+    $("#jmollabelson_button").html(Jmol.jmolButton(JSMol0, 'pages/study_process/terms/term2/atlas/aspartic_labels.spt', 'Show labels'));
+    $("#jmollabelsoff_button").html(Jmol.jmolButton(JSMol0, 'pages/study_process/terms/term2/atlas/labelsoff.spt', 'UnShow labels'));
+
+});
+</script>
+<div class="col-md-12">
+    <h1>Атлас аминокислот - аспарагиновая кислота.</h1>
+    <hr>
+</div>
+<div class="col-md-6">
+    <div id='jmolinfo'></div>
+    <div id='jmollabelson_button' class='key'></div>
+    <div id='jmollabelsoff_button' class='key'></div>
+</div>
+<div class="col-md-6">
+    <table class='table table-bordered'>
+        <tbody>
+            <tr style='background-color:PapayaWhip'>
+                <td colspan='2'> Общие свойства</td>
+            </tr>
+            <tr>
+                <td>Название по IUPAC</td>
+                <td>2-аминобутандиовая кислота</td>
+            </tr>
+            <tr>
+                <td>Краткое название</td>
+                <td>Асп, Asp, D</td>
+            </tr>
+            <tr>
+                <td>Хим.формула</td>
+                <td>HOOCCH<sub>2</sub>CH(NH<sub>2</sub>)COOH</td>
+            </tr>
+            <tr>
+                <td>Брутто-формула</td>
+                <td>С<sub>4</sub>H<sub>7</sub>NO<sub>4</sub></td>
+            </tr>
+            <tr style='background-color:PapayaWhip'>
+                <td colspan='2'> Физические свойства</td>
+            </tr>
+            <tr>
+                <td>Молярная масса</td>
+                <td>133.10 г/моль</td>
+            </tr>
+            <tr>
+                <td>Температура плавления</td>
+                <td>270 °C</td>
+            </tr>
+            <tr>
+                <td>Растворимость в воде, 25°C</td>
+                <td> 4.5 г/л</td>
+            </tr>
+            <tr style='background-color:PapayaWhip'>
+                <td colspan='2'>Классификация</td>
+            </tr>
+            <tr>
+                <td>PubChem</td>
+                <td><a href='http://pubchem.ncbi.nlm.nih.gov/compound/59605960'>5960</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-md-4 col-md-offset-4">
+    <figure>
+        <figcaption>Диаграмма 1. Длины белков </figcaption>
+        <img src="pages/study_process/terms/term2/atlas/aspartic.png" width="100%" height="100%">
+    </figure>
+</div>
+<div class="col-md-12">
+    <div class="col-md-12">
+        <h1>Общие сведения</h1>
+        <p>Аспарагиновая кислота — алифатическая аминокислота, одна из 20 протеиногенных аминокислот организма. Встречается во всех организмах в свободном виде и в составе белков. Кроме того, выполняет роль нейромедиатора в центральной нервной системе. [1].
+        </p>
+    </div>
+    <div class="col-md-6">
+        <h3>Формы аминокислот в зависимости от pH</h3>
+        <p>Аспарагиновая кислота относится к отрицательно заряженным аминокислотам. pKa = 3.65.</p>
+        <p>В апплете, представленном ниже отображаются структуры соответствующих (де)протонированных форм в зависимости от pH. Для запуска необходимо нажать кнопку "Change pH". </p>
+    </div>
+    <div class="col-md-6">
+        <h3>ДНК-белковые и белок-белковый контакты</h3>
+        <p>Аспартат гидрофильная заряженная аминокислота. Она заряжена отрицательно при нейтральном pH, поэтому образует ионные мостики. Образует водородные связи. </p>
+    </div>
+</div>
+<div class="col-md-12">
+    <div class="col-md-6">
+        <div id='jmolph'></div>
+        <div id='jmolph_button' class='key'></div>
+        <div id='snapshot' class='key'></div>
+    </div>
+    <div class="col-md-6">
+        <div id='jmol'> </div>
+        <div id='snapshot1' class='key'></div>
+        <hr class='hr'>
+        <div id='jmolhbstart' class='key'></div> <a href="pages/study_process/terms/term2/atlas/asp_hb.spt">[текст скрипта]</a>
+        <div id='jmolhbresume' class='key'></div> белок-белковые водородные связи
+        <hr class='hr'>
+        <div id='jmolsbstart' class='key'></div> <a href="pages/study_process/terms/term2/atlas/asp_sb.spt">[текст скрипта]</a>
+        <div id='jmolsbresume' class='key'></div> белок-белковые солевые мостики
+        <hr class='hr'>
+        <div id='jmoldnastart' class='key'></div> <a href="pages/study_process/terms/term2/atlas/asp_dna.spt">[текст скрипта]</a>
+        <div id='jmoldnaresume' class='key'></div> ДНК-белковые взаимодействия
+    </div>
+</div>
+<div class="col-md-12">
+    <hr>
+</div>
+<div name="links" id="links" class="col-md-12">
+    <h2>Примечания:</h2>
+    <ul>
+        <li><a href='https://en.wikipedia.org/wiki/Aspartic_acid'>en.wikipedia.org</a></li>
+    </ul>
+</div>

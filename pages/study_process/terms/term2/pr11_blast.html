@@ -1,0 +1,104 @@
+<div class="col-md-12">
+    <h1>Blast</h1>
+    <hr>
+</div>
+<div class="col-md-12">
+    <h2>Построение парных выравниваний. Поиск по сходству. </h2>
+    <p>
+        Дано: последовательность универсального белка стресса E из бактерии <i>Proteus mirabilis</i> (universal stress protein UspE [Proteus mirabilis BB2000]).
+        <a href='pages/study_process/terms/term2/pr10/uspe.fasta'> [fasta]</a>. </br>
+        Требуется: собрать выборку гомологов, построить выравнивания.</p>
+    <p>Белок: universal stress protein E, Proteus mirabilis strain HI4320, запись uniprot B4ETT2_PROMH. </br>
+        <a href='pages/study_process/terms/term2/pr10/search_strategy.asn'>Параметры поиска [asn]</a> </p>
+    <p>Оказалось, что при стандартной выдаче в 100 гомологов у самой худшей находки e-value составляет 2e-169. Тогда я ограничила поиск доменом Bacteria и расширила выдачу до 5000. </p>
+    <table class="table table-bordered">
+        <tbody>
+            <tr><span style='font-weight:bold'><td>Находка</td> <td>Длина выравнивания</td> <td>Bit score</td><td>% идентичных</td><td>% сходных</td><td>E-value</td><td>Выравнивание</td></span></tr>
+            <tr>
+                <td>MULTISPECIES: universal stress protein E [Enterobacteriaceae]</td>
+                <td>316</td>
+                <td>650 bits (1677)</td>
+                <td>100</td>
+                <td>100</td>
+                <td>0.0</td>
+                <td><a href="pages/study_process/terms/term2/pr10/seqdump1.txt">выравнивание</a></td>
+            </tr>
+            <tr>
+                <td>universal stress protein E [Gallibacterium anatis]</td>
+                <td>313</td>
+                <td>293 bits (749)</td>
+                <td>48</td>
+                <td>66</td>
+                <td>5e-94</td>
+                <td><a href="pages/study_process/terms/term2/pr10/seqdump2.txt">выравнивание</a></td>
+            </tr>
+            <tr>
+                <td>universal stress protein [Pseudomonas abietaniphila]</td>
+                <td>296</td>
+                <td>103 bits (258)</td>
+                <td>26</td>
+                <td>48</td>
+                <td>3e-22</td>
+                <td><a href="pages/study_process/terms/term2/pr10/seqdump3.txt">выравнивание</a></td>
+            </tr>
+            <tr>
+                <td>MULTISPECIES: universal stress protein A [Enterococcus]</td>
+                <td>154</td>
+                <td>36.6 bits(83)</td>
+                <td>22</td>
+                <td>47</td>
+                <td>9.5</td>
+                <td><a href="pages/study_process/terms/term2/pr10/seqdump4.txt">выравнивание</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Я думаю, что данный критерий гомологичности последовательностей - e-value
+        < 1e-3 и query cover>70% - хорошо подходит для подсчета гомологов.
+    </p>
+    </br><a href='pages/study_process/terms/term2/pr10/seqdump24.fasta'>Выборка гомологов белка</a>
+    <hr>
+</div>
+<div class="col-md-12">
+    <h2>Множественное выравнивание выборки гомологов </h2>
+    <p>С помощью Muscle и JalView было построено множественное выравнивание выборки из 24 гомологов моего белка. </p>
+    <figure>
+        <figcaption>Множественное выравнивание гомологов </figcaption>
+        <img src='pages/study_process/terms/term2/pr10/aligned-24.png' width="100%">
+    </figure>
+    <a href='pages/study_process/terms/term2/pr10/aligned-24.jvp'> Проект JalView [jvp] </a>
+    <hr>
+</div>
+<div class="col-md-12">
+    <h2>Построение парых выравниваний</h2>
+    <p>
+        Последовательности (исходная и один из гомологов, universal stress protein E [Gallibacterium anatis]) были выровнены четырьмя различными способами:
+        <ul>
+            <li>из множественного выравнивания <a href='pages/study_process/terms/term2/pr10/ali2-from-multiple.fasta'>[fasta]</a></li>
+            <li>needle <a href='pages/study_process/terms/term2/pr10/ali2-needle.fasta'>[fasta]</a></li>
+            <li>water <a href='pages/study_process/terms/term2/pr10/ali2-water.fasta'>[fasta]</a></li>
+            <li>blast <a href='pages/study_process/terms/term2/pr10/ali2-blast.fasta'>[fasta]</a></li>
+        </ul>
+    </p>
+    <figure>
+        <figcaption>Парные выравнивания (в указанном порядке)</figcaption>
+        <img src='pages/study_process/terms/term2/pr10/ali2-ali4.png' width="100%">
+    </figure>
+    <a href='pages/study_process/terms/term2/pr10/ali2-ali4.jvp'> Проект JalView [jvp] </a>
+    <hr>
+    <figure>
+        <figcaption>Несовпадающий участок</figcaption> <img src='pages/study_process/terms/term2/pr10/ali2-ali4-cut.png'>
+    </figure>
+    <hr>
+</div>
+<div class="col-md-12">
+    <h2>Построение парых выравниваний негомологичный белков</h2>
+    <p>
+        Последовательности (исходная и случайный белок Nitrogen regulatory protein P-II, M4ZXT5_9ACTN) были выровнены с помощью water (локальное выравнивание) и needle (глобальное выравнивание). Блоков в данных выравниваниях не наблюдается.
+    </p>
+    <figure>
+        <figcaption>Парные выравнивания с помощью water и needle.</figcaption>
+        <img src='pages/study_process/terms/term2/pr10/pr11-ali2.png' width="100%">
+    </figure>
+    <a href='pages/study_process/terms/term2/pr10/pr11-ali2.jvp'> Проект JalView [jvp] </a>
+</div>

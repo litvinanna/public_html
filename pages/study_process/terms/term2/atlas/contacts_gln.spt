@@ -1,0 +1,42 @@
+set echo top center
+font echo 15
+color echo white
+
+zap
+load=4YBH
+wireframe off
+ backbone 5
+color white
+cpk off
+select (gln189:a or gln176:a)
+center selected
+zoom 500
+wireframe 60
+cpk 130
+color cpk
+hbonds calculate
+measure range (gln189:a.o)(gln176:a.n)
+measure range (gln189:a.n)(gln176:a.o)
+set echo top center
+font echo 15
+color echo white
+echo Protein backbone with hydrogen bonds between gln189, gln176  (PDB ID: 4YBH)
+pause
+
+zap
+load=4YR3
+restrict (within(5.0, dna) and gln)
+restrict within(group, selected)
+wireframe 60
+select dna
+wireframe 
+spacefill
+select (within(5.0, dna) and gln)
+center selected
+zoom 400
+set echo top center
+font echo 15
+color echo white
+echo DNA-binding protein site including gln (PDB ID:4YR3)
+pause
+

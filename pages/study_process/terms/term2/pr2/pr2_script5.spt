@@ -1,0 +1,21 @@
+zap
+load "pages/study_process/terms/term2/4yr3.rsc"
+set echo top left; font echo 20 sansserif plain; color echo [xFFEFD5];
+
+echo Dna,major groove, proton acceptors are cyan, donors are magenta
+restrict none
+script "pages/study_process/terms/term2/pr2/pr2_dna.rsc"
+select dna; spacefill on
+zoom 150; center selected; color cpk
+select dnachain; spacefill on
+select mjg; color yellow
+select hamjg; color cyan
+select hbmjg; color magenta
+pause
+
+resume
+echo Dna,minor groove, proton acceptors are cyan, donors are magenta 
+select dna; color cpk
+select mig; color pink
+select hamig; color cyan
+select hdmig; color magenta

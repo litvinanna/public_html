@@ -1,0 +1,490 @@
+<div class='col-md-12'>
+    <h1>Подготовка чтений</h1>
+    <h3>Анализ[1]</h3>
+</div>
+
+
+<div class='col-md-8'>
+
+    <p>Дано: одноконцевые чтения 10 хромосомы человека, референсная последовательность
+        десятой хромосомы человека (сборка версии hg19).</p>
+    <p>Качество чтений было проанализировано с помощью программы <a href='http://www.bioinformatics.babraham.ac.uk/projects/fastqc/'>FastQC</a>.
+        Она была запущена командой:</p>
+    <pre>fastqc chr10-reads.fastq</pre>
+
+</div>
+<div class='col-md-4'>
+    <table class='table table-bordered'>
+        <caption>Таб.1. Качество ридов</caption>
+        <tr>
+            <td>Число последовательностей</td>
+            <td>10666</td>
+        </tr>
+        <tr>
+            <td>Длина последовательностей </td>
+            <td>38-100</td>
+        </tr>
+        <tr>
+            <td>%GC</td>
+            <td>37</td>
+        </tr>
+    </table>
+</div>
+
+<div class='col-md-12 small_empty_block'></div>
+<div class='col-md-4'>
+    <p>
+        На рисунке представлено распределение качества прочтения каждого нуклеотида
+        в зависимости от позиции.
+    </p>
+    <p>
+        На горизонтальной оси отмечены позиции в риде (1-100). Вертикальная ось
+        соответствует некоторому значению 'качества' прочтения.
+    </p>
+    <p>
+        Жёлтый блок охватывает вторую и третью квартиль распределения качества
+        для для каждой позиции. Красная линия - медиана, синяя - среднее
+        значение. Черные 'уши' обозначают границы 10 и 90 перцентилей.
+    </p>
+</div>
+
+<div class='col-md-8'>
+    <figure>
+        <figcaption>Рис.1. Качество нуклеотидов в последовательностях</figcaption>
+        <img src='pages/study_process/terms/term3/pr13/reads-per_base_quality.png'
+        width=100%>
+    </figure>
+
+</div>
+<div class='col-md-12'>
+    <h3>Очистка чтений</h3>
+    <p>Как мы видим (рис.1), некоторые нуклеотиды попадают в красную зону по качеству. Они недостоверны. Такие "плохие" чтения нужно удалить. 
+    Также слишком короткие последовательности нам не подходят, так как они могут неоднозначно картироваться.</p>
+    <p>
+        Чтения были очищены с помощью программы Trimmomatic. Адаптерных последовательностей
+        изначально не содержалось.
+    </p>
+    <p>От конца каждого чтения были отрезаны нуклеотиды качеством ниже 20
+        - TRAILING:20 . Последовательности длиной меньше 50 нуклеотидов
+        были удалены - MINLEN:50.</p>
+    <pre>java -jar /usr/share/java/trimmomatic.jar SE -phred33 chr10-reads.fastq chr10-cut.fastq TRAILING:20 MINLEN:50</pre>
+    <p>Результаты работы:</p>
+    <pre>TrimmomaticSE: Started with arguments: -phred33 chr10-reads.fastq chr10-cut.fastq TRAILING:20 MINLEN:50
+Automatically using 8 threads
+Input Reads: 10666 Surviving: 10526 (98,69%) Dropped: 140 (1,31%)
+TrimmomaticSE: Completed successfully
+</pre>
+    <p>Было удалено 140 ридов.</p>
+</div>
+<div class='col-md-12'>
+    <h3>Анализ[2]</h3>
+</div>
+<div class='col-md-8'>
+    <p>Очищенные чтения были снова проанализированы FastQC.</p>
+
+
+</div>
+<div class='col-md-4'>
+    <table class='table table-bordered'>
+        <caption>Таб.2. Качество очищенных чтений</caption>
+        <tr>
+            <td>Число последовательностей</td>
+            <td>10526</td>
+        </tr>
+        <tr>
+            <td>Длина последовательностей </td>
+            <td>50-100</td>
+        </tr>
+        <tr>
+            <td>%GC</td>
+            <td>37</td>
+        </tr>
+    </table>
+</div>
+<div class='col-md-4'>
+    <p>
+        После обработки в ридах остались только те последовательности, в которых
+        качество нуклеотидов >20.
+    </p>
+</div>
+<div class='col-md-8'>
+    <figure>
+        <figcaption>Рис.2. Качество нуклеотидов в последовательностях</figcaption>
+        <img src='pages/study_process/terms/term3/pr13/cut-per_base_quality.png'
+        width=100%>
+    </figure>
+
+</div>
+
+
+<div class='col-md-12'>
+    <h3>Анализ[3]</h3>
+    <p>
+        Распределение качества у множества последовательностей практически не изменилось
+        (рис.3,4). Хотя мы избавились от плохо-прочтенных нуклеотидов (с
+        низким качеством) на концах последовательностей при чистке. Удаленные
+        последовательности составляли малую часть (1.31%), поэтому не повлияли
+        на распределение.
+    </p>
+</div>
+<div class='col-md-6'>
+    <figure>
+        <figcaption>Рис.3. Качество изначальных последовательностей</figcaption>
+        <img src='pages/study_process/terms/term3/pr13/reads-per_sequence_quality.png'
+        width=100%>
+    </figure>
+</div>
+
+<div class='col-md-6'>
+    <figure>
+        <figcaption>Рис.4. Качество очищенных последовательностей</figcaption>
+        <img src='pages/study_process/terms/term3/pr13/cut-per_sequence_quality.png'
+        width=100%>
+    </figure>
+</div>
+<div class='col-md-12 small_empty_block'></div>
+<div class='col-md-6'>
+    <p>
+        Программы выдала предупреждение по распределению азотистых оснований по
+        последовательности (рис.5). Оно не отличается в обычных и очищенных
+        ридах, так как мы не трогали начало последовательностей. В первых
+        нуклеотидах число А и Т отличается больше, чем на 10%.
+    </p>
+</div>
+<div class='col-md-6'>
+    <figure>
+        <figcaption>Рис.5. Распределение различных пар по длине последовательностей</figcaption>
+        <img src='pages/study_process/terms/term3/pr13/cut-per_base_sequence_content.png'
+        width=100%>
+    </figure>
+</div>
+<div class='col-md-12'>
+    <h2>Картирование чтений</h2>
+    <p>Референсная последовательность была проиндексирована</p>
+    <pre>bwa index chr10-human.fasta </pre>
+    <p>Очищенные риды были картированы на хромосому</p>
+    <pre> bwa mem chr10-human.fasta chr10-cut.fastq > align.sam</pre>
+
+
+</div>
+<div class='col-md-12'>
+    <h3>Анализ выраниваний</h3>
+    <p>Выравнивание чтений было переведено в бинарный формат .bam.</p>
+    <pre> samtools view -b align.sam > align.bam</pre>
+    <p>Выравнивание чтений с референсом было отсортировано по координате в
+        референсе начала чтения.</p>
+    <pre>samtools sort align.bam align-sorted</pre>
+    <p>Полученный файл align-soted.bam был снова проиндексирован.</p>
+    <pre>samtools index align-sorted.bam </pre>
+    <p>Было подсчитано, сколько чтений откартировалось на геном.</p>
+    <pre>samtools idxstats align-sorted.bam > idxstats.out</pre>
+    <p>Получен файл <a href='pages/study_process/terms/term3/pr13/idxstats.out'>idxstats.out</a>.
+        На геном успешно откартировалось 10524 чтений, не откартировалось
+        2.
+    </p>
+
+</div>
+<div class='col-md-12'>
+    <h3>Анализ покрытия экзона</h3>
+</div>
+<div class='col-md-12'>
+    <p>Было вычислено покрытие каждого нуклеотида <a href='pages/study_process/terms/term3/pr13/depth-all.txt'>полученный файл</a>.
+    </p>
+    <pre> samtools depth  align-sorted.bam > depth-all.txt</pre>
+    <p>С помощью <a href='pages/study_process/terms/term3/pr13/depth.py'>скрипта</a>  
+          было найдено число нуклеотидов в различным покрытием.</p>
+    <pre>python depth.py depth-all.txt > depth-coverage.txt</pre>
+    <p>И построена диаграмма покрытия <a href='pages/study_process/terms/term3/pr13/depth-coverage.xlsx'>таблица exsel</a>.  </p>
+</div>
+<div class='col-md-12'>
+    <figure>
+        <figcaption>Рис.6. Логарифм числа нуклеотидов (верт. ось) с различным покрытием
+            (гор. ось)</figcaption>
+        <img src='pages/study_process/terms/term3/pr13/coverage.png' width=100%>
+    </figure>
+
+    <p>Хорошее покрытие - покрытие больше 100. Был выбран нуклеотид chr10
+        5768896 127. В <a href='https://www.ncbi.nlm.nih.gov/assembly/2758/'>данной сборке</a> 
+        координаты экзона с выбранным нуклеотидом 5768847 .. 5768920. Для
+        данного экзона была найдена глубина покрытия</p>
+    <pre> samtools depth align-sorted.bam -r chr10:5768847-5768920 > depth-exon.txt</pre>
+    <p>Среднее покрытие этого экзона составило 123.</p>
+    <figure>
+        <figcaption>Рис.7. Выбранный нуклеотид в геномном браузере</figcaption>
+        <img src='pages/study_process/terms/term3/pr13/exon.png' width=100%>
+    </figure>
+
+</div>
+<div class='col-md-12'>
+    <h3>Поиск SNP и инделей</h3>
+    <p>Был создан файл с полиорфизмамив формате .bcf.</p>
+    <pre>samtools mpileup -uf chr17.fasta al_sort.bam -o snp.bcf</pre>
+    <p>Был создан файл со списком отличий между референсом и чтениями в формате
+        .vcf.
+    </p>
+    <pre>bcftools call -cv snp.bcf -o snp.vcf</pre>
+    <p>Был получен файл <a href='pages/study_process/terms/term3/pr13/snp.vcf'>snp.vcf</a>.
+        13 инделей и 58 замен, 71 полиморфизм.</p>
+    <table class='table table-bordered'>
+        <caption>Таб.3. Найденные полиморфизмы</caption>
+        <tbody class='small'>
+            <tr style='font-weight: 700;'>
+                <td>Координата</td>
+                <td>Тип</td>
+                <td>Референс</td>
+                <td>Чтение</td>
+                <td>Качество</td>
+                <td>Покрытие</td>
+            </tr>
+            <tr>
+                <td>5766152</td>
+                <td>Индель (вставка)</td>
+                <td>AGTAT</td>
+                <td>AGTATGTAT</td>
+                <td>52.4663</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>63976912</td>
+                <td>Индель (делеция)</td>
+                <td>TAGCTTCA</td>
+                <td>TA</td>
+                <td>217.468</td>
+                <td>91</td>
+            </tr>
+            <tr>
+                <td>63999263</td>
+                <td>snp</td>
+                <td>G </td>
+                <td>A</td>
+                <td>165.003</td>
+                <td>13</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class='col-md-12'>
+    <h3>Анализ snp</h3>
+    <p>Из файла snp.vcf, содержащего информацию о полиморфизмах, были удалены
+        все индели
+        <a href='pages/study_process/terms/term3/pr13/snp-snp.vcf'>snp-snp.vcf</a> - 58 snp осталось.</p>
+    <pre> perl /nfs/srv/databases/annovar/convert2annovar.pl -format vcf4 snp-snp.vcf -outfile snp.annovar</pre>
+    <p>Далее был получен файл, с которым работает программа Annovar. Входной
+        файл имеет формат vcf, выходной файл snp.annovar.</p>
+    <pre>perl /nfs/srv/databases/annovar/convert2annovar.pl -format vcf4 snp-snp.vcf -outfile snp.annovar</pre>
+    <p>Полученный файл аннотировался разными способами программой annotate_variation.pl.
+    </p>
+    <p>Сводная таблица найденных проаннотированных snp <a href='pages/study_process/terms/term3/pr13/snp.xlsx'>[xlsx]</a>.
+    </p>
+</div>
+
+
+<div class='col-md-12'>
+    <h4>1. Refgene gene-based annotation </h4>
+</div>
+<div class='col-md-9'>
+    <pre>perl /nfs/srv/databases/annovar/annotate_variation.pl -out chr10.refgene -build hg19 snp.annovar /nfs/srv/databases/annovar/humandb/</pre>
+    <p>-out название выходного файла</br> -build сборка генома, по которой
+        идет аннотация</p>
+    <p>Было получено несколько файлов: <samp>chr10.refgene.variant_function</samp> - описание всех snp,
+     <samp>chr10.refgene.exonic_variant_function</samp> - snp в экзонах,
+      <samp>chr10.refgene.log</samp> - сведения о работе
+        программы Найденные snp располагаются в различных зонах хромосомы
+        и могут гетеро- или гомозиготными (таблица 4).
+    </p>
+</div>
+<div class='col-md-3'>
+    <table class='table table-bordered'>
+        <caption>Таб.4. Информация о snp по refgene</caption>
+        <tbody class='small'>
+            <tr>
+                <td>Аннотированы</td>
+                <td>58</td>
+            </tr>
+            <tr>
+                <td>Экзоны</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Интроны</td>
+                <td>45</td>
+            </tr>
+            <tr>
+                <td>UTR3</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Гомо-</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Гетеро-</td>
+                <td>28</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<div class='col-md-12'>
+<p>Из аннотации по refgene были выбраны три snp, попавших в экзоны. При синонимичной замене кодируемая аминокислота не меняется и, соответственно, наоборот.</p>
+<table class='table table-bordered'>
+    <caption>Таб.4-1. Информация о трех snp в экзонах</caption>
+    <tbody>
+	    <tr> 
+
+			<td>Тип</td>
+			<td>Ген</td>
+			<td>Позиция</td>
+			<td>Замена</td>
+			<td>Качество</td>
+			<td>Покрытие</td>
+			</tr>	
+	    <tr> 
+			<td>nonsynonymous</td>
+			<td>FAM208B</td>
+			<td>5781628</td>
+			<td>Т > G</td>
+			<td>117.008</td>
+			<td>21</td>
+			</tr>	
+	    <tr> 
+			<td>synonymous</td>
+			<td>RTKN2</td>
+			<td>63964653</td>
+			<td>C > T</td>
+			<td>206.009</td>
+			<td>38</td>
+			</tr>	
+	    <tr> 
+			<td>nonsynonymous</td>
+			<td>CASP7</td>
+			<td>115457264 </td>
+			<td>T > G</td>
+			<td>225.009</td>
+			<td>71</td>
+			</tr>	
+	
+    </tbody>
+    </table>
+    <p>RTKN2 &mdash; rhotekin 2 &mdash; возможно играет важную роль при лимфопоэзе.</p>
+    <p>CASP7 &mdash; caspase-7 &mdash; участвует в активации каскадного аопототического пути.</p>
+</div>
+<div class='col-md-12'>
+    <h4>2. Dbsnp - filter-based annotation  </h4>
+</div>
+<div class='col-md-9'>
+    <pre>perl /nfs/srv/databases/annovar/annotate_variation.pl -filter -out chr10.dbsnp -build hg19 -dbtype snp138 snp.annovar /nfs/srv/databases/annovar/humandb/</pre>
+    <p>Полученные файлы: <samp>chr10.dbsnp.hg19_snp138_dropped</samp> - snp,
+        аннотированные в базе (с идентификатором rs),
+        <samp>chr10.dbsnp.hg19_snp138_filtered</samp> - не аннотированные,
+        <samp>chr10.dbsnp.log</samp> - информация о запуске.</p>
+    <p>Качество аннотированных snp варьируется в широких пределах, некоторые
+        (с покрытием 1) нельзя считать достоверными.</p>
+</div>
+<div class='col-md-3'>
+    <table class='table table-bordered'>
+        <caption>Таб.5. Информация о snp по dbsnp</caption>
+        <tbody class='small'>
+
+            <tr>
+                <td>Аннотированы</td>
+                <td>55</td>
+            </tr>
+            <tr>
+                <td>Не анн.</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Гомо-</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>Гетеро-</td>
+                <td>26</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<div class='col-md-12'>
+    <h4>3. 1000 genomes - filter-based annotation </h4>
+</div>
+<div class='col-md-9'>
+    <pre>perl /nfs/srv/databases/annovar/annotate_variation.pl -filter -dbtype 1000g2014oct_all -buildver hg19 -out chr10.1000g snp.annovar /nfs/srv/databases/annovar/humandb/</pre>
+    <p>Полученные файлы аналогичны предыдущим. При аннотации указывается частота
+        данного полиморфизма.</p>
+</div>
+<div class='col-md-3'>
+    <table class='table table-bordered'>
+        <caption>Таб.6. Информация о snp по 1000 genomes </caption>
+        <tbody class='small'>
+
+            <tr>
+                <td>Аннотированы</td>
+                <td>54</td>
+            </tr>
+            <tr>
+                <td>Не анн.</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Гомо-</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>Гетеро-</td>
+                <td>25</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class='col-md-12'>
+    <h4>4. Gwas - region-based annotation </h4>
+</div>
+<div class='col-md-9'>
+    <pre>perl /nfs/srv/databases/annovar/annotate_variation.pl -regionanno -build hg19 -out chr10.gwas -dbtype gwasCatalog snp.annovar /nfs/srv/databases/annovar/humandb/</pre>
+    <p>Полученные файлы: <samp>chr10.gwas.hg19_gwasCatalog</samp> - информация
+        об snp, связанных с изменениями в фенотипе, <samp>chr10.gwas.log</samp> - информация о запуске программы.</p>
+    <p>GWAS содержит клиническую аннотацию. Три аннотированных snp связаны
+        с остеосаркомой, витилиго и ревматоидным артритом.</p>
+</div>
+<div class='col-md-3'>
+    <table class='table table-bordered'>
+        <caption>Таб.7. Информация о snp по GWAS</caption>
+        <tbody class='small'>
+
+            <tr>
+                <td>Аннотированы</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class='col-md-12'>
+    <h4>5. Clinvar - filter-based annotation</h4>
+</div>
+<div class='col-md-9'>
+    <pre> perl /nfs/srv/databases/annovar/annotate_variation.pl -filter -dbtype clinvar_20150629 -buildver hg19 -out chr10.clinvar snp.annovar /nfs/srv/databases/annovar/humandb/ </pre>
+    <p>Полученные файлы аналогичны предыдущим (dropped с аннотированными,
+        filtered с неаннотированными, log). Файл dropped оказался пустым,
+        то есть ни один snp не оказался проаннотирован.</p>
+</div>
+<div class='col-md-3'>
+    <table class='table table-bordered'>
+        <caption>Таб.8. Информация о snp по сlinvar</caption>
+        <tbody class='small'>
+
+            <tr>
+                <td>Аннотированы</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Не анн.</td>
+                <td>58</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

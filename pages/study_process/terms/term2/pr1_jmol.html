@@ -1,0 +1,126 @@
+<script type="text/javascript-lazy">
+var Info = {
+    serverURL: "libs/js/jsmol/php/",
+    j2sPath: "libs/js/jsmol/j2s/",    
+    use: "HTML5",
+    width: 600,
+    height: 600,
+    color: "black",
+    deferApplet: true,
+    coverImage: "images/applet.png",
+    coverclickgo: "images/applet.png",
+    script: "script pages/study_process/terms/term2/pr1_script1.spt"
+};
+$(document).ready(function() {
+    $('#jmol').html(Jmol.getAppletHtml("JSMol", Info));
+    var startButton = Jmol.jmolButton(JSMol, 'script pages/study_process/terms/term2/pr1_script1.spt', 'Start script');
+    var resumeButton = Jmol.jmolButton(JSMol, 'resume', 'Resume')
+
+
+    $('#jmolStart').on('click', function() {
+        Jmol.controls._click(startButton, 1);
+    })
+    $('#jmolResume').on('click', function() {
+        Jmol.controls._click(resumeButton, 2);
+    });
+});
+</script>
+
+<h1>Визуализация молекул в Jmol.</h1>
+<div class="col-md-12">
+    <p>На этой странице представлена кристаллическая структура универсального белка стресса E
+        <sup>[1]</sup> из бактерии <i>Proteus mirabilis</i> в комплексе с лигандом [2].
+    </p>
+</div>
+<div class="col-md-6">
+    <div id='jmol'></div>
+</div>
+<div class="col-md-6">
+    <p>Была написана программа, которая меняет внешний вид молекулы.</p>
+    <p>Для запуска программы нажмите на кнопку Start. Для продолжения программы нажмите на кнопку Resume.</p>
+    <button id='jmolStart' class="btn btn-navy sharp">Start</button>
+    <button id='jmolResume' class="btn btn-navy sharp">Resume</button>
+    <br>
+    <a href="pages/study_process/terms/term2/pr1_script1.spt">[текст скрипта]</a>
+</div>
+<div class="col-md-8">
+    <table class="table table-bordered">
+        <caption><strong>Параметры водородных связей между остовными атомами во вторичной структуре</strong></caption>
+        <tr>
+            <td><strong>#</strong> </td>
+            <td><strong>Имена атомов</strong> </td>
+            <td><strong>Длина связи (Å)</strong> </td>
+            <td><strong>Угол N-O-C (°)</strong> </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan='3'>Альфа-спирали</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>[ILE]228:A.N #1833 - [GLY]224:A.O #1805</td>
+            <td>3.09</td>
+            <td>151.0</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>[ARG]223:A.N #1791 - [ASN]219:A.O #1765</td>
+            <td>3.04</td>
+            <td>153.0</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>[GLN]225:A.N #1806 - [ALA]221:A.O #1781</td>
+            <td>2.86</td>
+            <td>158.1</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>[LEU]222:A.N #1783 - [TYR]218:A.O #1753</td>
+            <td>2.91</td>
+            <td>163.0</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan='3'>Бета-тяжи</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>[ALA]116:A.N #941 - [VAL]145:A.O #1176</td>
+            <td>2.85</td>
+            <td>138.7</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>[VAL]145:A.N #1173 - [LYS]114:A.O #927</td>
+            <td>2.82</td>
+            <td>150.6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>[LYS]114:A.N #924 - [TRP]143:A.O #1154</td>
+            <td>2.98</td>
+            <td>164.0</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>[TRP]143:A.N #1151 - [LEU]112:A.O #911</td>
+            <td>2.79</td>
+            <td>173.0</td>
+        </tr>
+    </table>
+</div>
+<div class="col-md-12">
+    <p>Водородные связи — электросатческие взаимодействия между полярными атомами, когда водород образует связь с электроотрицательным атомом (кислородом, азотом). Энерги водородной связи составляет от 5 до 30 ккал/моль, они сильнее ван-дер-ваальсовых взаимодействий, но слабее ковалентных или ионных связей [3]. </p>
+    <p>Довольно подробно структура альфа-спирали была описана ещё в 1953 году [4]. Энергия водородной связи в альфа-спирали составляет 8 ккал/моль, средняя длина (от N до O карбоксильного) составляет 2.72 - 2.8 Å. Структура бета-листов описана в статье 1951 года [5]. Было установлено, что длина водородной связи составляет примерно 2.8 - 2.84 Å, энергия 0.6 - 2 ккал/моль. То есть полученные данные совпадают с научной картиной.</p>
+</div>
+<div name="links" id="links" class="col-md-12">
+    <h2>Источники:</h2>
+    <ul>
+        <li><a href='http://www.rcsb.org/pdb/explore/explore.do?structureId=4wy2'>Go to the protein page</a></li>
+        <li>UDP-3-O-[(3R)-3-hydroxytetradecanoyl]-N-acetyl-alpha-glucosamine</li>
+        <li><a href='https://en.wikipedia.org/wiki/Hydrogen_bond'>Hydrogen bonds, Wikipedia</a></li>
+        <li><a href='http://www.pnas.org/content/37/4/205.long'>Pauling L, Corey RB, Branson HR. The Structure of Proteins: Two Hydrogen-Bonded Helical Configurations of the Polypeptide Chain. Proceedings of the National Academy of Sciences of the United States of America. 1951;37(4):205-211.</a></li>
+        <li><a href='http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1063460/'>Pauling L, Corey RB. Configurations of Polypeptide Chains With Favored Orientations Around Single Bonds: Two New Pleated Sheets. Proceedings of the National Academy of Sciences of the United States of America. 1951;37(11):729-740.</a></li>
+    </ul>
+</div>

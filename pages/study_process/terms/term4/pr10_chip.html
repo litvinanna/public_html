@@ -1,0 +1,120 @@
+<div class='col-md-12'>
+	<h2>Поиск сигналов в chip-seq</h2>
+<h3>Обработка чтений</h3>
+</div>
+<div class='col-md-8'>
+
+    <p>Дано: одноконцевые чтения 10 хромосомы человека, референсная последовательность
+        десятой хромосомы человека (сборка версии hg19).</p>
+    <p>Качество чтений было проанализировано с помощью программы <a href='http://www.bioinformatics.babraham.ac.uk/projects/fastqc/'>FastQC</a>.
+        Она была запущена командой:</p>
+    <pre>fastqc chipseq_chunk22.fastq</pre>
+Качество последовательностей хорошее.
+</div>
+<div class='col-md-4'>
+    <table class='table table-bordered'>
+        <caption>Таб.1. Качество ридов</caption>
+        <tr>
+            <td>Число последовательностей</td>
+            <td>7909</td>
+        </tr>
+        <tr>
+            <td>Длина последовательностей </td>
+            <td>36</td>
+        </tr>
+        <tr>
+            <td>%GC</td>
+            <td>41</td>
+        </tr>
+    </table>
+</div>
+<div class='col-md-12'>
+	
+	
+	<figure class='col-md-6' style=''>
+            <figcaption>Рис.1. Качество каждой позиции рида</figcaption>
+            <img src='pages/study_process/terms/term4/pr10/per_base_quality.png' style='' width = 100%>
+        </figure>
+</div>
+
+<div class='col-md-12 small_empty_block'></div>
+
+
+<div class='col-md-12'>
+    <h3>Картирование чтений</h3>
+    <p>Риды были картированы на хромосому</p>
+    <pre> bwa mem /srv/databases/ngs/hg19/GRCh37.p13.genome.fa chipseq_chunk22.fastq > chipseq_chunk22.sam</pre>
+
+
+</div>
+<div class='col-md-12'>
+    <h3>Анализ выраниваний</h3>
+    <p>Выравнивание чтений было переведено в бинарный формат .bam.</p>
+    <pre> samtools view -b chipseq_chunk22.sam > chipseq_chunk22.bam</pre>
+    <p>Выравнивание чтений с референсом было отсортировано по координате в
+        референсе начала чтения.</p>
+    <pre>samtools sort chipseq_chunk22.bam 22-sorted</pre>
+    <p>Полученный файл 22-sorted.bam был снова проиндексирован.</p>
+    <pre>samtools index 22-sorted.bam </pre>
+    <p>Было подсчитано, сколько чтений откартировалось на геном.</p>
+    <pre>samtools idxstats 22-sorted.bam > idxstats.out</pre>
+    <p>На 10 хромосому успешно откартировалось 7565 чтений.
+    </p>
+
+</div>
+
+
+<div class='col-md-12'>
+	<h3>Поиск пиков</h3>
+<p>
+Для поиска пиков использовалась программа MACS. 
+Запуск получился успешым с такой командой:
+</p>
+<pre>macs2 callpeak -t chipseq_chunkX.sorted.bam --nomodel -n 22</pre>
+
+<p>
+Итогом работы программы являются три выходных файла:
+22_peaks.narrowPeak,
+22_peaks.xls,
+22_summits.bed.</p>
+<p>Для просмотра в геномном браузере <a href='https://genome.ucsc.edu/'>UCSC</a> в начало файла .narrowPeaks
+ был добавлен следующий текст:</p>
+ <pre>track type=narrowPeak visibility=3 db=hg19 name="22_peaks" description="Peaks from chunk 22"
+browser position chr10:22508342-23336937
+</pre>
+<p>Затем данный файл был загружен в геномный браузер - выдача на рисунке 1.</p>
+
+	<figure style=''>
+            <figcaption>Рис.1. Выдача геномного браузера</figcaption>
+            <img src='pages/study_process/terms/term4/pr10/br.png' style='' width = 100%>
+        </figure>
+</div>
+<div>
+<table class='table table-bordered'>
+        <caption>Таб.1. Качество ридов</caption> 
+        <tbody class='small'>     
+<tr><td>Название        </td><td>Хромосома  </td><td>  Начало      </td><td>Конец              </td><td>    Длина</td><td>Сдвиг вершины <br> относительно начала</td><td> Покрытие  </td><td> -log<sub>10</sub>(pvalue) </td><td>-log<sub>10</sub>(qvalue)  </td></tr>
+<tr><td>22_peak_1    </td><td>chr10 </td><td>  22,508,343   </td><td>     22,508,602  </td><td>      260  </td><td>147</td><td>   29.00 </td><td                >  25.79730      </td><td>19.12664        </td></tr>
+<tr><td>22_peak_2    </td><td>chr10 </td><td>  22,658,452   </td><td>     22,658,774  </td><td>      323  </td><td>186</td><td>   40.00 </td><td class='success'>  31.12337      </td><td>24.12780        </td></tr>
+<tr><td>22_peak_3    </td><td>chr10 </td><td>  22,722,828   </td><td>     22,723,125  </td><td>      298  </td><td>149</td><td>   42.00 </td><td class='success'>  35.11995      </td><td>28.01503        </td></tr>
+<tr><td>22_peak_4    </td><td>chr10 </td><td>  22,792,780   </td><td>     22,793,012  </td><td>      233  </td><td>119</td><td>   23.00 </td><td                >  18.52369      </td><td>12.11850        </td></tr>
+<tr><td>22_peak_5    </td><td>chr10 </td><td>  22,888,034   </td><td>     22,888,233  </td><td>      200  </td><td>80 </td><td>   22.00 </td><td                >  17.71014      </td><td>11.32070        </td></tr>
+<tr><td>22_peak_6    </td><td>chr10 </td><td>  22,920,704   </td><td>     22,920,996  </td><td>      293  </td><td>114</td><td>   45.00 </td><td class='success'>  32.02092      </td><td>25.01329        </td></tr>
+<tr><td>22_peak_7    </td><td>chr10 </td><td>  22,961,603   </td><td>     22,961,802  </td><td>      200  </td><td>114</td><td>   23.00 </td><td                >  16.75344      </td><td>10.40309        </td></tr>
+<tr><td>22_peak_8    </td><td>chr10 </td><td>  22,972,297   </td><td>     22,972,545  </td><td>      249  </td><td>96 </td><td>   23.00 </td><td                >  14.49455      </td><td>8.24977         </td></tr>
+<tr><td>22_peak_9    </td><td>chr10 </td><td>  23,105,885   </td><td>     23,106,229  </td><td>      345  </td><td>158</td><td>   91.00 </td><td class='success'>  86.92498      </td><td>77.46404        </td></tr>
+<tr><td>22_peak_10   </td><td>chr10 </td><td>  23,336,662   </td><td>     23,336,937  </td><td>      276  </td><td>133</td><td>   36.00 </td><td                >  26.07866      </td><td>19.39223        </td></tr>
+	
+      </tbody>
+    </table>
+    <p>Значимыми можно считать пики с высоким значением -log<sub>10</sub>(pvalue). Самыми достоверными в данной выборке можно назвать пики 9, 2, 3, 7.</p>
+    <p>Также видно, что высокая достоверность по p-value коррелирует с покрытием.</p>
+<p>Пики 5, 6, 7, 8 попали в облать перед геном  phosphatidylinositol-5-phosphate 4-kinase, type II, alpha (PIP4K2A), 
+<a href='https://genome.ucsc.edu/cgi-bin/hgGene?hgg_gene=uc010qcu.2&hgg_prot=uc010qcu.2&hgg_chrom=chr10&hgg_start=22823765&hgg_end=22880710&hgg_type=knownGene&db=hg19&hgsid=592992915_RfBCSzdE4AAcuaQBhB4Pqa66fRwa'>его описание на USCS</a>.
+ Этот белок учавствует в сигнальном пути фосфатидил-инозитол-фосфатном пути, ответственном за клеточную дифференцировку, пролиферацию, клеточную подвижность. Эта киназа 
+ фсофорилирует фосфатидилинозитол-5-фосфат. Тем не менее последовательность этого белка не гомологична
+ другим киназам.
+</p>
+<p></p>
+
+</div>

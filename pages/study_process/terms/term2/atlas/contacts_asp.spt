@@ -1,0 +1,61 @@
+set echo top center
+font echo 15
+color echo white
+
+zap
+load=4UAV
+wireframe off
+backbone 5
+color white
+cpk off
+select (asp101:a or glu105:a or ile97:a)
+center selected
+zoom 500
+wireframe 60
+cpk 130
+color cpk
+hbonds calculate
+measure range (glu105:a.n)(asp101:a.o)
+measure range (asp101:a.n)(ile97:a.o)
+set echo top center
+font echo 15
+color echo white
+echo Protein backbone with hydrogen bonds between asp101, glu105, ile97  (PDB ID: 4UAV)
+pause
+
+zap
+load=3TX3
+wireframe off
+ backbone 5
+color white
+cpk off
+select (arg136:b or asp180:b)
+center selected
+zoom 500
+wireframe 60
+cpk 130
+color cpk
+measure range (arg136:b.nh2)(asp180:b.od1)
+set echo top center
+font echo 15
+color echo white
+echo Protein backbone with salt bridge  between arg136:b and asp180:b (PDB ID: 3TX3)
+pause
+
+zap
+load=4YR3
+restrict (within(5.0, dna) and asp)
+restrict within(group, selected)
+wireframe 60
+select dna
+wireframe 
+spacefill
+select (within(5.0, dna) and asp)
+center selected
+zoom 400
+set echo top center
+font echo 15
+color echo white
+echo DNA-binding protein site including asp (PDB ID:4YR3)
+pause
+

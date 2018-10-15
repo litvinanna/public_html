@@ -1,0 +1,164 @@
+<div class='md-col-12'>
+<h2>Диагностические позиции</h2>
+<p>Для организмов из первого практикума
+было построено выравнивание последовательностей рибосомного белка S4 &mdash; мнемоника RS4. Последовательности
+были скачаны из Swissprot'а и выровнены в Jalview алгоритмом Musle (рис.1) <a href='pages/study_process/terms/term4/pr2/muscle-align.fasta'>[fasta]</a></p>
+
+<figure style='overflow-x: scroll;'>
+            <figcaption>Рис.1. Выравнивание белков в Jalview, сolour Clustalx.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/big_alignment.png' style='height : 200px'>
+        </figure>
+		<div class='small_empty_block'></div>
+<p>В выравнивании много консервативных блоков (рис.2, кроме рамочек), но есть позиции, которые заметно отличаются - обведены черным.
+ Сразу бросается в глаза большая вставка в районе 30 позиции в последовательности вида CLOBA. 
+ Это может говорить о том, что этот организм один из самых отдаленных в этой группе.</p>
+ <figure style='overflow-x: scroll;'>
+            <figcaption>Рис.2. Черные рамочки плохих блоков.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/big_alignment_differences.png' style='height : 200px'>
+        </figure>
+        <div class='small_empty_block'></div>
+<p>Первый таксон, который можно выделить это STAAR + STAES = Staphylococcaceae; Staphylococcus.
+Можно найти достаточно позиций, которые сходны у этих организмов и отличают их от остальных (рис.3 ).</p>
+ <figure style='overflow-x: scroll;'>
+            <figcaption>Рис.3. STAAR + STAES = Staphylococcaceae; Staphylococcus.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/big_alignment_staar.png' style='height : 200px'>
+        </figure>
+        <div class='small_empty_block'></div>
+<p>Следующими можно рассмотреть BACSU + GEOKA = Bacillaceae.
+ Тут аналогичных позиций меньше (рис.4).</p>
+ <figure style='overflow-x: scroll;'>
+            <figcaption>Рис.4. BACSU + GEOKA = Bacillaceae.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/big_alignment_bascu.png'  style='height : 200px'>
+        </figure>
+        <div class='small_empty_block'></div>
+        
+<p>Первые две пары организмов входят в таксон Bacillales. </p>
+<figure style='overflow-x: scroll;'>
+            <figcaption>Рис.5. BACSU + GEOKA + STAAR + STAES = Bacillales.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/big_alignment_two-pairs.png'  style='height : 200px'>
+        </figure>
+        <div class='small_empty_block'></div>
+<p>И ещё один таксон LACAC + STRP1 + ENTFA = Lactobacillales &mdash; разнородный таксон, так как объединяющих 
+позиций не так много, но есть такие, которые показывают, что эта группа похожим образом отличается от всех.</p>
+<figure style='overflow-x: scroll;'>
+            <figcaption>Рис.6. LACAC + STRP1 + ENTFA = Lactobacillales.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/big_alignment_lacac.png'  style='height : 200px'>
+        </figure>
+        <div class='small_empty_block'></div>
+<p>В данном выравнивании есть позиции, по которым можно догадаться о филогении. Некоторые нетривиальные ветви дерева просматриваются в некоторых позициях.
+ То есть 'близкие' организмы одной группы одинаково отличаются от 'далеких' других организмов. 
+ На этом и основано восстановлении филогении по геномам.  
+</p>
+</div>
+
+
+
+<div class='col=md-12'>
+<h1>Разные алгоритмы</h1>
+<h3>Neighbor-joining</h3>
+<p>По тому же выраниванию можно построить филогенетическое дерево используя разные алгоритмы. 
+Многим из них &mdash; например Neighbor-joining &mdash; требуется матрица расстояний между последовательностями. 
+Построить такую матрицу можно из различный принципов: просто посчитать количество совпадающих букв (%Identity)
+или придавая различным заменам разный вес, в зависимости от встречаемости (PAM 250, BLOWSUM 62). 
+</p>
+<p>Алгоритм Neighbor-joining сначала объединяет все последовательности в один корень. Затем по матрице находятся два ближайщих таксона.
+Они объединяются, создаётся новый узел. Расстояние между оставшимися таксонами, нашей парочкой и новым узлом определенный образом пересчитываются.
+Пара ближайших таксонов ищется снова и так далее.</p>
+<p>Деревья, построенные методом Neighbor-joining с разными принципами подсчета расстояний.</p>
+</div>
+<div class="col-md-6">
+        <figure>
+            <figcaption>Рис.7-0. Филогения.</figcaption>
+            <img src='pages/study_process/terms/term4/pr1/tree.png' width="100%">
+        </figure>
+    </div>
+<div class='col-md-6'>
+<figure>
+            <figcaption>Рис.7-1. Jalview Neighbor-joining %Identity.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/jv-nj-identity.png' width = 100%>
+        </figure>
+        </div>
+<div class='col-md-6'>
+<figure >
+            <figcaption>Рис.7-2. Jalview Neighbor-joining PAM 250.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/jv-nj-pam.png' width = 100%>
+        </figure>
+        </div>
+<div class='col-md-6'>
+<figure>
+            <figcaption>Рис.7-3. Jalview Neighbor-joining BLOWSUM 62.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/jv-nj-blosum.png' width = 100%>
+        </figure>
+        </div>
+<div class='col-md-6'>       
+<figure>
+            <figcaption>Рис.7-4. Mega Neighbor-joining.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/mega-nj.png' width = 100%>
+        </figure>
+        </div>
+<div class='col-md-12'>
+<p> Neighbor-joining строит неукоренённые деревья, поэтому расположение крайних таксонов на картинке может меняться.
+ Но это не влияет на топологию дерева. Везде мы получили нетривиальную ветвь, которая отделяет группу (FINM2, CLOBA).
+ </p>
+ <p>Отличаются данные деревья тем, кого первым выделить в группе LACAC, STRP1, ENTFA (такая ветвь есть везде) 
+ &mdash; внутри по-разному, и выделена ли группа BACSU, GEOKA (должна быть) среди BACSU, GEOKA, STAAR, STAES (такая ветвь есть везде).
+  Ни одно из деревьев не сооответствует современной филогении.</p>
+</div>
+<div class='col-md-12'>
+<h3>Другие</h3>
+<p>Но существуют другие алгоритмы, которые могут более точно восстановить дерево.</p>
+</div>
+<div class='col-md-6'>       
+<figure>
+            <figcaption>Рис.8-1. Mega Maximum likehood.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/mega-max_likehood.png' width = 100%>
+        </figure>
+        <p>
+        Переборный символьный метод, учитавает то, что мутации могут происходить с разной скоростью в разных ветках, каждому дереву приписывается вероятность, с которой оно могло 'случиться'.
+        Реконструированны длины ветвей, видно, что наш белок менялся с разной скоростью в разных организмах и группах. 
+        </p>
+        </div>
+<div class='col-md-6'>       
+<figure>
+            <figcaption>Рис.8-2. Mega Maximum parsimony.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/mega-max_parsimony.png' width = 100%>
+        </figure>
+        <p>
+        Переборный символьный метод, учитывает разные эволюционные события (замены, делеции), которые могли бы объяснить каждое дерево и выбирает самое просто осуществимое.
+        Это дерево помогает только оценить, как могут быть связаны таксоны.
+        </p>
+        </div>
+		<div class='small_empty_block col-md-12'></div>
+<div class='col-md-6'>       
+<figure>
+            <figcaption>Рис.8-3. Mega Minimum evolution.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/mega-min_evolution.png' width = 100%>
+        </figure>
+        <p>
+        Переборный метод. В MEG'е каждой ветви присваивается мера в зависимости от числа эволюционный событий и выбирается дерево с наименьшей суммой мер ветвей.  
+        Длины ветвей тоже реконструированы.
+        </p>
+        </div>
+<div class='col-md-6'>       
+<figure>
+            <figcaption>Рис.8-4. Mega UPGMA.</figcaption>
+            <img src='pages/study_process/terms/term4/pr2/mega-upgma.png' width = 100%>
+        </figure>
+        <p>Прямой дистанционный метод, строит дерево снизу вверх, объединяя ближайшие группы и таксоны.
+        Он подобрался ближе всего по внутренней топологии (она верная), но дерево укоренено неверно.
+        Но этого и следовало ожидать, так как два последних организма FINM2 и CLOBA, 
+        как видно из других ветве-реконструирующих методов, находятся далеко и долго эволюционировали отдельно и, возможно, быстро, поэтому прямой UPGMA 
+        в конце последовательно объединил их с полостью правильной ветвью (из остальных). 
+        Если бы мы использовали эти два организма как outgroup, то этот метод единственный дал бы правильный результат.
+        </p>
+        </div>
+<div class='col-md-12'>
+<p>
+Несмотря на более изощренный способы, эти алгоритмы тоже не отразили реальную филогению. 
+В этом нет ничего плохого, по одному белку нельзя правильно восстановить эволюцию. </p>
+<p>(победил UPGMA)
+</p>
+</div>
+
+
+

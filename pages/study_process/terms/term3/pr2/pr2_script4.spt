@@ -1,0 +1,5 @@
+load "pages/study_process/terms/term3/pr2/step20.pdb"
+wireframe 100
+color cpk
+set echo top left; font echo 18; color echo [xFFEFD5];
+echo GC/AC overlap

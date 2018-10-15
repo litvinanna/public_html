@@ -1,0 +1,46 @@
+NW_014652958.1	AUGUSTUS	gene	1030986	1053799	0.02	+	.	g43
+NW_014652958.1	AUGUSTUS	transcript	1042306	1053799	0.01	+	.	g43.t1
+NW_014652958.1	AUGUSTUS	tss	1042306	1042306	.	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1042306	1043191	.	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1048276	1048427	.	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	start_codon	1048281	1048283	.	+	0	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	initial	1048281	1048427	0.58	+	0	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	internal	1050504	1050666	0.46	+	0	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	internal	1051448	1051683	0.78	+	2	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	terminal	1051843	1052037	0.93	+	0	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	intron	1048428	1050503	0.71	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	intron	1050667	1051447	0.48	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	intron	1051684	1051842	0.93	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	CDS	1048281	1048427	0.58	+	0	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	CDS	1050504	1050666	0.46	+	0	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1050504	1050666	.	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	CDS	1051448	1051683	0.78	+	2	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1051448	1051683	.	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	CDS	1051843	1052037	0.93	+	0	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1051843	1053799	.	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	stop_codon	1052035	1052037	.	+	0	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	tts	1053799	1053799	.	+	.	transcript_id "g43.t1"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	transcript	1030986	1053799	0.01	+	.	g43.t2
+NW_014652958.1	AUGUSTUS	tss	1030986	1030986	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1030986	1031028	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1032003	1032253	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1033715	1033825	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1042023	1043191	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1048276	1048427	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	start_codon	1048281	1048283	.	+	0	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	initial	1048281	1048427	0.58	+	0	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	internal	1050504	1050714	0.26	+	0	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	internal	1051448	1051683	0.78	+	2	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	terminal	1051843	1052037	0.93	+	0	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	intron	1048428	1050503	0.71	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	intron	1050715	1051447	0.3	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	intron	1051684	1051842	0.93	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	CDS	1048281	1048427	0.58	+	0	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	CDS	1050504	1050714	0.26	+	0	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1050504	1050714	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	CDS	1051448	1051683	0.78	+	2	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1051448	1051683	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	CDS	1051843	1052037	0.93	+	0	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	exon	1051843	1053799	.	+	.	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	stop_codon	1052035	1052037	.	+	0	transcript_id "g43.t2"; gene_id "g43";
+NW_014652958.1	AUGUSTUS	tts	1053799	1053799	.	+	.	transcript_id "g43.t2"; gene_id "g43";

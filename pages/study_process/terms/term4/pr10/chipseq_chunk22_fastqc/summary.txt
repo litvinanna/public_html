@@ -1,0 +1,12 @@
+PASS	Basic Statistics	chipseq_chunk22.fastq
+PASS	Per base sequence quality	chipseq_chunk22.fastq
+FAIL	Per tile sequence quality	chipseq_chunk22.fastq
+PASS	Per sequence quality scores	chipseq_chunk22.fastq
+WARN	Per base sequence content	chipseq_chunk22.fastq
+PASS	Per sequence GC content	chipseq_chunk22.fastq
+PASS	Per base N content	chipseq_chunk22.fastq
+PASS	Sequence Length Distribution	chipseq_chunk22.fastq
+PASS	Sequence Duplication Levels	chipseq_chunk22.fastq
+PASS	Overrepresented sequences	chipseq_chunk22.fastq
+PASS	Adapter Content	chipseq_chunk22.fastq
+PASS	Kmer Content	chipseq_chunk22.fastq

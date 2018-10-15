@@ -1,0 +1,59 @@
+########################################
+# Program: water
+# Rundate: Mon 23 May 2016 13:02:17
+# Commandline: water
+#    [-asequence] fasta-for-gl-loc.fasta
+#    [-bsequence] uspe.fasta
+# Align_format: srspair
+# Report_file: wp_021461508.water
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: WP_021461508.1
+# 2: B4ETT2_PROMH
+# Matrix: EBLOSUM62
+# Gap_penalty: 10.0
+# Extend_penalty: 0.5
+#
+# Length: 303
+# Identity:     144/303 (47.5%)
+# Similarity:   203/303 (67.0%)
+# Gaps:           5/303 ( 1.7%)
+# Score: 741.0
+# 
+#
+#=======================================
+
+WP_021461508.      3 FNNILVVIDPENEKQAALERALHLIKQQNSSQLVNLTAFLAIYNLSYAVS     52
+                     :.|:||||||..:.|.||.||:::: |:|..:   :.|||.:|:|||.::
+B4ETT2_PROMH       4 YQNLLVVIDPNQDDQPALRRAVYIV-QRNGGR---IKAFLPVYDLSYDMT     49
+
+WP_021461508.     53 VTHSSSEREEMIAAVIAEKKAWLQDILAQYDLSNTQFKIEVVWESNEADA    102
+                     ...|..||..|...||.:|.||::.....|..:..|..|:|:|.:...:|
+B4ETT2_PROMH      50 TLLSPDERNAMRKGVINQKTAWIKQQARYYLEAGIQIDIKVIWHNRPYEA     99
+
+WP_021461508.    103 IEKEIVKHHHDLVVKFTHQEDDLSSLIFTPTDWQLLRKSSCPILMVKDGD    152
+                     |.:|::...|||::|..||.|.|.||||||.|||||||...|:.||||.:
+B4ETT2_PROMH     100 IIEEVITDKHDLLIKMAHQHDKLGSLIFTPLDWQLLRKCPAPVWMVKDKE    149
+
+WP_021461508.    153 WKHQRRILVAVNVSDDEPYHDDFNKQLVGLSMSLAQSLDRG-NIHLVSAY    201
+                     |.....|:||.|:|::|.|||..|.:|:.|:..|:..:.:. ::||:|||
+B4ETT2_PROMH     150 WPEYGTIVVAANLSNEESYHDALNLKLIELTNDLSHRIQKDPDVHLLSAY    199
+
+WP_021461508.    202 PSAPVGITLDLPEFSVPDYGNSIRGQHLINMKALRQHFGIAEDHTHVYEG    251
+                     |.||:.|.::||:|....|.|::||||||.||.|||.|.|.|:.|||.||
+B4ETT2_PROMH     200 PVAPINIAIELPDFDPNLYNNALRGQHLIAMKELRQKFSIPEEKTHVKEG    249
+
+WP_021461508.    252 LPEEVIPKVAQDIGAELVVLGTIGRTGLSAVLLGNTAEHVISQLNCNLLA    301
+                     |||:|||:|.:::.|.:||||.:|||||||..||||||.:|..:.|:|||
+B4ETT2_PROMH     250 LPEQVIPQVCEELNAGIVVLGILGRTGLSAAFLGNTAEQLIDHIKCDLLA    299
+
+WP_021461508.    302 IKP    304
+                     |||
+B4ETT2_PROMH     300 IKP    302
+
+
+#---------------------------------------
+#---------------------------------------

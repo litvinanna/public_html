@@ -1,0 +1,224 @@
+<div class='col-md-12'>
+<h2>Консервативное окружение гена</h2>
+<p>
+Для работы мне был выдан универсальный стрессовый белок E (uspE) из бактерии <i>Proteus mirabilis</i>, с которым я
+работала в <a ng-click="innerLink(0, 2)">первом семестре</a>
+(<a href='https://www.ncbi.nlm.nih.gov/protein/YP_008397761.1?report=genpept'>ncbi YP_008397761</a>).
+
+</p>
+<p> Поиск проводился с помощью Conserve Domain Database <a href='https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi'>CDD</a> 
+и списка всех  <a href='ftp://ftp.ncbi.nih.gov/pub/COG/COG2014/static/lists/listCOGs.html'>КОГов</a>.
+В поле поиска была вставлена последовательность белка в формате fasta, был включен просмотр всех результатов.
+ </p>
+ 
+ <figure style=''>
+            <figcaption>Рис.1. Выдача CDD</figcaption>
+            <img src='pages/study_process/terms/term4/pr6/cdd.png'  style='' width = 100%>
+        </figure>
+       
+<table class='table table-bordered'>
+	<caption>Таб.1. КОГ</caption>
+	<tbody class=''>
+	<tr>
+		<td>Идентификатор КОГа</td>
+		<td>COG0589</td>
+		</tr>
+	<tr>
+		<td>Полное название КОГа</td>
+		<td>Nucleotide-binding universal stress protein, UspA family
+			<br> Связывающий нуклеотиды универсальный белок стресса, семейство UspA</td>
+		</tr>
+
+	<tr>
+		<td>E-value</td>
+		<td>1.69e-14</td>
+		</tr>
+	<tr>
+		<td>Координаты в белке</td>
+		<td>164-315 </br> длина белка 327 аа</td>
+		</tr>
+	<tr>
+		<td>Функциональная группа</td>
+		<td>[Signal transduction mechanisms] 
+			<br> Механизмы передачи сигналов</td>
+		</tr>
+		
+	</tbody>
+	</table>
+
+
+</div>
+<div class='col-md-12'>
+<h3>Визуализация геномного окружения</h3>
+<p>
+Геномное окружение моего белка было проверено в базе данных <a href='http://string-db.org/'>STRING</a>.
+
+</p>
+</div>
+<div class='col-md-6'>
+<figure style=''>
+            <figcaption>Рис.2. Окружение белка по STRING</figcaption>
+            <img src='pages/study_process/terms/term4/pr6/string.png'  style='' width = 100%>
+        </figure>
+ <switch>
+   
+    <button class="btn btn-xm" ng-click="setCurrent('1')" ng-if="isCurrent('default')">аннотация</button>
+	<button class="btn btn-xm" ng-click="setCurrent('default')" ng-if="isCurrent('1')">скрыть</button>
+<figure ng-if="isCurrent('1')" style='overflow-x: scroll;'>
+            <img src='pages/study_process/terms/term4/pr6/string-1.png' width = 150%>
+        </figure>    
+</switch>
+</div>
+
+<div class='col-md-6'>
+<table class='table table-bordered'>
+	<caption>Таб.2. Белки в окружении STRING</caption>
+	<tbody class=''>
+	<tr>
+		<td>glpG</td>
+		<td>intramembrane serine protease GlpG; Rhomboid-type serine protease that catalyzes intramembrane proteolysis (By similarity)</td>
+		</tr>
+	<tr>
+		<td>rseB</td>
+		<td>anti sigma E (sigma 24) factor, negative regulator</td>
+		</tr>
+	<tr>
+		<td>uspF</td>
+		<td>universal stress protein F</td>
+		</tr>
+	<tr>
+		<td>proQ</td>
+		<td>solute/DNA competence effector; Not exactly known; may be a structural element that influences the osmotic activation of ProP at a post-translational level (By similarity)</td>
+		</tr>
+	<tr>
+		<td>rraB</td>
+		<td>hypothetical protein; Globally modulates RNA abundance by binding to RNase E (Rne) and regulating its endonucleolytic activity. Can modulate Rne action in a substrate-dependent manner by altering the composition of the degradosome (By similarity)</td>
+		</tr>
+	<tr>
+		<td>nlpB</td>
+		<td>lipoprotein; Part of the outer membrane protein assembly complex, which is involved in assembly and insertion of beta-barrel proteins into the outer membrane (By similarity)</td>
+		</tr>
+	<tr>
+		<td>rseA</td>
+		<td>anti-RNA polymerase sigma factor SigE</td>
+		</tr>
+	<tr>
+		<td>metJ</td>
+		<td>transcriptional repressor protein MetJ; This regulatory protein, when combined with SAM (S- adenosylmethionine) represses the expression of the methionine regulon and of enzymes involved in SAM synthesis (By similarity)</td>
+		</tr>
+	<tr>
+		<td>PMI3337	</td>
+		<td>hypothetical protein</td>
+		</tr>
+	<tr>
+		<td>PMI0667</td>
+		<td>hypothetical protein</td>
+		</tr>
+		
+	</tbody>
+	</table>
+</div>
+
+<div class='small_empty_block col-md-12'></div>
+<div class='col-md-6'>
+
+<figure style=''>
+            <figcaption>Рис.3. Окружение КОГа по COGNAT</figcaption>
+            <img src='pages/study_process/terms/term4/pr6/cognat.png'  style='' width = 100%>
+        </figure>
+</div>
+<div class='col-md-6'>
+<figure style=''>
+            <figcaption>Рис.3-1. Аннотация</figcaption>
+            <img src='pages/study_process/terms/term4/pr6/cognat-1.png'  style='' width = 100%>
+        </figure>
+  <p></p>
+<p>
+Результаты поиска в базе <a href='https://micro.depo.msu.ru/module/cognat'>COGNAT</a>
+ для нашего КОГа COG0589 отображены на рис.3. 
+</p>  <p>
+ Поиск был проведен по идентификатору КОГа, c количеством соседей 7,occurrence threshold 20%, без учета таксономии. 
+ </p>  <p>
+ Как мы видим, никакого консервативного окружения КОГа не наблюдается.	
+</p></div>
+<div class='col-md-12'>
+<h2>Отнесение uspE из Proteus mirabilis к терминам Gene Ontology</h2>
+<p>С помощью инструмента <a href='amigo.geneontology.org/amigo/software_list'>AMIGO</a> был найден белок, более всего похожий на мой. 
+Это универсальный белок стресса E из Escherichia coli K-12 <a href='http://amigo1.geneontology.org/cgi-bin/amigo/gp-details.cgi?gp=UniProtKB:P0AAC0&session_id=9433amigo1491412686'>USPE_ECOLI</a>,
+находка с низким p-value 1.2e-120 (белки практически совпадают).
+</p>
+<p>
+	Таблица 1 содержит термины gene ontology, которые были отнесены к белку USPE_ECOLI. Для
+	данного белка известно, что он участвует в нескольких клеточных процессах. Два из них связанны 
+	со стрессовыми условиями для клетки (ультрафиолет, пероксиды), отсюда понятно название белка.
+
+</p>
+<table class='table table-bordered'>
+	<caption>Таблица 3. Термины GO, отнесенные к белку с идентификатором Uniprot P0AAC0 (USPE_ECOLI)</caption>
+	<tbody class='small'></tbody>
+	<tr>
+		<td>Аспект</td>
+		<td>Идентификатор GO</td>
+		<td>Название термина</td>
+		<td>Перевод названия термина</td>
+		<td>Код типа достоверности</td>
+		 </tr>
+	<tr>
+		<td>Биологический процесс (biological process)</td>
+		<td>GO:0071973 </td>
+		<td>bacterial-type flagellum-dependent cell motility</td>
+		<td>жгутиковая подвижность клетки бактериального типа (с участием флагеллина)</td>
+		<td>IMP</td>
+		</tr>
+	<tr>
+		<td>Биологический процесс (biological process)</td>
+		<td>GO:0070301</td>
+		<td> cellular response to hydrogen peroxide</td>
+		<td>клеточный ответ на пероксид водорода</td>
+		<td>IEP</td>
+		</tr>
+	<tr>
+		<td>Биологический процесс (biological process)</td>
+		<td>GO:0034644</td>
+		<td> cellular response to UV</td>
+		<td>клеточный ответ на ультрафиолет</td>
+		<td>IMP</td>
+		</tr>
+	<tr>
+		<td>Биологический процесс (biological process)</td>
+		<td>GO:0044010 :</td>
+		<td> single-species biofilm formation</td>
+		<td>A process in which planktonically growing microorganisms of the same species grow at a liquid-air interface or on a solid substrate under the flow of a liquid and produce extracellular polymers that facilitate matrix formation, resulting in a change in the organisms' growth rate and gene transcription. </td>
+		<td>IMP</td>
+		</tr>
+
+
+</table>
+<p>
+Отнесение терминов gene ontology к генах строится на различных подтверждениях (кодах достоверности). Они показывают, из чего был сделан тот или иной вывод. 
+Доказательства бывают экспериментальные, расчетные, авторские, присваемые на основе автоматически обработанных аннотаций. Соответственно, разные доказательствам можно и 
+нужно доверять по-разному. 
+</p><p>
+В таб.2 приведены расшифровки кодов достоверности, по которым присвоены свойства найденному гену uspe_ecoli.
+</p>
+<table class='table table-bordered'>
+	<caption>Таблица 4. Описание кодов достоверности, использованных в Таблице 3.</caption>
+	<tbody class='small'></tbody>
+	<tr>
+		<td>Код типа достоверности</td>
+		<td>Расшифровка кода типа достоверности</td>
+		<td>Объяснение</td>
+		 </tr>
+	<tr>
+		<td>IMP</td>
+		<td>Inferred from Mutant Phenotype</td>
+		<td>Присваивается, если данная функция, свойство было потеряно при изменении гена белка.</td>
+		</tr>
+	<tr>
+		<td>IEP</td>
+		<td>Inferred from Expression Pattern</td>
+		<td>Присваивается, если свойство присвоено исходя из времени и местоположения экспрессии гена.</td>
+		</tr>
+</table>
+
+</div>

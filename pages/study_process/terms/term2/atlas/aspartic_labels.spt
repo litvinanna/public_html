@@ -1,0 +1,18 @@
+select N1 
+label N
+select C2
+label CA
+select C3
+label C
+select O4
+label O
+select C5
+label CB
+select C6
+label CG
+select O7
+label OD1
+select O8
+label OD2
+select all 
+font labels 20; color labels white

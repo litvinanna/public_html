@@ -1,0 +1,16 @@
+
+1. Acrasis kona culture-collection ATCC:MYA-3509 mitochondrion, complete genome
+51,458 bp circular DNA 
+NC_026286.1 GI:756877081
+
+2. Naegleria fowleri mitochondrion, complete genome
+49,531 bp circular DNA 
+NC_021104.1 GI:484759711
+
+3. Naegleria gruberi mitochondrion, complete genome
+49,843 bp circular DNA 
+NC_002573.1 GI:11466174
+
+4. Stachyamoeba lipophora strain ATCC 50324 culture-collection ATCC:50324 mitochondrion, complete genome
+49,742 bp circular DNA 
+NC_026312.1 GI:756877602

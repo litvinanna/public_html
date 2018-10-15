@@ -1,0 +1,46 @@
+zap
+load "pages/study_process/terms/term2/4wy2.rsc"
+set echo top left; font echo 18; color echo [xFFEFD5];
+restrict none
+select protein; cartoon on; color chain; zoom 110; rotate best
+echo Protein colored chain
+pause
+
+resume
+echo Protein colored structure
+color structure
+pause
+
+resume
+echo Ligand is shown
+select ligand
+color cpk
+wireframe 0.6 on
+cpk 0.8 on
+pause 
+
+resume 
+echo Van der Walls radius atoms
+restrict protein
+cartoons off
+spacefill on
+color cpk
+pause
+
+resume
+echo Alpha chain with hydrogen bonds   
+spacefill off
+restrict 215-236 :A
+backbone 0.4 on
+hbonds calculate; hbonds 30
+center selected; zoom 500; rotate best
+pause 
+
+resume                                              
+echo Beta sheet with hydrogen bonds
+delete selected
+restrict 111- 118 : A or 142-146:A  
+backbone 0.4 on
+center selected; rotate best
+hbond calculate; hbonds 30
+pause

@@ -1,0 +1,19 @@
+zap
+load "pages/study_process/terms/term2/4yr3.rsc"
+set echo top left; font echo 20 sansserif plain; color echo [xFFEFD5];
+
+echo DNA-protein complex, colored structure
+restrict none
+select protein; cartoon on; color structure
+select dna; cartoon on; color structure
+pause
+
+resume
+echo Protein contacting with DNA is shown
+restrict none 
+select dna; spacefill on; color structure
+select protein; backbone 50 on; color structure
+select within(7.0, dna) and not dna
+select within(groups, selected); wireframe 0.8 on; color green
+pause
+

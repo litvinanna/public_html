@@ -1,0 +1,143 @@
+<div class='col-md-12'>
+<h2>Дерево по 16s rRNA</h2>
+<p>Филогенетическое дерево тех же бактерий было постороено с использованием нуклеотидных последовательностей гена 16s rRNA (субъединица рибосомальной РНК).</p>
+<p>
+Геномы многих бактерий лежат в базе <a href='ftp://ftp.ncbi.nlm.nih.gov/genomes/archive/old_refseq/Bacteria/'>NCBI</a>.
+Каждый геном состоит нескольких файлов, содержащих различную информацию о генах, его свойствах, последовательностях. 
+В файле .frn лежат последовательности всех РНК клетки. Для каждой бактерии в базе была найдена наиболее
+близкая (некоторый штамм этого вида), и из указанного файла была скопирована последовательность 16s rRNA.
+Ген 16s rRNA часто представлен в геноме несколько раз (<a href ='https://en.wikipedia.org/wiki/16S_ribosomal_RNA'>Wikipedia</a>), 
+для анализы была выбрана первая последовательность из списка. Файл с последовательностями 
+<a href='pages/study_process/terms/term4/pr4/seqs.fasta' >[fasta]</a> - таб.1.
+</p>
+<p>
+Для Streptococcus pyogenes serotype M1 в банке не оказалось последовательности 16s rRNA, поэтому 
+был взят ген малой субъединицы РНК, который содержит 16S. После выравнивания было обнаружено, что эта 
+малая субъединица выровнялась с другими 16S без лишних хвостов, возможно она содержала только последовательность 16S.
+</p>
+</div>
+<div class='col-md-12'>
+	<table class='table table-bordered compact'>
+	<caption>Таб.1. Выбранные последовательности РНК</caption>
+		<tbody class='small'>
+	<tr>
+		<td>Бактерия</td>
+		<tr>Последовательность</tr>
+		</tr>
+	<tr>
+		<td>Bacillus_subtilis_168_uid57675</td>
+		<td> ref|NC_000964|:9810-11364|ribosomal RNA-16S| [gene=rrnO-16S] [locus_tag=BSU_rRNA_1]</td>
+		</tr>
+	<tr>
+		<td>Clostridium_botulinum_A2_Kyoto_uid59229</td>
+		<td>ref|NC_012563|:9454-10955|16S ribosomal RNA| [gene=rrs] [locus_tag=CLM_0008]</td>
+		</tr>
+	<tr>
+		<td>Enterococcus_faecalis_62_uid159663</td>
+		<td>ref|NC_017312|:374851-376399|16S ribosomal RNA| [locus_tag=EF62_0349]</td>
+		</tr>
+	<tr>
+		<td>Finegoldia_magna_ATCC_29328_uid58867</td>
+		<td> ref|NC_010376|:197837-199361|16S ribosomal RNA| [locus_tag=FMG_rrnD_16SrRNA]</td>
+		</tr>
+	<tr>
+		<td>Geobacillus_C56_T3_uid49467</td>
+		<td>ref|NC_014206|:10593-12138|16S ribosomal RNA| [locus_tag=GC56T3_R0001]</td>
+		</tr>
+	<tr>
+		<td>Lactobacillus_acidophilus_30SC_uid63605</td>
+		<td> ref|NC_015214|:57091-58665|16S ribosomal RNA| [locus_tag=LAC30SC_r10831]</td>
+		</tr>
+	<tr>
+		<td>Staphylococcus_aureus_04_02981_uid161969</td>
+		<td>ref|NC_017340|:503766-505320|16S Ribosomal RNA| [locus_tag=SA2981_rRNA01]</td>
+		</tr>
+	<tr>
+		<td>Staphylococcus_epidermidis_ATCC_12228_uid57861</td>
+		<td>ref|NC_004461|:1598006-1599559|16S ribosomal RNA| [locus_tag=SEr03]</td>
+		</tr>
+	<tr>
+		<td>Streptococcus_pyogenes_M1_476_uid193766</td>
+		<td>ref|NC_020540|:17062-18613|small subunit ribosomal RNA| [locus_tag=M1GAS476_0015]</td>
+		</tr>
+	</tbody>
+
+	</table>
+</div>
+<div class='col-md-12'>
+<p>
+Последовательности были выровнены в Jalview методом Muscle with Defaults. Выранивание 
+<a href='pages/study_process/terms/term4/pr4/muscle-16s.fasta'>[fasta]</a>.
+</p>
+<p>Филогенетичсекое дерево было построено в программе MEGA5 методом maximum likehood - рис.1..</p>
+</div>
+<div class='col-md-6'>
+<figure style=''>
+            <figcaption>Рис.1.Maximum likehood, 16s rRNA</figcaption>
+            <img src='pages/study_process/terms/term4/pr4/tree.png'  style='' width = 100%>
+        </figure>
+</div>
+<div class="col-md-6">
+        <figure>
+            <figcaption>Рис.2. Филогения</figcaption>
+            <img src='pages/study_process/terms/term4/pr1/tree.png' width="100%">
+        </figure>
+    </div>
+    
+<div class='col-md-12'>
+<p>Дерево, реконструированное по 16s rRNA полностью совпадает с принятой филогенией. По белкам верное дерево построить не 
+удалось. 
+</p>
+<p>Последовательность 16s rRNA есть во всех бактериях и очень консервативна, так как она работает в таком "базовом" клеточном процессе как трансляция. 
+Известно, что рибосомы и, соотвественно рРНК, устроены похоже у всех организмов, а в пределах бактерий они очень похожи. 
+Поэтому происходящие мутации в данном гене: случаются с одинаковой скоростью во всех организах и ветках дерева, и случаются редко, поэтому соответствуют филогении. 
+Такие консервативные последовательности обычно и используют для реконструкции филогении достаточно далеких организмов.
+</p>
+</div>
+<div class='col-md-12'>
+<h2>Ортологи и паралоги</h2>
+	<p>В протеомах бактерий были найдены гомологи белка <a href='http://www.uniprot.org/uniprot/P50866.fasta'>CLPX_BACSU</a>.
+	Для этого я скачала протемы своих бактерий в формате fasta, записала их в один файл с помощью <code>cat proteom >> proteims</code>,  
+	<a href='pages/study_process/terms/term4/pr4/all-proteomes.fasta'>полученный файл [fasta]</a>.
+	Затем в помощью blastp провела поиск белка по базе протеомов с порогом e-value 10^(-10).
+	</p>
+	<pre>blastp -query clpx.fasta -subject all_proteomes.fasta -outfmt '6 sseqid sseq' -evalue 1e-10 -out found-1.fasta</pre>
+	<p>Полученные последовательности были выровнены в Jalview. Затем построено филогенетическое дерево методом наибольшего правдоподобия.</p>
+	
+<div class='col-md-6'>
+
+<figure style=''>
+            <figcaption>Рис.3.Maximum likehood, гомологи CLPX_BACSU, evalue 1e-10</figcaption>
+            <img src='pages/study_process/terms/term4/pr4/ml-1e-10-1.png'  style='' width = 100%>
+        </figure>
+        
+ </div>
+ <p>На рис.3. отмечены паралоги и ортологи. Паралоги &mdash; гомологичные белки из одного организма. Ортологи &mdash; гомологичные белки из разных организмов,
+	разделение их общего предка на линии, ведущие к ним, произошло в результате видообразования.
+	</p>
+<p>Зелёным выделены две группы ортологов, синий и жёлтым &mdash; две группы паралогов.</p>
+<p>
+Соответственно, в организмах FINM2 и STRP1 произошло по одной дупликации. Каждая группа ортологов стала таковыми 
+в результате видообразования, у общего предка был 'предок' данных белков, который затем при разделени видов начал 
+эволюционировать в каждом организме отдельно. В группах ортологов много белков с одинаковыми названиями, 
+что говорит о том, что это действительно схожие белки, выполняющие сейчас похожие функции в разных бактериях.
+</p>
+
+</div>
+
+<div class='col-md-6'>
+
+<figure style='height: 450px; overflow-x: scroll;'>
+            <figcaption>Рис.4.Maximum likehood, гомологи CLPX_BACSU, evalue 1e-5 </figcaption>
+            <img src='pages/study_process/terms/term4/pr4/ml-1e-5.png'  width = 100% style =''>
+        </figure>
+        
+ </div>
+ <div class='col-md-6'>
+ <p>Чтобы обнаружить больше ортологов и паралогов blastp был запущен с порогом evalue 10^(-5), 
+ белки были выравнены muscle
+ <a href='pages/study_process/terms/term4/pr4/muscle1e-5.fasta'>полученный файл [fasta]</a>.
+ Из последовательностей построено дерево методов наибольшего правдоподобия. </p>
+ <p>На рис.4. разноцветными рамочками показаны некоторые группы паралогов. Они возникли, скорее всего, 
+ в результате генных дупликаций в каждом организме.</p>
+ </div>

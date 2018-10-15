@@ -1,0 +1,44 @@
+
+1. Flammulina velutipes KACC42780 chromosome 3, whole genome shotgun sequence
+2,195,887 bp linear DNA 
+CM002697.1 GI:615276220
+
+2. Flammulina velutipes KACC42780 chromosome 2, whole genome shotgun sequence
+1,704,096 bp linear DNA 
+CM002696.1 GI:615276219
+
+3. Flammulina velutipes KACC42780 chromosome 8, whole genome shotgun sequence
+3,897,418 bp linear DNA 
+CM002702.1 GI:615276218
+
+4. Flammulina velutipes KACC42780 chromosome 11, whole genome shotgun sequence
+5,535,272 bp linear DNA 
+CM002705.1 GI:615276217
+
+5. Flammulina velutipes KACC42780 chromosome 4, whole genome shotgun sequence
+2,452,449 bp linear DNA 
+CM002698.1 GI:615276216
+
+6. Flammulina velutipes KACC42780 chromosome 9, whole genome shotgun sequence
+4,336,796 bp linear DNA 
+CM002703.1 GI:615276215
+
+7. Flammulina velutipes KACC42780 chromosome 10, whole genome shotgun sequence
+4,751,402 bp linear DNA 
+CM002704.1 GI:615276214
+
+8. Flammulina velutipes KACC42780 chromosome 6, whole genome shotgun sequence
+3,053,742 bp linear DNA 
+CM002700.1 GI:615276213
+
+9. Flammulina velutipes KACC42780 chromosome 1, whole genome shotgun sequence
+1,543,237 bp linear DNA 
+CM002695.1 GI:615276212
+
+10. Flammulina velutipes KACC42780 chromosome 5, whole genome shotgun sequence
+2,616,717 bp linear DNA 
+CM002699.1 GI:615276211
+
+11. Flammulina velutipes KACC42780 chromosome 7, whole genome shotgun sequence
+3,555,525 bp linear DNA 
+CM002701.1 GI:615276210

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html ng-app="app">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/ico" href="pic/favicon.ico" />
+    <!-- Main css style file-->
+    <link rel="stylesheet" href="main.css">
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" media="screen" href="libs/css/FontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen" href="libs/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen" href="libs/css/bootstrap//theme/styleo.css">
+    <script src="libs/js/jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="libs/css/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+    <!-- Scripts -->
+    <script type="text/javascript" src="libs/js/angular/angular.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="libs/js/jsmol/JSmol.min.js"></script>
+    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40394600 = new Ya.Metrika({ id:40394600, clickmap:true, trackLinks:true, accurateTrackBounce:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/40394600" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->    
+</head>
+
+<body>
+    <navbar></navbar>
+    <div id="container">
+        <div id="content">
+            <div ng-if="isPage('about_me')">
+                <about></about>
+            </div>
+            <div ng-if="isPage('study_process')">
+                <study></study>
+            </div>
+
+        </div>
+    </div>
+</body>
+<footer></footer>
+
+</html>

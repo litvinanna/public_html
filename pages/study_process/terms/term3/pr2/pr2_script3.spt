@@ -1,0 +1,9 @@
+load "pages/study_process/terms/term3/pr2/gatc-z.pdb"
+cpk off
+cartoon on
+set echo top left; font echo 18; color echo [xCCCCCC];
+echo Z-DNA
+select a; color red
+select g; color green
+select t; color blue
+select c; color orange

@@ -1,0 +1,23 @@
+set echo top center
+font echo 15
+color echo white
+
+
+
+zap
+load=4YR3
+restrict (within(5.0, dna) and gln)
+restrict within(group, selected)
+wireframe 60
+select dna
+wireframe 
+spacefill
+select (within(5.0, dna) and gln)
+center selected
+zoom 400
+set echo top center
+font echo 15
+color echo white
+echo DNA-binding protein site including gln (PDB ID:4YR3)
+pause
+

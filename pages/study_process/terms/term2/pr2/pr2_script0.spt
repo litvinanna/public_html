@@ -1,0 +1,10 @@
+load "pages/study_process/terms/term2/4wy2.rsc"
+set echo top left; font echo 18; color echo [xFFEFD5];
+echo Structure of universal stress protein E from Proteus mirabilis in complex with ligands
+restrict none
+select protein
+cartoon on
+color groups
+select ligand
+wireframe 0.6 on
+color grey

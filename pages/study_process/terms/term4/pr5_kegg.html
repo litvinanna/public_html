@@ -1,0 +1,191 @@
+<div class='col-md-12'>
+<h2></h2>
+
+<p>
+Данный практикум посвящен работе с японской базой данный <a href='http://www.genome.jp/kegg/'>KEGG</a>.
+Она в частности содержит информацию о сотнях тысяч метаболических путей живых организмов,21000 ортологических групп белков, которые
+осуществляют различные реакции.
+</p>
+<p>
+Я рассмотрела фолатный путь(<a href='http://www.kegg.jp/kegg-bin/show_pathway?map=map00670&show_description=show'> One carbon pool by folate</a>) (рис.2), 
+реакцию <a href='http://www.kegg.jp/dbget-bin/www_bget?R02302'>R02302</a> (рис.1).
+</p>
+</div>
+
+<div class='col-md-4'>
+
+<p>Соответственные вещества:
+<ol class='list-unstyled'>
+<li>C00664 - 5-формимнотетрагидрофолат</li>
+<li> плюс протон получается</li>
+<li>C00445 - 5,10-метинилтетрагидрофолат</li>
+<li>и аммиак</li>
+</ol>
+</p>
+
+</div>
+
+
+<div class='col-md-8'>
+
+<figure style=''>
+            <figcaption>Рис.1. Реакция</figcaption>
+            <img src='pages/study_process/terms/term4/pr5/R02302.gif'  style='' width = 100%>
+        </figure>
+        
+ </div>
+ 
+ <div class='col-md-12'>
+  <switch>
+<figure style=''>
+            <figcaption>Рис.2. Фолатный путь, реакция выделена</figcaption>
+ 
+			<button class="btn btn-default" ng-click="setCurrent('1')">Показать рис.2</button>	
+			<button class="btn btn-default" ng-click="setCurrent('default')">Скрыть</button>
+
+
+
+
+            <img ng-if="isCurrent('1')" src='pages/study_process/terms/term4/pr5/pathway.png'  style='' width = 100%>  
+
+        </figure>
+<p ng-if="isCurrent('default')" class='text-muted'>Изображение скрыто</p>
+
+  </switch>
+  </div>
+  
+ <div class='small_empty_block col-md-12'></div>
+<div class='col-md-12'>
+<p>Данную рекцию осуществляют <a href='http://www.kegg.jp/dbget-bin/www_bget?K01746+K13990+4.3.1.4+R02302'>два ортологичных ряда белков </a> - таб.1.</p>
+
+
+<table class='table table-bordered'>
+	<caption>Таб.1. Ортологичные ряды</caption>
+	<tbody class='small'>
+	<tr>
+		<td>Ортологичний ряд</td>
+		<td><a href='http://www.kegg.jp/dbget-bin/www_bget?K01746'>K01746</a></td>
+		<td><a href='http://www.kegg.jp/dbget-bin/www_bget?K13990'>K13990</a></td>
+		</tr>
+	<tr>
+		<td>Название белков и номер</td>
+		<td>formiminotetrahydrofolate cyclodeaminase [EC:4.3.1.4]</td>
+		<td>glutamate formiminotransferase / formiminotetrahydrofolate cyclodeaminase [EC:2.1.2.5 4.3.1.4]</td>
+		</tr>
+
+	<tr>
+		<td>Число белков</td>
+		<td>27</td>
+		<td>70</td>
+		</tr>
+		
+	</tbody>
+	</table>
+</div>
+
+<div class='col-md-12'>
+<p>В базе KEGG для каждого ряда содержится ссылка на таблицу идентификаторов всех белков ряда, мнемоникой, точным названием белка в каждом организме.
+Первый столбец с идентификаторами был скачан, а затем этот список загружен в базу последовательностей Uniprot в раздел Retrive/ID mapping.
+После этого полученный список объектовбыл скачан в виде файла с последовательностями в формате fasta.
+Для удобства просмотра файл с последовательностями каждого ряда был преобразован &mdash; каждое имя было заменено на мнемонику организма|имя пути с помощью
+<a href='pages/study_process/terms/term4/pr5/change-id.py'>скрипта на python</a>. Далее все последовательности были собраны в один файл и 
+построено множественно выравнивание с помощью muscle.
+ </p>
+ <pre>
+ python change-id.py k01746.fasta 
+ python change-id.py k13990.fasta 
+ cat k01746-changed.fasta > allseqs.fasta 
+ cat k13990-changed.fasta >> allseqs.fasta 
+ muscle -in allseqs.fasta -out muscle.fasta </pre>
+ <p>Полученное выравнивание <a href='pages/study_process/terms/term4/pr5/muscle.fasta'>[fasta]</a>.</p>
+ <p>Полученное выравнивание было покрашено в Jalview методом Clustalx. Полученный проект <a href='pages/study_process/terms/term4/pr5/muscle.jvp'>[jvp]</a>. 
+ </p>
+ <h3>Проверка выравнивания</h3>
+ <p>
+ Множественнное было построено - рис.3.1. Видно, что есть три консервативных блока.
+ Первые два у двух третей последовательностей, у трети эти блоки явно отсутствуют.
+ А вот третий большой блок есть у всех, кроме отдельных последовательностей. Эти
+ последовательности были удалены, так как они бы не позволили построить дерево.
+ Очищенное выравнивание - рис.3.2.</p>
+ <p>
+	Очищенное выравнивание 
+	<a href='pages/study_process/terms/term4/pr5/muscle-cleaned.fasta'>[fasta]</a>
+	<a href='pages/study_process/terms/term4/pr5/muscle-cleaned.jvp'>[jvp]</a>.
+ </p>
+ <h3>Гомологичность белков в выравнивании</h3>
+ <p>В очищенном выравнивании наблюдаем сплошной консервативный блок справа.
+ Также слева два блока консервативны у двух третей последовательностей. У трети
+ этот участок отсутствует. Возможно этот участок был делетирован в процессе эволюции
+ у какого-то общего предка, это можно проверить после построения дерева.
+ </p>
+</div>
+
+
+<switch class="col-md-12">
+	<caption>Рис.3. Выравнивания</caption><br>
+	<button class="btn btn-default" ng-click="setCurrent('3')">1 - изначальное</button>
+	<button class="btn btn-default" ng-click="setCurrent('4')">2 - очищенное </button>
+	<button class="btn btn-default" ng-click="setCurrent('default')">скрыть всё</button>
+		
+		<a href='pages/study_process/terms/term4/pr5/full.png'   ng-if="isCurrent('3')" class="btn btn-default btn-link">показать полностью</a>
+		<a href='pages/study_process/terms/term4/pr5/cleaned.png' ng-if="isCurrent('4')" class="btn btn-default btn-link">показать полностью</a>
+		
+	<p ng-if="isCurrent('default')" class='text-muted'> Выберите выравнивание</p>
+	<figure style='' ng-if="isCurrent('3')">
+            <img src='pages/study_process/terms/term4/pr5/full.png'  style='' width = 100%>
+        </figure>
+	<figure style='' ng-if="isCurrent('4')">
+            <img src='pages/study_process/terms/term4/pr5/cleaned.png'  style='' width = 100%>
+        </figure>
+</switch>
+<div class='col-md-12'>
+<h3>Построение дерева</h3>
+<p>
+По конечному выравниванию было построено филогенетическое дерево программой MEGA, методом Neighbor-Joining, со 100 бутстреп-репликами.
+</p></div>
+<switch>
+	<div class='col-md-12'>
+	<caption>Рис.4. Деревья</caption><br>
+	<button class="btn btn-default" ng-click="setCurrent('5')">1 - original tree</button>
+	<button class="btn btn-default" ng-click="setCurrent('7')">1 - original tree with comments</button>
+	<button class="btn btn-default" ng-click="setCurrent('6')">2 - consensus tree</button>
+	<button class="btn btn-default" ng-click="setCurrent('default')">скрыть всё</button>
+	<figure style='' ng-if="isCurrent('5')">
+            <img src='pages/study_process/terms/term4/pr5/radial-original-colored.png'  style='' width=100% >
+        </figure>
+	<figure style='' ng-if="isCurrent('6')">
+            <img src='pages/study_process/terms/term4/pr5/radial-consensus.png'  style='' width=100%>
+        </figure>
+	<p ng-if="isCurrent('default')" class='text-muted'>Выберите дерево</p>
+	</div>
+	<div class='col-md-6' ng-if="isCurrent('7')">
+	<figure style='' >
+            <img src='pages/study_process/terms/term4/pr5/radial-original-colored.png'  style='' width=100% >
+        </figure></div>
+     <div class='col-md-6' ng-if="isCurrent('7')">
+        	<p>Красным выделена ветвь отделяющая белки только из пути K13990. Синим - аналогичная ветвь, отделяющая меньше белков.
+        	Обе ветви имеют высокую поддержку. Они включают большинство белков данного ряда, причем другие ветви,
+        	находящиеся ближе к центру дерева (формально примерно корню, если бы мы укореняли в среднюю точку),
+        	имеют очень маленькую поддержку, то есть данные две ветви можно считать достаточно фундаментальными и их
+        	взаимное отношение четко установить из дерева нельзя, возможно они сестринские.</p>
+        	<p>Зеленым - ветвь, отделяющая основную массу белков ряда K01746. Среди них очень много почти не разошедшихся эволюционно
+        	паралогов в организме STRP и STRE. Эта ветвь имеет большую поддержку, как и её внутренние ветви. Её тоже можно считать 
+        	важной группой белков.</p>
+        	<p>Желтым и розовым выделены две разнородные группы, в которых есть белки из обоих путей. Внутри них есть ветви 
+        	с большой поддержкой, но всё-таки таким группам нельзя доверять.</p>
+        	<p>Также двумя тонами розового выделена группа и белок, имеющие большие длины ветвей. Но достоверно сказать, что они хуже выровнялись я не могу.
+			Например, белок PICT действительно имеет больше гэпов, чем соседние последовательности, но белок DICF не отличается от соседей.
+        	</p>
+        	
+        	</div>
+	
+</switch>
+
+<div class='col-md-12'>
+<p>
+Также в выравнивании было видно, что у части белков отсутствует некоторая часть, какой-то домен в начале.
+Оказалось, что большая часть этих белков входит в ветвь, отмеченную зеленым цветом, а также в 'смешанные' ветви. 
+Возможно, наличие этого домена в частности и отличается два ортологичных ряда белков.
+
+</p>
+</div>

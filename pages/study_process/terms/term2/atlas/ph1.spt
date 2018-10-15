@@ -1,0 +1,23 @@
+set echo top center;font echo 15;color echo white
+
+for (var i = 1; i <= 100; i++ ) {
+load $[NH3+]C(CCC(=O)N)C(=O)O
+script pages/study_process/terms/term2/atlas/glutamine_labels.spt
+set echo top center;font echo 15;color echo white
+echo pH<2,17
+pause
+
+resume
+load $[NH3+]C(CCC(=O)N)C(=O)[O-]
+set echo top center;font echo 15;color echo white
+echo 2,17<=pH<9,13
+pause
+
+resume
+load $NC(CCC(=O)O)C(=N)[O-]
+set echo top center;font echo 15;color echo white
+echo pH>=9,13
+pause
+resume
+}
+
