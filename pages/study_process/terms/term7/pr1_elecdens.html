@@ -1,0 +1,11 @@
+<div class='col-md-12'>
+<h2>Построение и визуализация электронной плотности</h2></div>
+<div class='col-md-12'>
+<p>Был выбран PDB файл, удовлетворяющий следующим требованиям</p>
+<switch>
+<a ng-click="setCurrent('1')" ng-if="isCurrent('default')">Показать требования</a>
+<a ng-click="setCurrent('default')" ng-if="isCurrent('1')">Cкрыть</a>
+<p ng-if="isCurrent('1')" >some text </p>
+</switch>
+
+<p> Была выбран белок PDB ID <a href="https://www.rcsb.org/structure/3OLQ">3OLQ</a> </p>
