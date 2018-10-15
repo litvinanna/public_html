@@ -12,9 +12,9 @@
 
         var terms = [{
             id: 0,
-            title: 'Первый семестр',
+            title: 'I',
             page_title: 'Term 1',
-            description: 'Первый семестр посвящен изучению принципов работы в Far Manager, Microsoft Office Excel, освоению основ программирования на Python 2.7, созданию веб-страниц.',
+            description: 'Начало',
             tasks: [{
                 id: 0,
                 title: 'Краткое описание генома вируса <i>Clitocybe odora virus</i>',
@@ -53,9 +53,9 @@
             }]
         }, {
             id: 1,
-            title: 'Второй семестр',
+            title: 'II',
             page_title: 'Term 2',
-            description: 'Второй семестр посвящен изучению методов визуализации биомолекул',
+            description: 'Визуализация биомолекул',
             tasks: [{
                 id: 0,
                 title: 'Визуализация молекул в Jmol',
@@ -104,7 +104,7 @@
             }]
         }, {
             id: 2,
-            title: 'Третий семестр',
+            title: 'III',
             page_title: 'Term 3',
             description: 'Последовательности и структуры нуклеиновых кислот',
             tasks: [{
@@ -166,7 +166,7 @@
     }]
         }, {
             id: 3,
-            title: 'Четвёртый семестр',
+            title: 'IV',
             page_title: 'Term 4',
             description: 'Эволюция последовательностей ',
             tasks: [{
@@ -235,14 +235,14 @@
             description: 'RSA',
             tasks: [{
                 id: 0,
-                title: '',
-                url: 'pages/study_process/terms/term3/',
-                page_title: ''
+                title: 'Электронная плотность в PyMol',
+                url: 'pages/study_process/terms/term7/pr1_elecdens.html',
+                page_title: 'E-density'
             } , {
                 id: 1,
-                title: '',
-                url: 'pages/study_process/terms/term3/',
-                page_title: ''
+                title: 'Восстановление кристалла из PDB файла',
+                url: 'pages/study_process/terms/term7/pr2_restor.htmls',
+                page_title: 'Restoration'
 
 
 

@@ -9,8 +9,8 @@ caption {
     color: #444444 !important;
 }
 
-ul { 
-  list-style-type: decimal; 
+ul {
+  list-style-type: decimal;
 }
 
 .small_empty_block {
@@ -31,7 +31,7 @@ ul {
 
 #container {
     position: absolute;
-    top: 100px;
+    top: 70px;
     left: 10%;
     width: 80%;
 }
@@ -63,8 +63,8 @@ ul {
 .index_navbar_background {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 10%;
+    width: 80%;
     height: 40px; /*was 50*/
     z-index: 20000;
     background-color: #ffffff;
@@ -73,10 +73,10 @@ ul {
 
 .index_navbar {
     position: fixed;
-    top: 10px; /*was 15 */
+    top: 0px; /*was 15 */
     left: 10%;
     width: 80%;
-    height: 30px;/*was 35*/
+    height: 40px;/*was 35*/
     z-index: 20000;
     color: #006666;
 }
@@ -87,6 +87,7 @@ ul {
     height: 100%;
     cursor: pointer;
     margin: auto;
+    padding-top: 10px;
     text-align: center;
     transition: border-bottom 0.2s;
 }
@@ -108,9 +109,22 @@ ul {
     color: #006666;
 }
 
+.index_navbar > .navbar_cell-navy {
+    border-bottom: 8px solid #006666;
+    /* background-color: #000000; */
+}
+.index_navbar > .navbar_cell-navy > a {
+    font-weight: bold;
+}
+
+
 .index_wrapper {
     position: absolute;
     top: 650px;
     width: 100%;
 }
-
+.term_desc{
+    padding-top: 15px;
+    text-align: center;
+    color: #006666;
+}

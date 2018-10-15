@@ -1,15 +1,15 @@
 <div class="panel panel-navy separated sharp">
-    <div class="panel-heading">
+    <!-- <div class="panel-heading">
         <h4 class="text-navy">Учебный процесс</h4>
-    </div>
+    </div> -->
     <div class="panel-body">
         <div ng-repeat="term in terms" class="col-md-2">
             <button class="btn btn-default btn-block sharp" ng-click="setTerm(term)" ng-class="{'btn-navy':isTermActive(term)}" compile="term.title"></button>
         </div>
         <div class="col-md-12" ng-if="isTermChoosen()">
-            <hr>
-            <h2>{{ currentTerm().description }}</h2>
-            <hr>
+            <!-- <hr> -->
+            <p class="term_desc">{{ currentTerm().description }}</p>
+            <!-- <hr> -->
         </div>
     </div>
     <div class="panel-body" ng-if="isTermChoosen()">
