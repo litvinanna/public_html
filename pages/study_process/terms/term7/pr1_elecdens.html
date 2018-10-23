@@ -1,11 +1,74 @@
-<div class='col-md-12'>
-<h2>Построение и визуализация электронной плотности</h2></div>
-<div class='col-md-12'>
-<p>Был выбран PDB файл, удовлетворяющий следующим требованиям</p>
-<switch>
-<a ng-click="setCurrent('1')" ng-if="isCurrent('default')">Показать требования</a>
-<a ng-click="setCurrent('default')" ng-if="isCurrent('1')">Cкрыть</a>
-<p ng-if="isCurrent('1')" >some text </p>
-</switch>
+<div class='col-md-12'> <p> Был выбран белок гистидин лиаза из бактерии <i>Pseudomonas putida</i>, характеристики в таблице 1.</p>
+<table class='table table-bordered'>
+	<caption>Таб.1. Характеристики структуры</caption>
+	<tbody class=''>
+    <tr>
+      <td>Название структуры</td>
+      <td>HISTIDINE AMMONIA-LYASE (HAL) FROM PSEUDOMONAS PUTIDA INHIBITED WITH L-CYSTEINE</td>
+    </tr>
+    <tr>
+      <td>PBD ID</td>
+      <td><a href="https://www.rcsb.org/structure/1GKM">1GKM</a></td>
+    </tr>
+    <tr>
+      <td>Разрешение структуры</td>
+      <td>1 Å</td>
+    </tr>
+    <tr>
+      <td>Организм</td>
+      <td><i>Pseudomonas putida</i></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
 
-<p> Была выбран белок PDB ID <a href="https://www.rcsb.org/structure/3OLQ">3OLQ</a> </p>
+
+	</tbody>
+	</table>
+
+<p>На рисунках 1-9 показаны срезы электронной плотности для структуры на различных уровнях &#963.
+</p>
+
+
+</div>
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.1. ЭП, весь белок, &#963=1 </figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh1_2.png'  style='' width = 100%>
+  </figure>
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.2. ЭП, весь белок, &#963=3 </figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh3.png'  style='' width = 100%>
+  </figure>
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.3. ЭП, весь белок, &#963=5 </figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh5.png'  style='' width = 100%>
+  </figure>
+
+  <div class='col-md-6'></div>
+
+  <div class='small_empty_block col-md-12'></div>
+
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.4. ЭП, аланин внутри белка, &#963=2 </figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh_ala_2.png'  style='' width = 100%>
+  </figure><figure style='' class="col-md-6" >
+    <figcaption>Рис.5. ЭП, аланин внутри белка, &#963=4</figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh_ala_4.png'  style='' width = 100%>
+  </figure>
+
+
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.6. ЭП,аргинин рядом с поверхностью в &beta-слое, &#963=2 </figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh_arg_2.png'  style='' width = 100%>
+  </figure><figure style='' class="col-md-6" >
+    <figcaption>Рис.7. ЭП,аргинин рядом с поверхностью в &beta-слое, &#963=4 </figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh_arg_4.png'  style='' width = 100%>
+  </figure>
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.8. ЭП, глутамат рядом с поверхностью, &#963=2 </figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh_glu_2.png'  style='' width = 100%>
+  </figure><figure style='' class="col-md-6" >
+    <figcaption>Рис.9. ЭП, глутамат рядом с поверхностью, &#963=4 </figcaption>
+    <img src='pages/study_process/terms/term7/pr1/1gkm_mesh_glu_4.png'  style='' width = 100%>
+  </figure>
