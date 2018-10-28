@@ -61,7 +61,8 @@ ul {
 }
 
 .index_navbar_background {
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     top: 0;
     left: 10%;
     width: 80%;
@@ -72,7 +73,8 @@ ul {
 }
 
 .index_navbar {
-    position: fixed;
+    /* position: fixed; */
+    position: absolute;
     top: 0px; /*was 15 */
     left: 10%;
     width: 80%;

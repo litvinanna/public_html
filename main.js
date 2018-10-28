@@ -241,7 +241,7 @@
             } , {
                 id: 1,
                 title: 'Восстановление кристалла из PDB файла',
-                url: 'pages/study_process/terms/term7/pr2_restor.htmls',
+                url: 'pages/study_process/terms/term7/pr2_restor.html',
                 page_title: 'Restoration'
 
 
