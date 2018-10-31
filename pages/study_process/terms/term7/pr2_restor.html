@@ -2,76 +2,76 @@
   <p>
     Структурный файл PDB содержит информацию о кристаллографической ячейке в поле CRYST1. Подробное описание формата поля <a href="http://www.bmsc.washington.edu/CrystaLinks/man/pdb/part_54.html">по ссылке</a>.
 
-</p><p>
-  Согласно формату,
+  </p><p>
+    Согласно формату,
     <pre>
       COLUMNS       DATA TYPE      FIELD         DEFINITION
--------------------------------------------------------------
- 1 -  6       Record name    "CRYST1"
+      -------------------------------------------------------------
+      1 -  6       Record name    "CRYST1"
 
- 7 - 15       Real(9.3)      a             a (Angstroms).
+      7 - 15       Real(9.3)      a             a (Angstroms).
 
-16 - 24       Real(9.3)      b             b (Angstroms).
+      16 - 24       Real(9.3)      b             b (Angstroms).
 
-25 - 33       Real(9.3)      c             c (Angstroms).
+      25 - 33       Real(9.3)      c             c (Angstroms).
 
-34 - 40       Real(7.2)      alpha         alpha (degrees).
+      34 - 40       Real(7.2)      alpha         alpha (degrees).
 
-41 - 47       Real(7.2)      beta          beta (degrees).
+      41 - 47       Real(7.2)      beta          beta (degrees).
 
-48 - 54       Real(7.2)      gamma         gamma (degrees).
+      48 - 54       Real(7.2)      gamma         gamma (degrees).
 
-56 - 66       LString        sGroup        Space group.
+      56 - 66       LString        sGroup        Space group.
 
-67 - 70       Integer        z             Z value.</pre>
-    данные поля CRYST1 из файла 1gkm.pdb
-    <pre>
-CRYST1   79.267  116.788  129.532  90.00  90.00  90.00 I 2 2 2       8</pre>
-    значат следующее:
-    <ul class="">
-      <li>Направляющие вектора кристалла имеют длину 79.267, 116.788, 129.532 Å.  </li>
-      <li>Углы между направляющими векторами все равно 90, то есть ячейка – параллелепипед.</li>
-      <li>Кристаллографическая группа I 2 2 2 – объёмноцентрированная ...
-      </li>
-      <li>В кристаллографической ячейке содержится 8 белковых цепей.
-      </li>
-    </ul>
-  </p>
-
-
-<h3>Строение кристаллографической ячейки</h3>
-<div class='col-md-6'>
-  <p>
-    На рисунке 1 показаны восемь цепей белка, которые входят в одну кристаллографическую ячейку (показана в виде параллелепипеда).
-    </p>
-    <p>
-      Кристалл состоит из тетрамеров, очень сближенных между собой. Эти блоки тетрамеров расставлены слоями с дробным (относительно тетрамера) сдвигом, поэтому в элементарной ячейке аходится два таких тетрамера.
+      67 - 70       Integer        z             Z value.</pre>
+      данные поля CRYST1 из файла 1gkm.pdb
+      <pre>
+        CRYST1   79.267  116.788  129.532  90.00  90.00  90.00 I 2 2 2       8</pre>
+        значат следующее:
+        <ul class="">
+          <li>Направляющие вектора кристалла имеют длину 79.267, 116.788, 129.532 Å.  </li>
+          <li>Углы между направляющими векторами все равно 90, то есть ячейка – параллелепипед.</li>
+          <li>Кристаллографическая группа I 2 2 2 – объёмноцентрированная ...
+          </li>
+          <li>В кристаллографической ячейке содержится 8 белковых цепей.
+          </li>
+        </ul>
       </p>
-    <p>
-      Рисунки 2 и 3 показывают чередование тетрамеров. 
-      </p>
-</div>
-  <figure style='' class="col-md-6" >
-     <figcaption>Рис.1. Цепи белка, образующие кристаллографическую ячейку.</figcaption>
-     <img src='pages/study_process/terms/term7/pr2/crystall_2.png'  style='' width = 100%>
-   </figure>
 
-   </div>
-   <div class="col-md-12">
-   <figure style='' class="col-md-6" >
-      <figcaption>Рис.2. Одинаковыми цветами показаны аналогичные цепи, похожими цветами -- "биологически" аналогичные.</figcaption>
-      <img src='pages/study_process/terms/term7/pr2/crystall_7.png'  style='' width = 100%>
-    </figure>
-    <figure style='' class="col-md-6" >
-       <figcaption>Рис.3. </figcaption>
-       <img src='pages/study_process/terms/term7/pr2/crystall_8.png'  style='' width = 100%>
-     </figure>
-     <figure style='' class="col-md-12" >
+
+      <h3>Строение кристаллографической ячейки</h3>
+      <div class='col-md-6'>
+        <p>
+          На рисунке 1 показаны восемь цепей белка, которые входят в одну кристаллографическую ячейку (показана в виде параллелепипеда).
+        </p>
+        <p>
+          Кристалл состоит из тетрамеров, очень сближенных между собой. Эти блоки тетрамеров расставлены слоями с дробным (относительно тетрамера) сдвигом, поэтому в элементарной ячейке аходится два таких тетрамера.
+        </p>
+        <p>
+          Рисунки 2 и 3 показывают чередование тетрамеров.
+        </p>
+      </div>
+      <figure style='' class="col-md-6" >
+        <figcaption>Рис.1. Цепи белка, образующие кристаллографическую ячейку.</figcaption>
+        <img src='pages/study_process/terms/term7/pr2/crystall_2.png'  style='' width = 100%>
+      </figure>
+
+    </div>
+    <div class="col-md-12">
+      <figure style='' class="col-md-6" >
+        <figcaption>Рис.2. Одинаковыми цветами показаны аналогичные цепи, похожими цветами -- "биологически" аналогичные.</figcaption>
+        <img src='pages/study_process/terms/term7/pr2/crystall_7.png'  style='' width = 100%>
+      </figure>
+      <figure style='' class="col-md-6" >
+        <figcaption>Рис.3. </figcaption>
+        <img src='pages/study_process/terms/term7/pr2/crystall_8.png'  style='' width = 100%>
+      </figure>
+      <figure style='' class="col-md-12" >
         <figcaption>Рис.4. Вид на стопки тетрамеров сбоку.</figcaption>
         <img src='pages/study_process/terms/term7/pr2/crystall_10.png'  style='' width = 100%>
       </figure>
 
       <p>
 
-        </p>
-  </div>
+      </p>
+    </div>

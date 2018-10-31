@@ -242,7 +242,12 @@
                 id: 1,
                 title: 'Восстановление кристалла из PDB файла',
                 url: 'pages/study_process/terms/term7/pr2_restor.html',
-                page_title: 'Restoration'
+                page_title: 'Crystall estoration'
+            } , {
+                id: 2,
+                title: 'Восстановление структуры в одномерной модели',
+                url: 'pages/study_process/terms/term7/pr3_fourier.html',
+                page_title: 'Structure restoration'
 
 
 
