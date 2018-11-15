@@ -25,3 +25,13 @@
         <li>Green tea</li>
       </ul>
     </ul>
+
+
+    <switch class ='col-md-8'>
+       <a class="btn btn-success" ng-click="setCurrent('1')" ng-if="isCurrent('default')"></a>
+   	<a class="btn btn-default" ng-click="setCurrent('default')" ng-if="isCurrent('1')"></a>
+   <figure ng-if="isCurrent('1')">
+   	<caption></caption>
+               <img src='pages/study_process/terms/term7/' width = 100%>
+           </figure>
+   </switch>
