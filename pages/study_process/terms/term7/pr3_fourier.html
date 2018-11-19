@@ -90,7 +90,7 @@
     </p>
     <p>
 
-      </p>
+    </p>
   </div>
   <table class='table table-bordered'>
     <caption>Таб.1. </caption>
@@ -113,19 +113,22 @@
         <td colspan="7">
           <div class="col-md-10">
 
+            <p>
+              Полный набор гармоник. </br>
+              Для полного набора видно, что отличное качество восстановления достигается при n=30. </br>
+            </p>
 
-            Полный набор гармоник.
-            Для полного набора видно, что отличное качество восстановления достигается при n=30.</div>
-        <div class="col-md-2">
-          <switch>
-            <a class ="btn btn-default"  ng-click="setCurrent('1')" ng-if="isCurrent('default')">Показать картинки</a>
-            <a ng-click="setCurrent('default')" ng-if="isCurrent('1')">Скрыть картинки</a>
-          </switch>
+          </div>
+          <div class="col-md-2">
+            <switch>
+              <a class ="btn btn-default"  ng-click="setCurrent('1')" ng-if="isCurrent('default')">Показать картинки</a>
+              <a ng-click="setCurrent('default')" ng-if="isCurrent('1' || '2' || '3')">Скрыть картинки</a>
+            </switch>
           </div>
 
 
 
-          </td>
+        </td>
       </tr>
 
       <tr>
@@ -143,87 +146,89 @@
     </tr>
 
 
-<tr>
-  <td>0-3</td>
-  <td>10</td>
-  <td>100</td>
-  <td>0</td>
-  <td>0</td>
-  <td cellpadding="0" bgcolor="OLDLACE"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_0-3_0.png ' width = 100%>
-  </div>
-  <div ng-if="isCurrent('default')">среднее</div></td>
+    <tr>
+      <td>0-3</td>
+      <td>10</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0</td>
+      <td cellpadding="0" bgcolor="OLDLACE"><div ng-if="isCurrent('1')">
+        <img src='pages/study_process/terms/term7/pr3/figure_0-3_0.png ' width = 100%>
+      </div>
+      <div ng-if="isCurrent('default')">среднее</div></td>
+      <td></td>
+    </tr>
+
+
+    <tr>
+      <td>0-10</td>
+      <td>3</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0</td>
+      <td cellpadding="0" bgcolor=" LIGHTYELLOW"><div ng-if="isCurrent('1')">
+        <img src='pages/study_process/terms/term7/pr3/figure_0-10_0.png ' width = 100%>
+      </div>
+      <div ng-if="isCurrent('default')">хорошее</div></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>0-30</td>
+      <td>1</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0</td>
+      <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
+        <img src='pages/study_process/terms/term7/pr3/figure_0-30_0.png ' width = 100%>
+      </div>
+      <div ng-if="isCurrent('default')">отличное</div></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>0-50</td>
+      <td>0.6</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0</td>
+      <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
+        <img src='pages/study_process/terms/term7/pr3/figure_0-50_0.png ' width = 100%>
+      </div>
+      <div ng-if="isCurrent('default')">отличное</div></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td colspan="7">
+        <div class="col-md-10"><p>
+          Теперь добавим шум. Шум добавлялся и к фазе, и к амплитуде. </br>
+          Я смотрела как шум может повлиять на хорошие или отличные восстановления.
+          </p>
+
+        </div>
+          <div class="col-md-2">
+            <switch>
+              <a class ="btn btn-default"  ng-click="setCurrent('2')" ng-if="isCurrent('default')">Показать картинки</a>
+              <a ng-click="setCurrent('default')" ng-if="isCurrent('2')">Скрыть картинки</a>
+            </switch>
+          </div>
+
+        </td>
+      </tr>
+
+      <!-- <tr>
+      <td>0-1</td>
+      <td>30</td>
+      <td>100</td>
+      <td>20</td>
+      <td>20</td>
+      <td cellpadding="0" bgcolor="mistyrose"><div ng-if="isCurrent('2')">
+      <img src='pages/study_process/terms/term7/pr3/figure_0-1_20.png ' width = 100%>
+    </div>
+    <div ng-if="isCurrent('default')">плохое</div>
+  </td>
   <td></td>
-</tr>
-
-
-<tr>
-  <td>0-10</td>
-  <td>3</td>
-  <td>100</td>
-  <td>0</td>
-  <td>0</td>
-  <td cellpadding="0" bgcolor="oldlace"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_0-10_0.png ' width = 100%>
-  </div>
-  <div ng-if="isCurrent('default')">среднее</div></td>
-  <td></td>
-</tr>
-<tr>
-  <td>0-30</td>
-  <td>1</td>
-  <td>100</td>
-  <td>0</td>
-  <td>0</td>
-  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_0-30_0.png ' width = 100%>
-  </div>
-  <div ng-if="isCurrent('default')">отличное</div></td>
-  <td></td>
-</tr>
-<tr>
-  <td>0-50</td>
-  <td>0.6</td>
-  <td>100</td>
-  <td>0</td>
-  <td>0</td>
-  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_0-50_0.png ' width = 100%>
-  </div>
-  <div ng-if="isCurrent('default')">отличное</div></td>
-  <td></td>
-</tr>
-
-<tr>
-<td colspan="7">
-  <div class="col-md-10">
-
-
-Теперь добавим шум. Шум добавлялся и к фазе, и к амплитуде.</div>
-<div class="col-md-2">
-  <switch>
-    <a class ="btn btn-default"  ng-click="setCurrent('2')" ng-if="isCurrent('default')">Показать картинки</a>
-    <a ng-click="setCurrent('default')" ng-if="isCurrent('2')">Скрыть картинки</a>
-  </switch>
-  </div>
-
-</td>
-</tr>
-
-<tr>
-<td>0-1</td>
-<td>30</td>
-<td>100</td>
-<td>20</td>
-<td>20</td>
-<td cellpadding="0" bgcolor="mistyrose"><div ng-if="isCurrent('2')">
-<img src='pages/study_process/terms/term7/pr3/figure_0-1_20.png ' width = 100%>
-</div>
-<div ng-if="isCurrent('default')">плохое</div>
-</td>
-<td></td>
-</tr>
-<tr>
+</tr> -->
+<!-- <tr>
 <td>0-3</td>
 <td>10</td>
 <td>100</td>
@@ -235,135 +240,165 @@
 <div ng-if="isCurrent('default')">плохое</div></td>
 <td></td>
 </tr>
-<tr>
+<tr> -->
 <td>0-10</td>
 <td>3</td>
 <td>100</td>
 <td>20</td>
 <td>20</td>
 <td cellpadding="0" class="warning"><div ng-if="isCurrent('2')">
-<img src='pages/study_process/terms/term7/pr3/figure_0-10_20.png ' width = 100%>
+  <img src='pages/study_process/terms/term7/pr3/figure_0-10_20.png ' width = 100%>
 </div>
 <div ng-if="isCurrent('default')">среднее</div></td>
 <td></td>
 </tr>
 <tr>
-<td>0-30</td>
-<td>1</td>
-<td>100</td>
-<td>10</td>
-<td>10</td>
-<td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('2')">
-<img src='pages/study_process/terms/term7/pr3/figure_0-30_10.png ' width = 100%>
-</div>
-<div ng-if="isCurrent('default')">хорошее</div></td>
-<td>
-  <div ng-if="isCurrent('2')">
-  Видно, что, при шуме в 10%
-</div></td>
-</tr>
-<tr>
-<td>0-50</td>
-<td>0.6</td>
-<td>100</td>
-<td>10</td>
-<td>10</td>
-<td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('2')">
-<img src='pages/study_process/terms/term7/pr3/figure_0-50_10.png ' width = 100%>
-</div>
-<div ng-if="isCurrent('default')">отличное</div></td>
-<td></td>
-</tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<tr>
-  <td colspan="7">
-    Неполный набор гармоник
-  </td>
-</tr>
-<tr>
-  <td>1-10</td>
-  <td></td>
-  <td>90</td>
-  <td>0</td>
-  <td>0</td>
-  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_1-10_0.png ' width = 100%>
+  <td>0-30</td>
+  <td>1</td>
+  <td>100</td>
+  <td>10</td>
+  <td>10</td>
+  <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('2')">
+    <img src='pages/study_process/terms/term7/pr3/figure_0-30_10.png ' width = 100%>
   </div>
-  <div ng-if="isCurrent('default')">отличное</div></td>
-  <td></td>
-</tr>
-<tr>
-  <td>3-10</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_3-10_0.png ' width = 100%>
-  </div>
-  <div ng-if="isCurrent('default')">отличное</div></td>
-  <td></td>
-</tr>
-<tr>
-  <td>5-10</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_5-10_0.png ' width = 100%>
-  </div>
-  <div ng-if="isCurrent('default')">отличное</div></td>
-  <td></td>
-</tr>
+  <div ng-if="isCurrent('default')">хорошее</div></td>
+  <td>
+    <div ng-if="isCurrent('2')">
+      Видно, что, при шуме в 10%
+    </div></td>
+  </tr>
+  <tr>
+    <td>0-50</td>
+    <td>0.6</td>
+    <td>100</td>
+    <td>10</td>
+    <td>10</td>
+    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('2')">
+      <img src='pages/study_process/terms/term7/pr3/figure_0-50_10.png ' width = 100%>
+    </div>
+    <div ng-if="isCurrent('default')">отличное</div></td>
+    <td></td>
+  </tr>
 
-<tr>
-  <td>5-30</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_5-30_0.png ' width = 100%>
-  </div>
-  <div ng-if="isCurrent('default')">отличное</div></td>
-  <td></td>
-</tr>
-<tr>
-  <td>10-30</td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
-    <img src='pages/study_process/terms/term7/pr3/figure_10-30_0.png ' width = 100%>
-  </div>
-  <div ng-if="isCurrent('default')">отличное</div></td>
-  <td></td>
-</tr>
-<tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
-</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <tr>
+    <td colspan="7">
+      <div class="col-md-10">
+        <p>
+          Неполный набор гармоник</br>
+          Если убрать несколько первых гармоник с большим периодом, то
+          </p>
+
+        </div>
+
+
+      <div class="col-md-2">
+        <switch>
+          <a class ="btn btn-default"  ng-click="setCurrent('3')" ng-if="isCurrent('default')">Показать картинки</a>
+          <a ng-click="setCurrent('default')" ng-if="isCurrent('3')">Скрыть картинки</a>
+        </switch>
+      </div>
+
+    </td>
+  </tr>
+  <tr>
+    <td>1-10</td>
+    <td></td>
+    <td>90</td>
+    <td>0</td>
+    <td>0</td>
+    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('3')">
+      <img src='pages/study_process/terms/term7/pr3/figure_1-10_0.png ' width = 100%>
+    </div>
+    <div ng-if="isCurrent('default')">отличное</div></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>3-10</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('3')">
+      <img src='pages/study_process/terms/term7/pr3/figure_3-10_0.png ' width = 100%>
+    </div>
+    <div ng-if="isCurrent('default')">отличное</div></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>5-10</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('3')">
+      <img src='pages/study_process/terms/term7/pr3/figure_5-10_0.png ' width = 100%>
+    </div>
+    <div ng-if="isCurrent('default')">отличное</div></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="7">
+      <div class="col-md-10">
+        ...
+        </div>
+
+
+      <div class="col-md-2">
+        <switch>
+          <a class ="btn btn-default"  ng-click="setCurrent('3')" ng-if="isCurrent('default')">Показать картинки</a>
+          <a ng-click="setCurrent('default')" ng-if="isCurrent('3')">Скрыть картинки</a>
+        </switch>
+      </div>
+
+    </td>
+  </tr>
+  <tr>
+    <td>5-30</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
+      <img src='pages/study_process/terms/term7/pr3/figure_5-30_0.png ' width = 100%>
+    </div>
+    <div ng-if="isCurrent('default')">отличное</div></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>10-30</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
+      <img src='pages/study_process/terms/term7/pr3/figure_10-30_0.png ' width = 100%>
+    </div>
+    <div ng-if="isCurrent('default')">отличное</div></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
 
 
 </tbody>
