@@ -30,6 +30,7 @@
     <p>В  качестве начальных характеристик были взяты параметры  из примера 7, записанные в виде параметров нескольких гауссиан <samp>lambda,beta,gamma+lambda1,beta1,gamma1+...,</samp>  таких, что
       <img src="http://latex.codecogs.com/gif.latex?f(t) = \sum_{atoms}{\lambda e^{(x-\gamma)^2/\beta}}" border="0"/>,
       которые имитируют несколько атомов, расположенных на оси X.
+      <pre>10,2,5+10,2,7+30.0,2,12+30.0,2,16+30.0,2,22+30,2,24  </pre>
     </p>
   </div>
 
@@ -68,7 +69,7 @@
     Полученные гармоники Фурье (498 штук) фильтровались (скрипт fourier-filter.py), чтобы оставить некоторый ограниченный набор, из которого далее восстанавливалась функция (скрпит fourier2func.py). Исходная и восстановленная функции представляллись на графике для визуального анализа.
   </p>
   <p>
-    Качество восстановления оценивалось по слелующим критериям:
+    Качество восстановления оценивалось по следующим критериям:
     <ul>
       <li style="background-color: beige">Отличное восстановление – по графику восстановленной функции можно определить положение максимума всех гауссовых слагаемых функции ("атомов") </li>
       <li style="background-color: LIGHTYELLOW">Хорошее восстановление – можно угадать положение всех максимумов, зная число слагаемых ("атомов"), хотя на восстановленной функции максимумы от атомов не отличимы от шума </li>
@@ -79,6 +80,9 @@
 </div>
 
 <div class="col-md-12">
+  <p>
+    Результаты работы представлены в таблице 1. Там же даны некоторые комментарии по ходу работы. Кнопка показать картинки открывает графиуи функций в каждом случае.
+  </p>
 
 
   <p>
@@ -86,7 +90,7 @@
   </p>
   <p>
     Полный набор из n гармоник содержит все гармоники от 0 до n-ой, в неполном наборе могут отсутствовать некоторые гармоники от 0 до (n-1)-ой. Полнота набора оперделяется как отношение числа гармоник в наборе к числу гармоник в аналогичном (до n) полном наборе (то есть это доля присутствующих (до n-ой) гармоник). </p>
-    <p>Разрешение полного набора гармоник определяется по максивальному номеру n и равно периоду функции (равен моделируемому отрезку, 30Å), поделеному на номер. Для неполного набора нельзя однозначно определить разрешение. Можно требовать, чтобы для номера k, по которому определяется разрешение набора, полнота была не менее 90%, например.
+    <p>Разрешение полного набора гармоник определяется по максимальному номеру n и равно периоду функции (равен моделируемому отрезку, 30Å), поделеному на номер. Для неполного набора нельзя однозначно определить разрешение. Можно требовать, чтобы для номера k, по которому определяется разрешение набора, полнота была не менее 90%, например.
     </p>
     <p>
 
@@ -96,14 +100,14 @@
     <caption>Таб.1. </caption>
     <thead>
       <tr>
-        <th class="col-md-1">Набор гармоник</th>
-        <th class="col-md-1">Разрешение (Å)</th>
-        <th class="col-md-1">Полнота данных (%)</th>
-        <th>Шум амплитуды (% от величины F)</th>
-        <th>Шум фазы (% от величины phi)</th>
-        <th class="col-md-8">Качество восстановления
+        <th style="width:4%">Набор гармоник</th>
+        <th style="width:4%">Разрешение (Å)</th>
+        <th style="width:4%">Полнота данных (%)</th>
+        <th style="width:4%">Шум амплитуды (% от величины F)</th>
+        <th style="width:4%">Шум фазы (% от величины phi)</th>
+        <th style="width:45%">Качество восстановления
         </th>
-        <th class="col-md-4">Комментарии</th>
+        <th style="width:35%">Комментарии</th>
       </tr>
     </thead>
     <tbody>
@@ -114,15 +118,16 @@
           <div class="col-md-10">
 
             <p>
-              Полный набор гармоник. </br>
-              Для полного набора видно, что отличное качество восстановления достигается при n=30. </br>
+            <strong>Полный набор гармоник.</strong>   </br>
+              Из рисунка 1 видно, что характерный размер "основания" колокола атома составляет 1-2Å, полуширина которая задавалась параметром beta везде равна 2 . Можно ожидать, что отличное восстановление будет достигнуто при разрешении менее 2Å.
+              Для полного набора видно, что отличное качество восстановления достигается при n=30 при разрешении 1Å. </br>
             </p>
 
           </div>
           <div class="col-md-2">
             <switch>
-              <a class ="btn btn-default"  ng-click="setCurrent('1')" ng-if="isCurrent('default')">Показать картинки</a>
-              <a ng-click="setCurrent('default')" ng-if="isCurrent('1' || '2' || '3')">Скрыть картинки</a>
+              <a class ="btn btn-default"  ng-click="addCurrent('1')" ng-if="isnotCurrent('1')">Показать картинки</a>
+              <a class ="btn btn-default"  ng-click="rmCurrent('1')" ng-if="isCurrent('1')">Скрыть картинки</a>
             </switch>
           </div>
 
@@ -130,7 +135,6 @@
 
         </td>
       </tr>
-
       <tr>
         <td>0-1</td>
         <td>30</td>
@@ -140,12 +144,10 @@
         <td cellpadding="0" bgcolor="mistyrose"><div ng-if="isCurrent('1')">
           <img src='pages/study_process/terms/term7/pr3/figure_0-1_0.png ' width = 100%>
         </div>
-        <div ng-if="isCurrent('default')">плохое</div>
+        <div ng-if="isnotCurrent('1')">плохое</div>
       </td>
       <td></td>
     </tr>
-
-
     <tr>
       <td>0-3</td>
       <td>10</td>
@@ -155,11 +157,9 @@
       <td cellpadding="0" bgcolor="OLDLACE"><div ng-if="isCurrent('1')">
         <img src='pages/study_process/terms/term7/pr3/figure_0-3_0.png ' width = 100%>
       </div>
-      <div ng-if="isCurrent('default')">среднее</div></td>
+      <div ng-if="isnotCurrent('1')">среднее</div></td>
       <td></td>
     </tr>
-
-
     <tr>
       <td>0-10</td>
       <td>3</td>
@@ -169,9 +169,22 @@
       <td cellpadding="0" bgcolor=" LIGHTYELLOW"><div ng-if="isCurrent('1')">
         <img src='pages/study_process/terms/term7/pr3/figure_0-10_0.png ' width = 100%>
       </div>
-      <div ng-if="isCurrent('default')">хорошее</div></td>
-      <td></td>
+      <div ng-if="isnotCurrent('1')">хорошее</div></td>
+      <td>Разрешение 3Å уже позволяет довольно точно определить положения атомов</td>
     </tr>
+    <tr>
+      <td>0-15</td>
+      <td>2</td>
+      <td>100</td>
+      <td>0</td>
+      <td>0</td>
+      <td cellpadding="0" bgcolor=" LIGHTYELLOW"><div ng-if="isCurrent('1')">
+        <img src='pages/study_process/terms/term7/pr3/figure_0-15_0.png ' width = 100%>
+      </div>
+      <div ng-if="isnotCurrent('1')">хорошее</div></td>
+      <td>Разрешения 2Å ешё не достаточно для отличного восстановления</td>
+    </tr>
+
     <tr>
       <td>0-30</td>
       <td>1</td>
@@ -181,8 +194,8 @@
       <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
         <img src='pages/study_process/terms/term7/pr3/figure_0-30_0.png ' width = 100%>
       </div>
-      <div ng-if="isCurrent('default')">отличное</div></td>
-      <td></td>
+      <div ng-if="isnotCurrent('1')">отличное</div></td>
+      <td>Разрешение 1Å дает отличное восстановление</td>
     </tr>
     <tr>
       <td>0-50</td>
@@ -193,40 +206,40 @@
       <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
         <img src='pages/study_process/terms/term7/pr3/figure_0-50_0.png ' width = 100%>
       </div>
-      <div ng-if="isCurrent('default')">отличное</div></td>
+      <div ng-if="isnotCurrent('1')">отличное</div></td>
       <td></td>
     </tr>
 
     <tr>
       <td colspan="7">
         <div class="col-md-10"><p>
-          Теперь добавим шум. Шум добавлялся и к фазе, и к амплитуде. </br>
+          Теперь добавим <strong> шум </strong>. Шум добавлялся и к фазе, и к амплитуде. </br>
           Я смотрела как шум может повлиять на хорошие или отличные восстановления.
-          </p>
+        </p>
 
-        </div>
-          <div class="col-md-2">
-            <switch>
-              <a class ="btn btn-default"  ng-click="setCurrent('2')" ng-if="isCurrent('default')">Показать картинки</a>
-              <a ng-click="setCurrent('default')" ng-if="isCurrent('2')">Скрыть картинки</a>
-            </switch>
-          </div>
+      </div>
+      <div class="col-md-2">
+        <switch>
+          <a class ="btn btn-default"  ng-click="addCurrent('2')" ng-if="isnotCurrent('2')">Показать картинки</a>
+          <a class ="btn btn-default"  ng-click="rmCurrent('2')" ng-if="isCurrent('2')">Скрыть картинки</a>
+        </switch>
+      </div>
 
-        </td>
-      </tr>
+    </td>
+  </tr>
 
-      <!-- <tr>
-      <td>0-1</td>
-      <td>30</td>
-      <td>100</td>
-      <td>20</td>
-      <td>20</td>
-      <td cellpadding="0" bgcolor="mistyrose"><div ng-if="isCurrent('2')">
-      <img src='pages/study_process/terms/term7/pr3/figure_0-1_20.png ' width = 100%>
-    </div>
-    <div ng-if="isCurrent('default')">плохое</div>
-  </td>
-  <td></td>
+  <!-- <tr>
+  <td>0-1</td>
+  <td>30</td>
+  <td>100</td>
+  <td>20</td>
+  <td>20</td>
+  <td cellpadding="0" bgcolor="mistyrose"><div ng-if="isCurrent('2')">
+  <img src='pages/study_process/terms/term7/pr3/figure_0-1_20.png ' width = 100%>
+</div>
+<div ng-if="isCurrent('default')">плохое</div>
+</td>
+<td></td>
 </tr> -->
 <!-- <tr>
 <td>0-3</td>
@@ -244,12 +257,12 @@
 <td>0-10</td>
 <td>3</td>
 <td>100</td>
-<td>20</td>
-<td>20</td>
-<td cellpadding="0" class="warning"><div ng-if="isCurrent('2')">
-  <img src='pages/study_process/terms/term7/pr3/figure_0-10_20.png ' width = 100%>
+<td>10</td>
+<td>10</td>
+<td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('2')">
+  <img src='pages/study_process/terms/term7/pr3/figure_0-10_10.png ' width = 100%>
 </div>
-<div ng-if="isCurrent('default')">среднее</div></td>
+<div ng-if="isnotCurrent('2')">хорошее</div></td>
 <td></td>
 </tr>
 <tr>
@@ -258,26 +271,102 @@
   <td>100</td>
   <td>10</td>
   <td>10</td>
-  <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('2')">
+  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('2')">
     <img src='pages/study_process/terms/term7/pr3/figure_0-30_10.png ' width = 100%>
   </div>
-  <div ng-if="isCurrent('default')">хорошее</div></td>
-  <td>
-    <div ng-if="isCurrent('2')">
-      Видно, что, при шуме в 10%
-    </div></td>
+  <div ng-if="isnotCurrent('2')">отличное</div></td>
+  <td></td>
+</tr>
+<tr>
+  <td>0-50</td>
+  <td>0.6</td>
+  <td>100</td>
+  <td>10</td>
+  <td>10</td>
+  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('2')">
+    <img src='pages/study_process/terms/term7/pr3/figure_0-50_10.png ' width = 100%>
+  </div>
+  <div ng-if="isnotCurrent('2')">отличное</div></td>
+  <td></td>
+</tr>
+
+<td>0-10</td>
+<td>3</td>
+<td>100</td>
+<td>20</td>
+<td>20</td>
+<td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('2')">
+  <img src='pages/study_process/terms/term7/pr3/figure_0-10_20.png ' width = 100%>
+</div>
+<div ng-if="isnotCurrent('2')">хорошее</div></td>
+<td></td>
+</tr>
+<tr>
+  <td>0-30</td>
+  <td>1</td>
+  <td>100</td>
+  <td>20</td>
+  <td>20</td>
+  <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('2')">
+    <img src='pages/study_process/terms/term7/pr3/figure_0-30_20.png ' width = 100%>
+  </div>
+  <div ng-if="isnotCurrent('2')">хорошее</div></td>
+  <td>Шум в 20% делает восстановление из 30 гармоник не таким четким и однозначным.</td>
+</tr>
+<tr>
+  <td>0-50</td>
+  <td>0.6</td>
+  <td>100</td>
+  <td>20</td>
+  <td>20</td>
+  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('2')">
+    <img src='pages/study_process/terms/term7/pr3/figure_0-50_20.png ' width = 100%>
+  </div>
+  <div ng-if="isnotCurrent('2')">отличное</div></td>
+  <td>При шуме в 20% неоходимое число гармоник для достижения такого же качества восстановления – около 50.</td>
+</tr>
+
+<tr>
+  <td colspan="7">
+    <div class="col-md-10">
+      <p>
+        Интересно посмотреть отдельно, как влияет шум в амплитудах – непосредственно неточность измерения интенсивности световых пятен, и шум в фазе – который получается более сложно, из решения фазовой проблемы.
+      </p>
+
+    </div>
+
+
+    <div class="col-md-2">
+      <switch>
+        <a class ="btn btn-default"  ng-click="addCurrent('5')" ng-if="isnotCurrent('5')">Показать картинки</a>
+        <a class ="btn btn-default"  ng-click="rmCurrent('5')" ng-if="isCurrent('5')">Скрыть картинки</a>
+      </switch>
+    </div>
+
+  </td>
+  <tr>
+    <td>0-30</td>
+    <td>1</td>
+    <td>100</td>
+    <td>20</td>
+    <td>0</td>
+    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('5')">
+      <img src='pages/study_process/terms/term7/pr3/figure_0-30_f20_p0.png ' width = 100%>
+    </div>
+    <div ng-if="isnotCurrent('5')">отличное</div></td>
+    <td>Шум только в амплитуде несильно портит восстановленную функцию.</td>
   </tr>
   <tr>
-    <td>0-50</td>
-    <td>0.6</td>
+    <td>0-30</td>
+    <td>1</td>
     <td>100</td>
-    <td>10</td>
-    <td>10</td>
-    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('2')">
-      <img src='pages/study_process/terms/term7/pr3/figure_0-50_10.png ' width = 100%>
+    <td>0</td>
+    <td>20</td>
+    <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('5')">
+      <img src='pages/study_process/terms/term7/pr3/figure_0-30_f0_p20.png ' width = 100%>
     </div>
-    <div ng-if="isCurrent('default')">отличное</div></td>
-    <td></td>
+    <div ng-if="isnotCurrent('5')">хорошее</div></td>
+    <td>Аналогичный по относительной интенсивности шум в фазах вносит гораздо больше неясности в график восстаночленной функции. Учитывая, что получение фаз – решение фазовой проблемы – само по себе сложное занятие, оно должно выполняться точно.</td>
   </tr>
 
 
@@ -298,17 +387,15 @@
     <td colspan="7">
       <div class="col-md-10">
         <p>
-          Неполный набор гармоник</br>
-          Если убрать несколько первых гармоник с большим периодом, то
-          </p>
-
-        </div>
-
-
+          <strong>Неполный набор гармоник</strong></br>
+          Если убрать несколько первых гармоник с большим периодом, то качество, конечно, падает. При этом самые первые гармоники влияют незначительно, меняя базовый уровень функции, восстановление можно провести.
+          Гармоники с меньшими периодами (несколько ангстрем) делают пики максимумов уже плохо различимыми.
+        </p>
+      </div>
       <div class="col-md-2">
         <switch>
-          <a class ="btn btn-default"  ng-click="setCurrent('3')" ng-if="isCurrent('default')">Показать картинки</a>
-          <a ng-click="setCurrent('default')" ng-if="isCurrent('3')">Скрыть картинки</a>
+          <a class ="btn btn-default"  ng-click="addCurrent('3')" ng-if="isnotCurrent('3')">Показать картинки</a>
+          <a class ="btn btn-default"  ng-click="rmCurrent('3')" ng-if="isCurrent('3')">Скрыть картинки</a>
         </switch>
       </div>
 
@@ -316,51 +403,70 @@
   </tr>
   <tr>
     <td>1-10</td>
-    <td></td>
+    <td>3*</td>
     <td>90</td>
     <td>0</td>
     <td>0</td>
-    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('3')">
+    <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('3')">
       <img src='pages/study_process/terms/term7/pr3/figure_1-10_0.png ' width = 100%>
     </div>
-    <div ng-if="isCurrent('default')">отличное</div></td>
+    <div ng-if="isnotCurrent('3')">хорошее</div></td>
     <td></td>
   </tr>
   <tr>
     <td>3-10</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('3')">
+    <td>...</td>
+    <td>70</td>
+    <td>0</td>
+    <td>0</td>
+    <td cellpadding="0" bgcolor="oldlace"><div ng-if="isCurrent('3')">
       <img src='pages/study_process/terms/term7/pr3/figure_3-10_0.png ' width = 100%>
     </div>
-    <div ng-if="isCurrent('default')">отличное</div></td>
-    <td></td>
+    <div ng-if="isnotCurrent('3')">среднее</div></td>
+    <td>Присутствуют гармоники, разрешением от 3 до 10 Å</td>
   </tr>
   <tr>
     <td>5-10</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('3')">
+    <td>...</td>
+    <td>50</td>
+    <td>0</td>
+    <td>0</td>
+    <td cellpadding="0" bgcolor="oldlace"><div ng-if="isCurrent('3')">
       <img src='pages/study_process/terms/term7/pr3/figure_5-10_0.png ' width = 100%>
     </div>
-    <div ng-if="isCurrent('default')">отличное</div></td>
-    <td></td>
+    <div ng-if="isnotCurrent('3')">среднее</div></td>
+    <td>Присутствуют гармоники, разрешением от 6 до 10 Å</td>
   </tr>
   <tr>
+<tr>
+  <td colspan="7">
+
+
+  <p>
+    3* означает, что набор гармоник имеет полноту менее 100, но больше 90%.</br>
+    ... означает, что определить разрешение затруднительно, так как нельзя выбрать такой поднабор гармоник, полнота которого была бы более 90%.
+    </p>
+      </td>
+  </tr>
+
+
+
+
+
+
     <td colspan="7">
       <div class="col-md-10">
-        ...
-        </div>
+        <p>
+Посмотрим на другие непольные наборы гармоник Фурье.</br>
+Кажется из всех неполных наборов, самым оптимальным является набор 5-30. Эти гармоники покрывают периоды от 6 до 1 Å, что позволяет различать пики отдельных атомов с характерным размером по оси X в 1-3 Å, при этом колебания с периодом больше 6Å (которые остались нерешенными) уже не мешают.
+          </p>
+      </div>
 
 
       <div class="col-md-2">
         <switch>
-          <a class ="btn btn-default"  ng-click="setCurrent('3')" ng-if="isCurrent('default')">Показать картинки</a>
-          <a ng-click="setCurrent('default')" ng-if="isCurrent('3')">Скрыть картинки</a>
+          <a class ="btn btn-default" ng-click="setCurrent('4')" ng-if="isnotCurrent('4')">Показать картинки</a>
+          <a class ="btn btn-default"  ng-click="rmCurrent('4')" ng-if="isCurrent('4')">Скрыть картинки</a>
         </switch>
       </div>
 
@@ -369,37 +475,113 @@
   <tr>
     <td>5-30</td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
+    <td>83</td>
+    <td>0</td>
+    <td>0</td>
+    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('4')">
       <img src='pages/study_process/terms/term7/pr3/figure_5-30_0.png ' width = 100%>
     </div>
-    <div ng-if="isCurrent('default')">отличное</div></td>
+    <div ng-if="isnotCurrent('4')">отличное</div></td>
     <td></td>
   </tr>
   <tr>
     <td>10-30</td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('1')">
+    <td>66</td>
+    <td>0</td>
+    <td>0</td>
+    <td cellpadding="0" bgcolor="oldlace"><div ng-if="isCurrent('4')">
       <img src='pages/study_process/terms/term7/pr3/figure_10-30_0.png ' width = 100%>
     </div>
-    <div ng-if="isCurrent('default')">отличное</div></td>
+    <div ng-if="isnotCurrent('4')">среднее</div></td>
     <td></td>
   </tr>
   <tr>
+    <td>1-10, 20-30</td>
     <td></td>
+    <td>66</td>
+    <td>0</td>
+    <td>0</td>
+    <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('4')">
+      <img src='pages/study_process/terms/term7/pr3/figure_1-10,20-30_0.png ' width = 100%>
+    </div>
+    <div ng-if="isnotCurrent('4')">хорошее</div></td>
     <td></td>
+  </tr>
+  <tr>
+    <td>1-10, 30-100</td>
     <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>80</td>
+    <td>0</td>
+    <td>0</td>
+    <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('4')">
+      <img src='pages/study_process/terms/term7/pr3/figure_1-10,30-100_0.png ' width = 100%>
+    </div>
+    <div ng-if="isnotCurrent('4')">хорошее</div></td>
     <td></td>
   </tr>
 
+
+
+
+
+
+
+
+
+  <td colspan="7">
+    <div class="col-md-10">
+      <p>
+Кажется из всех неполных наборов, самым оптимальным является набор 5-30. Эти гармоники покрывают периоды от 6 до 1 Å, что позволяет различать пики отдельных атомов с характерным размером по оси X в 1-3 Å, при этом колебания с периодом больше 6Å (которые остались нерешенными) уже не мешают, даже при наличии шума
+        </p>
+    </div>
+
+
+    <div class="col-md-2">
+      <switch>
+        <a class ="btn btn-default" ng-click="setCurrent('6')" ng-if="isnotCurrent('6')">Показать картинки</a>
+        <a class ="btn btn-default"  ng-click="rmCurrent('6')" ng-if="isCurrent('6')">Скрыть картинки</a>
+      </switch>
+    </div>
+
+  </td>
+</tr>
+<tr>
+  <td>5-30</td>
+  <td></td>
+  <td>83</td>
+  <td>0</td>
+  <td>0</td>
+  <td cellpadding="0" bgcolor="beige"><div ng-if="isCurrent('6')">
+    <img src='pages/study_process/terms/term7/pr3/figure_5-30_0.png ' width = 100%>
+  </div>
+  <div ng-if="isnotCurrent('6')">отличное</div></td>
+  <td></td>
+</tr>
+<tr>
+  <td>5-30</td>
+  <td></td>
+  <td>83</td>
+  <td>10</td>
+  <td>10</td>
+  <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('6')">
+    <img src='pages/study_process/terms/term7/pr3/figure_5-30_f10_p10.png ' width = 100%>
+  </div>
+  <div ng-if="isnotCurrent('6')">хорошее</div></td>
+  <td></td>
+</tr>
+<tr>
+  <td>5-30</td>
+  <td></td>
+  <td>83</td>
+  <td>20</td>
+  <td>20</td>
+  <td cellpadding="0" bgcolor="LIGHTYELLOW"><div ng-if="isCurrent('6')">
+    <img src='pages/study_process/terms/term7/pr3/figure_5-30_f20_p20.png ' width = 100%>
+  </div>
+  <div ng-if="isnotCurrent('6')">хорошее</div></td>
+  <td></td>
+</tr>
 
 </tbody>
 </table>
