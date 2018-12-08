@@ -248,6 +248,46 @@
         title: 'Восстановление структуры в одномерной модели',
         url: 'pages/study_process/terms/term7/pr3_fourier.html',
         page_title: 'Structure restoration'
+      } , {
+        id: 3,
+        title: 'Отчет по валидации структуры',
+        url: 'pages/study_process/terms/term7/pr4_validation.html',
+        page_title: ''
+      } , {
+        id: 4,
+        title: '',
+        url: 'pages/study_process/terms/term7/pr.html',
+        page_title: ''
+      } , {
+        id: 5,
+        title: '',
+        url: 'pages/study_process/terms/term7/pr.html',
+        page_title: ''
+      } , {
+        id: 6,
+        title: '',
+        url: 'pages/study_process/terms/term7/pr.html',
+        page_title: ''
+      } , {
+        id: 7,
+        title: '',
+        url: 'pages/study_process/terms/term7/pr.html',
+        page_title: ''
+      } , {
+        id: 8,
+        title: '',
+        url: 'pages/study_process/terms/term7/pr.html',
+        page_title: ''
+      } , {
+        id: 9,
+        title: '',
+        url: 'pages/study_process/terms/term7/pr.html',
+        page_title: ''
+      } , {
+        id: 10,
+        title: '',
+        url: 'pages/study_process/terms/term7/pr.html',
+        page_title: ''
 
 
 

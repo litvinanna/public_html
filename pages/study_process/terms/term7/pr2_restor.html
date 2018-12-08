@@ -1,77 +1,85 @@
 <div class="col-md-12">
   <p>
+    Разбиралась структура гистидазы из <em>Pseudomonas putida</em> с PDB ID1 GKM (разрешение 1Å).
+  </p>
+  <p>
     Структурный файл PDB содержит информацию о кристаллографической ячейке в поле CRYST1. Подробное описание формата поля <a href="http://www.bmsc.washington.edu/CrystaLinks/man/pdb/part_54.html">по ссылке</a>.
+    Кристалл гистидазы 1GKM имеет следующие зарактеристики:
+    <ul class="">
+      <li>Направляющие вектора кристалла имеют длину 79.267, 116.788, 129.532 Å.  </li>
+      <li>Углы между направляющими векторами все равны 90, то есть ячейка – параллелепипед.</li>
+      <li>Кристаллографическая группа I 2 2 2 – объёмноцентрированная ...
+      </li>
+      <li>В кристаллографической ячейке содержится 8 белковых цепей.
+      </li>
+    </ul>
 
-  </p><p>
-    Согласно формату,
-    <pre>
-      COLUMNS       DATA TYPE      FIELD         DEFINITION
-      -------------------------------------------------------------
-      1 -  6       Record name    "CRYST1"
+  </p>
 
-      7 - 15       Real(9.3)      a             a (Angstroms).
+  <h3>Строение кристаллографической ячейки</h3>
 
-      16 - 24       Real(9.3)      b             b (Angstroms).
+  <p>
+    На рисунке 1 показаны восемь цепей белка, которые входят в одну кристаллографическую ячейку (показана в виде параллелепипеда).
+  </p>
+  <p>
+    Кристалл состоит из тетрамеров, очень сближенных между собой. Эти блоки тетрамеров расставлены слоями с дробным (относительно тетрамера) сдвигом, поэтому в элементарной ячейке аходится два таких тетрамера.
+  </p>
+  <p>
+  </p>
 
-      25 - 33       Real(9.3)      c             c (Angstroms).
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.1. Цепи белка, образующие кристаллографическую ячейку.</figcaption>
+    <img src='pages/study_process/terms/term7/pr2/crystall-2.png'  style='' width = 100%>
+  </figure>
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.2. Вид на стопки тетрамеров. </figcaption>
+    <img src='pages/study_process/terms/term7/pr2/crystall-3.png'  style='' width = 100%>
+  </figure>
+<div style="small_empty_block"></div>
+<h3>Необычная структура 1MNM</h3>
+  <p>1MNM – структура дрожжевого транскрипционного фактора (разрешение 2.25Å). В ассиметрической ячейке содержится несколько цепей белка, связанных с цепочкой ДНК. При этом один &beta;-стрендов торчит в пустоту (обведен на рисунке 3). При восстановлении содержимого соседних ассиметрических ячеек становится понятно, но этот участок образует &beta;-лист вместе с цепью из соседней ячейки (рисунок 4).
 
-      34 - 40       Real(7.2)      alpha         alpha (degrees).
-
-      41 - 47       Real(7.2)      beta          beta (degrees).
-
-      48 - 54       Real(7.2)      gamma         gamma (degrees).
-
-      56 - 66       LString        sGroup        Space group.
-
-      67 - 70       Integer        z             Z value.</pre>
-      данные поля CRYST1 из файла 1gkm.pdb
-      <pre>
-        CRYST1   79.267  116.788  129.532  90.00  90.00  90.00 I 2 2 2       8</pre>
-        значат следующее:
-        <ul class="">
-          <li>Направляющие вектора кристалла имеют длину 79.267, 116.788, 129.532 Å.  </li>
-          <li>Углы между направляющими векторами все равно 90, то есть ячейка – параллелепипед.</li>
-          <li>Кристаллографическая группа I 2 2 2 – объёмноцентрированная ...
-          </li>
-          <li>В кристаллографической ячейке содержится 8 белковых цепей.
-          </li>
-        </ul>
-      </p>
+  </p>
 
 
-      <h3>Строение кристаллографической ячейки</h3>
-      <div class='col-md-6'>
-        <p>
-          На рисунке 1 показаны восемь цепей белка, которые входят в одну кристаллографическую ячейку (показана в виде параллелепипеда).
-        </p>
-        <p>
-          Кристалл состоит из тетрамеров, очень сближенных между собой. Эти блоки тетрамеров расставлены слоями с дробным (относительно тетрамера) сдвигом, поэтому в элементарной ячейке аходится два таких тетрамера.
-        </p>
-        <p>
-          Рисунки 2 и 3 показывают чередование тетрамеров.
-        </p>
-      </div>
-      <figure style='' class="col-md-6" >
-        <figcaption>Рис.1. Цепи белка, образующие кристаллографическую ячейку.</figcaption>
-        <img src='pages/study_process/terms/term7/pr2/crystall_2.png'  style='' width = 100%>
-      </figure>
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис.3 Содержимое одной ассимметрической ячейки структуры 1MNM. Струнный участок обведен.</figcaption>
+    <img src='pages/study_process/terms/term7/pr2/1mnm.png'  style='' width = 100%>
+  </figure>
+  <figure style='' class="col-md-6" >
+    <figcaption>Рис. 4. Содержимое соседней ассиметрической ячейки показано серым цевтом. "Торчащий в пустоту" &beta;-стренд образует &beta;-лист вместе с участками из соседней ячейки. </figcaption>
+    <img src='pages/study_process/terms/term7/pr2/1mnm-1.png'  style='' width = 100%>
+  </figure>
 
-    </div>
-    <div class="col-md-12">
-      <figure style='' class="col-md-6" >
-        <figcaption>Рис.2. Одинаковыми цветами показаны аналогичные цепи, похожими цветами -- "биологически" аналогичные.</figcaption>
-        <img src='pages/study_process/terms/term7/pr2/crystall_7.png'  style='' width = 100%>
-      </figure>
-      <figure style='' class="col-md-6" >
-        <figcaption>Рис.3. </figcaption>
-        <img src='pages/study_process/terms/term7/pr2/crystall_8.png'  style='' width = 100%>
-      </figure>
-      <figure style='' class="col-md-12" >
-        <figcaption>Рис.4. Вид на стопки тетрамеров сбоку.</figcaption>
-        <img src='pages/study_process/terms/term7/pr2/crystall_10.png'  style='' width = 100%>
-      </figure>
 
-      <p>
+<div style="small_empty_block"></div>
+  <h3>Несовпадение ассимметрической ячейки и биологической единицы</h3>
 
-      </p>
-    </div>
+  <p>
+    Часто биологическую функцию выполняют гомо-n-меры белка, состоящие из несколькиз одинаковых субъединиц. В структурном файле PDB содержится минимальная информация -- структура одной субъединицы. Структуру всей биологичсекой единицы можно получить применением нескольких симметрий.
+    </p>
+  <p>
+    Например, структура <a href="https://www.rcsb.org/structure/4m86">4M86</a> – редуктаза еноил-ацил-переносчика (FabI) из  <em>Neisseria meningitidis</em>. В ассиметрической ячейке содержится две цепи (рисунок 5). Биологическую роль выполняет тетрамер (рисунок 6).
+    </p>
+    <figure style='' class="col-md-6" >
+      <figcaption>Рис.5. Структура димера 4M86, сожержание ассимметрической ячейки.;</figcaption>
+      <img src='pages/study_process/terms/term7/pr2/4m86-dimer.png'  style='' width=65%>
+    </figure>
+    <figure style='' class="col-md-6" >
+      <figcaption>Рис.6 Биологичекая единица 4M86, тетрамер.</figcaption>
+      <img src='pages/study_process/terms/term7/pr2/4m86-tetra.png'  style='' width = 100%>
+    </figure>
+
+<p>
+  структура <a href="https://www.rcsb.org/structure/3jzv"> 3JZV </a> – купин-2 домен из  <em>Rhodospirillum rubrums</em>. В ассиметрической ячейке содержится jlyf цепь (рисунок 7). Биологическую роль выполняет димер (рисунок 8).
+  </p>
+
+    <figure style='' class="col-md-6" >
+      <figcaption>Рис.7. Мономер, содержащийся в ассимметрической ячейке 3JZV.</figcaption>
+      <img src='pages/study_process/terms/term7/pr2/3jzv-monomer.png'  style='' width = 70%>
+    </figure>
+    <figure style='' class="col-md-6" >
+      <figcaption>Рис.8 Биологическая единица 3JZV, димер.</figcaption>
+      <img src='pages/study_process/terms/term7/pr2/3jzv-dimer.png'  style='' width = 100%>
+    </figure>
+</div>
