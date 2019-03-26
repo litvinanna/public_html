@@ -1,4 +1,6 @@
 <div class="col-md-12">
+  <h2>Восстановление кристалла из PDB файла</h2>
+  <h3>Описание взаимодействий в кристалле белка</h3>
   <p>
     Разбиралась структура гистидазы из <em>Pseudomonas putida</em> с PDB ID1 GKM (разрешение 1Å).
   </p>
@@ -16,70 +18,112 @@
 
   </p>
 
-  <h3>Строение кристаллографической ячейки</h3>
+  <h5>Строение кристаллографической ячейки</h5>
 
   <p>
     На рисунке 1 показаны восемь цепей белка, которые входят в одну кристаллографическую ячейку (показана в виде параллелепипеда).
   </p>
-  <p>
-    Кристалл состоит из тетрамеров, очень сближенных между собой. Эти блоки тетрамеров расставлены слоями с дробным (относительно тетрамера) сдвигом, поэтому в элементарной ячейке аходится два таких тетрамера.
+  <p>Биологической единицей гистидазы являются тетрамеры.
+    Кристалл состоит из тетрамеров, очень сближенных между собой. Эти блоки тетрамеров расставлены слоями с дробным (относительно тетрамера) сдвигом, поэтому в элементарной ячейке суммарно находится два таких тетрамера.
   </p>
   <p>
   </p>
 
-  <figure style='' class="col-md-6" >
-    <figcaption>Рис.1. Цепи белка, образующие кристаллографическую ячейку.</figcaption>
-    <img src='pages/study_process/terms/term7/pr2/crystall-2.png'  style='' width = 100%>
+
+  <figure style='' class="col-md-12" >
+    <img src='pages/study_process/terms/term7/pr2/crystall-4.png'  style='' width = 49%>
+    <img src='pages/study_process/terms/term7/pr2/crystall-3.png'  style='' width = 49%>
+
+    <figcaption>Рис.1 <b>Кристалл гистидазы 1GKM.</b>
+      (слева) Цепи белка, образующие кристаллографическую ячейку.
+    (справа) Вид на стопки тетрамеров</figcaption>
   </figure>
-  <figure style='' class="col-md-6" >
-    <figcaption>Рис.2. Вид на стопки тетрамеров. </figcaption>
-    <img src='pages/study_process/terms/term7/pr2/crystall-3.png'  style='' width = 100%>
+
+
+
+<div class='small_empty_block col-md-12'></div>
+  <p class="col-md-8">
+  Рассмотрим, какие контакты образуются в кристалле. Контактов внутри тетрамера (желтый и зеленый на рисунке 3)  много, так как цепи сближены на большой площади, и они наверняка имеют биологическое значение, так как гистидаза активна в виде тетрамера. Контакты же с между тетрмерами (серое и цветное на рисунке 4) возможны, хотя и гораздо менее малочислены, но обусловлены только процессом кристаллизации, не имеют биологического значения
+  </p>
+  <figure style='' class="col-md-4" >
+    <img src='pages/study_process/terms/term7/pr2/contacts.png'  style='' width = 80%>
+    <figcaption>Рис.2 Контакты в кристалле. Внутри тетрамера (зеленое и желтое), между тетрамерами (зеленое и серое).</figcaption>
+
   </figure>
-<div style="small_empty_block"></div>
+
+<div class='small_empty_block col-md-12'></div>
+
+
+  <figure style='' class="col-md-12" >
+    <img src='pages/study_process/terms/term7/pr2/contacts_intra_lines.png'  style='' width = 40%> <img src='pages/study_process/terms/term7/pr2/contacts_intra_res.png'  style='' width = 58%>
+
+    <figcaption>Рис.3 <b> Контакты между субъединицами в тетрамере. </b> Полярные контакты между остатками показаны синими линиями. (слева )Две соседствующие цепи показаны серым.
+      (справа) Зеленым и желтым показаны остатки из разных тетрамеров, находящиеся на расстоянии 4Å. </br> Контактов внутри тетрамера много.</figcaption>
+
+  </figure>
+
+
+<div class='small_empty_block col-md-12'></div>
+<figure class="figure col-md-12">
+
+    <img src='pages/study_process/terms/term7/pr2/contacts_out_lines.png'  style='' width = 40%>
+    <img src='pages/study_process/terms/term7/pr2/contacts_out_res.png'  style='' width = 58%>
+    <figcaption>Рис.4 <b> Контакты между тетрамерами.</b> Полярные контакты между атомами показаны синими линиями. (справа) Зеленым и серым пкоазаны остатки из разных тетрамеров. </figcaption>
+  </figure>
+
+
+
+
+
+<div class='small_empty_block col-md-12'></div>
 <h3>Необычная структура 1MNM</h3>
-  <p>1MNM – структура дрожжевого транскрипционного фактора (разрешение 2.25Å). В ассиметрической ячейке содержится несколько цепей белка, связанных с цепочкой ДНК. При этом один &beta;-стрендов торчит в пустоту (обведен на рисунке 3). При восстановлении содержимого соседних ассиметрических ячеек становится понятно, но этот участок образует &beta;-лист вместе с цепью из соседней ячейки (рисунок 4).
+  <p>1MNM – структура дрожжевого транскрипционного фактора (разрешение 2.25Å). В ассиметрической ячейке содержится несколько цепей белка, связанных с цепочкой ДНК. При этом один &beta;-стрендов торчит в пустоту (обведен на рисунке 5). При восстановлении содержимого соседних ассиметрических ячеек становится понятно, но этот участок образует &beta;-лист вместе с цепью из соседней ячейки (рисунок 6).
 
   </p>
 
 
   <figure style='' class="col-md-6" >
-    <figcaption>Рис.3 Содержимое одной ассимметрической ячейки структуры 1MNM. Струнный участок обведен.</figcaption>
     <img src='pages/study_process/terms/term7/pr2/1mnm.png'  style='' width = 100%>
+    <figcaption>Рис.5 Содержимое одной ассимметрической ячейки структуры 1MNM. Струнный участок обведен.</figcaption>
+
   </figure>
   <figure style='' class="col-md-6" >
-    <figcaption>Рис. 4. Содержимое соседней ассиметрической ячейки показано серым цевтом. "Торчащий в пустоту" &beta;-стренд образует &beta;-лист вместе с участками из соседней ячейки. </figcaption>
     <img src='pages/study_process/terms/term7/pr2/1mnm-1.png'  style='' width = 100%>
+    <figcaption>Рис.6 Содержимое соседней ассиметрической ячейки показано серым цветом. "Торчащий в пустоту" &beta;-стренд образует &beta;-лист вместе с участками из соседней ячейки. </figcaption>
+
   </figure>
 
 
-<div style="small_empty_block"></div>
+<div class='small_empty_block col-md-12'></div>
   <h3>Несовпадение ассимметрической ячейки и биологической единицы</h3>
 
   <p>
     Часто биологическую функцию выполняют гомо-n-меры белка, состоящие из несколькиз одинаковых субъединиц. В структурном файле PDB содержится минимальная информация -- структура одной субъединицы. Структуру всей биологичсекой единицы можно получить применением нескольких симметрий.
     </p>
   <p>
-    Например, структура <a href="https://www.rcsb.org/structure/4m86">4M86</a> – редуктаза еноил-ацил-переносчика (FabI) из  <em>Neisseria meningitidis</em>. В ассиметрической ячейке содержится две цепи (рисунок 5). Биологическую роль выполняет тетрамер (рисунок 6).
+    Например, структура <a href="https://www.rcsb.org/structure/4m86">4M86</a> – редуктаза еноил-ацил-переносчика (FabI) из  <em>Neisseria meningitidis</em>. В ассиметрической ячейке содержится две цепи (рисунок 7). Биологическую роль выполняет тетрамер (рисунок 8).
     </p>
-    <figure style='' class="col-md-6" >
-      <figcaption>Рис.5. Структура димера 4M86, сожержание ассимметрической ячейки.;</figcaption>
-      <img src='pages/study_process/terms/term7/pr2/4m86-dimer.png'  style='' width=65%>
-    </figure>
-    <figure style='' class="col-md-6" >
-      <figcaption>Рис.6 Биологичекая единица 4M86, тетрамер.</figcaption>
-      <img src='pages/study_process/terms/term7/pr2/4m86-tetra.png'  style='' width = 100%>
+
+    <figure style='' class="col-md-12" >
+        <img src='pages/study_process/terms/term7/pr2/4m86-dimer.png' class="col-md-5" width = 70%>
+        <img src='pages/study_process/terms/term7/pr2/4m86-tetra.png' class="col-md-7" >
+        <div class="col-md-12">
+        <figcaption class="col-md-6" >Рис.7 Структура димера 4M86, сожержание ассимметрической ячейки.</figcaption>
+      <figcaption class="col-md-6" >Рис.8 Биологичекая единица 4M86, тетрамер.</figcaption>
+        </div>
+
     </figure>
 
-<p>
-  структура <a href="https://www.rcsb.org/structure/3jzv"> 3JZV </a> – купин-2 домен из  <em>Rhodospirillum rubrums</em>. В ассиметрической ячейке содержится jlyf цепь (рисунок 7). Биологическую роль выполняет димер (рисунок 8).
+<div class='small_empty_block col-md-12'></div>
+<p class="col-md-12">
+  Cтруктура <a href="https://www.rcsb.org/structure/3jzv"> 3JZV </a> – купин-2 домен из  <em>Rhodospirillum rubrums</em>. В ассиметрической ячейке содержится одна цепь (рисунок 9). Биологическую роль выполняет димер (рисунок 10).
   </p>
 
-    <figure style='' class="col-md-6" >
-      <figcaption>Рис.7. Мономер, содержащийся в ассимметрической ячейке 3JZV.</figcaption>
-      <img src='pages/study_process/terms/term7/pr2/3jzv-monomer.png'  style='' width = 70%>
-    </figure>
-    <figure style='' class="col-md-6" >
-      <figcaption>Рис.8 Биологическая единица 3JZV, димер.</figcaption>
-      <img src='pages/study_process/terms/term7/pr2/3jzv-dimer.png'  style='' width = 100%>
+
+    <figure style='' class="col-md-12" >
+      <img src='pages/study_process/terms/term7/pr2/3jzv-monomer.png'  style='' width = 49%>
+      <img src='pages/study_process/terms/term7/pr2/3jzv-dimer.png'  style='' width = 49%>
+      <figcaption class='col-md-6'>Рис.9 Мономер, содержащийся в ассимметрической ячейке 3JZV.</figcaption>
+      <figcaption class='col-md-6'>Рис.10 Биологическая единица 3JZV, димер.</figcaption>
     </figure>
 </div>

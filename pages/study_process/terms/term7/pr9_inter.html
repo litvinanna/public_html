@@ -1,0 +1,116 @@
+<h2>Совмещение структур</h2>
+<p>
+  Для сравнения были выбраны структуры, представленные в таблице 1, первая строка – референсная структура 1GKJ.
+
+</p>
+<table class='table table-bordered'>
+  <caption>Таб.1. </caption>
+  <thead>
+    <th>PDB ID</th>
+    <th>Название</th>
+    <th>RMSD</th>
+    <th>Длина выравнивания</th>
+    <th>Z-score</th>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1GKJ:A</td>
+      <td class="small">HISTIDINE AMMONIA-LYASE (HAL) MUTANT Y280F FROM PSEUDOMONAS PUTIDA</td>
+      <td>-</td>
+      <td>507</td>
+      <td>-</td>
+
+    </tr>
+    <tr>
+      <td>3UNV:A</td>
+      <td class="small">PANTOEA AGGLOMERANS PHENYLALANINE AMINOMUTASE</td>
+      <td>1.36</td>
+      <td>473</td>
+      <td>18.0</td>
+
+    </tr>
+    <tr>
+      <td>2NYN:A</td>
+      <td class="small">CRYSTAL STRUCTURE OF PHENYLALANINE AMMONIA-LYASE FROM ANABAENA VARIABILIS</td>
+      <td>1.52</td>
+      <td>452</td>
+      <td>16.5</td>
+
+    </tr>
+    <tr>
+      <td>2O6Y:D</td>
+      <td class="small">TYROSINE AMMONIA-LYASE FROM RHODOBACTER SPHAEROIDES</td>
+      <td>1.98</td>
+      <td>466</td>
+      <td>13.7</td>
+
+    </tr>
+
+
+  </tbody>
+</table>
+<p>Ниже представлено выравнивание вторичных структур и общее структурное выравнивание белков. Видно, что  структуры выровнены хорошо.
+</p>
+<figure  class="col-md-6 " >
+  <figcaption>Рис.1. Выравнивание вторичных структур.</figcaption>
+  <img src='pages/study_process/terms/term7/pr9/ss_align.png'  style='' width = 100%>
+
+</figure>
+<figure  class="col-md-6 " >
+<figcaption>Рис.2. Общее выравнивание структур.</figcaption>
+  <img src='pages/study_process/terms/term7/pr9/rasmol_align.png'  style='' width = 100%>
+</figure>
+
+<div class="col-md-12 small_empty_block">  </div>
+<p>
+  Множественное структурное выранивание (покрашено по консервативности 30% blosum62):
+</p>
+<figure  class="col-md-12 " style="overflow-x:scroll;">
+
+  <img src='pages/study_process/terms/term7/pr9/ss_seq_align.svg' >
+
+</figure>
+
+
+<p>
+  Множественное выравнивание программой Muscle (покрашено по консервативности 30% blosum62):
+</p>
+<figure  class="col-md-12" style="overflow-x:scroll;">
+
+  <img src='pages/study_process/terms/term7/pr9/ss_seq_align_muscle.svg' >
+
+</figure>
+
+<p class="col-md-6">Для более подробного исследования структур они были далее выровнены в pymol, так как выходной структурный файл pdbefold не содержал названий цепей (по исходным PDB ID) и с ним сложнее было работать, так как все структуры содержались в одном объекте (что делает невозможным даже покрасить структуры разными цветами). Pymol выровнял структуры достаточно хорошо для сравнения, так как они действительно похожи – была использована команда align, каждая структуры была выровнена к референсу 1GKJ.
+  </p>
+  <figure  class="col-md-6" >
+    <figcaption>Рис.3. Структуры белков, выровненные в Pymol.</figcaption>
+    <img src='pages/study_process/terms/term7/pr9/pymol_alignment.png' width = 100%>
+  </figure>
+
+
+
+
+<div class="col-md-12 small_empty_block ">
+  </div>
+<p class="col-md-6">
+  В выравнивании последовательностей был обнаружен интересный момент.
+  Программа Muscle рядом с консервативным блоком в позиции 464 нашла консервативную колонку треонинов. В структурном выравнивании pdbefold только три из этих треонинов были выровнены, а четвертый был плохо выровнен и сдвинут.
+  </p>
+  <figure  class="col-md-6" >
+    <figcaption>Рис.4. Несовпаление в выравниваниях Muscle и pdbefold – выранивание треонинов.
+      </figcaption>
+    <img src='pages/study_process/terms/term7/pr9/tyrs_align.png' width = 100%>
+  </figure>
+
+
+  <figure  class="col-md-12 text-center" >
+    <figcaption>Рис.3. Структура выровненных участков с несовпадением в выравнивании.
+    </figcaption>
+    <img src='pages/study_process/terms/term7/pr9/ribbon_tyrs.png' width = 100%>
+  </figure>
+
+<p>
+  В структуре 2NYN (розовая) треонин445 действительно не выравнивается ни с какими остатками. При этом уже через 2-3 остатка от него наблюдается очень хорошее совпадение. Можно утверждать, что в области этого остатка ни одному из выраниваний доверять нельзя, так как даже структурного совпадения не наблюдается, тем более не все треонины гомологичны между собой.
+  </p>

@@ -1,0 +1,41 @@
+<h2>Гидрофобные кластеры</h2>
+<div class="col-md-6">
+  <p>
+    В структуре гистидазы 1GKJ были найдены и визуализированы гиброфобные кластеры.
+  </p>
+  <p>
+Поиск проводился с помощью сервиса <a href="http://mouse.belozersky.msu.ru/npidb/cgi-bin/hftri.pl">Clud</a>. Задавался файл со структурой, либо номер PDB ID, а также порог расстояний (cutoff). Полученная текстовая выдача преобразовывалась в команды для pymol с помощью <a href="http://kodomo.fbb.msu.ru/~seferbekova/term7/pr10/pr10.html">скрипта</a>, любезно представленного сестрой по несчатью. В Pymol наибольшие кластерыбыли представлены в виде spheres и раскрашены.
+    </p>
+    <p>
+      Для одной молекулы гистидазы 1GKJ, состоящей из одной цепи, наилучшим порогом является расстояние 4.4Å. На этой границе происходит разделение огромного гидрофобного кластера внутри всей цепи (порог 4.5Å) на более мелкие кластеры, которые отражают "гантелевидную" форму белка.
+      </p>
+
+</div>
+<figure style='' class="figure col-md-6" >
+  <img src='pages/study_process/terms/term7/pr10/clust_43.png'  style='' width = 100%>
+  <img src='pages/study_process/terms/term7/pr10/clust_44.png'  style='' width = 100%>
+  <img src='pages/study_process/terms/term7/pr10/clust_45.png'  style='' width = 100%>
+  <figcaption>Рис.1. Гидрофобные кластеры в структуре гистидазы 1GKJ, найденные при разном значении порога (cutoff). </figcaption>
+</figure>
+<div class="col-md-12 small_empty_box ">
+
+  </div>
+<p>
+ С помощью сервиса <a href="http://www.ebi.ac.uk/pdbe/pisa/">PDBePISA</a> был создан файл PDB, содержащий структуру биологической единицы гистидазы – тетрамера.
+  </p>
+  <p>
+    Поиск гидрофобных кластеров между двумя цепями тетрамера при разных значениях порога (рисунок 2) показывает, что цепи плотно соединены и образуют много гидрофобных кластеров между собой, но меньше, чем внутри цепи. Тетрамер внутри себя более менее однороден в плане гидрофобности и плотности, цепи не "болтаются", а плотно держаться, в том числе и за счет гиброфобных взаимодействий. При этом, как было найдено ранее (в задании  восстановление кристалла из PDB файла), цепи соединены также множеством водородных связей.
+    </p>
+  <figure style='' class="figure col-md-12" >
+    <img src='pages/study_process/terms/term7/pr10/tetra_pic_45.png'  style='' width = 24%>
+    <img src='pages/study_process/terms/term7/pr10/tetra_pic_50.png'  style='' width = 24%>
+    <img src='pages/study_process/terms/term7/pr10/tetra_pic_55.png'  style='' width = 24%>
+    <img src='pages/study_process/terms/term7/pr10/tetra_pic_60.png'  style='' width = 24%>
+    <figcaption>Рис.2. Гидрофобные кластеры между двумя цепями (темно-синими) в тетрамере гистидазы  1GKJ. Две цепи тетрамера покрашены темно-синим, две – светло-синим. </figcaption>
+  </figure>
+
+  <figure style='' class="figure col-md-12" >
+    <img src='pages/study_process/terms/term7/pr10/whole_pic_44.png'  style='' width =49%>
+    <img src='pages/study_process/terms/term7/pr10/whole_pic_50.png'  style='' width =49%>
+    <figcaption>Рис.3. Некоторые гидрофобные кластеры в полном тетрамере 1GKJ. Две цепи тетрамера покрашены темно-синим, две – светло-синим.</figcaption>
+  </figure>

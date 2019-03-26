@@ -1,0 +1,189 @@
+<div class="col-md-12">
+<h2>Предсказание вторичных структур</h2>
+<div class="col-md-6">
+
+<p>
+Для структуры 4WJO (<a href="pages/study_process/terms/term7/pr6/4wjo.pdb">pdb файл</a>) были предсказаны участки вторичой структуры с помощью программ
+<a href="https://swift.cmbi.umcn.nl/gv/dssp/"> DSSP</a> [1] (<a href="pages/study_process/terms/term7/pr6/4wjo.dssp">выдача dssp</a>)
+и <a href="http://webclu.bio.wzw.tum.de/stride/"> Stride </a>[2] (<a href="pages/study_process/terms/term7/pr6/4wjo.stride">выдача stride</a>).
+
+  </p>
+  <p>
+    Программы включают разные типы вторичных структур.
+    В файле PDB разметка вторичной структуры состоит из &alpha;-спиралей (разных типов в нашем случае: обычной, где остатки соединены через 4, водородные связи замыкают цикл из 13 атомов и спирали 310, где остатки соединены через 3, водородные связи замыкают цикл из 10 атомов), &beta;-листов и петель. </p> <p>
+    В выдаче DSSP остатки размены следующими кодами :
+<pre>  * H = alpha helix
+  * B = residue in isolated beta-bridge
+  * E = extended strand, participates in beta ladder
+  * G = 3-helix (3/10 helix)
+  * I = 5 helix (pi helix)
+  * T = hydrogen bonded turn
+  * S = bend</pre>
+</p> <p>
+  Программа Stride использует примерно такие же обозначения для вторичных структур:
+  <pre>     H        Alpha helix
+     G        3-10 helix
+     I        PI-helix
+     E        Extended conformation
+     B or b   Isolated bridge
+     T        Turn
+     C        Coil (none of the above)</pre>
+
+    </p>
+
+<p>
+  В данной структуре обнаружилось три спирали и 6 &beta;-листов. Сравнение предсказаний различных участков представлено в таблице 1, изображение на рисунке 1.
+  </p>
+  </div>
+  <figure style='' class="col-md-16 figure" >
+
+     <img src='pages/study_process/terms/term7/pr6/4wjo.png'  style='' width = 50%>
+     <figcaption>Рис.1. Структура 4WJO с обозначенными вторичными структурами. Часть белка в структуре была получена в виде отдельной цепи (со структурой beta1), что соответствует началу белка. </figcaption>
+   </figure>
+
+
+  <table class='table table-bordered table-hover'>
+  	<caption>Таб.1. Сравнение результатов работы программ по предсказанию вторичной структуры.</caption>
+  <thead>
+
+
+      <tr>
+        <th rowspan="2">
+          Обозначение
+          </th>
+        <th colspan="2">Структура XRAY</th>
+        <th colspan="2">DSSP</th>
+        <th colspan="2">Stride</th>
+        <th rowspan="2" class="col-md-1">Примечания</th>
+
+      </tr>
+      <tr>
+        <th >Координаты </th>
+        <th class="col-md-3">Описание   </th>
+        <th ">Координаты </th>
+        <th class="col-md-3">Описание   </th>
+        <th >Координаты </th>
+        <th class="col-md-3">Описание   </th>
+
+      </tr>
+      </thead>
+      	<tbody class=''>
+      <tr class="not-good">
+        <td>alpha1</td>
+        <td>44-56</td>
+        <td>&alpha;-спираль типа 1 <br> (правозакрученная, обычная) </td>
+        <td>45-55</td>
+        <td>&alpha;-спираль <br /> остаток 44 входит в связанную петлю (hydrogen bonded turn)</td>
+        <td>44-55</td>
+        <td>&alpha;-спираль </td>
+        <td>неточное совпадение</td>
+      </tr>
+      <tr class="not-good">
+        <td>alpha2</td>
+        <td>58-60</td>
+        <td>&alpha;-спираль типа 5 <br>(правозакрученная спираль 310)</td>
+        <td>59-61</td>
+        <td>спираль 310</td>
+        <td>59-61</td>
+        <td>спираль 310</td>
+        <td>неточное совпадение</td>
+      </tr>
+
+      <tr class="not-good">
+        <td>alpha3</td>
+        <td>76-81</td>
+        <td>&alpha;-спираль типа 1 <br>(правозакрученная, обычная)</td>
+        <td>77-80</td>
+        <td>&alpha;-спираль <br /> остаток 81 входит в связанную петлю (hydrogen bonded turn)</td>
+        <td>77-80</td>
+        <td  class="bad">спираль 310</td>
+        <td>неточное совпадение, плохое предсказание</td>
+      </tr>
+
+      <tr class="good">
+        <td>beta1</td>
+        <td>11-13</td>
+        <td>strand</td>
+        <td>11-13</td>
+        <td>extended strand</td>
+        <td>11-13</td>
+        <td>strand</td>
+        <td>совпадение</td>
+      </tr>
+      <tr class="good">
+        <td>beta2</td>
+        <td>22-27</td>
+        <td>strand</td>
+        <td>22-27</td>
+        <td>extended strand</td>
+        <td>22-27</td>
+        <td>strand</td>
+        <td>совпадение</td>
+      </tr>
+      <tr class="good">
+        <td>beta3</td>
+        <td>33-38</td>
+        <td>strand</td>
+        <td>33-38</td>
+        <td>extended strand</td>
+        <td>33-38</td>
+        <td>strand</td>
+        <td>совпадение</td>
+      </tr>
+
+      <tr class="good">
+        <td>beta4</td>
+        <td>62-66</td>
+        <td>strand</td>
+        <td>62-66</td>
+        <td>extended strand</td>
+        <td>62-66</td>
+        <td>strand</td>
+        <td>совпадение</td>
+      </tr>
+      <tr class="good">
+        <td>beta5</td>
+        <td>69-70</td>
+        <td>strand</td>
+        <td>69-70</td>
+        <td>extended strand</td>
+        <td>69-70</td>
+        <td>strand</td>
+        <td>совпадение</td>
+      </tr>
+      <tr class="good">
+        <td>beta6</td>
+        <td>87-92</td>
+        <td>strand</td>
+        <td>87-92</td>
+        <td>extended strand</td>
+        <td>87-92</td>
+        <td>strand</td>
+        <td>совпадение</td>
+      </tr>
+
+
+  	</tbody>
+  	</table>
+
+
+
+<p>
+  В данном примере видно, что &beta;-листы (strands) предсказываются отлично, границы совпадают. Предсказания &alpha; -спиралей тоже совпадают с данными в PDB-файле, но границы не точные. Спираль 76-81 была предсказана хуже всего.
+  </p>
+<p>
+  Каких-либо интересных моментов – изолированных &beta;-мостиков, пи-спиралей (остатки соединены через 5, водородные связи замыкают цикл из 16 атомов) найдено не было.
+  </p>
+
+<h4>Ссылки:</h4>
+  <ul>
+    <li>
+      A series of PDB related databases for everyday needs.
+Wouter G Touw, Coos Baakman, Jon Black, Tim AH te Beek, E Krieger, Robbie P Joosten, Gert Vriend.
+Nucleic Acids Research 2015 January; 43(Database issue): D364-D368.
+      </li>
+      <li>
+        Heinig, M., Frishman, D. (2004). STRIDE: a Web server for secondary structure assignment from known atomic coordinates of proteins. Nucl. Acids Res. , 32, W500-2.
+        </li>
+    </ul>
+  </div>

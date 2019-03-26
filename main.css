@@ -119,7 +119,6 @@ ul {
     font-weight: bold;
 }
 
-
 .index_wrapper {
     position: absolute;
     top: 650px;
@@ -129,4 +128,97 @@ ul {
     padding-top: 15px;
     text-align: center;
     color: #006666;
+}
+/*это для раскрашивания таблиц  */
+.table > thead > tr > td.not-good,
+.table > tbody > tr > td.not-good,
+.table > tfoot > tr > td.not-good,
+.table > thead > tr > th.not-good,
+.table > tbody > tr > th.not-good,
+.table > tfoot > tr > th.not-good,
+.table > thead > tr.not-good > td,
+.table > tbody > tr.not-good > td,
+.table > tfoot > tr.not-good > td,
+.table > thead > tr.not-good > th,
+.table > tbody > tr.not-good > th,
+.table > tfoot > tr.not-good > th,
+.not-good {
+  background-color: #ffffe0;
+}
+.table-hover > tbody > tr > td.not-good:hover,
+.table-hover > tbody > tr > th.not-good:hover,
+.table-hover > tbody > tr.not-good:hover > td,
+.table-hover > tbody > tr:hover > .not-good,
+.table-hover > tbody > tr.not-good:hover > th,
+.not-good:hover {
+  background-color: #ffffb3;
+}
+.table > thead > tr > td.good,
+.table > tbody > tr > td.good,
+.table > tfoot > tr > td.good,
+.table > thead > tr > th.good,
+.table > tbody > tr > th.good,
+.table > tfoot > tr > th.good,
+.table > thead > tr.good > td,
+.table > tbody > tr.good > td,
+.table > tfoot > tr.good > td,
+.table > thead > tr.good > th,
+.table > tbody > tr.good > th,
+.table > tfoot > tr.good > th,
+.good {
+  background-color: #f7ffe6;
+}
+.table-hover > tbody > tr > td.good:hover,
+.table-hover > tbody > tr > th.good:hover,
+.table-hover > tbody > tr.good:hover > td,
+.table-hover > tbody > tr:hover > .good,
+.table-hover > tbody > tr.good:hover > th,
+.good:hover {
+  background-color: #e6ffb3;
+}
+.table > thead > tr > td.not-bad,
+.table > tbody > tr > td.not-bad,
+.table > tfoot > tr > td.not-bad,
+.table > thead > tr > th.not-bad,
+.table > tbody > tr > th.not-bad,
+.table > tfoot > tr > th.not-bad,
+.table > thead > tr.not-bad > td,
+.table > tbody > tr.not-bad > td,
+.table > tfoot > tr.not-bad > td,
+.table > thead > tr.not-bad > th,
+.table > tbody > tr.not-bad > th,
+.table > tfoot > tr.not-bad > th,
+.not-bad {
+  background-color: #ffeecc;
+}
+.table-hover > tbody > tr > td.not-bad:hover,
+.table-hover > tbody > tr > th.not-bad:hover,
+.table-hover > tbody > tr.not-bad:hover > td,
+.table-hover > tbody > tr:hover > .not-bad,
+.table-hover > tbody > tr.not-bad:hover > th,
+.not-bad:hover {
+  background-color: #ffdd99;
+}
+.table > thead > tr > td.bad,
+.table > tbody > tr > td.bad,
+.table > tfoot > tr > td.bad,
+.table > thead > tr > th.bad,
+.table > tbody > tr > th.bad,
+.table > tfoot > tr > th.bad,
+.table > thead > tr.bad > td,
+.table > tbody > tr.bad > td,
+.table > tfoot > tr.bad > td,
+.table > thead > tr.bad > th,
+.table > tbody > tr.bad > th,
+.table > tfoot > tr.bad > th,
+.bad {
+  background-color: #ffe4e1;
+}
+.table-hover > tbody > tr > td.bad:hover,
+.table-hover > tbody > tr > th.bad:hover,
+.table-hover > tbody > tr.bad:hover > td,
+.table-hover > tbody > tr:hover > .bad,
+.table-hover > tbody > tr.bad:hover > th,
+.bad:hover {
+  background-color: #ffbab3;
 }

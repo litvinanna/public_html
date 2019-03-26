@@ -242,7 +242,7 @@
         id: 1,
         title: 'Восстановление кристалла из PDB файла',
         url: 'pages/study_process/terms/term7/pr2_restor.html',
-        page_title: 'Crystall estoration'
+        page_title: 'Crystall restoration'
       } , {
         id: 2,
         title: 'Восстановление структуры в одномерной модели',
@@ -252,44 +252,65 @@
         id: 3,
         title: 'Отчет по валидации структуры',
         url: 'pages/study_process/terms/term7/pr4_validation.html',
-        page_title: ''
+        page_title: 'Validation'
       } , {
         id: 4,
-        title: '',
-        url: 'pages/study_process/terms/term7/pr.html',
-        page_title: ''
+        title: 'Поиск по PDB и содержание PDB файла',
+        url: 'pages/study_process/terms/term7/pr4_pdbcontent.html',
+        page_title: 'PDB file'
       } , {
         id: 5,
-        title: '',
-        url: 'pages/study_process/terms/term7/pr.html',
-        page_title: ''
+        title: 'ЯМР',
+        url: 'pages/study_process/terms/term7/pr5_nmr.html',
+        page_title: 'NMR'
       } , {
         id: 6,
-        title: '',
-        url: 'pages/study_process/terms/term7/pr.html',
-        page_title: ''
+        title: 'Вторичная структура',
+        url: 'pages/study_process/terms/term7/pr6_ss.html',
+        page_title: 'Secondary structures'
       } , {
         id: 7,
-        title: '',
-        url: 'pages/study_process/terms/term7/pr.html',
-        page_title: ''
+        title: 'Файл структурных факторов',
+        url: 'pages/study_process/terms/term7/pr7_sf.html',
+        page_title: 'Structure factors'
       } , {
+
         id: 8,
-        title: '',
-        url: 'pages/study_process/terms/term7/pr.html',
-        page_title: ''
+        title: 'Совмещение',
+        url: 'pages/study_process/terms/term7/pr9_inter.html',
+        page_title: 'Alignment'
       } , {
         id: 9,
-        title: '',
-        url: 'pages/study_process/terms/term7/pr.html',
-        page_title: ''
+        title: 'Гидрофобные кластеры',
+        url: 'pages/study_process/terms/term7/pr10_hydrophob.html',
+        page_title: 'Hydrofhobic'
+
+ }]
+    }, {
+      id: 5,
+      title: 'VIII',
+      page_title: 'Term 8',
+      description: "Molecular modelling, pages may load slow :(  ",
+      tasks: [{
+        id: 0,
+        title: 'Знакомство с Pymol',
+        url: 'pages/study_process/terms/term8/pr1.html',
+        page_title: 'Pymol'
       } , {
-        id: 10,
-        title: '',
-        url: 'pages/study_process/terms/term7/pr.html',
-        page_title: ''
-
-
+        id: 1,
+        title: 'Работа с Pymol',
+        url: 'pages/study_process/terms/term8/pr2.html',
+        page_title: 'Pymol'
+      } , {
+        id: 2,
+        title: 'Хемоинформатика',
+        url: 'pages/study_process/terms/term8/pr3.html',
+        page_title: 'Ibu'
+      } , {
+        id: 3,
+        title: 'Ab initio вычиление орбиталей водорода',
+        url: 'pages/study_process/terms/term8/pr4.html',
+        page_title: " :'( "
 
       }]
     }]
